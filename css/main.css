@@ -1,0 +1,242 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url("../fonts/MuseoSansCyrl.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.header_call-us_button {
+  width: 225px;
+  height: 35px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0071ba;
+  background-color: white;
+  box-sizing: border-box;
+  color: #0071ba;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button_short {
+  width: 220px;
+  height: 46px;
+}
+
+body {
+  margin: 0;
+  font-family: MuseoSansCyrl;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :visited {
+  color: black;
+}
+
+section {
+  margin: 0 auto;
+  height: 1000px;
+  width: 100%;
+}
+
+header {
+  margin: 0 auto;
+}
+
+.header_wrapper {
+  width: 100%;
+  background-color: black;
+}
+
+.header_wrapper_sub {
+  width: 100%;
+  background-color: white;
+}
+
+.header_hiding {
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header_menu {
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.header_choose-lang {
+  position: relative;
+  display: inline-block;
+}
+
+.header_choose-lang_main {
+  display: block;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+  height: 35px;
+  width: 70px;
+  line-height: 35px;
+  padding-left: 16px;
+  color: white;
+}
+
+.header_choose-lang_content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 70px;
+  z-index: 1;
+}
+
+.header_choose-lang_drop {
+  color: white;
+  padding-left: 16px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  border-top: solid 1px white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header_choose-lang:hover .header_choose-lang_content {
+  display: block;
+  background-color: black;
+}
+
+.header_logo {
+  width: 174px;
+  height: 47px;
+}
+
+.header_menu_main,
+.footer_menu {
+  display: flex;
+}
+
+.header_menu_main li,
+.footer_menu li {
+  display: block;
+  float: left;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.header_callus_top {
+  display: flex;
+}
+
+.header_callus_top li {
+  border-left: solid 1px white;
+}
+
+.header_call-us {
+  text-align: center;
+}
+
+.header_call-us span {
+  display: block;
+}
+
+.header_call-us_button:focus {
+  outline: none;
+}
+
+.header_call-us_button:hover {
+  background-color: #0063a6;
+  color: white;
+}
+
+.header_call-us_button:active {
+  transform: translateY(1px);
+}
+
+.header_basket {
+  font-size: 20px;
+}
+
+.invisible {
+  display: none;
+}
+
+.stickytop {
+  position: fixed;
+  top: 0;
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */
