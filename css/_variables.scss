@@ -1,0 +1,43 @@
+// @include font-face(MuseoSansCyrl, '../fonts/MuseoSansCyrl');
+// @include font-face(ProximaNovaRegular, fonts/ProximaNovaRegular);
+
+@font-face {
+	// font-family: "MuseoSansCyrl";
+    // font-weight: normal;
+    // font-style: normal;
+	// src: 
+    //     url("../fonts/MuseoSansCyrl.otf") format("opentype");
+    font-family: "MuseoSansCyrl";
+    font-weight: 500;
+    src:
+        url("../fonts/Museosanscyrl500.woff2") format("woff2"),
+		url("../fonts/Museosanscyrl500.woff") format("woff"),
+		url("../fonts/Museosanscyrl500.ttf") format("truetype");
+        
+}
+$main_font: "MuseoSansCyrl";
+// $secondary_font: "ProximaNovaRegular";
+
+$weight_light: 300;
+$weight_normal: 500;
+$weight_bold: 700;
+$weight_super-bold: 900;
+
+
+// colors
+    //bg
+
+    //font-colors
+    $font_white: rgb(255,255,255);
+    $font_black: rgb(17,24,32);
+    $font_h2:rgb(13,34,63);
+    $font-gray: rgb(120,120,123);
+
+    //buttons
+$button_normal: rgb(0,113,186);
+$button_hover: rgb(0,99,166);
+$button_inactive: rgb(221,221,221);
+$button_border: rgb(0,113,186);
+
+    //backgrounds
+    $bg_white: $font_white;
