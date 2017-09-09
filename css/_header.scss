@@ -3,19 +3,19 @@
     width: 100%;
     height: 40px;
     background-color: rgb(17,24,32);
-    color: rgb(255,255,255);
+    color: $font_white;
     
 }
 .header_wrapper_hidesmall {
     margin: 0 auto;
     max-width: 1200px;
-	display: flex;
+	@include flex;
 	font-size: 18px;
     font-weight: 500;
     justify-content: space-between;
 	box-sizing: border-box;
 	background-color: rgb(17,24,32);
-	color: rgb(255,255,255);
+	color: $font_white;
 }
 // CHOOSE LANGUAGE MENU
 .header_lang {
@@ -34,7 +34,7 @@
 	height: 40px;
 	line-height: 40px;
 	padding-left: 20px;
-	color: rgb(255,255,255);
+	color: $font_white;
 }
 .header_lang_content {
 	// display: none;
@@ -57,7 +57,7 @@
 // END OF CHOOSE LANGUAGE MENU
 
 .header_callus {
-	display: flex;
+	@include flex;
 	align-items: center;
     font-size: 18px;
     font-weight: 700;
@@ -67,8 +67,8 @@
 
 .header_callus_tel {
     width: 186px;
-	color: rgb(255,255,255);
-	font-weight: 700;
+	color: $font_white;
+	font-weight: $weight_normal;
 	border-left: solid 1px rgb(53, 59, 66);
 	border-right: solid 1px rgb(53, 59, 66);
 }
@@ -79,6 +79,7 @@
 .header_callus_text {
 	width: 235px;
 	border-right: solid 1px rgb(53, 59, 66);
+	font-weight: $weight_normal;
 }
 
 
@@ -86,14 +87,14 @@
     margin: 0 auto;
     width: 100%;
 	height: 70px;
-	background-color: rgb(255,255,255);
+	background-color: $bg_white;
 }
 .header_wrapper_small {
 	margin: 0 auto;
 	height: 70px;
 	max-width: 1200px;
-	background-color: rgb(255,255,255);
-	display: flex;
+	background-color: $bg_white;
+	@include flex;
 	align-items: center;
 	justify-content: space-between;
 	font-size: 18px;
@@ -107,7 +108,7 @@
 }
 
 .header_menu {
-	display: flex;
+	@include flex;
 	width: 60%;
 	li {
 		display: block;
@@ -120,23 +121,33 @@
 }
 
 .header_cart {
-	display: flex;
+	@include flex;
 	width: 20%;
 	justify-content: flex-end;
-	// @include flex;
 }
 
 .header_cart_call-button {
 	@extend %btn_big;
+	&:hover{
+		background-color: $button_hover;
+		color: $font_white;
+	}
+	&:active{
+		transform: translateY(1px);
+	}
 }
 .header_cart_call {
 	flex-wrap: wrap;
 	justify-content: center;
-	text-align: center;	
+	text-align: center;
 }
 
 .header_cart_call-tel {
 	display: block;
+	font-family: $main_font;
+	font-weight: $weight_light;
+	font-size: 16px;
+	padding: 5px;
 }
 
 .header_cart_buy {
@@ -157,9 +168,9 @@
 		top: -13px;
 		left: -5px;
 		background-color: rgb(0,113,186);
-		color: rgb(255,255,255);
+		color: $font_white;
 		text-align: center;
-		font-family: MuseoSansCyrl;
+		font-family: $main_font;
 		font-size: 12px;
 		font-weight: 700;
 	}

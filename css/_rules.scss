@@ -1,41 +1,93 @@
-@import 'reset';
-// FONT
-@font-face {
-    font-family:'ProximaNovaRegular';
-    src: url('../fonts/ProximaNovaRegular.otf');
-    font-style: normal;
-    font-stretch: normal;
+@import 'reset','variables','mixins';
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@font-face {
-    font-family:'MuseoSansCyrl';
-    src: url('../fonts/MuseoSansCyrl.otf');
-    font-style: normal;
-    font-stretch: normal;
+//titles
+
+h1 {
+    font-family: $main_font;
+    font-weight: $weight_super-bold;
+    font-size: 72px;
+    color: $font_white;
+    letter-spacing: 2.2px;
+    line-height: 112px;
+    text-transform: uppercase;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url('../img/squares.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 13px;
+        left: 7px;
+        bottom: 0;
+    }
 }
 
-// @include font-face(MuseoSansCyrl, fonts/MuseoSansCyrl);
-// @include font-face(ProximaNovaRegular, fonts/ProximaNovaRegular);
+h2 {
+    font-family: $main_font;
+    font-weight: $weight_bold;
+    font-size: 48px;
+    color: $font_h2;
+    letter-spacing: 0px;
+    line-height: 57px;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url('../img/squares.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 10px;
+        left: 4px;
+        bottom: -10px;
+    }
+}
 
-// colors
-$button: rgb(0,113,186);
-$button_hover: rgb(0,99,166);
-$button_inactive: rgb(221,221,221);
-$button_border: rgb(0,113,186);
+h3 {
+    font-family: $main_font;
+    font-weight: $weight_normal;
+    font-size: 24px;
+    color: $font_white;
+    line-height: 34px;
+}
+
+.dots{
+    position: relative;
+    margin-left: 50px;
+    text-transform: uppercase;
+    &::before{
+       content: "";
+        position: absolute;
+        background-image: url('../img/squares.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 10px;
+        left: -50px;
+        bottom: 9px; 
+    }
+}
+
 
 // BUTTONS
 
 %btn_big{
-    display: block;
-    width: 200px;
+    width: 225px;
     height: 35px;
 	cursor: pointer;
     border-style: solid;
     border-width: 1px;
-    border-color: $button;
+    border-color: $button_normal;
     background-color: rgb(255,255,255);
     box-sizing: border-box;
-    color: $button;
+    color: $button_normal;
 	font-size: 18px;
     text-decoration: none;
     font-weight: bold;
@@ -46,12 +98,11 @@ $button_border: rgb(0,113,186);
     width: 220px;
     height: 46px;
 }
-
 // END OF BUTTONS
 
 body {
     margin: 0;
-    font-family: MuseoSansCyrl;
+    font-family: $main_font;
     width: 100%;
 }
 
@@ -68,3 +119,5 @@ section {
     height: 1000px;
     width: 100%;
 }
+
+
