@@ -25,7 +25,9 @@ $weight_super-bold: 900;
 
 
 // colors
-    //bg
+    
+    //backgrounds
+    $bg_white: $font_white;
 
     //font-colors
     $font_white: rgb(255,255,255);
@@ -34,10 +36,7 @@ $weight_super-bold: 900;
     $font-gray: rgb(120,120,123);
 
     //buttons
-$button_normal: rgb(0,113,186);
-$button_hover: rgb(0,99,166);
-$button_inactive: rgb(221,221,221);
-$button_border: rgb(0,113,186);
+    $button_normal: rgb(0,113,186);
+    $button_hover: rgb(0,99,166);
+    $button_inactive: rgb(221,221,221);
 
-    //backgrounds
-    $bg_white: $font_white;
