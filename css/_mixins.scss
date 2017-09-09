@@ -1,0 +1,36 @@
+@mixin H1 {
+    font-family: MuseoSansCyrl;
+    font-weight: 700;
+    font-size: 72pt;
+}
+
+@mixin H2 {
+    font-family: MuseoSansCyrl;
+    font-weight: 900;
+    font-size: 48pt;
+    color: black;
+}
+
+@mixin H3 {
+    font-family: MuseoSansCyrl;
+    font-weight: 700;
+    font-size: 24pt;
+}
+
+@mixin b18 {
+    font-family: MuseoSansCyrl;
+    font-weight: 700;
+    font-size: 18pt;
+}
+
+@mixin b18white {
+    font-family: MuseoSansCyrl;
+    font-weight: 700;
+    font-size: 18pt;
+}
+
+@mixin main {
+    font-family: ProximaNovaRegular;
+    font-weight: 900;
+    font-size: 48pt;
+}
