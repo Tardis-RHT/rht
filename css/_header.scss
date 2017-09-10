@@ -50,6 +50,9 @@
 	line-height: 40px;
 	display: block;
 	border-top: solid 1px rgb(53, 59, 66);
+	&:last-of-type {
+		border-bottom: solid 1px rgb(53, 59, 66);
+	}
 }
 .invisible {
 	display: none;
