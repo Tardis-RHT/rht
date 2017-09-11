@@ -25,6 +25,12 @@
 	font-family: $main_font;
 	font-weight: $weight_normal;
 }
+.header_mobile_burger {
+	align-self: center;
+    width: 32px;
+    text-align: center;
+}
+
 .header_mobile_logo {
 	 font-weight: $weight_bold;
 	 font-size: 24px;

@@ -3,6 +3,7 @@ $(function(){
 // MOBILE MENU
 $('#burger').click(function() {
 		$('.mobile_menu').toggle();
+		$(this).toggleClass('zmdi-menu').toggleClass('zmdi-close');
 });
 // MOBILE MENU END
 
