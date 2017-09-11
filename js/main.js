@@ -1,4 +1,12 @@
 $(function(){
+
+// MOBILE MENU
+$('#burger').click(function() {
+		$('.mobile_menu').toggle();
+});
+// MOBILE MENU END
+
+
 // CHANGE LANGUAGE MENU START
 	$('.header_lang_main').click(function() {
 	// 	$('.header_lang_content').toggle(function(){

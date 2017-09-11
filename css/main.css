@@ -364,21 +364,6 @@ h3 {
   bottom: 9px;
 }
 
-.header_cart_call-button {
-  width: 225px;
-  height: 35px;
-  cursor: pointer;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #0071ba;
-  background-color: white;
-  box-sizing: border-box;
-  color: #0071ba;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .button_short {
   width: 220px;
   height: 46px;
@@ -392,140 +377,32 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #111820;
 }
 
 a :visited {
-  color: black;
+  color: #111820;
 }
 
-section {
-  margin: 0 auto;
-  height: 1000px;
-  width: 100%;
-}
-
-.header_wrapper_hidebig {
-  margin: 0 auto;
-  width: 100%;
-  height: 40px;
-  background-color: #111820;
-  color: white;
-}
-
-.header_wrapper_hidesmall {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  font-size: 18px;
-  font-weight: 500;
-  justify-content: space-between;
-  box-sizing: border-box;
-  background-color: #111820;
-  color: white;
-}
-
-.header_lang {
-  position: relative;
-  display: inline-block;
-  width: 89px;
-  box-sizing: border-box;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 40px;
-}
-
-.header_lang_main {
-  display: block;
-  border-left: solid 1px #353b42;
-  border-right: solid 1px #353b42;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 20px;
-  color: white;
-}
-
-.header_lang_content {
-  position: absolute;
-  background-color: #111820;
-  min-width: 89px;
-  z-index: 1;
-}
-
-.header_lang_drop {
-  color: white;
-  padding-left: 20px;
-  height: 40px;
-  line-height: 40px;
-  display: block;
-  border-top: solid 1px #353b42;
-}
-
-.header_lang_drop:last-of-type {
-  border-bottom: solid 1px #353b42;
+.stickytop {
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .invisible {
   display: none;
 }
 
-.header_callus {
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  align-items: center;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 40px;
-  text-align: center;
-}
-
-.header_callus_tel {
-  width: 186px;
-  color: white;
-  font-weight: 700;
-  border-left: solid 1px #353b42;
-  border-right: solid 1px #353b42;
-}
-
-.zmdi-phone {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.header_callus_text {
-  width: 235px;
-  border-right: solid 1px #353b42;
-  font-weight: 300;
+.header_wrapper_hidebig {
+  display: none;
 }
 
 .header_wrapper_big {
-  margin: 0 auto;
-  width: 100%;
-  height: 70px;
-  background-color: white;
+  display: none;
 }
 
-.header_wrapper_small {
-  margin: 0 auto;
-  height: 70px;
-  max-width: 1200px;
-  background-color: white;
+.header_mobile {
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -536,97 +413,26 @@ section {
   /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  align-items: center;
+  padding: 10px;
   justify-content: space-between;
-  font-size: 18px;
-  font-weight: 500;
-  box-sizing: border-box;
-}
-
-.header_logo {
-  width: 175px;
-  height: 47px;
-}
-
-.header_menu {
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  justify-content: center;
-  width: 60%;
-}
-
-.header_menu li {
-  display: block;
-  float: left;
-  font-size: 18px;
-  font-weight: 500;
-  color: #111820;
-  padding: 20px;
-}
-
-.header_menu li:first-of-type {
-  padding-left: 0px;
-}
-
-.header_menu li:last-of-type {
-  padding-right: 0px;
-}
-
-.header_menu_main {
-  max-width: 475px;
-}
-
-.header_cart {
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  width: 20%;
-  justify-content: flex-end;
-}
-
-.header_cart_call-button {
-  font-weight: 700;
-}
-
-.header_cart_call-button:hover {
-  background-color: #0063a6;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  height: 40px;
+  background-color: #111820;
   color: white;
-}
-
-.header_cart_call-button:active {
-  transform: translateY(1px);
-}
-
-.header_cart_call {
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.header_cart_call-tel {
-  display: block;
   font-family: "MuseoSansCyrl";
-  font-weight: 300;
-  font-size: 16px;
-  padding: 5px;
+  font-weight: 500;
 }
 
-.header_cart_buy {
+.header_mobile_logo {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header_mobile_cart {
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -637,8 +443,6 @@ section {
   /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  align-self: center;
-  padding: 0 20px;
 }
 
 .shopping-cart_number {
@@ -655,12 +459,349 @@ section {
   font-family: "MuseoSansCyrl";
   font-size: 12px;
   font-weight: 700;
-  z-index: 2;
+  z-index: 1;
 }
 
-.stickytop {
+.mobile_menu {
+  display: none;
+  width: 100%;
+  height: 300px;
+  background-color: #111820;
+  color: white;
+  top: 40px;
   position: fixed;
-  top: 0;
+}
+
+.mobile_menu_main {
+  display: block;
+  height: 165px;
+  background-color: #111820;
+  color: white;
+  font-family: "MuseoSansCyrl";
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.mobile_menu_main li {
+  display: block;
+  margin: 20px;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.mobile_menu_main li a {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile_menu_main li a :visited {
+  color: white;
+}
+
+.mobile_callus {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 65px;
+}
+
+.mobile_callus span {
+  padding-bottom: 5px;
+}
+
+.mobile_callus-tel {
+  font-weight: 500;
+  color: white;
+}
+
+.mobile_icon_phone {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 25px;
+  left: -25px;
+}
+
+.mobile_callus-btn {
+  margin: 0 auto;
+  width: 225px;
+  height: 35px;
+  margin-left: 40px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #111820;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.mobile_callus-btn:active {
+  transform: translateY(1px);
+}
+
+@media screen and (min-width: 872px) {
+  .header_mobile {
+    display: none;
+  }
+  .mobile_menu {
+    display: none;
+  }
+  .header_wrapper_hidebig {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    background-color: #111820;
+    color: white;
+  }
+  .header_wrapper_hidesmall {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #111820;
+    color: white;
+  }
+  .header_lang {
+    position: relative;
+    display: inline-block;
+    width: 89px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .header_lang_main {
+    display: block;
+    border-left: solid 1px #353b42;
+    border-right: solid 1px #353b42;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: white;
+  }
+  .header_lang_content {
+    position: absolute;
+    background-color: #111820;
+    min-width: 89px;
+    z-index: 1;
+  }
+  .header_lang_drop {
+    color: white;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    border-top: solid 1px #353b42;
+  }
+  .header_lang_drop:last-of-type {
+    border-bottom: solid 1px #353b42;
+  }
+  .stickytop {
+    position: fixed;
+    top: 0;
+  }
+  .invisible {
+    display: none;
+  }
+  .header_callus {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+  }
+  .header_callus_tel {
+    width: 186px;
+    color: white;
+    font-weight: 700;
+    border-left: solid 1px #353b42;
+    border-right: solid 1px #353b42;
+  }
+  .zmdi-phone {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .header_callus_text {
+    width: 235px;
+    border-right: solid 1px #353b42;
+    font-weight: 300;
+  }
+  .header_wrapper_big {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+  }
+  .header_wrapper_small {
+    margin: 0 auto;
+    height: 70px;
+    max-width: 1200px;
+    background-color: white;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    box-sizing: border-box;
+  }
+  .header_logo {
+    width: 175px;
+    height: 47px;
+  }
+  .header_menu {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    width: 60%;
+  }
+  .header_menu li {
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: #111820;
+    padding: 20px;
+  }
+  .header_menu li:first-of-type {
+    padding-left: 0px;
+  }
+  .header_menu li:last-of-type {
+    padding-right: 0px;
+  }
+  .header_menu_main {
+    max-width: 475px;
+  }
+}
+
+@media screen and (min-width: 872px) and (max-width: 870px) {
+  .header_menu_main {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 872px) {
+  .header_cart {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    width: 20%;
+    justify-content: flex-end;
+  }
+  .header_cart_call-button {
+    width: 225px;
+    height: 35px;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0071ba;
+    background-color: white;
+    box-sizing: border-box;
+    color: #0071ba;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    font-weight: 700;
+  }
+  .header_cart_call-button:hover {
+    background-color: #0063a6;
+    color: white;
+  }
+  .header_cart_call-button:active {
+    transform: translateY(1px);
+  }
+  .header_cart_call {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .header_cart_call-tel {
+    display: block;
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 16px;
+    padding: 5px;
+  }
+  .header_cart_buy {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    align-self: center;
+    padding: 0 20px;
+  }
+  .shopping-cart_number {
+    top: -10px;
+    left: -5px;
+  }
 }
 
 section {
