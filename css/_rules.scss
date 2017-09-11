@@ -1,4 +1,4 @@
-@import 'reset','variables','mixins';
+@import 'reset', 'fonts', 'variables', 'mixins';
 
 .wrapper{
     max-width: 1200px;
@@ -98,6 +98,7 @@ h3 {
     width: 220px;
     height: 46px;
 }
+
 // END OF BUTTONS
 
 body {
@@ -112,6 +113,7 @@ a {
     :visited {
         color: black;
     }
+
 }
 
 section {

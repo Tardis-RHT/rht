@@ -71,7 +71,7 @@
 .header_callus_tel {
     width: 186px;
 	color: $font_white;
-	font-weight: $weight_normal;
+	font-weight: $weight_bold;
 	border-left: solid 1px rgb(53, 59, 66);
 	border-right: solid 1px rgb(53, 59, 66);
 }
@@ -82,7 +82,7 @@
 .header_callus_text {
 	width: 235px;
 	border-right: solid 1px rgb(53, 59, 66);
-	font-weight: $weight_normal;
+	font-weight: $weight_light;
 }
 
 
@@ -106,12 +106,13 @@
 }
 
 .header_logo {
-	width: 20%;
-	// height: 47px;
+	width: 175px;
+	height: 47px;
 }
 
 .header_menu {
 	@include flex;
+	justify-content: center;
 	width: 60%;
 	li {
 		display: block;
@@ -120,7 +121,17 @@
 		font-weight: 500;
 		color: rgb(17,24,32);
 		padding: 20px;
+		&:first-of-type{
+			padding-left: 0px;
+		}
+		&:last-of-type {
+			padding-right: 0px;
+		}
 	}
+}
+
+.header_menu_main {
+	max-width: 475px;
 }
 
 .header_cart {
@@ -131,6 +142,7 @@
 
 .header_cart_call-button {
 	@extend %btn_big;
+	font-weight: $weight_bold;
 	&:hover{
 		background-color: $button_hover;
 		color: $font_white;
@@ -154,40 +166,32 @@
 }
 
 .header_cart_buy {
+	@include flex;
 	align-self: center;
 	padding: 0 20px;
 }
 
-.icon_cart {
-	&::after {
-		content: '2';
-		display: inline-block;
-		width: 16px;
-		height: 16px;
-		line-height: 16px;
-		border: solid 1px;
-		border-radius: 50%;
-		position: relative;
-		top: -13px;
-		left: -5px;
-		background-color: rgb(0,113,186);
-		color: $font_white;
-		text-align: center;
-		font-family: $main_font;
-		font-size: 12px;
-		font-weight: 700;
-	}
+.shopping-cart_number {
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	border-radius: 50%;
+	position: relative;
+	top: -10px;
+	left: -5px;
+	background-color: rgb(0,113,186);
+	color: $font_white;
+	text-align: center;
+	font-family: $main_font;
+	font-size: 12px;
+	font-weight: $weight_bold;
+	z-index: 2;
 }
-
-
 
 .stickytop {
     position: fixed;
 	top:0
 }
-
-
-
 
 
 section {
