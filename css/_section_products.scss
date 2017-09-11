@@ -1,0 +1,56 @@
+.main_products{
+    max-width: 1820px;
+    margin: 0 auto;
+}
+.main_products-single{
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 320px;
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 650px;
+    background-color: $bg_black; 
+    &:nth-of-type(2){
+        padding-right: 320px;
+    }
+    &:first-of-type{
+        .main_products-img{
+            margin-right: 65px;
+        }
+        .main_products-caption{
+            width: 40%;
+            max-width: 400px;   
+        }
+    }
+}
+.main_products-caption{
+    width: 40%; 
+}
+.main_products-img{
+    width: 60%;
+}
+.main_products-img{
+    // background-image: url('../img/furniture.png');
+    // background-repeat: no-repeat;
+    // background-size: 1030px 550px;
+    align-self: flex-end;
+    max-height: 100%;
+    width: auto;
+}
+.main_products-category{
+    font-size: 14px;
+    line-height: 17px;
+    // color: $font-gray;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+}
+.main_products-title{
+    margin-bottom: 50px;
+    font-weight: $weight_bold;
+    font-size: 36px;
+    line-height: 46px;
+}
+.main_products-btn{
+    padding: 15px 35px;
+}

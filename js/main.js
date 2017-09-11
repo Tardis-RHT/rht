@@ -38,4 +38,3 @@ $('#burger').click(function() {
 		  $('.header_cart_call').addClass('invisible');
 	  }
   });
-});
