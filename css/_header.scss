@@ -1,0 +1,132 @@
+header {
+	margin: 0 auto;
+}
+
+.header_wrapper {
+	width: 100%;
+	background-color:rgb(17, 24, 32);
+}
+
+.header_wrapper_sub {
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+}
+
+.header_hiding {
+	margin: 0 auto;
+	max-width: 1024px;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: rgb(255, 255, 255);
+}
+
+.header_menu {
+	margin: 0 auto;
+	max-width: 1024px;
+	height: 76px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+}
+
+// MENU CHOOSE LANGUAGE
+.header_choose-lang {
+    position: relative;
+    display: inline-block;
+}
+.header_choose-lang_main {
+	display: block;
+	border-right: solid 1px white;
+	border-left: solid 1px white;
+	height: 35px;
+	width: 70px;
+	line-height: 35px;
+	padding-left: 16px;
+	color: white;
+}
+.header_choose-lang_content {
+	display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 70px;
+    z-index: 1;
+}
+.header_choose-lang_drop {
+	color: white;
+	padding-left: 16px;
+	height: 35px;
+	line-height: 35px;
+	display: block;
+	border-top: solid 1px white;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.header_choose-lang:hover .header_choose-lang_content {
+	display: block;
+	background-color: black;
+}
+// END OF MENU CHOOSE LANGUAGE
+
+
+
+
+.header_logo {
+	width: 174px;
+	height: 47px;
+}
+
+.header_menu_main,
+.footer_menu {
+	display: flex;
+	li {
+		display: block;
+		float: left;
+		font-size: 20px;
+		padding: 20px;
+	}
+}
+
+.header_callus_top {
+	display: flex;
+	li {
+		border-left: solid 1px white;
+	}
+}
+
+.header_call-us {
+	text-align: center;
+	span {
+		display: block;
+	}
+}
+
+.header_call-us_button {
+	@extend %btn_big;
+}
+.header_call-us_button:focus {
+    outline: none;
+}
+.header_call-us_button:hover {
+	background-color: $button_hover;
+	color: white;
+}
+.header_call-us_button:active {
+	transform: translateY(1px);
+}
+
+.header_basket {
+	font-size: 20px;
+}
+
+.invisible {
+	display: none;
+}
+
+.stickytop {
+    position: fixed;
+	top:0
+}

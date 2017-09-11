@@ -1,0 +1,705 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea, html input[type="button"],
+input[type="reset"],
+input[type="submit"], button[disabled],
+html input[disabled], button::-moz-focus-inner,
+input::-moz-focus-inner, input[type="checkbox"],
+input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/MuseoSansCyrl.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/MuseoSansCyrl_0.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/MuseoSansCyrl_1.otf") format("opentype"), url("../fonts/Museosanscyrl500.woff2") format("woff2"), url("../fonts/Museosanscyrl500.woff") format("woff"), url("../fonts/Museosanscyrl500.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/MuseoSansCyrl_2.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/MuseoSansCyrl_3.otf") format("opentype");
+}
+
+.btn {
+  display: block;
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #0071ba;
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0063a6;
+}
+
+.btn:active {
+  top: 1px;
+}
+
+.btn:disabled {
+  background-color: #dddddd;
+}
+
+.btn:disabled:hover {
+  top: 0;
+}
+
+.ghost_btn {
+  display: block;
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 18px;
+  color: #0071ba;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid #0071ba;
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  outline: none;
+}
+
+.ghost_btn:hover {
+  color: white;
+  background-color: #0063a6;
+  border-color: #0063a6;
+}
+
+.ghost_btn:active {
+  top: 1px;
+}
+
+.ghost_btn:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  background-color: white;
+}
+
+.ghost_btn:disabled:hover {
+  top: 0;
+}
+
+.ghost_btn i {
+  margin-left: 10px;
+}
+
+.video_icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.video_icon #Oval {
+  -webkit-transition: fill 0.3s;
+  -moz-transition: fill 0.3s;
+  -o-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+
+.video_icon:hover #Oval {
+  fill: #0063a6;
+}
+
+.video_icon:active {
+  top: 1px;
+}
+
+.video_icon:disabled #Oval {
+  fill: #dddddd;
+}
+
+.video_icon:disabled:hover {
+  top: 0;
+}
+
+.toggle {
+  display: block;
+}
+
+.toggle label {
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 18px;
+  color: #0071ba;
+  letter-spacing: 0;
+  line-height: 22px;
+  border: 2px solid #0071ba;
+  padding: 15px 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.toggle label:last-of-type {
+  margin-left: -6px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle input:checked + label {
+  background-color: #0071ba;
+  color: white;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "MuseoSansCyrl";
+  font-weight: 900;
+  font-size: 72px;
+  color: white;
+  letter-spacing: 2.2px;
+  line-height: 112px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/squares.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 13px;
+  left: 7px;
+  bottom: 0;
+}
+
+h2 {
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 48px;
+  color: #0d223f;
+  letter-spacing: 0px;
+  line-height: 57px;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/squares.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 10px;
+  left: 4px;
+  bottom: -10px;
+}
+
+h3 {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  line-height: 34px;
+}
+
+.dots {
+  position: relative;
+  margin-left: 50px;
+  text-transform: uppercase;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/squares.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 10px;
+  left: -50px;
+  bottom: 9px;
+}
+
+.header_call-us_button {
+  width: 225px;
+  height: 35px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0071ba;
+  background-color: white;
+  box-sizing: border-box;
+  color: #0071ba;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button_short {
+  width: 220px;
+  height: 46px;
+}
+
+body {
+  margin: 0;
+  font-family: "MuseoSansCyrl";
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a :visited {
+  color: black;
+}
+
+header {
+  margin: 0 auto;
+}
+
+.header_wrapper {
+  width: 100%;
+  background-color: #111820;
+}
+
+.header_wrapper_sub {
+  width: 100%;
+  background-color: white;
+}
+
+.header_hiding {
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header_menu {
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.header_choose-lang {
+  position: relative;
+  display: inline-block;
+}
+
+.header_choose-lang_main {
+  display: block;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+  height: 35px;
+  width: 70px;
+  line-height: 35px;
+  padding-left: 16px;
+  color: white;
+}
+
+.header_choose-lang_content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 70px;
+  z-index: 1;
+}
+
+.header_choose-lang_drop {
+  color: white;
+  padding-left: 16px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  border-top: solid 1px white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header_choose-lang:hover .header_choose-lang_content {
+  display: block;
+  background-color: black;
+}
+
+.header_logo {
+  width: 174px;
+  height: 47px;
+}
+
+.header_menu_main,
+.footer_menu {
+  display: flex;
+}
+
+.header_menu_main li,
+.footer_menu li {
+  display: block;
+  float: left;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.header_callus_top {
+  display: flex;
+}
+
+.header_callus_top li {
+  border-left: solid 1px white;
+}
+
+.header_call-us {
+  text-align: center;
+}
+
+.header_call-us span {
+  display: block;
+}
+
+.header_call-us_button:focus {
+  outline: none;
+}
+
+.header_call-us_button:hover {
+  background-color: #0063a6;
+  color: white;
+}
+
+.header_call-us_button:active {
+  transform: translateY(1px);
+}
+
+.header_basket {
+  font-size: 20px;
+}
+
+.invisible {
+  display: none;
+}
+
+.stickytop {
+  position: fixed;
+  top: 0;
+}
+
+.main-page_video {
+  position: relative;
+  width: 100%;
+  height: 1030px;
+  margin-bottom: 100px;
+}
+
+.main-page_video-video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main-page_video_caption {
+  padding-top: 480px;
+}
+
+.main-page_video_caption .main-page_video-title {
+  margin-bottom: 15px;
+}
+
+.main-page_video_caption .main-page_video-about {
+  margin-bottom: 40px;
+}
+
+.main-page_video-more {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main-page_video-more .video_icon {
+  margin-bottom: 10px;
+}
+
+.main_page_video-scroll {
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 90px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  padding: 8px 8px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.main_page_video-scroll i {
+  font-size: 18px;
+}
+
+.main_products {
+  max-width: 1820px;
+  margin: 0 auto;
+}
+
+.main_products-single {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 320px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  align-items: center;
+  justify-content: space-between;
+  height: 650px;
+  background-color: #111820;
+}
+
+.main_products-single:nth-of-type(2) {
+  padding-right: 320px;
+}
+
+.main_products-single:first-of-type .main_products-img {
+  margin-right: 65px;
+}
+
+.main_products-single:first-of-type .main_products-caption {
+  width: 40%;
+  max-width: 400px;
+}
+
+.main_products-caption {
+  width: 40%;
+}
+
+.main_products-img {
+  width: 60%;
+}
+
+.main_products-img {
+  align-self: flex-end;
+  max-height: 100%;
+  width: auto;
+}
+
+.main_products-category {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+
+.main_products-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.main_products-btn {
+  padding: 15px 35px;
+}
+
+.main-page_certificates .slider {
+  width: 100%;
+  height: 347px;
+  overflow: hidden;
+}
+
+.main-page_certificates .slides {
+  height: 100%;
+}
+
+.main-page_certificates .slide {
+  float: left;
+  height: 100%;
+  margin-right: 35px;
+}
+
+.main-page_certificates .slide img {
+  height: 100%;
+  width: auto;
+}
+
+.main-page_certificates .controls {
+  text-align: center;
+}
+
+.main-page_certificates .slider_btn {
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */
