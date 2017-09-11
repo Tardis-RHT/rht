@@ -6,77 +6,185 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>RHT</title>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	
 </head>
 
 <body>
 	<header>
+		<!-- MOBILE MENU -->
+		<div class="header_mobile stickytop">
+			<div><i id='burger' class="zmdi zmdi-menu zmdi-hc-2x"></i>
+		</div>
+			<div class="header_mobile_logo">RHT</div>
+			<div class="header_mobile_cart">
+				<i class="zmdi zmdi-shopping-cart icon_cart"></i>
+				<div class="shopping-cart_number">2</div>
+			</div>
+		</div>
+		<div class="mobile_menu">
+			<ul class="mobile_menu_main">
+				<li><a href="#">Фурнитура</a></li>
+				<li><a href="#">Автоматика</a></li>
+				<li><a href="#">Филёнка</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<button class="mobile_callus-btn">Перезвоните мне</button>
+			<div class="mobile_callus">
+				<img class="mobile_icon_phone" src="img/phone.svg" alt="call us">
+				<a class="mobile_callus-tel" href="tel:0 800 210 257">0 800 210 257</a>
+				<span class="mobile_callus-text">Бесплатно по Украине</span>
+			</div>
+		</div>
+		<!-- END OF MOBILE MENU -->
+
 		<!-- HIDING PART OF MENU -->
-		<div class="header_wrapper">
-			<div class="header_hiding">
-				<div class="header_choose-lang">
-					<a class="header_choose-lang_main" href="#">Рус</a>
-					<div class="header_choose-lang_content">
-						<a class="header_choose-lang_drop" href="#">Укр</a>
-						<a class="header_choose-lang_drop" href="#">Англ</a>
+		<div class="header_wrapper_hidebig">
+			<div class="header_wrapper_hidesmall">
+				<div class="header_lang">
+					<a class="header_lang_main" href="#">Рус <i id="header_shevron" class="zmdi zmdi-chevron-down"></i>
+					</a>
+					<div class="header_lang_content invisible">
+						<a class="header_lang_drop" href="#">Укр</a>
+						<a class="header_lang_drop" href="#">Англ</a>
 					</div>
 				</div>
-				<ul class="header_">
-					<li>0 800 210 257</li>
-					<li>Бесплатно по Украине</li>
-				</ul>
+				<div class="header_callus">
+					<a class="header_callus_tel" href="tel:0 800 210 257"><i class="zmdi zmdi-phone"></i> 0 800 210 257</a>
+					<span class="header_callus_text">Бесплатно по Украине</span>
+				</div>
 			</div>
 		</div>
 		<!-- END OF HIDING PART OF MENU -->
 
+
+
 		<!-- MAIN MENU -->
-		<div class="header_wrapper_sub">
-			<div class="header_menu">
-				<img class="header_logo" src="img/logo.png" alt="Logo">
-				<ul class="header_menu_main">
-					<li><a href="#">Фурнитура</a></li>
-					<li><a href="#">Автоматика</a></li>
-					<li><a href="#">Филёнка</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-
-				<div class="header_call-us invisible">
-					<button class="header_call-us_button">Перезвоните мне</button>
-					<span class="header_call-us_tel">Или звоните 0 800 21 02 57</span>
-				</div>
-
-				<div class="header_basket">
-					<img src="img/shopping-store-cart.svg" width="15px" height="15px">
-					<span class="header_cart">Корзина</span>
+		<div class="header_wrapper_big">
+			<div class="header_wrapper_small">
+				<img class="header_logo" src="img/logo.png" alt="RHT logo">
+				<nav class="header_menu">
+					<ul class="header_menu_main">
+						<li><a href="#">Фурнитура</a></li>
+						<li><a href="#">Автоматика</a></li>
+						<li><a href="#">Филёнка</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header_cart">
+					<div class="header_cart_call invisible">
+						<button class="header_cart_call-button">Перезвоните мне</button>
+						<span class="header_cart_call-tel">Или звоните 0 800 21 02 57</span>
+					</div>
+					<div class="header_cart_buy">
+						<i class="zmdi zmdi-shopping-cart icon_cart"></i>
+						<div class="shopping-cart_number">1</div>
+						<span class="header_cart_bye-text">Корзина</span>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- END OF MAIN MENU -->
-
 	</header>
-	<section class="video">
 	
-		<video width="100%" height="100%" controls="controls" poster="video/duel.jpg">
+	<section class="main-page_video">
+	
+		<video class="main-page_video-video" poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop" poster="video/duel.jpg">
    <!--<source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>-->
    <source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
    <!--<source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>-->
-   Тег video не поддерживается вашим браузером. 
-   <a href="video/video.mp4">Скачайте видео</a>.
+   <!--Тег video не поддерживается вашим браузером. 
+   <a href="video/video.mp4">Скачайте видео</a>.-->
   		</video>
-	
+		<div class="main-page_video_caption wrapper">
+			<h1 class="main-page_video-title">Rolling Hi-tech</h1>
+			<h3 class="main-page_video-about">производитель усиленных комплектующих для откатных ворот</h3>
+			<p class="main-page_video-more">
+				<button class="video_icon">
+					<svg>
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ui-kit" transform="translate(-450.000000, -698.000000)">
+								<g id="btn-play" transform="translate(450.000000, 698.000000)">
+									<g id="normal">
+										<circle id="Oval" fill="#0071BA" cx="25" cy="25" r="25"></circle>
+										<polygon id="Triangle" fill="#FFFFFF" points="34 25 19 31 19 19"></polygon>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</button>
+				Подробнее о компании
+			</p>
+		</div>
+		
+		<a href="#" class="main_page_video-scroll"><i class="zmdi zmdi-chevron-down"></i></a>
+
+	</section>
+
+	<section class="main_products">
+		<div class="main_products-single">
+			<div class="main_products-caption">
+				<h3 class="main_products-category dots">Продукция</h3>
+				<h3 class="main_products-title">Усиленная фурнитура для откатных ворот</h3>
+				<button class="main_products-btn btn">Перейти в каталог фурнитуры</button>
+			</div>
+			<img src="img/Product_1.png" class="main_products-img">
+		</div>
+		<div class="main_products-single">
+			<img src="img/Product_2.png" class="main_products-img">
+			<div class="main_products-caption">
+				<h3 class="main_products-category dots">Продукция</h3>
+				<h3 class="main_products-title">Автоматика <br>для откатных ворот</h3>
+				<button class="main_products-btn btn">Перейти в каталог автоматики</button>
+			</div>
+		</div>
+		<div class="main_products-single">
+			<div class="main_products-caption">
+				<h3 class="main_products-category dots">Продукция</h3>
+				<h3 class="main_products-title">Металлические филёнки <br>для зашивки ворот и калиток</h3>
+				<button class="main_products-btn btn">Перейти в каталог филенок</button>
+			</div>
+			<img src="img/Product_3.png" class="main_products-img">
+		</div>
+	</section>
+
+	<section class="main-page_certificates">
+		<div class="slider">
+    		<div class="slides">
+      			<div class="slide">
+					  <img src="img/certificates/1.jpg" alt="Наши сертификаты">
+      			</div>
+      			<div class="slide">
+					  <img src="img/certificates/2.jpg" alt="Наши сертификаты">
+      			</div>
+      			<div class="slide">
+					  <img src="img/certificates/3.jpg" alt="Наши сертификаты">
+			    </div>
+      			<div class="slide">
+					  <img src="img/certificates/4.jpg" alt="Наши сертификаты">
+      			</div>
+				  <div class="slide">
+					  <img src="img/certificates/5.jpg" alt="Наши сертификаты">
+      			</div>
+      			<div class="slide">
+					  <img src="img/certificates/6.jpg" alt="Наши сертификаты">
+			    </div>
+      			<div class="slide">
+					  <img src="img/certificates/7.jpg" alt="Наши сертификаты">
+      			</div>
+    		</div>
+  		</div>
+
+  
+		<div class="main-page_certificates_slider">
+			<button class="slider_btn" id="prevSlide"><i class="zmdi zmdi-chevron-left"></i></button>
+			<button class="slider_btn" id="nextSlide"><i class="zmdi zmdi-chevron-right"></i></button>
+		</div>
 	</section>
 
 
-	<!-- <footer>
-		<div>
-			<ul class="footer_menu">
-				<li>Фурнитура</li>
-				<li>Автоматика</li>
-				<li>Филёнка</li>
-				<li>Контакты</li>
-			</ul>
-		</div>
-		<div>@ Rolling Hi-Tech, 2017</div>
-	</footer> -->
+
 
 
 
@@ -84,3 +192,4 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
+
