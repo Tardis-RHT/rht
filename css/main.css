@@ -803,6 +803,173 @@ a :visited {
     left: -5px;
   }
 }
+
+.main-page_video {
+  position: relative;
+  width: 100%;
+  height: 1030px;
+  margin-bottom: 100px;
+}
+
+.main-page_video-video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main-page_video_caption {
+  padding-top: 480px;
+}
+
+.main-page_video_caption .main-page_video-title {
+  margin-bottom: 15px;
+}
+
+.main-page_video_caption .main-page_video-about {
+  margin-bottom: 40px;
+}
+
+.main-page_video-more {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main-page_video-more .video_icon {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.main_page_video-scroll {
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 90px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  padding: 8px 8px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.main_page_video-scroll i {
+  font-size: 18px;
+}
+
+.main_products {
+  max-width: 1820px;
+  margin: 0 auto;
+}
+
+.main_products-single {
+  width: 100%;
+  margin-bottom: 50px;
+  padding-left: 320px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  align-items: center;
+  justify-content: space-between;
+  height: 650px;
+  background-color: #111820;
+}
+
+.main_products-single:nth-of-type(2) {
+  padding-right: 320px;
+}
+
+.main_products-single:first-of-type .main_products-img {
+  margin-right: 65px;
+}
+
+.main_products-single:first-of-type .main_products-caption {
+  width: 40%;
+  max-width: 400px;
+}
+
+.main_products-caption {
+  width: 40%;
+}
+
+.main_products-img {
+  width: 60%;
+}
+
+.main_products-img {
+  align-self: flex-end;
+  max-height: 100%;
+  width: auto;
+}
+
+.main_products-category {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+
+.main_products-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.main_products-btn {
+  padding: 15px 35px;
+}
+
+.main-page_certificates .slider {
+  width: 100%;
+  height: 347px;
+  overflow: hidden;
+}
+
+.main-page_certificates .slides {
+  height: 100%;
+}
+
+.main-page_certificates .slide {
+  float: left;
+  height: 100%;
+  margin-right: 35px;
+}
+
+.main-page_certificates .slide img {
+  height: 100%;
+  width: auto;
+}
+
+.main-page_certificates .controls {
+  text-align: center;
+}
+
+.main-page_certificates .slider_btn {
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
  
 
  /*# sourceMappingURL= main.css.map */
