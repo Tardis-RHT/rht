@@ -1002,6 +1002,62 @@ a :visited {
 .main_products-btn {
   padding: 15px 35px;
 }
+
+.main_partners {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main_partners_wrapper {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+}
+
+.main_partenrs_container {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+
+.main_partners_single {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  align-items: center;
+  width: 200px;
+  height: 150px;
+}
+
+.main_partners_single img {
+  max-width: 100%;
+  text-align: center;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+}
+
+.main_partners_single img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  /* Safari 6.0 - 9.0 */
+}
  
 
  /*# sourceMappingURL= main.css.map */
