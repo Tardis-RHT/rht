@@ -38,4 +38,27 @@ $('#burger').click(function() {
 		  $('.header_cart_call').addClass('invisible');
 	  }
   });
+
+ 
+	$("#lightgallery").lightGallery({
+		escKeyescKey: true,
+		mousewheel: false,
+	}); 
+
+
+  $('#lightSlider').lightSlider({
+    gallery: false,
+    item: 1,
+    loop:true,
+    slideMargin: 0,
+	controls: true,
+	adaptiveHeight: false,
+	pager: false
+});
+
+
+
+
+
+
 });
