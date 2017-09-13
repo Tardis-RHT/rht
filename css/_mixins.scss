@@ -13,7 +13,7 @@
      transition: $property $duration;
 }
 
-//Test-styles 
+//Text-styles 
 
 @mixin text-style_main($font-weight, $color, $line-height){
     font-family: $main_font;
