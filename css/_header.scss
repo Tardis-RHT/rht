@@ -30,7 +30,6 @@
     width: 32px;
     text-align: center;
 }
-
 .header_mobile_logo {
 	 font-weight: $weight_bold;
 	 font-size: 24px;
@@ -66,7 +65,6 @@
 	position: fixed;
 	z-index: 100;
 }
-
 .mobile_menu_main {
 	display: block;
 	height: 165px;
@@ -75,7 +73,6 @@
 	font-family: $main_font;
 	font-size: 18px;
 	font-weight: $weight_light;
-
 	li {
 		display: block;
 		margin: 20px;
@@ -90,7 +87,6 @@
 		}
 	}
 }
-
 .mobile_callus {
 	@include flex;
 	width: 100%;
@@ -106,7 +102,6 @@
 	font-weight: $weight_normal;
 	color: $font_white;
 }
-
 .mobile_icon_phone {
 	width: 18px;
 	height: 18px;
@@ -114,7 +109,6 @@
 	top: 25px;
 	left: -25px;
 }
-
 .mobile_callus-btn {
 	margin: 0 auto;
 	width: 225px;
@@ -135,10 +129,6 @@
 		transform: translateY(1px);
 	}
 }
-
-
-
-
 
 
 @media screen and (min-width: 872px){
@@ -220,7 +210,6 @@
 		line-height: 40px;
 		text-align: center;
 	}
-
 	.header_callus_tel {
 		width: 186px;
 		color: $font_white;
@@ -231,7 +220,6 @@
 	.zmdi-phone{
 		color: rgba(255,255,255,0.5);
 	}
-
 	.header_callus_text {
 		width: 235px;
 		border-right: solid 1px rgb(53, 59, 66);
@@ -293,7 +281,6 @@
 		width: 20%;
 		justify-content: flex-end;
 	}
-
 	.header_cart_call-button {
 		width: 225px;
 		height: 35px;
@@ -321,7 +308,6 @@
 		justify-content: center;
 		text-align: center;
 	}
-
 	.header_cart_call-tel {
 		display: block;
 		font-family: $main_font;
@@ -329,16 +315,13 @@
 		font-size: 16px;
 		padding: 5px;
 	}
-
 	.header_cart_buy {
 		@include flex;
 		align-self: center;
-		padding: 0 20px;
+		padding: g;
 	}
-
 	.shopping-cart_number {
 		top: -10px;
 		left: -5px;
 	}
 }
-

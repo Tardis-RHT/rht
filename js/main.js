@@ -1,10 +1,10 @@
 $(function(){
 
 // MOBILE MENU
-$('#burger').click(function() {
-		$('.mobile_menu').toggle();
-		$(this).toggleClass('zmdi-menu').toggleClass('zmdi-close');
-});
+	$('#burger').click(function() {
+			$('.mobile_menu').toggle();
+			$(this).toggleClass('zmdi-menu').toggleClass('zmdi-close');
+	});
 // MOBILE MENU END
 
 
@@ -25,12 +25,13 @@ $('#burger').click(function() {
 	});
 // CHANGE LANGUAGE MENU END
 
-
+// STCIKY HEADER
 	$(window).scroll(function() {
 	  if($(this).scrollTop() >= 40) {
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
 		  $('.header_cart_call').removeClass('invisible');
+		  $('.header_cart_buy').css('padding','0 0 0 20px');
 	  }
 	  else{
 		  $('.header_wrapper_big').removeClass('stickytop');
@@ -38,7 +39,7 @@ $('#burger').click(function() {
 		  $('.header_cart_call').addClass('invisible');
 	  }
   });
-
+// END OF STCIKY HEADER
  
 	$("#lightgallery").lightGallery({
 		escKeyescKey: true,
