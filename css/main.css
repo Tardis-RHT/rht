@@ -1040,23 +1040,31 @@ a :visited {
   /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  margin-right: 10px;
   align-items: center;
   width: 200px;
   height: 150px;
 }
 
+.main_partners_single:last-of-type {
+  margin-right: 0;
+}
+
 .main_partners_single img {
+  margin: 0 auto;
   max-width: 100%;
   text-align: center;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
+  opacity: 0.9;
 }
 
 .main_partners_single img:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
   /* Safari 6.0 - 9.0 */
+  opacity: 1;
 }
 
 .main_feedback {
