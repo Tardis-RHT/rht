@@ -56,14 +56,7 @@ $(function(){
 	// 	else {
 	// 		$('.main_benefits_container').removeAttr('id', 'lightSlider');
 	// 	}
-	// }); 
-
-
-	
-
-
-
-
+	// });
 	
 
 	// LightSlider call and settings
