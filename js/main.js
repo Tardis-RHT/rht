@@ -7,7 +7,6 @@ $(function(){
 	});
 // MOBILE MENU END
 
-
 // CHANGE LANGUAGE MENU START
 	$('.header_lang_main').click(function() {
 	// 	$('.header_lang_content').toggle(function(){
@@ -57,6 +56,21 @@ $(function(){
 	// 		$('.main_benefits_container').removeAttr('id', 'lightSlider');
 	// 	}
 	// });
+	// }); 
+
+// ANCHOR SCROLL
+
+
+$(document).ready(function() {
+	$(".main_page_video-scroll").click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top - $('.header_wrapper_big').height() - 100;
+		$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+		return false;
+		});
+	});
+
+//Sertificates Carousel
 	
 
 	// LightSlider call and settings
@@ -71,6 +85,18 @@ $(function(){
 		autoWidth: true
 	});
 
+$('#lightSlider_certificates').lightSlider({
+	item:6,
+	loop:true,
+	slideMove:1,
+	easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+	speed:600,
+	controls: false,
+	prevHtml: '',
+	nextHtml: '',
+	pager: false,
+	slideMargin: 0
+});
 
 });
 

@@ -63,6 +63,19 @@
             $el = this;
         plugin.$el = this;
 
+        //for my carousel (certificates)
+        $('#prevSlide').on('click', function (e) {
+          if ($el[0].id === 'lightSlider_certificates'){
+            $el.goToPrevSlide();
+          }            
+        });
+        $('#nextSlide').on('click', function (e) {
+            if ($el[0].id === 'lightSlider_certificates'){
+                $el.goToNextSlide();
+            }
+        });
+        //end of code for carousel (certificates)
+
         if (settings.mode === 'fade') {
             settings.vertical = false;
         }
@@ -201,11 +214,11 @@
                         if ($(this).attr('class') === 'lSPrev') {
                             $el.goToPrevSlide();
                         } else {
-                            $el.goToNextSlide();
-                        }
-                        return false;
+                            $el.goToNextSlide(); 
+                        } 
+                        return false;    
                     });
-                }
+                } 
             },
             initialStyle: function () {
                 var $this = this;
