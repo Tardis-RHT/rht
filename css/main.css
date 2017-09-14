@@ -1088,13 +1088,13 @@ a :visited {
 }
 
 .main_feedback {
-  margin: 0 auto;
+  margin: 0 auto 150px;
   width: 100%;
 }
 
 .main_feedback_wrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 150px;
 }
 
 .main_feedback_container {
@@ -1238,6 +1238,253 @@ a :visited {
 
 .lg-sub-html {
   display: none;
+}
+
+.callback_form_wrapper-small {
+  margin: 0 auto;
+  width: 320px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.callback_form_wrapper-small h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.callback_form_wrapper-small p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0d223f;
+  margin: 0 20px;
+}
+
+.callback_form_wrapper-small span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #78787b;
+  align-self: flex-start;
+  margin: 0 20px;
+}
+
+.form_callback {
+  width: 320px;
+  margin: 20px;
+  border-bottom: solid 2px #78787b;
+  text-align: center;
+  padding: 20px;
+}
+
+.form_callback input, .form_callback button {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 280px;
+  height: 46px;
+}
+
+.form_callback input {
+  border: 1px solid #dddddd;
+  background-color: #f7f7f7;
+  outline: none;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #111820;
+  text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+  .main_callback {
+    margin: 0 auto;
+    width: 100%;
+    height: 685px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    background-color: #f7f7f7;
+  }
+  .main_callback_left,
+  .main_callback_right {
+    align-self: flex-end;
+    width: 100%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: auto;
+  }
+  .main_callback_left {
+    background-image: url("../img/bg_left.png");
+    background-position: left bottom;
+  }
+  .main_callback_right {
+    background-image: url("../img/bg_right.png");
+    background-position: right bottom;
+  }
+  .main_callback_center {
+    width: 525px;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    align-items: center;
+  }
+  .callback_form_wrapper {
+    width: 525px;
+    height: 585px;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  .callback_form_wrapper-small {
+    width: 440px;
+    height: 500px;
+    border: solid 1px #78787b;
+  }
+  .callback_form_wrapper-small h2 {
+    margin-left: 0;
+    margin-bottom: 45px;
+    font-size: 48px;
+    align-self: center;
+  }
+  .callback_form_wrapper-small p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 40px;
+  }
+  .callback_form_wrapper-small span {
+    font-size: 18px;
+    line-height: 26px;
+    color: #78787b;
+  }
+  .form_callback {
+    width: 357px;
+  }
+  .form_callback input, .form_callback button {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 280px;
+    height: 46px;
+  }
+  .form_callback input {
+    border: 1px solid #dddddd;
+    background-color: #f7f7f7;
+    outline: none;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #111820;
+    text-align: center;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.footer_wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_wrapper .header_menu {
+  justify-content: flex-start;
+}
+
+.footer_copyright {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #78787b;
+}
+
+@media screen and (max-width: 872px) {
+  footer {
+    height: 40px;
+    background-color: #111820;
+  }
+  .footer_wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer_wrapper .header_menu {
+    display: none;
+  }
+  .footer_copyright {
+    text-align: center;
+  }
 }
  
 
