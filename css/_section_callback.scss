@@ -100,8 +100,10 @@
         height: 500px;    
         border: solid 1px $font-gray;
         h2{
+            margin-left: 0;
             margin-bottom: 45px;
-            font-size: 48px;            
+            font-size: 48px;
+            align-self: center;        
         }
         p{
             font-weight: $weight_normal;

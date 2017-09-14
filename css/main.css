@@ -1363,8 +1363,10 @@ a :visited {
     border: solid 1px #78787b;
   }
   .callback_form_wrapper-small h2 {
+    margin-left: 0;
     margin-bottom: 45px;
     font-size: 48px;
+    align-self: center;
   }
   .callback_form_wrapper-small p {
     font-weight: 500;
