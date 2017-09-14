@@ -6,11 +6,11 @@
     display: flex;               /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
 }
 
-@mixin transition($property, $duration){
-    -webkit-transition: $property $duration;
-     -moz-transition: $property $duration;
-     -o-transition: $property $duration;
-     transition: $property $duration;
+@mixin transition($property){
+    -webkit-transition: $property 0.3s;
+     -moz-transition: $property 0.3s;
+     -o-transition: $property 0.3s;
+     transition: $property 0.3s;
 }
 
 //Text-styles 
@@ -55,7 +55,7 @@
     text-decoration: none;
     background-color: $button_normal;
     position: relative;
-    @include transition(background-color, .3s);
+    @include transition(background-color);
     outline: none;
     border: none;
     &:hover{
@@ -81,7 +81,7 @@
     background-color: $bg_white;
     border: 2px solid $button_normal;
     position: relative;
-    @include transition(background-color, .3s);
+    @include transition(background-color);
     outline: none;
     &:hover{
         color: $font_white;
@@ -115,7 +115,7 @@
     box-shadow: none;
     padding: 0;
     #Oval{
-        @include transition(fill, .3s);
+        @include transition(fill);
     }
     &:hover{
         #Oval{
