@@ -65,12 +65,12 @@
 
         //for my carousel (certificates)
         $('#prevSlide').on('click', function (e) {
-          if ($el[0].childElementCount == '21'){
+          if ($el[0].id === 'lightSlider_certificates'){
             $el.goToPrevSlide();
           }            
         });
         $('#nextSlide').on('click', function (e) {
-            if ($el[0].childElementCount == '21'){
+            if ($el[0].id === 'lightSlider_certificates'){
                 $el.goToNextSlide();
             }
         });

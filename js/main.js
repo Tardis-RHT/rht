@@ -68,10 +68,10 @@ $(document).ready(function() {
 	});
 	});
 
-//Sertificates Carausel
+//Sertificates Carousel
 
 $('#lightSlider_certificates').lightSlider({
-	item:7,
+	item:6,
 	loop:true,
 	slideMove:1,
 	easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
@@ -79,7 +79,8 @@ $('#lightSlider_certificates').lightSlider({
 	controls: false,
 	prevHtml: '',
 	nextHtml: '',
-	pager: false
+	pager: false,
+	slideMargin: 0
 });
 
 });
