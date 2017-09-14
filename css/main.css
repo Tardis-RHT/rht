@@ -1305,6 +1305,23 @@ a :visited {
     justify-content: center;
     background-color: #f7f7f7;
   }
+  .main_callback_left,
+  .main_callback_right {
+    align-self: flex-end;
+    width: 100%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: auto;
+  }
+  .main_callback_left {
+    background-image: url("../img/bg_left.png");
+    background-position: left bottom;
+  }
+  .main_callback_right {
+    background-image: url("../img/bg_right.png");
+    background-position: right bottom;
+  }
   .main_callback_center {
     width: 525px;
     display: -webkit-box;
@@ -1344,12 +1361,18 @@ a :visited {
   }
   .callback_form_wrapper-small h2 {
     margin-bottom: 45px;
+    font-size: 48px;
   }
   .callback_form_wrapper-small p {
     font-weight: 500;
     font-size: 18px;
     line-height: 26px;
     margin: 0 40px;
+  }
+  .callback_form_wrapper-small span {
+    font-size: 18px;
+    line-height: 26px;
+    color: #78787b;
   }
   .form_callback {
     width: 357px;
