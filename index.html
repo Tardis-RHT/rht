@@ -88,19 +88,23 @@
 		<!-- END OF MAIN MENU -->
 	</header>
 	
-	<section class="main-page_video">
-	
-		<video class="main-page_video-video" poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop" poster="video/duel.jpg">
+	<section class="main-page_video" id="main_video">
+		<a href="index.html" class="video-fullscreen_logo toShow" id="video-fullscreen_logo">
+			<img src="img/logo-transparent.png" alt="RHT logo">
+		</a>
+		<video id="main_video-video" class="main-page_video-video" onclick="vidplay()" poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop" poster="video/duel.jpg" hight="1300">
 			<!-- <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'> -->
 			<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 			<!-- <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'> -->
 			<!-- Тег video не поддерживается вашим браузером. <a href="video/video.mp4">Скачайте видео</a>. -->
-  		</video>
-		<div class="main-page_video_caption wrapper">
-			<h1 class="main-page_video-title">Rolling Hi-tech</h1>
+		  </video>
+		  <a class="video-play toShow" id="video-play" onclick="vidplay()">| |</a>
+		  <button class="video_exit toShow" onclick="exitFullscreen('main_video')"><i class="zmdi zmdi-close zmdi-hc-5x"></i></button>
+		<div class="main-page_video_caption wrapper toHide">
+			<h1 class="main-page_video-title" id="title">Rolling Hi-tech</h1>
 			<h3 class="main-page_video-about">производитель усиленных комплектующих для откатных ворот</h3>
 			<p class="main-page_video-more">
-				<button class="video_icon">
+				<button class="video_icon" onclick="enterFullscreen('main_video')">
 					<svg>
 						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 							<g id="ui-kit" transform="translate(-450.000000, -698.000000)">
@@ -114,12 +118,15 @@
 						</g>
 					</svg>
 				</button>
-				Подробнее о компании
+				<a class="main-page_video-link" onclick="enterFullscreen('main_video')">Подробнее о компании</a>
 			</p>
 		</div>
 		
-		<a href="#benefits" class="main_page_video-scroll"><i class="zmdi zmdi-chevron-down"></i></a>
+		<a href="#benefits" class="main_page_video-scroll toHide"><i class="zmdi zmdi-chevron-down"></i></a>
+
+
 	</section>
+
 
 	<section class="main_benefits" id="benefits">
 		<ul id="lightSlider" class="main_benefits_container">

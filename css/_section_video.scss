@@ -9,7 +9,7 @@
     z-index: -1;
     top: 0;
     left: 0;
-    height: 100%;
+    max-height: 100%;
     width: 100%;
 }
 .main-page_video_caption{
@@ -35,6 +35,10 @@
         cursor: pointer;
     }
 }
+.main-page_video-link{
+    color: inherit;
+    cursor: pointer;
+}
 .main_page_video-scroll{
     position: absolute;
     left: calc(50% - 15px);
@@ -47,3 +51,94 @@
         font-size: 18px;
     }
 }
+
+//video popup
+.toShow{
+    display: none;
+}
+.toHide{
+    display: block;
+}
+.video_exit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: $button_inactive;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+.video-fullscreen_logo{
+    position: absolute;
+    background-color: rgba(255,255,255, .3);
+    left: 20px;
+    top: 35px;
+}
+.video-play{
+    @extend .video_icon;
+    background-color: $button_normal;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    z-index: 10;
+    color: $font_white;
+    line-height: 70px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: $weight_bold;
+    cursor: pointer;
+    visibility: hidden;
+    @include transition(visibility);
+    &:active{
+        top: calc(50% - 35px);
+    }
+}
+
+
+:-webkit-full-screen{
+    background: black;
+    }
+    :-moz-full-screen {
+    background: black;
+    }
+    :-webkit-full-screen#fs_section_video.fs_section,
+    :-webkit-full-screen#fs_section_img.fs_section{
+    width:100%;
+    left:0;
+    top:0;
+    }
+    :-moz-full-screen#fs_section_video.fs_section,
+    :-moz-full-screen#fs_section_img.fs_section{
+    width:100%;
+    left:0;
+    }
+    :-webkit-full-screen#fs_section_img.fs_section #i1{
+    display:none;
+    }
+    :-moz-full-screen#fs_section_img.fs_section #i1{
+    display:none;
+    }
+    :-webkit-full-screen#fs_section_img.fs_section #i2{
+    display:block;
+    z-index:1;
+    }
+    :-moz-full-screen#fs_section_img.fs_section #i2{
+    display:block;
+    z-index:1;
+    }
+    :-webkit-full-screen#fs_section_img.fs_section #i3{
+    opacity:1;
+    display:block;
+    z-index:2;
+    -webkit-transition: all 2s 2s ease-in-out;
+    }
+    :-moz-full-screen#fs_section_img.fs_section #i3{
+    opacity:1;
+    display:block;
+    z-index:2;
+    -moz-transition:    all 2s 2s ease-in-out;
+    }
