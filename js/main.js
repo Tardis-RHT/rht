@@ -56,9 +56,30 @@ $('#burger').click(function() {
 	pager: false
 });
 
+// ANCHOR SCROLL
 
 
+$(document).ready(function() {
+	$(".main_page_video-scroll").click(function () {
+	var elementClick = $(this).attr("href")
+	var destination = $(elementClick).offset().top - $('.header_wrapper_big').height() - 100;
+	jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+	return false;
+	});
+	});
 
+//Sertificates Carausel
 
+$('#lightSlider_certificates').lightSlider({
+	item:7,
+	loop:true,
+	slideMove:1,
+	easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+	speed:600,
+	controls: false,
+	prevHtml: '',
+	nextHtml: '',
+	pager: false
+});
 
 });

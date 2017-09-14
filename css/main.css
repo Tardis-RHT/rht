@@ -1211,6 +1211,90 @@ a :visited {
 .lg-sub-html {
   display: none;
 }
+
+.main-page_certificates {
+  padding-top: 120px;
+  padding-bottom: 140px;
+  background-color: #f7f7f7;
+  margin-bottom: 115px;
+}
+
+.main-page_certificates .slider {
+  width: auto;
+  overflow: hidden;
+}
+
+.main-page_certificates .slides {
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 45px;
+}
+
+.main-page_certificates .slide {
+  display: inline-block;
+  height: 347px;
+  width: 270px;
+  margin: 0 17px;
+}
+
+.main-page_certificates .slide img {
+  display: block;
+  height: 100%;
+  width: auto;
+  filter: brightness(0.9) grayscale(100%);
+  -webkit-transition: filter 0.3s;
+  -moz-transition: filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+}
+
+.main-page_certificates .slide img:hover {
+  filter: none;
+}
+
+.main-page_certificates .controls {
+  text-align: center;
+}
+
+.main-page_certificates .slider_btn {
+  display: inline-block;
+  width: 18px;
+  height: 46px;
+  color: #dddddd;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.main-page_certificates .slider_btn svg {
+  width: 18px;
+  height: 33px;
+}
+
+.main-page_certificates .slider_btn:hover svg > g {
+  stroke: #0071ba;
+}
+
+.main-page_certificates .slider_btn:active {
+  padding: 0;
+}
+
+.slider_controls-line {
+  display: inline-block;
+  height: 33px;
+  width: 2px;
+  background-color: #dddddd;
+  margin: 0 15px;
+}
+
+.main-page_certificates_title {
+  margin-bottom: 100px;
+}
+
+.main-page_certificates > .slider {
+  margin-bottom: 45px;
+}
  
 
  /*# sourceMappingURL= main.css.map */
