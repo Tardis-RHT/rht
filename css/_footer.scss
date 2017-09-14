@@ -1,0 +1,29 @@
+footer {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    background-color: $bg_white;
+    box-sizing: border-box;
+}
+.footer_wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    .header_menu{
+        justify-content: flex-start;
+    }
+}
+.footer_copyright {
+    font-family: $main_font;
+    font-weight: $weight_normal;
+    font-size: 18px;
+    color: $font-gray;
+}
+
+@media screen and (max-width: 872px) {
+    footer {
+        display: none;
+    }
+}

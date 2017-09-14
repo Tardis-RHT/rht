@@ -1219,6 +1219,48 @@ a :visited {
 .lg-sub-html {
   display: none;
 }
+
+footer {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.footer_wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_wrapper .header_menu {
+  justify-content: flex-start;
+}
+
+.footer_copyright {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #78787b;
+}
+
+@media screen and (max-width: 872px) {
+  footer {
+    display: none;
+  }
+}
  
 
  /*# sourceMappingURL= main.css.map */
