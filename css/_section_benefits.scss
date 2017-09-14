@@ -14,8 +14,8 @@
 }
 
 .main_benefits_single {
-    width: 350px;
-    height: 340px;
+    width: 305px;
+    height: 380px;
     box-sizing: border-box;
     text-align: left;
     margin-bottom: 85px;
@@ -37,4 +37,22 @@
     align-self: flex-start
 }
 
+@media screen and (max-width: 915px) {
+    .main_benefits_container{
+        justify-content: space-around;
+    }
+}
 
+@media screen and (max-width: 620px) {
+    .main_benefits_container{
+        justify-content: center;
+    }
+    .main_benefits_single {
+        height: 340px;
+        margin-bottom: 15px;
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
