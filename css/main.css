@@ -1219,6 +1219,7 @@ a :visited {
 .lg-sub-html {
   display: none;
 }
+<<<<<<< HEAD
 
 footer {
   width: 100%;
@@ -1261,6 +1262,8 @@ footer {
     display: none;
   }
 }
+=======
+>>>>>>> cd83856a1f2669d86d2ecdf3567b1740bf5916f5
  
 
  /*# sourceMappingURL= main.css.map */
