@@ -5,15 +5,20 @@
     margin: 0 auto;
 }
 
+%wrapper-mobile{
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
 //titles
 
 h1 {
     font-family: $main_font;
     font-weight: $weight_super-bold;
-    font-size: 72px;
+    font-size: 28px;
+    line-height: 50px;
     color: $font_white;
     letter-spacing: 2.2px;
-    line-height: 112px;
     text-transform: uppercase;
     position: relative;
     &::before{
@@ -22,20 +27,29 @@ h1 {
         background-image: url('../img/squares.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: 40px;
-        height: 13px;
-        left: 7px;
-        bottom: 0;
+        width: 25px;
+        height: 8px;
+        left: 0px;
+        bottom: 0px;
+    }
+    @media(min-width:768px){
+        font-size: 72px;
+        line-height: 112px;
+        &::before{
+            width: 40px;
+            height: 13px;
+            left: 7px;
+        }
     }
 }
 
 h2 {
     font-family: $main_font;
     font-weight: $weight_bold;
-    font-size: 48px;
+    font-size: 24px;
     color: $font_h2;
     letter-spacing: 0px;
-    line-height: 57px;
+    line-height: 33px;
     position: relative;
     &::before{
         content: "";
@@ -48,30 +62,42 @@ h2 {
         left: 4px;
         bottom: -10px;
     }
+    @media(min-width:768px){
+        font-size: 48px;
+        line-height: 57px;
+    }
 }
 
 h3 {
     font-family: $main_font;
     font-weight: $weight_normal;
     font-size: 24px;
-    color: $font_white;
     line-height: 34px;
+    color: $font_white;
 }
 
 .dots{
     position: relative;
-    margin-left: 50px;
     text-transform: uppercase;
+    margin-left: 40px;
     &::before{
        content: "";
         position: absolute;
         background-image: url('../img/squares.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        width: 40px;
-        height: 11px;
-        left: -50px;
+        width: 30px;
+        height: 8px;
+        left: -40px;
         bottom: 4px; 
+    }
+    @media(min-width:768px){
+        margin-left: 50px;
+        &::before{
+            left: -50px;
+            width: 40px;
+            height: 11px;
+        }
     }
 }
 
