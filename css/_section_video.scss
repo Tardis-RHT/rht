@@ -1,8 +1,8 @@
 .main-page_video{
     position: relative;
     width: 100%;
-    min-height: 300px;
-    max-height: 1030px;
+    // min-height: 300px;
+    // max-height: 1030px;
     @media (min-width:768px){
         height: 1030px;
         margin-bottom: 100px;
@@ -76,6 +76,10 @@
         font-size: 18px;
         line-height: 22px;
     }
+}
+.main-page_video-link{
+    color: inherit;
+    cursor: pointer;
 }
 .main_page_video-scroll{
     visibility: hidden;
