@@ -1682,9 +1682,8 @@ a :visited {
 
 .callback_form_wrapper-small h2 {
   margin-bottom: 25px;
-  font-size: 32px;
   align-self: flex-start;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .callback_form_wrapper-small p {
@@ -1692,7 +1691,7 @@ a :visited {
   font-size: 16px;
   line-height: 22px;
   color: #0d223f;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .callback_form_wrapper-small span {
@@ -1701,7 +1700,7 @@ a :visited {
   line-height: 18px;
   color: #78787b;
   align-self: flex-start;
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 .form_callback {
@@ -1807,7 +1806,6 @@ a :visited {
   .callback_form_wrapper-small h2 {
     margin-left: 0;
     margin-bottom: 45px;
-    font-size: 48px;
     align-self: center;
   }
   .callback_form_wrapper-small p {
