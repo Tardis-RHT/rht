@@ -1399,18 +1399,29 @@ a :visited {
 }
 
 .main_feedback {
-  margin: 0 auto 150px;
+  margin: 0 auto;
   width: 100%;
 }
 
 .main_feedback_wrapper {
   max-width: 1200px;
-  margin: 0 auto 150px;
+  margin: 0 auto;
+}
+
+.main_feedback_number-container {
+  width: 100%;
+  text-align: right;
+  margin-left: -15px;
+}
+
+.main_feedback_number-container img {
+  width: 15px;
+  height: 15px;
 }
 
 .main_feedback_container {
   margin: 0 auto;
-  width: 670px;
+  width: 100%;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -1425,79 +1436,23 @@ a :visited {
   flex-flow: column;
 }
 
-.main_feedback_number-container {
-  width: 50%;
-  margin-left: auto;
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  justify-content: space-between;
-  align-items: right;
-}
-
-.main_feedback_number-container img {
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
-}
-
-.main_feedback_number {
-  font-family: "MuseoSansCyrl";
-  font-weight: 300;
-  font-size: 18px;
-  color: #78787b;
-  letter-spacing: 0;
-  line-height: 26px;
-}
-
-.main_feedback_number span {
-  font-size: 36px;
-  font-weight: 500;
-}
-
 .main_feedback_text {
-  width: 670px;
-  margin: 40px 0;
+  margin: 15px 15px;
   text-align: left;
   font-family: "MuseoSansCyrl";
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .main_feedback_nameanddate {
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  width: 100%;
-  justify-content: space-between;
-  text-align: left;
-  font-family: "MuseoSansCyrl";
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
-  color: #78787b;
-  margin-bottom: 20px;
+  margin-left: 15px;
 }
 
 .main_feedback_gallery {
-  width: 350px;
+  width: 290px;
   align-self: center;
-  margin: 35px;
+  margin-bottom: 20px;
 }
 
 .main_feedback_gallery-cont {
@@ -1537,14 +1492,108 @@ a :visited {
   width: 240px;
   height: 46px;
   align-self: center;
-  margin-top: 35px;
+  margin-bottom: 50px;
 }
 
-.fantom {
-  margin: 0 auto;
-  height: 500px;
-  padding: 100px;
-  text-align: center;
+@media screen and (min-width: 760px) {
+  .main_feedback {
+    margin: 0 auto 150px;
+  }
+  .main_feedback_wrapper {
+    max-width: 1200px;
+    margin: 0 auto 150px;
+  }
+  .main_feedback_number-container {
+    width: 50%;
+    margin-left: auto;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: space-between;
+    align-items: right;
+  }
+  .main_feedback_number-container img {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+  }
+  .main_feedback_container {
+    width: 670px;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    flex-flow: column;
+  }
+  .main_feedback_number {
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 18px;
+    color: #78787b;
+    letter-spacing: 0;
+    line-height: 26px;
+  }
+  .main_feedback_number span {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .main_feedback_text {
+    width: 670px;
+    margin: 40px 0;
+    text-align: left;
+    font-family: "MuseoSansCyrl";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .main_feedback_nameanddate {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #78787b;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  .main_feedback_gallery {
+    width: 350px;
+  }
+  .main_feedback_feedback {
+    margin-top: 35px;
+  }
+  .fantom {
+    margin: 0 auto;
+    height: 500px;
+    padding: 100px;
+    text-align: center;
+  }
 }
 
 .lg-sub-html {
