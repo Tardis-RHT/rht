@@ -382,7 +382,6 @@ h3 {
   background-image: url("../img/squares.svg");
   background-repeat: no-repeat;
   background-size: contain;
-
   width: 30px;
   height: 8px;
   left: -40px;
@@ -398,7 +397,6 @@ h3 {
     width: 40px;
     height: 11px;
   }
-
 }
 
 .button_short {
@@ -913,7 +911,6 @@ a :visited {
 }
 
 .main-page_video-more .video_icon, .main-page_video-more .video-play {
-
   margin-bottom: 0;
   cursor: pointer;
 }
@@ -934,7 +931,6 @@ a :visited {
 
 .main-page_video-link {
   color: inherit;
-
   cursor: pointer;
   font-size: 12px;
   line-height: 20px;
@@ -972,7 +968,6 @@ a :visited {
     visibility: visible;
   }
 }
-
 
 .toShow {
   display: none;
