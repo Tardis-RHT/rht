@@ -849,6 +849,8 @@ a :visited {
 .main-page_video {
   position: relative;
   width: 100%;
+  min-height: 300px;
+  max-height: 1030px;
 }
 
 @media (min-width: 768px) {
@@ -863,7 +865,6 @@ a :visited {
   z-index: -1;
   top: 40px;
   left: 0;
-  max-height: 100%;
   width: 100%;
 }
 
