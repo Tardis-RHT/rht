@@ -117,6 +117,9 @@ $(document).ready(function() {
 
 	});
 
+
+
+
 // VIDEO POPUP
 	var toHide = document.getElementsByClassName("toHide");
 	var toShow = document.getElementsByClassName("toShow");
