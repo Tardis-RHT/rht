@@ -806,6 +806,7 @@ a :visited {
     text-decoration: none;
     font-weight: bold;
     font-weight: 700;
+    outline: none;
   }
   .header_cart_call-button:hover {
     background-color: #0063a6;
