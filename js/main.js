@@ -89,43 +89,33 @@ $(document).ready(function() {
 		autoWidth: true
 	});
 
-$('#lightSlider_certificates').lightSlider({
-	item:6,
-	loop:true,
-	slideMove:1,
-	easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-	speed:600,
-	controls: false,
-	prevHtml: '',
-	nextHtml: '',
-	pager: false,
-	slideMargin: 0
-});
 
-});
 
-// $(document).ready(function() {
-// 		var sld = function() {
-// 		var slider = $('#lightSlider').lightSlider();
-// 		if ($(window).width() < 620) {
-// 					slider.lightSlider({
-// 					gallery: false,
-// 					item: 1,
-// 					loop: true,
-// 					slideMargin: 0,
-// 					controls: true,
-// 					adaptiveHeight: true,
-// 					pager: false,
-// 					autoWidth: true
-// 				});
-// 		} else {
-// 		slider.destroy();
-// 		}
-// 		};
-// 	sld();
-// 	$(window).resize(sld);
-// });
+		$('#lightSlider_certificates').lightSlider({
+			item:6,
+			loop:true,
+			easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+			speed:600,
+			controls: false,
+			pager: false,
+			slideMargin: 0,
+			responsive: [
+				{
+					breakpoint:620,
+					settings: {
+						item:4
+					  }
+				},
+				{
+					breakpoint:470,
+					settings: {
+						item:3
+					  }
+				}
+			]
+		});
 
+	});
 
 // VIDEO POPUP
 	var toHide = document.getElementsByClassName("toHide");
