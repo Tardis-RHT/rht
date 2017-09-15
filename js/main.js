@@ -25,8 +25,8 @@ $(function(){
 	});
 	// CHANGE LANGUAGE MENU END
 
-	// STCIKY HEADER$
-	$(function(){
+	// STCIKY HEADER
+	$(window).scroll(function() {
 	  if($(this).scrollTop() >= 40) {
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
