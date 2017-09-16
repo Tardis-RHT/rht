@@ -2057,6 +2057,103 @@ footer {
     text-align: center;
   }
 }
+
+li .zmdi {
+  color: #0071ba;
+  left: -10px;
+}
+
+.contacts_feedback {
+  width: 100%;
+  text-align: center;
+}
+
+.page-contacts_h2 {
+  padding-top: 100px;
+  text-align: center;
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #111820;
+}
+
+.page-contacts_h2::before {
+  content: none;
+}
+
+.contacts_feedback p {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  color: #111820;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 24px;
+}
+
+.contacts_feedback button {
+  margin: 0 auto;
+}
+
+.contacts_feedback span {
+  display: inline-block;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 26px;
+  padding-top: 24px;
+}
+
+.page-contacts_wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+.page-contacts_wrapper-small {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+}
+
+.contacts_map {
+  width: 50%;
+}
+
+.contacts_contacts {
+  width: 50%;
+}
+
+.contacts_contacts h2 {
+  margin-bottom: 42px;
+}
+
+.page-contacts_list li {
+  max-width: 260px;
+  margin-bottom: 30px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contacts_bold {
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
  
 
  /*# sourceMappingURL= main.css.map */
