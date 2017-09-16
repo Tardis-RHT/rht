@@ -7,16 +7,15 @@
     flex-direction: column;
     h2{
         margin-bottom: 25px;
-        font-size: 32px;
         align-self: flex-start;
-        margin-left: 20px;
+        margin-left: 10px;
         }
     p{
         font-weight: $weight_normal;
         font-size: 16px;
         line-height: 22px;
         color: $font_h2;
-        margin: 0 20px;
+        margin: 0 10px;
     }
     span{
         display: inline-block;
@@ -24,7 +23,7 @@
         line-height: 18px;
         color: $font-gray;        
         align-self: flex-start;
-        margin: 0 20px;
+        margin: 0 10px;
     }
 }
 .form_callback {
@@ -102,7 +101,6 @@
         h2{
             margin-left: 0;
             margin-bottom: 45px;
-            font-size: 48px;
             align-self: center;        
         }
         p{

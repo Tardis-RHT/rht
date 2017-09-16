@@ -17,7 +17,7 @@
     background-color: $bg_black; 
     
     &:first-of-type{
-        background-image: url('../img/furniture.png');
+        background-image: url('../img/products/furniture.png');
         // background-size: 150%;
         .main_products-img{
             margin-right: 65px;
@@ -27,12 +27,12 @@
         }
     }
     &:nth-of-type(2){
-        background-image: url('../img/automatique.png');
+        background-image: url('../img/products/automatique.png');
         background-repeat: no-repeat;
         background-size: 120%;
     }
     &:last-of-type{
-        background-image: url('../img/filenka.png');
+        background-image: url('../img/products/filenka.png');
         background-repeat: no-repeat;
         // background-size: 120%;
         .main_products-title{
