@@ -1,82 +1,90 @@
-li{
-    .zmdi{
-        color: rgb(0,113,186);
-        left: -10px;
-    }
+.breadcrumbs_wrapper{
+	margin: 0 auto;
+	max-width: 1200px;
 }
 .contacts_feedback{
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 100px;
 }
 .page-contacts_h2{
-    padding-top: 100px;
-    text-align: center;
-    font-family: $main_font;
-    font-weight: $weight_bold;
-    font-size: 36px;
-    line-height: 42px;
-    color: $font_black;
-    &::before{
-        content: none;
-    }
+	padding-top: 100px;
+	text-align: center;
+	font-family: $main_font;
+	font-weight: $weight_bold;
+	font-size: 36px;
+	line-height: 42px;
+	color: $font_black;
+	&::before{
+		content: none;
+	}
 }
 .contacts_feedback{
-    p{
-        font-family: $main_font;
-        font-weight: $weight_light;
-        color: $font_black;
-        font-size: 24px;
-        line-height: 30px;    
-        padding: 24px;
-    }
-    button{
-        margin: 0 auto;
-    }
-    span{
-        display: inline-block;
-        @include text-style_main($weight_light, $font_black, 26px);
-        padding-top: 24px;
-    }
+	p{
+		font-family: $main_font;
+		font-weight: $weight_light;
+		color: $font_black;
+		font-size: 24px;
+		line-height: 30px;
+		padding: 24px;
+	}
+	button{
+		margin: 0 auto;
+	}
+	span{
+		display: inline-block;
+		@include text-style_main($weight_light, $font_black, 26px);
+		padding-top: 24px;
+	}
 }
 
 .page-contacts_wrapper{
-    width: 100%;
-    margin: 0 auto;
-    background-color: $bg_section;        
+	width: 100%;
+	margin: 0 auto;
+	background-color: $bg_section;
+	position: relative;
 }
 .page-contacts_wrapper-small{
-    max-width: 1200px;
-    margin: 0 auto;
-    @include flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	@include flex;
+	
 }
 .contacts_map{
+	position: absolute;
     width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;	
 }
-
-
-
-
-
 .contacts_contacts{
-    width: 50%;
-    h2{
-        margin-bottom: 42px;
-    }
+	width: 50%;
+	h2{
+		margin-bottom: 42px;
+	}
 }
 .page-contacts_list{
-    li{
-        max-width: 260px;
-        margin-bottom: 30px;
-        font-family: $main_font;
-        font-weight: $weight_light;
-        font-size: 18px;
-        line-height: 26px;
-    }
+	li{
+		max-width: 100%;
+		margin-bottom: 30px;
+		font-family: $main_font;
+		font-weight: $weight_light;
+		font-size: 18px;
+		line-height: 26px;
+		position: relative;
+		padding-left: 30px;
+		.zmdi{
+			color: rgb(0,113,186);
+			position: absolute;
+			left: 0;
+			top: 2px;
+		}
+	}
 }
 .contacts_bold{
-    font-family: $main_font;
-    font-weight: $weight_bold;
-    font-size: 18px;
-    line-height: 22px;
+	font-family: $main_font;
+	font-weight: $weight_bold;
+	font-size: 18px;
+	line-height: 22px;
 
 }

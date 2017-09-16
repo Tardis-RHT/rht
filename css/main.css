@@ -2058,14 +2058,15 @@ footer {
   }
 }
 
-li .zmdi {
-  color: #0071ba;
-  left: -10px;
+.breadcrumbs_wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .contacts_feedback {
   width: 100%;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .page-contacts_h2 {
@@ -2110,6 +2111,7 @@ li .zmdi {
   width: 100%;
   margin: 0 auto;
   background-color: #f7f7f7;
+  position: relative;
 }
 
 .page-contacts_wrapper-small {
@@ -2128,7 +2130,11 @@ li .zmdi {
 }
 
 .contacts_map {
+  position: absolute;
   width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
 }
 
 .contacts_contacts {
@@ -2140,12 +2146,21 @@ li .zmdi {
 }
 
 .page-contacts_list li {
-  max-width: 260px;
+  max-width: 100%;
   margin-bottom: 30px;
   font-family: "MuseoSansCyrl";
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.page-contacts_list li .zmdi {
+  color: #0071ba;
+  position: absolute;
+  left: 0;
+  top: 2px;
 }
 
 .contacts_bold {
