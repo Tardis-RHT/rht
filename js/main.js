@@ -1,3 +1,4 @@
+
 $(function(){
 
 	// MOBILE MENU
@@ -66,7 +67,7 @@ $(function(){
 	$(document).ready(function() {
 		$(".main_page_video-scroll").click(function () {
 			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height() - 100;
+			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height();
 			$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
 			return false;
 			});
