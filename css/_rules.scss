@@ -1,14 +1,15 @@
 @import 'reset', 'fonts', 'variables', 'mixins';
 
 .wrapper{
+    width: calc(100% - 30px);
     max-width: 1200px;
     margin: 0 auto;
 }
 
-%wrapper-mobile{
-    width: calc(100% - 30px);
-    margin: 0 auto;
-}
+// %wrapper-mobile{
+//     width: calc(100% - 30px);
+//     margin: 0 auto;
+// }
 
 //titles
 
@@ -31,6 +32,10 @@ h1 {
         height: 8px;
         left: 0px;
         bottom: 0px;
+    }
+    @media (min-width:480px){
+        font-size: 36px;
+        line-height: 60px;
     }
     @media(min-width:768px){
         font-size: 72px;

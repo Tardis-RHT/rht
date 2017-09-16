@@ -215,3 +215,21 @@ $(document).ready(function() {
 			$('#video-play').delay(1500).fadeOut();
 		});		
 	});
+
+	
+
+
+
+	$(function(){
+		var calcVideoSize = function() {
+			var video_height = $('#main_video-video').outerHeight()
+			$('#main_video').css("height", video_height + 'px');
+			console.log(video_height);
+		}
+		$(window).resize(function() {
+			calcVideoSize()
+		});	
+			calcVideoSize();
+
+	})
+
