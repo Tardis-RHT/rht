@@ -57,15 +57,17 @@
     position: relative;
     @include transition(background-color);
     outline: none;
-    border: none;
+    border: 2px solid $button_normal;
     &:hover{
         background-color: $button_hover;
+        border-color: $button_hover;
     }
     &:active{
         top: 1px;
     }
     &:disabled{
         background-color: $button_inactive;
+        border-color: $button_inactive;
         &:hover{
             top:0;
         }

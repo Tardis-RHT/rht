@@ -148,4 +148,14 @@ a {
 
 }
 
+.breadcrumbs{
+    @include text-style_main($weight_light, $font-gray, 22px);
+    padding-top: 30px;
+}
 
+// .only_desktop{
+//     display: none;
+//     @media (min-width:769px){
+//         display: block;
+//     }
+// }
