@@ -237,3 +237,14 @@ function _fullscreenEnabled() {
 
 	})
 });
+
+
+// VIDEO POPUP IN FURNITURA
+$(function () {
+	$('#vidBox').VideoPopUp({
+		backgroundColor: "#17212a",
+		opener: "video1",
+		maxweight: "1200",
+		idvideo: "v1"
+	});
+});

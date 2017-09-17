@@ -7,7 +7,7 @@
 	<title>RHT</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" href="css/lightslider.css">
+	<link rel="stylesheet" type="text/css" href="css/videopopup.css" media="screen" />
 	<link rel="stylesheet" href="css/lightgallery.css">
 	
 	
@@ -88,9 +88,9 @@
 		<!-- END OF MAIN MENU -->
     </header>
 
-    <section class="wrapper_huge">
-        <div class="furnitura_title">
-            <div class="furnitura_title_wrapper wrapper">
+    <section class="furnitura_title">
+        <div class="furnitura_title_wrapper">
+            <div class="furnitura_title_wrapper-small wrapper">
                     <h3 class="furnitura_h3_product dots">Продукция</h3>
                     <h3 class="furnitura_products-title">Усиленная фурнитура для откатных ворот</h3>
             </div>
@@ -131,6 +131,56 @@
             </li>
         </ul>
     </section>
+
+	<section class="furnitura_video">
+		
+		<img class="furnitura_video_pic" src="img/furnitura_video_bg.png">
+		<div class="furnitura_video_wrapper wrapper">
+			<h3 class="furnitura_video_h3">Детальнее об усиленной фурнитуре <span>ROLLING HI-TECH</span></h3>
+			<p class="main-page_video-more">
+				<button class="video_icon">
+					<svg>
+						<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<g id="ui-kit" transform="translate(-450.000000, -698.000000)">
+								<g id="btn-play" transform="translate(450.000000, 698.000000)">
+									<g id="normal">
+										<circle id="Oval" fill="#0071BA" cx="25" cy="25" r="25"></circle>
+										<polygon id="Triangle" fill="#FFFFFF" points="34 25 19 31 19 19"></polygon>
+									</g>
+								</g>
+							</g>
+						</g>
+					</svg>
+				</button>
+				<div>
+					<a class="main-page_video-link video" href="javascript:void(0)" id="video1">Посмотреть видео</a>
+				</div>
+				<div id="vidBox">
+						<div id="videCont">
+							<video id="v1" loop controls>
+								<source src="video/video.mp4" type="video/mp4">
+								<!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
+							</video>
+						 </div>
+				</div>
+			</p>
+
+
+
+
+
+
+		</div>
+	</section>
+
+	<section class="furnitura_download">
+		<div class="furnitura_wrapper wrapper">
+			<p>Собираетесь установить ворота своими руками?</p>
+			<button class="ghost_btn material-icons">Скачать инструкцию  
+					<i class="zmdi zmdi-download"></i>
+			</button>
+		</div>
+	</section>
 
 	<section class="main_feedback">
 		<div class="main_feedback_wrapper">
@@ -206,7 +256,7 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/lightslider.js"></script>
+	<script type="text/javascript" src="js/videopopup.js"></script>
 	<script type="text/javascript" src="js/lightgallery.js"></script>	
 </body>
 </html>
