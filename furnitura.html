@@ -182,6 +182,44 @@
 		</div>
 	</section>
 
+	<section class="furnitura_choose">
+		<div class="choose_wrapper wrapper">
+			<h2>Подобрать фурнитуру</h2>
+			<p>Укажите материал ваших ворот и их высоту. Выберете ширину ворот и нажмите «Применить». Готово! Вы увидите комплеты фурнитуры для ваших ворот.</p>
+			<div class="furnitura_choose_options">
+				<div class="furnitura_choose_material">
+					<span class="furnitura_choose_title">Материал зашивки ворот</span>
+					<div class="furnitura_choose_dropdown dropdown">
+						<button onclick="myFunction()" class="dropbtn">Любой</button>
+						<div id="myDropdown" class="dropdown-content">
+							<a href="#">Филёнка 280 x 280 x 1,5 мм</a>
+							<a href="#">Филёнка 480 x 280 x 1,5 мм</a>
+							<a href="#">Филёнка 480 x 480 x 1,5 мм</a>
+							<a href="#">Декоративная полоса 2 м</a>
+						</div>
+					</div>
+				</div>
+				<div class="furnitura_choose_height">
+					<span class="furnitura_choose_title">Высота, м</span>
+					<div class="range-slider">
+						<span class="">0</span>							
+						<input class="range-slider__range" type="range" min="0" max="4" step="1" value="2"> 
+						<span class="range-slider__value">0</span>
+					</div>									
+				</div>
+				<div class="furnitura_choose_width">
+					<span class="furnitura_choose_title">Ширина проема, м</span>
+					<div class="range-slider">
+						<span class="">0</span>							
+						<input class="range-slider__range" type="range" min="0" max="10" step="1" value="5"> 
+						<span class="range-slider__value">0</span>
+					</div>
+				</div>
+				<button class="furnitura_choose_btn btn" disabled>Применить</button>
+			</div>
+		</div>
+	</section>
+
 	<section class="main_feedback">
 		<div class="main_feedback_wrapper">
 			<h2>Отзывы</h2>

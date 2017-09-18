@@ -145,3 +145,139 @@
     }
 }
 // END OF SECTION DOWNLOAD
+
+//SECTION CHOOSE
+.choose_wrapper{
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    h2{
+        margin-top: 125px;
+        margin-bottom: 30px;
+    }
+    p{
+        max-width: 550px;
+        font-family: $main_font;
+        font-weight: $weight_light;
+        font-size: 18px;
+        line-height: 26px;
+        color: $font_h2;
+        margin-bottom: 70px;
+    }
+}
+.furnitura_choose_options{
+    margin: 0 auto;
+    width: 100%;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.furnitura_choose_btn{
+    width: 265px;
+    height: 46px;
+    align-self: flex-end;
+}
+.furnitura_choose_title{
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: $weight_light;
+    color: $font_black;
+    margin: 5px 0;
+}
+// DROPDOWN MENU
+/* Dropdown Button */
+.dropbtn {
+    margin: 0 auto;
+    width: 265px;
+    height: 46px;
+    background-color: $bg_section;
+    color: $font_black;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: $weight_normal;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: $bg_section;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $bg_section;
+    width: 265px;
+    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: $font_black;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    font-weight: $weight_normal;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+//END OF DROPDOWN MENU
+
+.furnitura_choose_height,
+.furnitura_choose_width {
+    width: 25%;
+}
+
+// RANGE SLIDER
+.range-slider {
+  height: 46px;
+  text-align: center;
+  @include flex;
+  align-items: center;
+  span{
+      padding: 0 25px;
+      color: $font_black;
+      font-size: 18px;
+      font-weight: $weight_normal;
+      line-height: 22px;
+      text-align: center;
+  }
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    height: 2px;
+    outline: none;
+    background-color: rgb(221,221,221);
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: $button_normal;
+    height: 10px;
+    width: 10px;
+    transform: rotate(-45deg);
+    &:hover{
+        background-color: $button_hover;
+    }
+}
+// END OF RANGE SLIDER
+
+
+
+
+
+//END OF SECTION CHOOSE
