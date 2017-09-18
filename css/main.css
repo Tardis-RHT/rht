@@ -2237,14 +2237,23 @@ footer {
   position: absolute;
   z-index: 2;
   max-width: 100%;
-  top: 0;
+  bottom: 0;
   left: 60%;
   opacity: .5;
+}
+
+@media (min-width: 480px) {
+  .automatica_set-single-wrapper img {
+    max-width: 80%;
+    left: 50%;
+    opacity: .9;
+  }
 }
 
 @media (min-width: 769px) {
   .automatica_set-single-wrapper img {
     position: static;
+    max-width: none;
     opacity: 1;
   }
 }
@@ -2256,6 +2265,7 @@ footer {
   z-index: 3;
   width: 60px;
   height: 60px;
+  opacity: 1;
 }
 
 @media (min-width: 769px) {
@@ -2386,7 +2396,6 @@ footer {
 @media (min-width: 769px) {
   .automatica_set-capture button {
     font-size: 18px;
-    margin-bottom: 0;
   }
 }
 
@@ -2398,14 +2407,6 @@ footer {
   .automatica_set-capture > .only_desktop {
     display: inline-block;
   }
-}
-
-.automatica_offers {
-  margin-bottom: 140px;
-}
-
-.automatica_offers-title {
-  margin-bottom: 45px;
 }
 
 .see-more-mobile {
@@ -2421,23 +2422,32 @@ footer {
   }
 }
 
+.automatica_offers {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .automatica_offers {
+    margin-bottom: 140px;
+  }
+}
+
+.automatica_offers-title {
+  margin-bottom: 45px;
+}
+
 .offers > a {
   font-weight: 700;
   font-size: 24px;
   line-height: 34px;
   margin-bottom: 15px;
-  display: inline-block;
-  background-color: rgba(17, 24, 32, 0.2);
-  margin-bottom: 15px;
-  padding: 10px 10px;
-  text-align: center;
-  justify-content: center;
-  background-color: #111820;
+  background-color: rgba(17, 24, 32, 0.3);
   display: block;
-  height: auto;
-  width: 100%;
+  width: calc(100% + 30px);
+  height: 195px;
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: cover;
+  background-position: bottom right;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -2449,7 +2459,22 @@ footer {
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  text-align: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.offers > a h3 {
+  background-color: rgba(17, 24, 32, 0.2);
+}
+
+@media (min-width: 480px) {
+  .offers > a {
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -2462,18 +2487,10 @@ footer {
 
 @media (min-width: 1024px) {
   .offers > a {
-    margin-bottom: 50px;
     font-size: 36px;
     line-height: 46px;
-  }
-}
-
-@media (min-width: 769px) {
-  .offers > a {
-    background-size: contain;
-    padding-left: 60px;
-    height: 195px;
-    width: 565px;
+    width: calc(50% - 35px);
+    margin: 0 0 50px;
   }
 }
 
