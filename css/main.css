@@ -823,6 +823,10 @@ a :visited {
     font-weight: bold;
     font-weight: 700;
     outline: none;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
   }
   .header_cart_call-button:hover {
     background-color: #0063a6;
@@ -2464,6 +2468,7 @@ input[type='range']::-webkit-slider-thumb {
 input[type='range']::-webkit-slider-thumb:hover {
   background-color: #0063a6;
 }
+
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
   background-color: #0071ba;
@@ -2493,6 +2498,7 @@ input[type=range]::-ms-thumb {
 input[type=range]::-ms-thumb:hover {
   background-color: #0063a6;
 }
+
 .breadcrumbs_wrapper {
   margin: 0 auto;
   max-width: 1200px;
