@@ -55,6 +55,7 @@
             filter: grayscale(0);
             -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
             opacity: 1;
+            @include transition(all);
         }
     }
 }
@@ -141,5 +142,8 @@
 
 // Disable the bottom panel in the gallery
 .lg-sub-html {
+    display: none;
+}
+#lg-download{
     display: none;
 }
