@@ -14,15 +14,14 @@
     background-image: url('../img/furnitura_title1.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: right 10% bottom;    
-    
+    background-position: right 10% bottom;
     background-color: $bg_black;
     @include flex;
     justify-content: space-between;
     align-items: center;
     @media (min-width:872px){
         height: 320px;
-        background-position: right 20px bottom;    
+        background-position: right 20px bottom;
     }
     @media (min-width:1025px){
         height: 420px;
@@ -37,7 +36,7 @@
     flex-direction: column;
     align-items: left;
     h3{
-        background-color: rgba(17,24,32,0.2); 
+        background-color: rgba(17,24,32,0.2);
         @media (min-width:1440px){
         }      
     }
@@ -134,19 +133,27 @@
 // SECTION DOWNLOAD
 .furnitura_download{
     background-color: $bg_section;
-    @include text-style_main($weight_light, $font_h2, 22px);
+    @include text-style_main($weight_light, $font_h2, 22px);    
 }
 .furnitura_wrapper{
-    @include flex;
-    align-content: center;
-    align-items: center;
+    padding-bottom: 15px;
     p{
-        margin: 40px 35px;
+        padding: 15px 0;
+    }
+    @media (min-width:872px) {
+        @include flex;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 0;        
+        p{
+            margin: 40px 35px;
+            padding: 0;
+        }
     }
 }
 // END OF SECTION DOWNLOAD
 
-//SECTION CHOOSE
+// SECTION CHOOSE
 .choose_wrapper{
     box-sizing: border-box;
     margin-bottom: 50px;
@@ -161,7 +168,10 @@
         font-size: 18px;
         line-height: 26px;
         color: $font_h2;
-        margin-bottom: 70px;
+        margin-bottom: 15px;
+        @media (min-width:872px){
+            margin-bottom: 70px;            
+        }
     }
 }
 .furnitura_choose_options{
@@ -169,12 +179,24 @@
     width: 100%;
     @include flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
+    flex-direction: column;   
+    @media (min-width:872px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 .furnitura_choose_btn{
     width: 265px;
     height: 46px;
-    align-self: flex-end;
+    @media (min-width:872px){
+        margin: 15px 0;
+    }
+    @media (min-width:1024px){
+        align-self: flex-end;
+    }
+    
 }
 .furnitura_choose_title{
     display: block;
@@ -235,11 +257,13 @@
 .dropdown-content a:hover {background-color: #f1f1f1}
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-//END OF DROPDOWN MENU
+// END OF DROPDOWN MENU
 
 .furnitura_choose_height,
 .furnitura_choose_width {
-    width: 25%;
+    @media (min-width:1024px){
+        width: 25%;
+    }    
 }
 
 // RANGE SLIDER
@@ -305,8 +329,250 @@ input[type=range]::-ms-thumb {
   }
 // END OF RANGE SLIDER
 
+// END OF SECTION CHOOSE
 
 
+// SECTION FURNITURA PRODUCTS
+.furnitura_products{
+    margin: 0 auto;
+    width: 100%;
+}
+.furnitura_products_wrapper{
+    margin: 0 auto 15px;
+    max-width: 1820px;
+    background-color: $bg_section;
+    @media (min-width:872px){
+        margin: 0 auto 50px;        
+    }
+}
+.furnitura_products_warranty{
+    align-self: flex-start;
+}
+.furnitura_products_chars{
+    min-width: 50%;
+    z-index: 2;
+    @media (max-width:872px){
+        min-width: 40%;
+    }
+}
+.furnitura_products_single{
+    position: relative;    
+    margin: 0 auto;
+    padding: 15px 0;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    @media (min-width:872px){
+        margin: 0 auto 50px;   
+        padding: 80px 0;
+        &:last-of-type{
+            padding:80px 0 0 0;
+        }      
+    }
+}
+.furnitura_products_img{
+    position: absolute;
+    left: 50%;
+    img{
+        width: 100%;
+        opacity: 0.5;
+        @media (min-width:480px){
+            max-width: 80%;
+            left: 50%;
+            opacity: 0.9;
+        }
+        @media (min-width:872px){
+            position: static;
+            max-width: none;
+            opacity: 1;
+        }
+    }
+}
+.furnitura_chars_buttons{
+    margin-bottom: 15px;    
+    @media (min-width:872px){
+        margin-bottom: 80px;        
+    }
+    button{
+        display: inline-block;
+        margin: 0 30px 0 0;
+        @media(max-width:921px){
+            display: block;
+            margin: 0 30px 15px 0;
+        }
+    }
+    .ghost_btn{
+        @media(max-width:425px){
+            display: none;
+        }
+        
+    }
+}
+.ghost_link{
+    display: block;
+    margin: 20px 0;
+    @media(min-width:426px){
+        display: none;
+    }
+}
+.furnitura_chars_set{
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 15px;
+    letter-spacing: 5px;
+    text-align: left;
+    color: $font_black;
+    @media (min-width:769px) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    @media (min-width:1024px) {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+.furnitura_chars_title{
+    font-size: 36px;
+    font-weight: $weight_bold;
+    line-height: 46px;
+    color: $font_h2;
+    margin-bottom: 22px;
+}
 
+.furnitura_chars_main{
+    margin-bottom: 15px;
+    @include text-style_main($weight_light, $font_h2, 18px);
+    font-size: 12px;
+    li{
+        margin-left: 25px;
+        position: relative;
+        b{
+            font-weight: $weight_bold;
+        }
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            // top: -5px;
+            left: -25px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .furnitura_chars_main-width::before{
+        background-image: url('../img/icons/icon_width.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .furnitura_chars_main-weight::before{
+        background-image: url('../img/icons/icon_weight.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    @media(min-width:872px){
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 32px;
+        li{
+            margin-left: 32px;
+            &::before{
+                left: -32px;
+                top: 5px;
+            }
+        }
+    }
+}
+.furnitura_chars_additional{
+    margin-bottom: 45px;
+    @include text-style_main($weight_light, $font-gray, 32px);
+    display: none;
+    @media(min-width:769px){
+        display: block;
+    }
+}
+.furnitura_chars_price{
+    font-weight: $weight_normal;
+    font-size: 36px;
+    line-height: 46px;
+    color: $font_black;
+    vertical-align: bottom;
+    span{
+        font-size: 18px;
+    }
+}
+.furnitura_products_end{
+    margin: 0 auto 50px;
+    padding-bottom: 15px;
+    width: 100%;
+    max-width: 1820px;
+    background-color: $bg_white;
+    border-bottom: solid 2px $bg_section;
+    @media (min-width:872px){
+        margin: 0 auto 115px; 
+        padding-bottom: 0;      
+    }
+}
+.furnitura_products_more{
+    margin: 0 0 0 15px;
+    @media (min-width:872px){
+        margin: 50px auto;
+    }
+}
+.whitespace{
+    width: 100%;
+    height: 100px;
+    background-color: $bg_white;
+}
+// END OF SECTION FURNITURA PRODUCTS
 
-//END OF SECTION CHOOSE
+// SECTION FURNITURA OFFER
+.furnitura_offer{
+    h2{
+        margin-bottom: 25px;
+    }
+    @media (min-width:872px){
+        padding-bottom: 140px;
+        h2{
+            margin-bottom: 60px;
+        }
+    }
+}
+// .furnitura_offers{
+//     width: 100%;
+//     @include flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-direction: column;
+   
+//     a{
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         width: 29.47vw;
+//         max-width: 566px;
+//         min-width: 320px;
+//         height: 10.16vw;
+//         // max-height: 195px;
+//         min-height: 110px;
+//         padding-left: 2%;
+//         margin-bottom: 15px;
+//     }
+//     @media (min-width:426px) {
+//         flex-direction: row;
+//         a{
+//             margin-bottom: 0;
+//         }
+//     }
+// }
+.offer-filenka2{
+    background-image: url('../img/offer_filenka.png');
+    background-color: $bg_black;
+}
+.offer-automatica{
+    background-image: url('../img/offer_automatica.png');
+    background-color: $bg_black;    
+}
+
+// END OF SECTION FURNITURA OFFER
