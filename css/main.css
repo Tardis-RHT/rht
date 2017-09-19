@@ -823,6 +823,10 @@ a :visited {
     font-weight: bold;
     font-weight: 700;
     outline: none;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
   }
   .header_cart_call-button:hover {
     background-color: #0063a6;
@@ -1106,7 +1110,7 @@ a :visited {
 .main_benefits {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 15px;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -1125,15 +1129,17 @@ a :visited {
   white-space: nowrap;
   overflow-x: visible;
   overflow-y: hidden;
+  vertical-align: top;
 }
 
 .main_benefits_single {
   display: inline-block;
   width: 300px;
-  height: 380px;
+  height: auto;
+  margin-bottom: 10px;
   box-sizing: border-box;
   text-align: left;
-  margin-bottom: 85px;
+  vertical-align: top;
   overflow: hidden;
   white-space: normal;
   padding: 0 15px;
@@ -1142,8 +1148,8 @@ a :visited {
 .main_benefits_single h3 {
   color: #111820;
   font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  min-height: 80px;
+  overflow: hidden;
 }
 
 .main_benefits_single p {
@@ -1154,6 +1160,7 @@ a :visited {
   color: #78787b;
   letter-spacing: 0;
   line-height: 26px;
+  overflow: hidden;
 }
 
 .main_benefits_icon {
@@ -1163,6 +1170,16 @@ a :visited {
 }
 
 @media screen and (min-width: 769px) {
+  .main_benefits {
+    padding-top: 150px;
+  }
+  .main_benefits_single {
+    margin-bottom: 85px;
+  }
+  .main_benefits_single h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   .main_benefits_container {
     display: -webkit-box;
     /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
@@ -1175,7 +1192,6 @@ a :visited {
     display: flex;
     /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
     width: 100%;
   }
@@ -1513,11 +1529,6 @@ a :visited {
   width: 100%;
 }
 
-.main_feedback_wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .main_feedback_number-container {
   width: 100%;
   text-align: right;
@@ -1547,16 +1558,12 @@ a :visited {
 }
 
 .main_feedback_text {
-  margin: 15px 15px;
+  margin: 15px 0;
   text-align: left;
   font-family: "MuseoSansCyrl";
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-}
-
-.main_feedback_nameanddate {
-  margin-left: 15px;
 }
 
 .main_feedback_gallery {
@@ -1596,6 +1603,10 @@ a :visited {
   -webkit-filter: grayscale(0);
   /* Safari 6.0 - 9.0 */
   opacity: 1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .main_feedback_feedback {
@@ -1823,7 +1834,6 @@ a :visited {
 
 .callback_form_wrapper-small {
   margin: 0 auto;
-  width: 320px;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -1842,7 +1852,6 @@ a :visited {
 .callback_form_wrapper-small h2 {
   margin-bottom: 25px;
   align-self: flex-start;
-  margin-left: 10px;
 }
 
 .callback_form_wrapper-small p {
@@ -1850,7 +1859,6 @@ a :visited {
   font-size: 16px;
   line-height: 22px;
   color: #0d223f;
-  margin: 0 10px;
 }
 
 .callback_form_wrapper-small span {
@@ -1859,15 +1867,14 @@ a :visited {
   line-height: 18px;
   color: #78787b;
   align-self: flex-start;
-  margin: 0 10px;
 }
 
 .form_callback {
   width: 320px;
-  margin: 20px;
+  margin: 15px 0;
   border-bottom: solid 2px #78787b;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .form_callback input, .form_callback button {
@@ -1963,7 +1970,6 @@ a :visited {
     border: solid 1px #78787b;
   }
   .callback_form_wrapper-small h2 {
-    margin-left: 0;
     margin-bottom: 45px;
     align-self: center;
   }
@@ -1977,6 +1983,7 @@ a :visited {
     font-size: 18px;
     line-height: 26px;
     color: #78787b;
+    margin: 0 40px;
   }
   .form_callback {
     width: 357px;
@@ -2064,6 +2071,747 @@ footer {
   .footer_copyright {
     text-align: center;
   }
+}
+
+.furnitura_title {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #111820;
+}
+
+@media (max-width: 872px) {
+  .furnitura_title {
+    padding-top: 50px;
+  }
+}
+
+.furnitura_title_wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1820px;
+  background-image: url("../img/furnitura_title1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 10% bottom;
+  background-color: #111820;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 872px) {
+  .furnitura_title_wrapper {
+    height: 320px;
+    background-position: right 20px bottom;
+  }
+}
+
+@media (min-width: 1025px) {
+  .furnitura_title_wrapper {
+    height: 420px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .furnitura_title_wrapper {
+    height: 620px;
+    background-size: auto;
+  }
+}
+
+.furnitura_title_wrapper-small {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  align-items: left;
+}
+
+.furnitura_title_wrapper-small h3 {
+  background-color: rgba(17, 24, 32, 0.2);
+}
+
+.furnitura_h3_product {
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+  text-align: left;
+}
+
+@media (min-width: 769px) {
+  .furnitura_h3_product {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .furnitura_h3_product {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 50px;
+  }
+}
+
+.furnitura_products-title {
+  max-width: 300px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 15px;
+  display: inline-block;
+  background-color: rgba(17, 24, 32, 0.1);
+}
+
+@media (min-width: 769px) {
+  .furnitura_products-title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 30px;
+    max-width: 520px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .furnitura_products-title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
+
+.furnitura_video {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  position: relative;
+}
+
+.furnitura_video_wrapper {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+}
+
+.furnitura_video_pic {
+  width: 100%;
+  height: 100%;
+}
+
+.furnitura_video_h3 {
+  max-width: 600px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.furnitura_video_h3 span {
+  font-weight: 900;
+  font-size: 35px;
+}
+
+.furnitura_download {
+  background-color: #f7f7f7;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #0d223f;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.furnitura_wrapper {
+  padding-bottom: 15px;
+}
+
+.furnitura_wrapper p {
+  padding: 15px 0;
+}
+
+@media (min-width: 872px) {
+  .furnitura_wrapper {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    align-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .furnitura_wrapper p {
+    margin: 40px 35px;
+    padding: 0;
+  }
+}
+
+.choose_wrapper {
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.choose_wrapper h2 {
+  margin-top: 125px;
+  margin-bottom: 30px;
+}
+
+.choose_wrapper p {
+  max-width: 550px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #0d223f;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 872px) {
+  .choose_wrapper p {
+    margin-bottom: 70px;
+  }
+}
+
+.furnitura_choose_options {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+}
+
+@media (min-width: 872px) {
+  .furnitura_choose_options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.furnitura_choose_btn {
+  width: 265px;
+  height: 46px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_choose_btn {
+    margin: 15px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .furnitura_choose_btn {
+    align-self: flex-end;
+  }
+}
+
+.furnitura_choose_title {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  color: #111820;
+  margin: 5px 0;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  margin: 0 auto;
+  width: 265px;
+  height: 46px;
+  background-color: #f7f7f7;
+  color: #111820;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #f7f7f7;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f7f7f7;
+  width: 265px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #111820;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .furnitura_choose_height,
+  .furnitura_choose_width {
+    width: 25%;
+  }
+}
+
+.range-slider {
+  height: 46px;
+  text-align: center;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  align-items: center;
+}
+
+.range-slider span {
+  padding: 0 25px;
+  color: #111820;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  height: 2px;
+  outline: none;
+  background-color: #dddddd;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: #0071ba;
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: pointer;
+  transform: rotate(-45deg);
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  background-color: #0063a6;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  background-color: #0071ba;
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: pointer;
+  -moz-transform: rotate(-45deg);
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  background-color: #0063a6;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  background-color: #0071ba;
+  height: 10px;
+  width: 10px;
+  border-radius: 0px;
+  border: 0 none;
+  cursor: pointer;
+  -ms-transform: rotate(-45deg);
+}
+
+input[type=range]::-ms-thumb:hover {
+  background-color: #0063a6;
+}
+
+.furnitura_products {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.furnitura_products_wrapper {
+  margin: 0 auto 15px;
+  max-width: 1820px;
+  background-color: #f7f7f7;
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_wrapper {
+    margin: 0 auto 50px;
+  }
+}
+
+.furnitura_products_warranty {
+  align-self: flex-start;
+}
+
+.furnitura_products_chars {
+  min-width: 50%;
+  z-index: 2;
+}
+
+@media (max-width: 872px) {
+  .furnitura_products_chars {
+    min-width: 40%;
+  }
+}
+
+.furnitura_products_single {
+  position: relative;
+  margin: 0 auto;
+  padding: 15px 0;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_single {
+    margin: 0 auto 50px;
+    padding: 80px 0;
+  }
+  .furnitura_products_single:last-of-type {
+    padding: 80px 0 0 0;
+  }
+}
+
+.furnitura_products_img {
+  position: absolute;
+  left: 50%;
+}
+
+.furnitura_products_img img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+@media (min-width: 480px) {
+  .furnitura_products_img img {
+    max-width: 80%;
+    left: 50%;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_img img {
+    position: static;
+    max-width: none;
+    opacity: 1;
+  }
+}
+
+.furnitura_chars_buttons {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_chars_buttons {
+    margin-bottom: 80px;
+  }
+}
+
+.furnitura_chars_buttons button {
+  display: inline-block;
+  margin: 0 30px 0 0;
+}
+
+@media (max-width: 921px) {
+  .furnitura_chars_buttons button {
+    display: block;
+    margin: 0 30px 15px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .furnitura_chars_buttons .ghost_btn {
+    display: none;
+  }
+}
+
+.ghost_link {
+  display: block;
+  margin: 20px 0;
+}
+
+@media (min-width: 426px) {
+  .ghost_link {
+    display: none;
+  }
+}
+
+.furnitura_chars_set {
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+  text-align: left;
+  color: #111820;
+}
+
+@media (min-width: 769px) {
+  .furnitura_chars_set {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .furnitura_chars_set {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.furnitura_chars_title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  color: #0d223f;
+  margin-bottom: 22px;
+}
+
+.furnitura_chars_main {
+  margin-bottom: 15px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #0d223f;
+  letter-spacing: 0;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.furnitura_chars_main li {
+  margin-left: 25px;
+  position: relative;
+}
+
+.furnitura_chars_main li b {
+  font-weight: 700;
+}
+
+.furnitura_chars_main li::before {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  left: -25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.furnitura_chars_main .furnitura_chars_main-width::before {
+  background-image: url("../img/icons/icon_width.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.furnitura_chars_main .furnitura_chars_main-weight::before {
+  background-image: url("../img/icons/icon_weight.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 872px) {
+  .furnitura_chars_main {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .furnitura_chars_main li {
+    margin-left: 32px;
+  }
+  .furnitura_chars_main li::before {
+    left: -32px;
+    top: 5px;
+  }
+}
+
+.furnitura_chars_additional {
+  margin-bottom: 45px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #78787b;
+  letter-spacing: 0;
+  line-height: 32px;
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .furnitura_chars_additional {
+    display: block;
+  }
+}
+
+.furnitura_chars_price {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 46px;
+  color: #111820;
+  vertical-align: bottom;
+}
+
+.furnitura_chars_price span {
+  font-size: 18px;
+}
+
+.furnitura_products_end {
+  margin: 0 auto 50px;
+  padding-bottom: 15px;
+  width: 100%;
+  max-width: 1820px;
+  background-color: white;
+  border-bottom: solid 2px #f7f7f7;
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_end {
+    margin: 0 auto 115px;
+    padding-bottom: 0;
+  }
+}
+
+.furnitura_products_more {
+  margin: 0 0 0 15px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_more {
+    margin: 50px auto;
+  }
+}
+
+.whitespace {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.furnitura_offer h2 {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_offer {
+    padding-bottom: 140px;
+  }
+  .furnitura_offer h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.offer-filenka2 {
+  background-image: url("../img/offer_filenka.png");
+  background-color: #111820;
+}
+
+.offer-automatica {
+  background-image: url("../img/offer_automatica.png");
+  background-color: #111820;
 }
 
 .breadcrumbs_wrapper {

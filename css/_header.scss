@@ -294,6 +294,7 @@
 		font-weight: bold;
 		font-weight: $weight_bold;
 		outline: none;
+		@include transition(background-color);
 		&:hover{
 			background-color: $button_hover;
 			color: $font_white;

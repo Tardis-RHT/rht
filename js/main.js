@@ -45,10 +45,18 @@ $(function(){
 	// LightGallery call and settings
 	$("#lightgallery").lightGallery({
 		escKeyescKey: true,
-		mousewheel: false
+		mousewheel: false,
+		download: false,
 	}); 
 	
-	
+	// FURNITURA VIDEO
+	$('#videoFurnitura').lightGallery({
+		videoMaxWidth: '100%',
+		autoPlay: true,
+		controls: false,
+		counter: false,
+		download: false,
+	}); 
 	// $(window).resize(function () {
 	// 	var width = $('body').outerWidth()
 	// 	if ($(window).width() < 620){
@@ -89,7 +97,6 @@ $(function(){
 	});
 
 
-
 	$('#lightSlider_certificates').lightSlider({
 		item:6,
 		loop:true,
@@ -126,69 +133,68 @@ $(function(){
 	});
 
 
+	// VIDEO POPUP
+	var toHide = document.getElementsByClassName("toHide");
+	var toShow = document.getElementsByClassName("toShow");
+	var control_btn = document.getElementById("video-play");
 
-// VIDEO POPUP
-var toHide = document.getElementsByClassName("toHide");
-var toShow = document.getElementsByClassName("toShow");
-var control_btn = document.getElementById("video-play");
+	document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen;
+	function onFullScreenEnter() {
+	// console.log("Enter fullscreen initiated from iframe");
 
-document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen;
-function onFullScreenEnter() {
-// console.log("Enter fullscreen initiated from iframe");
+		for (var i = 0; i < toHide.length; i++){
+			toHide[i].style.display="none";
+		};
 
-	for (var i = 0; i < toHide.length; i++){
-		toHide[i].style.display="none";
+		for (var i = 0; i < toShow.length; i++){
+			toShow[i].style.display="block";
+		};
 	};
 
-	for (var i = 0; i < toShow.length; i++){
-		toShow[i].style.display="block";
+	function onFullScreenExit() {
+		// console.log("Exit fullscreen initiated from iframe");
+
+		for (var i = 0; i < toHide.length; i++){
+			toHide[i].style.display="block";
+		};
+
+		for (var i = 0; i < toShow.length; i++){
+			toShow[i].style.display="none";
+			toShow[i].style.visibility="hidden";
+		};	
 	};
-};
 
-function onFullScreenExit() {
-	// console.log("Exit fullscreen initiated from iframe");
-
-	for (var i = 0; i < toHide.length; i++){
-		toHide[i].style.display="block";
-	};
-
-	for (var i = 0; i < toShow.length; i++){
-		toShow[i].style.display="none";
-		toShow[i].style.visibility="hidden";
-	};	
-};
-
-// Note: FF nightly needs about:config full-screen-api.enabled set to true.
-function enterFullscreen(id) {
-	onFullScreenEnter(id);
-	var el =  document.getElementById(id);
-	var onfullscreenchange =  function(e){
-	var fullscreenElement = document.fullscreenElement || document.mozFullscreenElement || document.webkitFullscreenElement;
-	var fullscreenEnabled = document.fullscreenEnabled || document.mozFullscreenEnabled || document.webkitFullscreenEnabled;
-	console.log( 'fullscreenEnabled = ' + fullscreenEnabled, ',  fullscreenElement = ', fullscreenElement, ',  e = ', e);
+	// Note: FF nightly needs about:config full-screen-api.enabled set to true.
+	function enterFullscreen(id) {
+		onFullScreenEnter(id);
+		var el =  document.getElementById(id);
+		var onfullscreenchange =  function(e){
+		var fullscreenElement = document.fullscreenElement || document.mozFullscreenElement || document.webkitFullscreenElement;
+		var fullscreenEnabled = document.fullscreenEnabled || document.mozFullscreenEnabled || document.webkitFullscreenEnabled;
+		console.log( 'fullscreenEnabled = ' + fullscreenEnabled, ',  fullscreenElement = ', fullscreenElement, ',  e = ', e);
+		}
+		el.addEventListener("webkitfullscreenchange", onfullscreenchange);
+		el.addEventListener("mozfullscreenchange",     onfullscreenchange);
+		el.addEventListener("fullscreenchange",             onfullscreenchange);
+		if (el.webkitRequestFullScreen) {
+		el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+		} else {
+		el.mozRequestFullScreen();
+		}
+		document.querySelector('#'+id + ' button').onclick = function(){
+		exitFullscreen(id);
+		}
 	}
-	el.addEventListener("webkitfullscreenchange", onfullscreenchange);
-	el.addEventListener("mozfullscreenchange",     onfullscreenchange);
-	el.addEventListener("fullscreenchange",             onfullscreenchange);
-	if (el.webkitRequestFullScreen) {
-	el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-	} else {
-	el.mozRequestFullScreen();
-	}
-	document.querySelector('#'+id + ' button').onclick = function(){
-	exitFullscreen(id);
-	}
-}
 
-function exitFullscreen(id) {
-	onFullScreenExit(id);
-	document.cancelFullScreen();
-	document.querySelector('#'+id + ' button').onclick = function(){
-	enterFullscreen(id);
+	function exitFullscreen(id) {
+		onFullScreenExit(id);
+		document.cancelFullScreen();
+		document.querySelector('#'+id + ' button').onclick = function(){
+		enterFullscreen(id);
+		}
 	}
-}
 
-function _fullscreenEnabled() {
+	function _fullscreenEnabled() {
 	// FF provides nice flag, maybe others will add support for this later on?
 	if(window['fullScreen'] !== undefined) {
 		console.log('1');
@@ -204,9 +210,9 @@ function _fullscreenEnabled() {
 	}
 	return screen.width == window.innerWidth &&
 		Math.abs(screen.height - window.innerHeight) < heightMargin;
-}
+	}
 
-//VIDEO CONTROLS	
+	//VIDEO CONTROLS	
 	
 	function vidplay() {
 		var video = document.getElementById("main_video-video");
@@ -246,3 +252,45 @@ function _fullscreenEnabled() {
 
 	})
 });
+
+
+// DROPDOWN MENU IN FURNITURA
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+// END OF DROPDOWN MENU IN FURNITURA
+
+
+// RANGE SLIDER IN FURNITURA
+var rangeSlider = function(){
+	var slider = $('.range-slider'),
+		range = $('.range-slider__range'),
+		value = $('.range-slider__value');
+	slider.each(function(){
+	  value.each(function(){
+		var value = $(this).prev().attr('value');
+		$(this).html(value);
+	  });
+	  range.on('input', function(){
+		$(this).next(value).html(this.value);
+	  });
+	});
+  };
+rangeSlider();
+//END OF RANGE SLIDER
