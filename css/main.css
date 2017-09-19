@@ -2808,6 +2808,24 @@ input[type=range]::-ms-thumb:hover {
   background-color: white;
 }
 
+.furnitura_offer {
+  padding-bottom: 140px;
+}
+
+.furnitura_offer h2 {
+  margin-bottom: 60px;
+}
+
+.offer-filenka2 {
+  background-image: url("../img/offer_filenka.png");
+  background-color: #111820;
+}
+
+.offer-automatica {
+  background-image: url("../img/offer_automatica.png");
+  background-color: #111820;
+}
+
 .breadcrumbs_wrapper {
   margin: 0 auto;
   max-width: 1200px;

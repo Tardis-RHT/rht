@@ -153,7 +153,7 @@
 }
 // END OF SECTION DOWNLOAD
 
-//SECTION CHOOSE
+// SECTION CHOOSE
 .choose_wrapper{
     box-sizing: border-box;
     margin-bottom: 50px;
@@ -257,7 +257,7 @@
 .dropdown-content a:hover {background-color: #f1f1f1}
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
-//END OF DROPDOWN MENU
+// END OF DROPDOWN MENU
 
 .furnitura_choose_height,
 .furnitura_choose_width {
@@ -329,10 +329,10 @@ input[type=range]::-ms-thumb {
   }
 // END OF RANGE SLIDER
 
-//END OF SECTION CHOOSE
+// END OF SECTION CHOOSE
 
 
-//SECTION FURNITURA PRODUCTS
+// SECTION FURNITURA PRODUCTS
 .furnitura_products{
     margin: 0 auto;
     width: 100%;
@@ -524,4 +524,48 @@ input[type=range]::-ms-thumb {
     height: 100px;
     background-color: $bg_white;
 }
-//END OF SECTION FURNITURA PRODUCTS
+// END OF SECTION FURNITURA PRODUCTS
+
+// SECTION FURNITURA OFFER
+.furnitura_offer{
+    padding-bottom: 140px;
+    h2{
+        margin-bottom: 60px;
+    }
+}
+// .furnitura_offers{
+//     width: 100%;
+//     @include flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-direction: column;
+   
+//     a{
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         width: 29.47vw;
+//         max-width: 566px;
+//         min-width: 320px;
+//         height: 10.16vw;
+//         // max-height: 195px;
+//         min-height: 110px;
+//         padding-left: 2%;
+//         margin-bottom: 15px;
+//     }
+//     @media (min-width:426px) {
+//         flex-direction: row;
+//         a{
+//             margin-bottom: 0;
+//         }
+//     }
+// }
+.offer-filenka2{
+    background-image: url('../img/offer_filenka.png');
+    background-color: $bg_black;
+}
+.offer-automatica{
+    background-image: url('../img/offer_automatica.png');
+    background-color: $bg_black;    
+}
+
+// END OF SECTION FURNITURA OFFER
