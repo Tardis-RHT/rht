@@ -505,12 +505,14 @@ input[type=range]::-ms-thumb {
 }
 .furnitura_products_end{
     margin: 0 auto 50px;
+    padding-bottom: 15px;
     width: 100%;
     max-width: 1820px;
     background-color: $bg_white;
     border-bottom: solid 2px $bg_section;
     @media (min-width:872px){
-        margin: 0 auto 115px;        
+        margin: 0 auto 115px; 
+        padding-bottom: 0;      
     }
 }
 .furnitura_products_more{

@@ -2767,6 +2767,7 @@ input[type=range]::-ms-thumb:hover {
 
 .furnitura_products_end {
   margin: 0 auto 50px;
+  padding-bottom: 15px;
   width: 100%;
   max-width: 1820px;
   background-color: white;
@@ -2776,6 +2777,7 @@ input[type=range]::-ms-thumb:hover {
 @media (min-width: 872px) {
   .furnitura_products_end {
     margin: 0 auto 115px;
+    padding-bottom: 0;
   }
 }
 
