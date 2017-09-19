@@ -528,9 +528,14 @@ input[type=range]::-ms-thumb {
 
 // SECTION FURNITURA OFFER
 .furnitura_offer{
-    padding-bottom: 140px;
     h2{
-        margin-bottom: 60px;
+        margin-bottom: 25px;
+    }
+    @media (min-width:872px){
+        padding-bottom: 140px;
+        h2{
+            margin-bottom: 60px;
+        }
     }
 }
 // .furnitura_offers{
