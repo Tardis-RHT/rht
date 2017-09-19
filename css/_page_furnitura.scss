@@ -87,21 +87,6 @@
     @include flex;
     justify-content: center;
     position: relative;
-    // background-image: url('../img/furnitura_video_bg.png');
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: center;
-
-    // @media (min-width:872px){
-    //     height: 400px;
-    //     padding-top: 50px;
-    //     }
-    // @media (min-width:1025px){
-    //     height: 420px;
-    // }
-    // @media (min-width:1440px){
-    //     height: 563px;
-    // }
 }
 .furnitura_video_wrapper{
     @include flex;
@@ -126,7 +111,12 @@
         font-weight: $weight_super-bold;
         font-size: 35px;
     }
-    
+}
+.main-page_video-link{
+    color: $font_white;
+    &:visited{
+        color: $font_white;
+    }
 }
 // END OF SECTION VIDEO
 
