@@ -2282,22 +2282,33 @@ footer {
 }
 
 .furnitura_wrapper {
-  display: -webkit-box;
-  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
-  display: -moz-box;
-  /* Firefox 2 - 27 (2009 Spec), UC Mini */
-  display: -ms-flexbox;
-  /* IE10 (2012 Syntax) */
-  display: -webkit-flex;
-  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
-  display: flex;
-  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-  align-content: center;
-  align-items: center;
+  padding-bottom: 15px;
 }
 
 .furnitura_wrapper p {
-  margin: 40px 35px;
+  padding: 15px 0;
+}
+
+@media (min-width: 872px) {
+  .furnitura_wrapper {
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    align-content: center;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .furnitura_wrapper p {
+    margin: 40px 35px;
+    padding: 0;
+  }
 }
 
 .choose_wrapper {
@@ -2317,7 +2328,13 @@ footer {
   font-size: 18px;
   line-height: 26px;
   color: #0d223f;
-  margin-bottom: 70px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 872px) {
+  .choose_wrapper p {
+    margin-bottom: 70px;
+  }
 }
 
 .furnitura_choose_options {
@@ -2334,19 +2351,27 @@ footer {
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 872px) {
   .furnitura_choose_options {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
 .furnitura_choose_btn {
   width: 265px;
   height: 46px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_choose_btn {
+    margin: 15px 0;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2754,15 +2779,27 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .furnitura_products_end {
-  margin: 0 auto 115px;
+  margin: 0 auto 50px;
   width: 100%;
   max-width: 1820px;
   background-color: white;
   border-bottom: solid 2px #f7f7f7;
 }
 
+@media (min-width: 872px) {
+  .furnitura_products_end {
+    margin: 0 auto 115px;
+  }
+}
+
 .furnitura_products_more {
-  margin: 50px auto;
+  margin: 0 0 0 15px;
+}
+
+@media (min-width: 872px) {
+  .furnitura_products_more {
+    margin: 50px auto;
+  }
 }
 
 .whitespace {

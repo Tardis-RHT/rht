@@ -133,14 +133,22 @@
 // SECTION DOWNLOAD
 .furnitura_download{
     background-color: $bg_section;
-    @include text-style_main($weight_light, $font_h2, 22px);
+    @include text-style_main($weight_light, $font_h2, 22px);    
 }
 .furnitura_wrapper{
-    @include flex;
-    align-content: center;
-    align-items: center;
+    padding-bottom: 15px;
     p{
-        margin: 40px 35px;
+        padding: 15px 0;
+    }
+    @media (min-width:872px) {
+        @include flex;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 0;        
+        p{
+            margin: 40px 35px;
+            padding: 0;
+        }
     }
 }
 // END OF SECTION DOWNLOAD
@@ -160,7 +168,10 @@
         font-size: 18px;
         line-height: 26px;
         color: $font_h2;
-        margin-bottom: 70px;
+        margin-bottom: 15px;
+        @media (min-width:872px){
+            margin-bottom: 70px;            
+        }
     }
 }
 .furnitura_choose_options{
@@ -168,15 +179,20 @@
     width: 100%;
     @include flex;
     justify-content: space-between;
-    align-items: center;
-    flex-direction: column;    
-    @media (min-width:1024px){
+    align-items: left;
+    flex-direction: column;   
+    @media (min-width:872px){
         flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
 .furnitura_choose_btn{
     width: 265px;
     height: 46px;
+    @media (min-width:872px){
+        margin: 15px 0;
+    }
     @media (min-width:1024px){
         align-self: flex-end;
     }
@@ -329,7 +345,6 @@ input[type=range]::-ms-thumb {
         margin: 0 auto 50px;        
     }
 }
-
 .furnitura_products_warranty{
     align-self: flex-start;
 }
@@ -489,17 +504,24 @@ input[type=range]::-ms-thumb {
     }
 }
 .furnitura_products_end{
-    margin: 0 auto 115px;
+    margin: 0 auto 50px;
     width: 100%;
     max-width: 1820px;
     background-color: $bg_white;
     border-bottom: solid 2px $bg_section;
+    @media (min-width:872px){
+        margin: 0 auto 115px;        
+    }
 }
 .furnitura_products_more{
-    margin: 50px auto;
+    margin: 0 0 0 15px;
+    @media (min-width:872px){
+        margin: 50px auto;
+    }
 }
 .whitespace{
     width: 100%;
     height: 100px;
     background-color: $bg_white;
 }
+//END OF SECTION FURNITURA PRODUCTS
