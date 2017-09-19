@@ -823,6 +823,10 @@ a :visited {
     font-weight: bold;
     font-weight: 700;
     outline: none;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
   }
   .header_cart_call-button:hover {
     background-color: #0063a6;
@@ -2516,7 +2520,6 @@ input[type=range]::-ms-thumb {
 input[type=range]::-ms-thumb:hover {
   background-color: #0063a6;
 }
-
 .furnitura_products {
   margin: 0 auto;
   width: 100%;
