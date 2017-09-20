@@ -48,10 +48,13 @@
     align-items: center;
 }
 .adjusting-plate_checkbox{
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border: solid 1px $font-gray;
+    width: 15px;
+    height: 15px;
+    outline: solid 1px $font-gray;
     background: $bg_section;
 }
 .zmdi-help {
@@ -62,7 +65,11 @@
     }
 }
 .showme:hover + .furnitura_help {
-    display: block;
+    display: flex;
+}
+.showme{
+    position: relative;
+    z-index: 2;
 }
 .furnitura_help{
     display: none;
@@ -70,11 +77,40 @@
     left: 250px;
     width: 400px;
     height: 130px;
-    overflow: hidden;
+    align-items: center;
     border: 1px solid $font-gray;
     color: $font_black;
-    background-color: $bg_white;
+    background-color: $bg_section;
+    &:after,
+    &:before {
+        content:'';
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 100%;
+        border-style: solid; 
+        // top: calc(50% - 10px);        
+    }
+    &:after {
+        border-color: transparent $bg_section transparent transparent;
+        border-width: 10px;
+        top: 50px;
+    }
+    &:before {
+        border-color: transparent $font-gray transparent transparent ;
+        border-width: 12px;
+        top: 49px;
+    }
+    img{
+        width:100px;
+        height: auto;
+    }
+    i{
+        padding: 5px;
+        align-self: flex-start;
+    }
 }
+// https://codepen.io/creme/pen/ntvqe
 // END OF SECTION SET TITLE
 
 // SECTION FURNITURA SET BENEFITS
@@ -94,19 +130,32 @@
     color: $font_h2;
 }
 // END OF SECTION FURNITURA SET BENEFITS
+
+
+.furnitura-set_kit{
+    h2{
+        margin-bottom: 60px;
+    }
+}
 .furnitura-set_fullkit{
     width: 100%;
     @include flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 130px;    
+    margin-bottom: 90px;    
 }
 .furnitura-set_kit_single{
     width: 266px;
     min-width: 266px;
     height: auto;
+    margin-bottom: 40px;
     img{
         width: 100%;
         height: 100%;
+    }
+    p{
+        display: inline-block;
+        height: 45px;
     }
 }
