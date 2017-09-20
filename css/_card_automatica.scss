@@ -1,6 +1,42 @@
 .card_automatica_title{
     background-color: $bg_section;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
+    padding-top: 45px;
+    overflow: hidden;
+    position: relative;
+    @media(min-width:872px){
+        padding-top: 0;
+        margin-bottom: 110px;
+    }
+    img{
+        position: absolute;
+        z-index: 2;
+        max-width: 100%;
+        bottom: 0;
+        left: 60%;
+        opacity: .5;
+        @media (min-width:480px){
+            max-width: 80%;
+            left: 50%;
+            opacity: .9;
+        }
+        @media (min-width:769px){
+            position: static;
+            max-width: none;
+            opacity: 1;
+        }
+    }
+    .garantee{
+        bottom: 40%;
+        @media (min-width:480px){
+            position: static;
+            max-width: none;
+            opacity: 1;
+        }
+        @media(min-width:769px){
+            display: none;
+        }
+    }
 }
 .automatica-inset{
     padding-bottom: 40px;
@@ -20,22 +56,34 @@
 .inset-items{
     @include flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 15px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+    @media(min-width:1024px){
+        flex-wrap: wrap;
+        white-space: normal;
+        overflow: hidden;
+    }
 }
 .inset-item{
-    width: calc((100% - 105px) / 4);
-    
+    width: 75%;    
+    @media(min-width:1024px){
+        width: calc((100% - 105px) / 4);    
+    }
     img{
         margin-bottom: 15px;
-        // background-color: $bg_section;
     }
 }
 
 .inset-item-name{
     @include text-style_main($weight_light, $font_black, 32px);
     min-height: 90px;
+    white-space: normal;
+
+    padding-left: 10px; //?
 }
 .inset-order{
     text-align: right;
@@ -44,6 +92,17 @@
     }
 }
 
+.automatica-more {
+    @media (max-width:930px){
+        .main_benefits_container{
+            white-space: nowrap;
+            overflow-x: visible;
+            overflow-y: hidden;
+            vertical-align: top;
+            flex-wrap: nowrap;
+        }
+    }
+}
 .automatica-more-title{
     margin-bottom: 50px;
 }
@@ -62,6 +121,13 @@
     @include text-style_main($weight_light, $font_black, 22px);
     span{
         margin-right: 25px;
+        font-size: 16px;
+        padding: 15px 0;
+        display: inline-block;
+        @media(min-width: 768px){
+            font-size: 18px;
+            padding: 0;
+        }
     }
     button{
         display: inline-block;
@@ -70,8 +136,9 @@
 
 .economy{
     background-color: $bg_black;
-    padding: 120px 0 50px;
     color: $font_white;
+    //mobile
+    padding: 50px 0;
 }
 .economy-title{
     margin-bottom: 15px;
@@ -82,6 +149,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    //mobile
+    flex-wrap: wrap;
     
 }
 .economy-item{
@@ -89,7 +158,39 @@
     flex-direction: column;
     justify-content: space-between;
     align-self: flex-start;
-    height: 345px;
+    //mobile
+    max-width: calc(40% - 15px);
+    min-height: 200px;
+    max-height: 345px;
+    // @media (min-width: 364px){
+    //     height: 250px;
+    //     // &:nth-of-type(2){
+    //     //     height: 228px;
+    //     // }
+    // }
+    // @media (min-width: 480px){
+    //     height: 260px;
+    //     // &:nth-of-type(2){
+    //     //     height: 238px;
+    //     // }
+    // }
+    // @media (min-width: 503px){
+    //     height: 300px;
+    //     // &:nth-of-type(2){
+    //     //     height: 300px;
+    //     // }
+    // }
+    @media (min-width: 625px){
+        height: 345px;
+    //     // &:nth-of-type(2){
+    //     //     height: 345px;
+    //     // }
+    }
+    img{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
 }
 .math{
     font-size: 35px;
@@ -98,22 +199,32 @@
     font-weight: $weight_normal;
     display: inline-block;
     text-align: middle;
-    padding: 0 50px;
+    //mobile
+    padding: 0 15px;
+    &:last-of-type{
+        display: none;
+    }
+    @media(min-width: 775px){
+        padding: 0 20px;
+        &:last-of-type{
+            display: inline-block;
+        }
+    }
 }
 .economy-item-title{
     @include text-style_main($weight_normal, $font_white, 22px);
     padding-top: 10px;
     border-top: 2px solid $font-gray;
+    //mobile    
+    font-size: 14px;
 }
 .economy_deal{
     @include flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 345px;
-    // padding: 18px 0 32px;
-    button{
-        margin-bottom: 34px;
-    }
+    //mobile
+    padding-top: 40px;
+    align-items: center;
 }
 .economy-price{
     @extend .automatica_set-price;
@@ -127,6 +238,49 @@
     
 }
 
-.economy-prices{
-    margin-bottom: 60px;
+@media(min-width: 846px){
+    .economy-item-title{
+        font-size: 18px;
+     }
+     .economy_deal{
+         height: 345px;
+         button{
+             margin-bottom: 34px;
+         }
+     }
+     .economy-prices{
+         margin-bottom: 60px;
+     }
+}
+@media(min-width:872px){
+    .economy{
+        padding: 120px 0 50px;
+    }
+    .economy-items{
+        flex-wrap: nowrap;
+    }
+    .economy-item{
+        max-width: none;
+        // img{
+        //     width: 100%;
+        //     height: auto;
+        // }
+    }
+    .economy_deal{
+        // height: 345px;
+        // padding: 18px 0 32px;
+        align-items: center; //?
+        button{
+            margin-bottom: 34px;
+        }
+    }
+    .economy-prices{
+        margin-bottom: 60px;
+    }
+}
+
+@media(min-width:1024px){    
+    .math{
+        padding: 0 50px;
+    }
 }
