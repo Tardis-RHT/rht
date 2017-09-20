@@ -121,6 +121,17 @@ $(function(){
 		]
 	});
 
+	$("#lightSlider_filenka").lightSlider({
+		gallery: false,
+		item: 1,
+		loop: false,
+		slideMargin: 0,
+		controls: true,
+		// adaptiveHeight: true,
+		pager: true,
+		// autoWidth: true
+	});
+
 
 	// VIDEO POPUP
 	var toHide = document.getElementsByClassName("toHide");

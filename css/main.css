@@ -1338,17 +1338,11 @@ a :visited {
   .main_products-single {
     height: 650px;
   }
-  .main_products-single:first-of-type {
-    background-size: 70%;
-  }
   .main_products-single:nth-of-type(2) {
     background-position: left 17% center;
   }
   .main_products-single:nth-of-type(2) .main_products-caption {
     padding-left: 34%;
-  }
-  .main_products-single:last-of-type {
-    background-size: 100%;
   }
 }
 
@@ -3261,6 +3255,7 @@ input[type=range]::-ms-thumb:hover {
     margin-bottom: 30px;
     font-size: 18px;
     line-height: 32px;
+    max-width: none;
   }
   .automatica_set-characteristics li {
     margin-left: 32px;
@@ -3287,7 +3282,7 @@ input[type=range]::-ms-thumb:hover {
   }
 }
 
-.automatica_set-price {
+.automatica_set-price, .catalog-item-price, .economy-price {
   font-family: "MuseoSansCyrl";
   font-weight: 500;
   font-size: 18px;
@@ -3297,7 +3292,7 @@ input[type=range]::-ms-thumb:hover {
   vertical-align: bottom;
 }
 
-.automatica_set-price b {
+.automatica_set-price b, .catalog-item-price b, .economy-price b {
   font-size: 36px;
 }
 
@@ -3405,7 +3400,7 @@ input[type=range]::-ms-thumb:hover {
     font-size: 36px;
     line-height: 46px;
     width: calc(50% - 35px);
-    margin: 0 0 50px;
+    margin: 0;
   }
 }
 
@@ -3430,6 +3425,366 @@ input[type=range]::-ms-thumb:hover {
 
 .offer-filenka {
   background-image: url("../img/products/filenka.png");
+}
+
+.offer-automatica {
+  background-image: url("../img/products/automatica-offer.png");
+}
+
+.page_filenka_slider-title {
+  margin-bottom: 70px;
+}
+
+.filenka-slide {
+  width: 100%;
+}
+
+.filenka-slide img {
+  width: 100%;
+}
+
+.page_filenka_catalog-title {
+  margin-bottom: 50px;
+}
+
+.catalog-container {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.catalog-item {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 15px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  color: #0d223f;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.catalog-item button {
+  font-size: 13px;
+}
+
+.catalog-item img {
+  max-width: 45%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 50%;
+}
+
+@media (min-width: 400px) {
+  .catalog-item img {
+    position: static;
+    max-width: 50%;
+    height: auto;
+  }
+}
+
+@media (min-width: 720px) {
+  .catalog-item {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog-item {
+    width: calc(50% - 18px);
+  }
+  .catalog-item:nth-of-type(odd) {
+    margin-right: 36px;
+  }
+}
+
+@media (min-width: 1115px) {
+  .catalog-item button {
+    font-size: 18px;
+  }
+}
+
+.catalog-item-info {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-item-title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+@media (min-width: 1024px) {
+  .catalog-item-title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: -10px;
+  }
+}
+
+.catalog-item-size {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+@media (min-width: 1024px) {
+  .catalog-item-size {
+    font-size: 18px;
+  }
+}
+
+.catalog-item-price {
+  margin-bottom: 20px;
+  align-self: flex-end;
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .catalog-item-price {
+    font-size: 18px;
+  }
+}
+
+.card_automatica_title {
+  background-color: #f7f7f7;
+  margin-bottom: 110px;
+}
+
+.automatica-inset {
+  padding-bottom: 40px;
+  border-bottom: 2px solid #f7f7f7;
+  margin-bottom: 110px;
+}
+
+.inset-title {
+  margin-bottom: 30px;
+}
+
+.inset-format {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #78787b;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.toggle {
+  margin-bottom: 50px;
+}
+
+.inset-items {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.inset-item {
+  width: calc((100% - 105px) / 4);
+}
+
+.inset-item img {
+  margin-bottom: 15px;
+}
+
+.inset-item-name {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 32px;
+  min-height: 90px;
+}
+
+.inset-order {
+  text-align: right;
+}
+
+.inset-order button {
+  display: inline;
+}
+
+.automatica-more-title {
+  margin-bottom: 50px;
+}
+
+.automatica_benefits_icon {
+  height: 45px;
+}
+
+.main_benefits_single:last-of-type > .automatica_benefits_icon {
+  padding: 10px;
+}
+
+.automatica-install {
+  background-color: #f7f7f7;
+}
+
+.automatica-instruction {
+  padding: 35px 0;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.automatica-instruction span {
+  margin-right: 25px;
+}
+
+.automatica-instruction button {
+  display: inline-block;
+}
+
+.economy {
+  background-color: #111820;
+  padding: 120px 0 50px;
+  color: white;
+}
+
+.economy-title {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.economy-items {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.economy-item {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  height: 345px;
+}
+
+.math {
+  font-size: 35px;
+  line-height: 36px;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  text-align: middle;
+  padding: 0 50px;
+}
+
+.economy-item-title {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding-top: 10px;
+  border-top: 2px solid #78787b;
+}
+
+.economy_deal {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 345px;
+}
+
+.economy_deal button {
+  margin-bottom: 34px;
+}
+
+.economy-price {
+  color: white;
+}
+
+.economy-last-price {
+  display: block;
+  text-decoration: line-through;
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.economy-prices {
+  margin-bottom: 60px;
 }
  
 

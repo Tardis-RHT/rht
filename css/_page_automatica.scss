@@ -188,6 +188,7 @@
         margin-bottom: 30px;
         font-size: 18px;
         line-height: 32px;
+        max-width: none;
         li{
             margin-left: 32px;
             &::before{
@@ -291,7 +292,7 @@
         font-size: 36px;
         line-height: 46px;
         width: calc(50% - 35px);
-        margin: 0 0 50px;
+        margin: 0;
     }
 
     // margin-bottom: 15px;
