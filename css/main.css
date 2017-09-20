@@ -2991,6 +2991,7 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .furnitura-set_checkbox {
+  position: relative;
   margin-bottom: 85px;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
@@ -3022,6 +3023,22 @@ input[type=range]::-ms-thumb:hover {
   color: #0063a6;
 }
 
+.showme:hover + .furnitura_help {
+  display: block;
+}
+
+.furnitura_help {
+  display: none;
+  position: absolute;
+  left: 250px;
+  width: 400px;
+  height: 130px;
+  overflow: hidden;
+  border: 1px solid #78787b;
+  color: #111820;
+  background-color: white;
+}
+
 .furnitura-set_benefits {
   height: 500px;
   margin: 0 auto;
@@ -3043,6 +3060,34 @@ input[type=range]::-ms-thumb:hover {
   font-size: 36px;
   font-weight: 700;
   color: #0d223f;
+}
+
+.furnitura-set_fullkit {
+  width: 100%;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.furnitura-set_kit_single {
+  width: 266px;
+  min-width: 266px;
+  height: auto;
+}
+
+.furnitura-set_kit_single img {
+  width: 100%;
+  height: 100%;
 }
 
 .breadcrumbs_wrapper {

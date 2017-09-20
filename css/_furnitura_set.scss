@@ -42,6 +42,7 @@
 }
 
 .furnitura-set_checkbox{
+    position: relative;
     margin-bottom: 85px;
     @include flex;
     align-items: center;
@@ -57,13 +58,26 @@
     padding-left: 5px;
     color: $button_normal;
     &:hover{
-        color: $button_hover;        
+        color: $button_hover;   
     }
+}
+.showme:hover + .furnitura_help {
+    display: block;
+}
+.furnitura_help{
+    display: none;
+    position: absolute;
+    left: 250px;
+    width: 400px;
+    height: 130px;
+    overflow: hidden;
+    border: 1px solid $font-gray;
+    color: $font_black;
+    background-color: $bg_white;
 }
 // END OF SECTION SET TITLE
 
-
-
+// SECTION FURNITURA SET BENEFITS
 .furnitura-set_benefits{
     height: 500px;
     margin: 0 auto;
@@ -73,10 +87,26 @@
     p{
         @include text-style_main($weight_light, $font_black, 22px);
     }
-
 }
 .furnitura-set_h3{
     font-size: 36px;
     font-weight: $weight_bold;
     color: $font_h2;
+}
+// END OF SECTION FURNITURA SET BENEFITS
+.furnitura-set_fullkit{
+    width: 100%;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 130px;    
+}
+.furnitura-set_kit_single{
+    width: 266px;
+    min-width: 266px;
+    height: auto;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
