@@ -2933,6 +2933,118 @@ input[type=range]::-ms-thumb:hover {
   background-color: #f7f7f7;
 }
 
+.furnitura_set_single {
+  margin: 0 auto;
+  padding: 15px 0;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 872px) {
+  .furnitura_set_single {
+    margin: 0 auto 50px;
+    padding: 80px 0;
+  }
+  .furnitura_set_single:last-of-type {
+    padding: 80px 0 0 0;
+  }
+}
+
+.furnitura-set_chars {
+  width: 30%;
+}
+
+.furnitura-set_img {
+  align-self: flex-start;
+  width: 60%;
+}
+
+.furnitura-set_img img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+@media (min-width: 480px) {
+  .furnitura-set_img img {
+    max-width: 100%;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 872px) {
+  .furnitura-set_img img {
+    position: static;
+    max-width: none;
+    opacity: 1;
+  }
+}
+
+.furnitura-set_checkbox {
+  margin-bottom: 85px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  align-items: center;
+}
+
+.adjusting-plate_checkbox {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #78787b;
+  background: #f7f7f7;
+}
+
+.zmdi-help {
+  padding-left: 5px;
+  color: #0071ba;
+}
+
+.zmdi-help:hover {
+  color: #0063a6;
+}
+
+.furnitura-set_benefits {
+  height: 500px;
+  margin: 0 auto;
+  max-width: 1820px;
+  background-color: #f7f7f7;
+  margin: 50px auto;
+}
+
+.furnitura-set_benefits p {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.furnitura-set_h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0d223f;
+}
+
 .breadcrumbs_wrapper {
   margin: 0 auto;
   max-width: 1200px;

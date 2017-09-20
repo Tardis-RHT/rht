@@ -2,3 +2,81 @@
     width: 100%;
     background-color: $bg_section;
 }
+
+// SECTION SET TITLE
+
+.furnitura_set_single{
+    margin: 0 auto;
+    padding: 15px 0;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    @media (min-width:872px){
+        margin: 0 auto 50px;   
+        padding: 80px 0;
+        &:last-of-type{
+            padding:80px 0 0 0;
+        }      
+    }
+}
+.furnitura-set_chars{
+    width: 30%
+}
+.furnitura-set_img{
+    align-self: flex-start;
+    width: 60%;
+    img{
+        width: 100%;
+        opacity: 0.5;
+        @media (min-width:480px){
+            max-width: 100%;
+            opacity: 0.9;
+        }
+        @media (min-width:872px){
+            position: static;
+            max-width: none;
+            opacity: 1;
+        }
+    }
+}
+
+.furnitura-set_checkbox{
+    margin-bottom: 85px;
+    @include flex;
+    align-items: center;
+}
+.adjusting-plate_checkbox{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: solid 1px $font-gray;
+    background: $bg_section;
+}
+.zmdi-help {
+    padding-left: 5px;
+    color: $button_normal;
+    &:hover{
+        color: $button_hover;        
+    }
+}
+// END OF SECTION SET TITLE
+
+
+
+.furnitura-set_benefits{
+    height: 500px;
+    margin: 0 auto;
+    max-width: 1820px;
+    background-color: $bg_section;
+    margin: 50px auto;
+    p{
+        @include text-style_main($weight_light, $font_black, 22px);
+    }
+
+}
+.furnitura-set_h3{
+    font-size: 36px;
+    font-weight: $weight_bold;
+    color: $font_h2;
+}
