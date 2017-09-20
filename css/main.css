@@ -2252,6 +2252,14 @@ footer {
   font-size: 35px;
 }
 
+.main-page_video-link {
+  color: white;
+}
+
+.main-page_video-link:visited {
+  color: white;
+}
+
 .furnitura_download {
   background-color: #f7f7f7;
   font-family: "MuseoSansCyrl";
