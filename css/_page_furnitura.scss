@@ -36,7 +36,7 @@
     flex-direction: column;
     align-items: left;
     h3{
-        background-color: rgba(17,24,32,0.2);
+        background-color: rgba(17,24,32,0.5);
         @media (min-width:1440px){
         }      
     }
@@ -87,46 +87,67 @@
     @include flex;
     justify-content: center;
     position: relative;
-    // background-image: url('../img/furnitura_video_bg.png');
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: center;
-
-    // @media (min-width:872px){
-    //     height: 400px;
-    //     padding-top: 50px;
-    //     }
-    // @media (min-width:1025px){
-    //     height: 420px;
-    // }
-    // @media (min-width:1440px){
-    //     height: 563px;
-    // }
+    @include flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media (min-width:1024px){
+        justify-content: center;
+    } 
 }
 .furnitura_video_wrapper{
-    @include flex;
-    flex-direction: column;
+    // top: 40px;
     justify-content: center;
     position: absolute;
-    top: 25%;
+    margin-left: 4%;
+    @media (min-width:768px){
+        top: 25%;
+    }
+    @media (min-width:1024px) and (max-width: 1290px){
+        padding-left: 20px;
+    }
+    @media (min-width:1024px){
+        margin-left: 0;
+    }
 }
 .furnitura_video_pic{
     width: 100%;
     height: 100%;
+    min-height: 300px;    
 }
 .furnitura_video_h3{
+    margin: 0 0 10px;
     max-width: 600px;
     font-family: $main_font;
-    font-weight: $weight_bold;
-    font-size: 48px;
-    line-height: 57px;
+    font-weight: $weight_bold;    
     color: $font_white;
-    margin-bottom: 100px;
+    font-size: 26px;
+    line-height: 33px;
+    @media (min-width:1024px){
+        font-size: 48px;
+        line-height: 57px;
+        margin: 0 0 50px;
+    }
+    @media (min-width:1440px){
+        margin: 0 0 100px;
+    }
     span{
         font-weight: $weight_super-bold;
-        font-size: 35px;
+        font-size: 30px;
+        @media (max-width:768px){
+            display: block;
+        }
+        @media (min-width:768px){
+            font-size: 35px;
+        }
     }
-    
+}
+.main-page_video-link{
+    display: block;
+    color: $font_white;
+    margin: 10px 0;
+    &:visited{
+        color: $font_white;
+    }
 }
 // END OF SECTION VIDEO
 
@@ -139,6 +160,10 @@
     padding-bottom: 15px;
     p{
         padding: 15px 0;
+        @media (max-width:768px) {
+            font-size: 16px;
+            line-height: 22px;            
+        }
     }
     @media (min-width:872px) {
         @include flex;
@@ -158,8 +183,11 @@
     box-sizing: border-box;
     margin-bottom: 50px;
     h2{
-        margin-top: 125px;
+        margin-top: 50px;
         margin-bottom: 30px;
+        @media (min-width:872px){
+            margin-top: 125px;
+        }
     }
     p{
         max-width: 550px;
@@ -169,6 +197,10 @@
         line-height: 26px;
         color: $font_h2;
         margin-bottom: 15px;
+        @media (max-width:768px) {
+            font-size: 16px;
+            line-height: 22px;            
+        }
         @media (min-width:872px){
             margin-bottom: 70px;            
         }
@@ -196,7 +228,6 @@
     @media (min-width:1024px){
         align-self: flex-end;
     }
-    
 }
 .furnitura_choose_title{
     display: block;
@@ -240,7 +271,7 @@
     background-color: $bg_section;
     width: 265px;
     // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 5;
 }
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -313,7 +344,7 @@ input[type=range]::-moz-range-thumb {
     &:hover{
         background-color: $button_hover;
     }
-  }
+}
   /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
     background-color: $button_normal;
@@ -326,7 +357,7 @@ input[type=range]::-ms-thumb {
     &:hover{
         background-color: $button_hover;
     }
-  }
+}
 // END OF RANGE SLIDER
 
 // END OF SECTION CHOOSE
@@ -406,7 +437,6 @@ input[type=range]::-ms-thumb {
         @media(max-width:425px){
             display: none;
         }
-        
     }
 }
 .ghost_link{
@@ -439,7 +469,6 @@ input[type=range]::-ms-thumb {
     color: $font_h2;
     margin-bottom: 22px;
 }
-
 .furnitura_chars_main{
     margin-bottom: 15px;
     @include text-style_main($weight_light, $font_h2, 18px);
@@ -540,32 +569,6 @@ input[type=range]::-ms-thumb {
         }
     }
 }
-// .furnitura_offers{
-//     width: 100%;
-//     @include flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     flex-direction: column;
-   
-//     a{
-//         background-size: cover;
-//         background-repeat: no-repeat;
-//         width: 29.47vw;
-//         max-width: 566px;
-//         min-width: 320px;
-//         height: 10.16vw;
-//         // max-height: 195px;
-//         min-height: 110px;
-//         padding-left: 2%;
-//         margin-bottom: 15px;
-//     }
-//     @media (min-width:426px) {
-//         flex-direction: row;
-//         a{
-//             margin-bottom: 0;
-//         }
-//     }
-// }
 .offer-filenka2{
     background-image: url('../img/offer_filenka.png');
     background-color: $bg_black;
@@ -574,5 +577,4 @@ input[type=range]::-ms-thumb {
     background-image: url('../img/offer_automatica.png');
     background-color: $bg_black;    
 }
-
 // END OF SECTION FURNITURA OFFER

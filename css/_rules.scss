@@ -125,6 +125,25 @@ h3 {
     font-weight: bold;
 }
 
+.video_btn{
+    background-color: $button_normal;
+    background-image: url('../img/icons/triangle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;  
+    @include transition(background-color);
+    &:hover{
+        background-color: $button_hover;
+    }
+    &:active{
+		transform: translateY(1px);
+    }
+}
 
 .button_short {
     width: 220px;
