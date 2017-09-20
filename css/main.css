@@ -2928,6 +2928,11 @@ input[type=range]::-ms-thumb:hover {
   background-color: #111820;
 }
 
+.furnitura-set_wrapper {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
 .breadcrumbs_wrapper {
   margin: 0 auto;
   max-width: 1200px;
