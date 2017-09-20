@@ -48,10 +48,18 @@
 }
 
 .automatica_benefits{
-    padding-top: 110px;
-    .main_benefits_container{
-        height: 440px;
+    @extend .main_benefits;
+    @media (max-width:930px){
+        .main_benefits_container{
+            white-space: nowrap;
+            overflow-x: visible;
+            overflow-y: hidden;
+            vertical-align: top;
+            flex-wrap: nowrap;
+        }
     }
+    padding-top: 50px;
+    margin-bottom: 50px;
     .main_benefits_icon{
         max-width: 153px;
         width: auto;
@@ -74,9 +82,17 @@
             line-height: 22px;
         }
     }
+    @media(min-width:769px){
+        padding-top: 110px;
+        .main_benefits_container{
+            height: 440px;
+        }
+    }
 }
 .automatica_sets-title{
+    @media(min-width:550px){
     line-height: 50px;
+    }
     margin-bottom: 50px;
 }
 .automatica_set-single{
