@@ -33,6 +33,10 @@
 		display: block;
 		@include text-style_caption;
 		overflow: hidden;
+		@media (max-width:768px){
+			font-size: 16px;
+			line-height: 22px;
+		}
 	}
 }
 .main_benefits_icon {
