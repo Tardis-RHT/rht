@@ -306,3 +306,25 @@ function toggle() {
 	  }
   document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CKICKIN CHECKBOX
+
+
+// SLIDER ON FURNITURA-SET PAGE
+$(document).ready(function() {
+    var slider = $('#fur_ben').lightSlider({
+		loop:true,
+		item: 1,
+		slideMove: 1,
+		keyPress: true,
+		controls: false,
+        onSliderLoad: function() {
+            $('#fur_ben').removeClass('cS-hidden');
+        } 
+	}); 
+	$('#goToPrevSlide').on('click', function () {
+		slider.goToPrevSlide();
+	});
+	$('#goToNextSlide').on('click', function () {
+		slider.goToNextSlide();
+	});
+  });
+// END OF SLIDER ON FURNITURA-SET PAGE
