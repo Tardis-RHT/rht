@@ -106,39 +106,11 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-// .page_filenka_slider-container > .lSSlideOuter > .lSSlideWrapper > .lSAction{
-//     .lSPrev, .lSNext {
-//         height: 100%;
-//         width: 65px;
-//         top: 15px; 
-//         background-color: rgba(17,24,32,.1);
-//         background-repeat: no-repeat;
-//         background-position: 50% 50%;
-//         opacity: 1;
-//         @include transition (background-color);
-//         &:hover{
-//             opacity: 1;
-//             background-color: rgba(17,24,32,.1);
-//         }
-//     }
-//     .lSPrev{
-//         // left: 0;
-//         background-image: url('../img/icons/left.svg');
-//     }
-//     .lSNext{
-//         // right: 0;
-//         background-image: url('../img/icons/right.svg');
-//     }
-// }
-
+.custom-html{
+    font-size: 36px;
+    color: $font_white;
+    font-weight: $weight_normal;
+    position: absolute;
+    top: calc(50% - 18px);
+    left: calc(50% - 10px);
+}

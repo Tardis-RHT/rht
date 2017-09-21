@@ -3713,6 +3713,15 @@ input[type=range]::-ms-thumb:hover {
   background-position: right bottom;
 }
 
+.custom-html {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 10px);
+}
+
 .card_automatica_title {
   background-color: #f7f7f7;
   margin-bottom: 50px;

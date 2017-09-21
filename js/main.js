@@ -75,7 +75,7 @@ $(function(){
 	$(document).ready(function() {
 		$(".main_page_video-scroll").click(function () {
 			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height();
+			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height() + 1;
 			$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
 			return false;
 			});
@@ -99,7 +99,7 @@ $(function(){
 
 	$('#lightSlider_certificates').lightSlider({
 		item:6,
-		loop:true,
+		loop:false,
 		easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
 		speed:600,
 		controls: false,
@@ -130,6 +130,8 @@ $(function(){
 		// adaptiveHeight: true,
 		pager: true,
 		// autoWidth: true
+		prevHtml : '<span class="custom-html"><</span>',
+		nextHtml : '<span class="custom-html">></span>'
 	});
 	$('#video_panels').lightGallery({
 		videoMaxWidth: '100%',
