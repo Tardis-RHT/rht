@@ -2105,19 +2105,19 @@ footer {
   }
 }
 
-.furnitura_title {
+.furnitura_title, .filenka_title {
   width: 100%;
   margin: 0 auto;
   background-color: #111820;
 }
 
 @media (max-width: 872px) {
-  .furnitura_title {
+  .furnitura_title, .filenka_title {
     padding-top: 50px;
   }
 }
 
-.furnitura_title_wrapper {
+.furnitura_title_wrapper, .filenka_title-container {
   margin: 0 auto;
   width: 100%;
   max-width: 1820px;
@@ -2141,20 +2141,20 @@ footer {
 }
 
 @media (min-width: 872px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 320px;
     background-position: right 20px bottom;
   }
 }
 
 @media (min-width: 1025px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 420px;
   }
 }
 
 @media (min-width: 1440px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 620px;
     background-size: auto;
   }
@@ -3701,6 +3701,25 @@ input[type=range]::-ms-thumb:hover {
   .catalog-item-price {
     font-size: 18px;
   }
+}
+
+.filenka_title .page_products-title {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.filenka_title-container {
+  background-image: url("../img/products/filenka.png");
+  background-position: right bottom;
+}
+
+.custom-html {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 10px);
 }
 
 .card_automatica_title {
