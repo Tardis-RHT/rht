@@ -222,13 +222,10 @@
     @media(min-width:872px){
         width: 100%;
         @include flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         flex-wrap: wrap;
         align-items: center;
         margin-bottom: 90px;
-    }
-    @media(min-width:1200px){
-        justify-content: space-between;
     }
 }
 .furnitura-set_kit_single{
@@ -250,9 +247,12 @@
         height: 65px;
         @include text-style_main($weight_normal, $font_h2, 30px);
     }
-    @media(min-width:1200px){
-        margin: 0;
-    }
+    // @media(min-width:1200px){
+    //     margin: 0;
+    // }
+}
+#adjusting-plate{
+    display: none;
 }
 .furnitura-set_kit_img{
     margin: 0 auto;

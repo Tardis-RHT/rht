@@ -3235,16 +3235,9 @@ input[type=range]::-ms-thumb:hover {
     /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
     display: flex;
     /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
-    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 90px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .furnitura-set_fullkit {
-    justify-content: space-between;
   }
 }
 
@@ -3277,10 +3270,8 @@ input[type=range]::-ms-thumb:hover {
   line-height: 30px;
 }
 
-@media (min-width: 1200px) {
-  .furnitura-set_kit_single {
-    margin: 0;
-  }
+#adjusting-plate {
+  display: none;
 }
 
 .furnitura-set_kit_img {
