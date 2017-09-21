@@ -92,10 +92,10 @@
 		<a href="index.html" class="video-fullscreen_logo toShow" id="video-fullscreen_logo">
 			<img src="img/logo-transparent.png" alt="RHT logo">
 		</a>
-		<video controls id="main_video-video" class="main-page_video-video" onclick="vidplay()" poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop">
+		<video controls="controls" id="main_video-video" class="main-page_video-video"  poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop">
 			<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		  <a class="video-play toShow" id="video-play" onclick="vidplay()">| |</a>
+		  <!-- <a class="video-play toShow" id="video-play" onclick="vidplay()">| |</a> -->
 		  <button class="video_exit toShow" onclick="exitFullscreen('main_video')"><i class="zmdi zmdi-close zmdi-hc-5x"></i></button>
 		<div class="main-page_video_caption wrapper toHide">
 			<h1 class="main-page_video-title" id="title">Rolling Hi-tech</h1>
@@ -164,7 +164,7 @@
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Усиленная фурнитура <br>для откатных ворот</h3>
-				<button class="main_products-btn btn">Перейти в каталог фурнитуры</button>
+				<button class="main_products-btn btn" onClick='location.href="furnitura.html"'>Перейти в каталог фурнитуры</button>
 			</div>
 			<!-- <img src="img/Product_1.png" class="main_products-img"> -->
 		</div>
@@ -173,14 +173,14 @@
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Автоматика <br>для откатных ворот</h3>
-				<button class="main_products-btn btn">Перейти в каталог автоматики</button>
+				<button class="main_products-btn btn" onClick='location.href="automatica.html"'>Перейти в каталог автоматики</button>
 			</div>
 		</div>
 		<div class="main_products-single">
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Металлические филёнки <br>для зашивки ворот и калиток</h3>
-				<button class="main_products-btn btn">Перейти в каталог филенок</button>
+				<button class="main_products-btn btn" onClick='location.href="panels.html"'>Перейти в каталог филенок</button>
 			</div>
 			<!-- <img src="img/Product_3.png" class="main_products-img"> -->
 		</div>
@@ -352,6 +352,7 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main-video.js"></script>
 	<script type="text/javascript" src="js/lightgallery.min.js"></script>
 	<script type="text/javascript" src="js/lightslider.js"></script>
 	<script type="text/javascript" src="js/lg-video.min.js"></script>
