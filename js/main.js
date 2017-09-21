@@ -130,8 +130,6 @@ $(function(){
 		// adaptiveHeight: true,
 		pager: true,
 		// autoWidth: true
-		prevHtml : '<span class="custom-html"><</span>',
-		nextHtml : '<span class="custom-html">></span>'
 	});
 	$('#video_panels').lightGallery({
 		videoMaxWidth: '100%',

@@ -114,3 +114,9 @@
     top: calc(50% - 18px);
     left: calc(50% - 10px);
 }
+.panels_video{
+    margin-bottom: 30px;
+    @media (min-width: 769px){
+        margin-bottom: 120px;
+    }
+}

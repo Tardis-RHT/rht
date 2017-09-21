@@ -22,39 +22,50 @@
 }
 
 .lg-actions .lg-next, .lg-actions .lg-prev {
-  background-color: rgba(0, 0, 0, 0.45);
-  border-radius: 2px;
-  color: #999;
+  /* background-color: rgba(0, 0, 0, 0.45); */
+  /* border-radius: 2px;
+  color: #999; */
   cursor: pointer;
   display: block;
-  font-size: 22px;
+  /* font-size: 22px;
   margin-top: -10px;
-  padding: 8px 10px 9px;
+  padding: 8px 10px 9px; */
   position: absolute;
   top: 50%;
   z-index: 1080;
   border: none;
   outline: none;
+
+  /* Anna choise */
+  background-color: transparent;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
 }
 .lg-actions .lg-next.disabled, .lg-actions .lg-prev.disabled {
   pointer-events: none;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 .lg-actions .lg-next:hover, .lg-actions .lg-prev:hover {
   color: #FFF;
 }
 .lg-actions .lg-next {
   right: 20px;
+  /* Anna choise */
+  background-image: url('../img/icons/right.svg');
 }
-.lg-actions .lg-next:before {
-  content: "\e095";
-}
+/* .lg-actions .lg-next:before {
+  content: "Hi!";
+} */
 .lg-actions .lg-prev {
   left: 20px;
+  /* Anna choise */
+  background-image: url('../img/icons/left.svg');
 }
-.lg-actions .lg-prev:after {
+/* .lg-actions .lg-prev:after {
   content: "\e094";
-}
+} */
 
 @-webkit-keyframes lg-right-end {
   0% {
@@ -163,7 +174,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  /* background-color: rgba(0, 0, 0, 0.45); */
 }
 .lg-toolbar .lg-icon {
   color: #999;
