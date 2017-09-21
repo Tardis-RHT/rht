@@ -1,0 +1,53 @@
+.form_callback{
+    position: relative;
+}
+.phone{
+    position: absolute;
+    visibility: hidden;
+    color:  $font-gray;
+    font-size: 16px;
+    font-weight: $weight_light;
+    line-height: 19px;
+    text-align: left;
+    display: block;
+    top: -10px;
+    left: 40px;
+    &::before{
+        content:"\f2be";
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        font-family: material-design-iconic-font;
+        color: $font-gray;
+        font-size: 18px;
+        font-weight: $weight_normal;
+    }
+}
+#tel{
+    font-family: $main_font;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $weight-light;
+    color: $font_black;
+    
+    &::-moz-placeholder {
+        opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+        opacity: 1;
+    }
+    &:active, &:focus{
+        text-align: right;
+        padding-right: 20px;
+    }
+    &:active + label, &:focus + label{
+        visibility: visible;
+    }
+    // &:invalid{
+	// 	border: 2px solid red;
+    // }
+    // &:placeholder-shown {
+	// 	border: none;
+	// }
+}
