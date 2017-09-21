@@ -195,3 +195,46 @@ var rangeSlider = function(){
 rangeSlider();
 //END OF RANGE SLIDER
 
+
+// SHOW HIDE THE adjusting-plate BLOCK BY CKICKIN CHECKBOX
+function toggle() {
+	var div = document.getElementById('adjusting-plate');
+	if(this.checked)
+	  div.style.display = 'block';
+	else
+	  div.style.display = 'none'
+	  }
+  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+// END OF SHOW HIDE THE adjusting-plate BLOCK BY CKICKIN CHECKBOX
+
+
+// SLIDER ON FURNITURA-SET PAGE
+$(document).ready(function() {
+    var slider = $('#fur_ben').lightSlider({
+		loop:true,
+		item: 1,
+		slideMove: 1,
+		keyPress: true,
+		controls: false,
+		pager: false,
+        onSliderLoad: function() {
+            $('#fur_ben').removeClass('cS-hidden');
+        } 
+	}); 
+	$('#goToPrevSlide').on('click', function () {
+		slider.goToPrevSlide();
+	});
+	$('#goToNextSlide').on('click', function () {
+		slider.goToNextSlide();
+	});
+	$('#fur_pager1').on('click', function () {
+		slider.goToSlide(1);
+	});
+	$('#fur_pager2').on('click', function () {
+		slider.goToSlide(2);
+	});	
+	$('#fur_pager3').on('click', function () {
+		slider.goToSlide(3);
+	});
+  });
+// END OF SLIDER ON FURNITURA-SET PAGE
