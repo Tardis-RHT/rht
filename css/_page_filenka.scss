@@ -92,8 +92,18 @@
     }
 }
 
-
-
+.filenka_title{
+    @extend .furnitura_title;
+    .page_products-title{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}
+.filenka_title-container{
+    @extend .furnitura_title_wrapper;
+    background-image: url('../img/products/filenka.png');
+    background-position: right bottom;
+}
 
 
 

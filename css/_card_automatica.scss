@@ -1,0 +1,132 @@
+.card_automatica_title{
+    background-color: $bg_section;
+    margin-bottom: 110px;
+}
+.automatica-inset{
+    padding-bottom: 40px;
+    border-bottom: 2px solid $bg_section; 
+    margin-bottom: 110px;
+}
+.inset-title{
+    margin-bottom: 30px;
+}
+.inset-format{
+    @include text-style_main($weight_light, $font-gray, 26px);
+    margin-bottom: 10px;
+}
+.toggle{
+    margin-bottom: 50px;
+}
+.inset-items{
+    @include flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.inset-item{
+    width: calc((100% - 105px) / 4);
+    
+    img{
+        margin-bottom: 15px;
+        // background-color: $bg_section;
+    }
+}
+
+.inset-item-name{
+    @include text-style_main($weight_light, $font_black, 32px);
+    min-height: 90px;
+}
+.inset-order{
+    text-align: right;
+    button{
+        display: inline;
+    }
+}
+
+.automatica-more-title{
+    margin-bottom: 50px;
+}
+.automatica_benefits_icon{
+    height: 45px;
+}
+.main_benefits_single:last-of-type > .automatica_benefits_icon{
+    padding: 10px;
+}
+
+.automatica-install{
+    background-color: $bg_section;
+}
+.automatica-instruction{
+    padding: 35px 0;
+    @include text-style_main($weight_light, $font_black, 22px);
+    span{
+        margin-right: 25px;
+    }
+    button{
+        display: inline-block;
+    }
+}
+
+.economy{
+    background-color: $bg_black;
+    padding: 120px 0 50px;
+    color: $font_white;
+}
+.economy-title{
+    margin-bottom: 15px;
+    color: $bg_white;
+}
+.economy-items{
+    @include flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.economy-item{
+    @include flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    height: 345px;
+}
+.math{
+    font-size: 35px;
+    line-height: 36px;
+    color: $font_white;
+    font-weight: $weight_normal;
+    display: inline-block;
+    text-align: middle;
+    padding: 0 50px;
+}
+.economy-item-title{
+    @include text-style_main($weight_normal, $font_white, 22px);
+    padding-top: 10px;
+    border-top: 2px solid $font-gray;
+}
+.economy_deal{
+    @include flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 345px;
+    // padding: 18px 0 32px;
+    button{
+        margin-bottom: 34px;
+    }
+}
+.economy-price{
+    @extend .automatica_set-price;
+    color: $font_white;
+}
+.economy-last-price{
+    display: block;
+    text-decoration: line-through;
+    @include text-style_main($weight_light, $font_white, 22px);
+    margin-bottom: 10px;
+    
+}
+
+.economy-prices{
+    margin-bottom: 60px;
+}
