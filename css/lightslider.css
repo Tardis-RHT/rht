@@ -91,16 +91,18 @@
     /* background-color: #222222; */
     /* border-radius: 30px; */
     display: inline-block;
-    height: 8px;
+    /* height: 8px; */
     overflow: hidden;
     text-indent: -999em;
-    width: 8px;
+    /* width: 8px; */
     position: relative;
     z-index: 99;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
      /* Anna choise */
      background-color: rgb(255,255,255);
+     height: 7px;
+     width: 7px;
 }
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
     /* background-color: #428bca; */
@@ -190,13 +192,21 @@
 .lSAction > .lSPrev {
     /* background-position: 0 0; */
     /* left: 10px; */
+    /* Anna choise */
+    background-image: url('../img/icons/left.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 .lSAction > .lSNext {
     /* background-position: -32px 0; */
     /* right: 10px; */
     /* Anna choise */
     right: 0;
+    background-image: url('../img/icons/right.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
+
 .lSAction > a.disabled {
     pointer-events: none;
 }
