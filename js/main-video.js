@@ -22,18 +22,19 @@ function hideControls(){
         // toShow[i].style.visibility="hidden";
     };
 }
-function checkScreen(){
-    if(screen.width == window.innerWidth){
-        console.log('Hi!');
-    }else{
-        console.log('Bye!');
-    }
-    return false;
-}
+// function checkScreen(){
+//     if(screen.height == window.innerHeight){
+//         console.log('Hi!');
+//     }else if (screen.height !== window.innerHeight){
+//         console.log('Bye!');
+//     }
+//     // return false;
+// }
 
 window.addEventListener("resize", function(){
-    checkScreen();
-    if(screen.width !== window.innerWidth){
+    // checkScreen();
+    if(screen.height !== window.innerHeight){
+        onFullScreenExit()
         hideControls();
         video.play();
     }
@@ -43,6 +44,7 @@ document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFu
 function onFullScreenEnter() {
     console.log("Enter fullscreen initiated from iframe");
     showControls();
+
 };
 
 function onFullScreenExit() {
