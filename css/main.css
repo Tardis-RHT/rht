@@ -3702,7 +3702,6 @@ input[type=range]::-ms-thumb:hover {
     font-size: 18px;
   }
 }
-<<<<<<< HEAD
 
 .filenka_title .page_products-title {
   display: inline-block;
@@ -3713,8 +3712,15 @@ input[type=range]::-ms-thumb:hover {
   background-image: url("../img/products/filenka.png");
   background-position: right bottom;
 }
-=======
->>>>>>> card_automatica
+
+.custom-html {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 10px);
+}
 
 .card_automatica_title {
   background-color: #f7f7f7;
