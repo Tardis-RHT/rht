@@ -2009,7 +2009,7 @@ a :visited {
     font-weight: 500;
     font-size: 18px;
     line-height: 26px;
-    margin: 0 40px;
+    margin: 0 40px 25px;
   }
   .callback_form_wrapper-small span {
     font-size: 18px;
@@ -4176,6 +4176,60 @@ input[type=range]::-ms-thumb:hover {
   .math {
     padding: 0 50px;
   }
+}
+
+.form_callback {
+  position: relative;
+}
+
+.phone {
+  position: absolute;
+  visibility: hidden;
+  color: #78787b;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+  display: block;
+  top: -10px;
+  left: 40px;
+}
+
+.phone::before {
+  content: "\f2be";
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-family: material-design-iconic-font;
+  color: #78787b;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#tel {
+  font-family: "MuseoSansCyrl";
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #111820;
+}
+
+#tel::-moz-placeholder {
+  opacity: 1;
+}
+
+#tel::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+#tel:active, #tel:focus {
+  text-align: right;
+  padding-right: 20px;
+}
+
+#tel:active + label, #tel:focus + label {
+  visibility: visible;
 }
  
 

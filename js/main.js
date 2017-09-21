@@ -195,3 +195,29 @@ var rangeSlider = function(){
 rangeSlider();
 //END OF RANGE SLIDER
 
+$(function($){
+	$("#tel").mask("+380 (99) 999 - 99 - 99");
+ });
+
+ 
+
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	// telBtn.setAttribute('disabled', 'disabled');
+	tel.checkValidity();
+	console.log(tel.checkValidity());
+	console.log(tel.value);
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+ }
+
+
