@@ -6,7 +6,7 @@
     position: relative;
     @media(min-width:872px){
         padding-top: 0;
-        margin-bottom: 110px;
+        margin-bottom: 120px;
     }
     img{
         position: absolute;
@@ -44,11 +44,11 @@
     margin-bottom: 110px;
 }
 .inset-title{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .inset-format{
     @include text-style_main($weight_light, $font-gray, 26px);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .toggle{
     margin-bottom: 50px;
@@ -79,11 +79,11 @@
 }
 
 .inset-item-name{
-    @include text-style_main($weight_light, $font_black, 32px);
+    @include text-style_main($weight_normal, $font_h2, 26px);
     min-height: 90px;
     white-space: normal;
 
-    padding-left: 10px; //?
+    // padding-left: 10px; //?
 }
 .inset-order{
     text-align: right;
@@ -91,6 +91,43 @@
         display: inline;
     }
 }
+.inset-img-container{
+    width: 265px;
+    height: 195px;
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg_section;
+}
+.item-width{
+    width: 245px;
+    box-sizing: border-box;
+    padding: 12px 0 12px 25px;
+    background-color: $bg_section;
+    outline: none;
+    border: 1px solid $button_inactive;
+    box-shadow: none;
+    margin-right: 7px;
+    font-family: $main_font;
+    font-weight: $weight_normal;
+    font-size: 18px;
+    color: $font_black;
+    letter-spacing: 0;
+
+    &::-moz-placeholder {
+        @include text-style_main($weight_normal, $font_black, 18px);
+        opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+        @include text-style_main($weight_normal, $font_black, 18px);
+        opacity: 1;
+	}
+}
+.item-width + i{
+    color: $button_normal;
+    cursor: pointer;
+}
+
 
 .automatica-more {
     @media (max-width:930px){
@@ -104,20 +141,36 @@
     }
 }
 .automatica-more-title{
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .automatica_benefits_icon{
-    height: 45px;
+    height: 40px;
 }
 .main_benefits_single:last-of-type > .automatica_benefits_icon{
     padding: 10px;
 }
+.automatica-more{
+    .main_benefits_single{
+    margin-bottom: 30px;
+    @media(min-width:769px){
+        margin-bottom: 140px;
+    }
+        h3{
+        margin-bottom: 15px;
+        min-height: 70px;
+        @media(min-width:1201px){
+            min-height: auto;
+        }
+        }
+    }
+}
+
 
 .automatica-install{
     background-color: $bg_section;
-}
 .automatica-instruction{
-    padding: 35px 0;
+    padding: 27px 0;
+}
     @include text-style_main($weight_light, $font_black, 22px);
     span{
         margin-right: 25px;

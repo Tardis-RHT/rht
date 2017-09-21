@@ -2111,19 +2111,19 @@ footer {
   }
 }
 
-.furnitura_title {
+.furnitura_title, .filenka_title {
   width: 100%;
   margin: 0 auto;
   background-color: #111820;
 }
 
 @media (max-width: 872px) {
-  .furnitura_title {
+  .furnitura_title, .filenka_title {
     padding-top: 50px;
   }
 }
 
-.furnitura_title_wrapper {
+.furnitura_title_wrapper, .filenka_title-container {
   margin: 0 auto;
   width: 100%;
   max-width: 1820px;
@@ -2147,20 +2147,20 @@ footer {
 }
 
 @media (min-width: 872px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 320px;
     background-position: right 20px bottom;
   }
 }
 
 @media (min-width: 1025px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 420px;
   }
 }
 
 @media (min-width: 1440px) {
-  .furnitura_title_wrapper {
+  .furnitura_title_wrapper, .filenka_title-container {
     height: 620px;
     background-size: auto;
   }
@@ -4194,6 +4194,35 @@ input[type=range]::-ms-thumb:hover {
   }
 }
 
+.filenka_title .page_products-title {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.filenka_title-container {
+  background-image: url("../img/products/filenka.png");
+  background-position: right bottom;
+}
+
+.custom-html {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 10px);
+}
+
+.panels_video {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 769px) {
+  .panels_video {
+    margin-bottom: 120px;
+  }
+}
+
 .card_automatica_title {
   background-color: #f7f7f7;
   margin-bottom: 50px;
@@ -4205,7 +4234,7 @@ input[type=range]::-ms-thumb:hover {
 @media (min-width: 872px) {
   .card_automatica_title {
     padding-top: 0;
-    margin-bottom: 110px;
+    margin-bottom: 120px;
   }
 }
 
@@ -4259,7 +4288,7 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .inset-title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .inset-format {
@@ -4269,7 +4298,7 @@ input[type=range]::-ms-thumb:hover {
   color: #78787b;
   letter-spacing: 0;
   line-height: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .toggle {
@@ -4320,14 +4349,13 @@ input[type=range]::-ms-thumb:hover {
 
 .inset-item-name {
   font-family: "MuseoSansCyrl";
-  font-weight: 300;
+  font-weight: 500;
   font-size: 18px;
-  color: #111820;
+  color: #0d223f;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 26px;
   min-height: 90px;
   white-space: normal;
-  padding-left: 10px;
 }
 
 .inset-order {
@@ -4336,6 +4364,65 @@ input[type=range]::-ms-thumb:hover {
 
 .inset-order button {
   display: inline;
+}
+
+.inset-img-container {
+  width: 265px;
+  height: 195px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.item-width {
+  width: 245px;
+  box-sizing: border-box;
+  padding: 12px 0 12px 25px;
+  background-color: #f7f7f7;
+  outline: none;
+  border: 1px solid #dddddd;
+  box-shadow: none;
+  margin-right: 7px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+}
+
+.item-width::-moz-placeholder {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 18px;
+  opacity: 1;
+}
+
+.item-width::-webkit-input-placeholder {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 18px;
+  opacity: 1;
+}
+
+.item-width + i {
+  color: #0071ba;
+  cursor: pointer;
 }
 
 @media (max-width: 930px) {
@@ -4349,23 +4436,40 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .automatica-more-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .automatica_benefits_icon {
-  height: 45px;
+  height: 40px;
 }
 
 .main_benefits_single:last-of-type > .automatica_benefits_icon {
   padding: 10px;
 }
 
-.automatica-install {
-  background-color: #f7f7f7;
+.automatica-more .main_benefits_single {
+  margin-bottom: 30px;
 }
 
-.automatica-instruction {
-  padding: 35px 0;
+@media (min-width: 769px) {
+  .automatica-more .main_benefits_single {
+    margin-bottom: 140px;
+  }
+}
+
+.automatica-more .main_benefits_single h3 {
+  margin-bottom: 15px;
+  min-height: 70px;
+}
+
+@media (min-width: 1201px) {
+  .automatica-more .main_benefits_single h3 {
+    min-height: auto;
+  }
+}
+
+.automatica-install {
+  background-color: #f7f7f7;
   font-family: "MuseoSansCyrl";
   font-weight: 300;
   font-size: 18px;
@@ -4374,7 +4478,11 @@ input[type=range]::-ms-thumb:hover {
   line-height: 22px;
 }
 
-.automatica-instruction span {
+.automatica-install .automatica-instruction {
+  padding: 27px 0;
+}
+
+.automatica-install span {
   margin-right: 25px;
   font-size: 16px;
   padding: 15px 0;
@@ -4382,13 +4490,13 @@ input[type=range]::-ms-thumb:hover {
 }
 
 @media (min-width: 768px) {
-  .automatica-instruction span {
+  .automatica-install span {
     font-size: 18px;
     padding: 0;
   }
 }
 
-.automatica-instruction button {
+.automatica-install button {
   display: inline-block;
 }
 
