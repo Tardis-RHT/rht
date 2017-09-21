@@ -316,6 +316,7 @@ $(document).ready(function() {
 		slideMove: 1,
 		keyPress: true,
 		controls: false,
+		pager: false,
         onSliderLoad: function() {
             $('#fur_ben').removeClass('cS-hidden');
         } 
@@ -325,6 +326,15 @@ $(document).ready(function() {
 	});
 	$('#goToNextSlide').on('click', function () {
 		slider.goToNextSlide();
+	});
+	$('#fur_pager1').on('click', function () {
+		slider.goToSlide(1);
+	});
+	$('#fur_pager2').on('click', function () {
+		slider.goToSlide(2);
+	});	
+	$('#fur_pager3').on('click', function () {
+		slider.goToSlide(3);
 	});
   });
 // END OF SLIDER ON FURNITURA-SET PAGE
