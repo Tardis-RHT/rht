@@ -459,6 +459,12 @@ a :visited {
   padding-top: 30px;
 }
 
+@media (max-width: 871px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+
 .stickytop {
   position: fixed;
   top: 0;
@@ -2933,6 +2939,16 @@ input[type=range]::-ms-thumb:hover {
   background-color: #f7f7f7;
 }
 
+.furnitura-set_title {
+  margin-top: 40px;
+}
+
+@media (min-width: 872px) {
+  .furnitura-set_title {
+    margin-top: 0;
+  }
+}
+
 .furnitura_set_single {
   margin: 0 auto;
   padding: 15px 0;
@@ -2962,31 +2978,35 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .furnitura-set_chars {
-  width: 30%;
+  min-width: 250px;
+  z-index: 1;
 }
 
 .furnitura-set_img {
+  position: absolute;
   align-self: flex-start;
-  width: 60%;
+  width: 95%;
+  opacity: 0.2;
 }
 
 .furnitura-set_img img {
   width: 100%;
-  opacity: 0.5;
+  height: auto;
 }
 
-@media (min-width: 480px) {
-  .furnitura-set_img img {
-    max-width: 100%;
-    opacity: 0.9;
+@media (min-width: 426px) {
+  .furnitura-set_img {
+    position: static;
+    opacity: 1;
+    margin-top: 5%;
   }
 }
 
 @media (min-width: 872px) {
-  .furnitura-set_img img {
-    position: static;
-    max-width: none;
-    opacity: 1;
+  .furnitura-set_img {
+    align-self: flex-start;
+    width: 60%;
+    margin-top: 0;
   }
 }
 
@@ -3014,6 +3034,12 @@ input[type=range]::-ms-thumb:hover {
   color: #0063a6;
 }
 
+@media (max-width: 768px) {
+  .furnitura-set_checkbox {
+    margin-bottom: 35px;
+  }
+}
+
 .adjusting-plate_checkbox {
   font-family: "MuseoSansCyrl";
   font-weight: 300;
@@ -3027,7 +3053,7 @@ input[type=range]::-ms-thumb:hover {
   cursor: pointer;
   width: 15px;
   height: 15px;
-  margin: 0 17px 0 1px;
+  margin: 0 9px 0 1px;
   outline: solid 1px #78787b;
   background: #f7f7f7;
   position: relative;
@@ -3049,26 +3075,32 @@ input[type=range]::-ms-thumb:hover {
   height: 5px;
 }
 
+@media (min-width: 872px) {
+  .adjusting-plate_checkbox {
+    margin: 0 17px 0 1px;
+  }
+}
+
 .showme:hover + .furnitura_help {
   display: flex;
 }
 
 .showme {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .furnitura_help {
   display: none;
   position: absolute;
-  top: -53px;
-  left: 260px;
-  width: 570px;
-  height: 130px;
   align-items: center;
   border: 1px solid #78787b;
   color: #111820;
   background-color: #f7f7f7;
+  top: 40px;
+  left: 0px;
+  width: 290px;
+  z-index: 2;
 }
 
 .furnitura_help:after, .furnitura_help:before {
@@ -3076,40 +3108,75 @@ input[type=range]::-ms-thumb:hover {
   position: absolute;
   width: 0;
   height: 0;
-  right: 100%;
   border-style: solid;
 }
 
 .furnitura_help:after {
-  border-color: transparent #f7f7f7 transparent transparent;
+  border-color: transparent transparent #f7f7f7 transparent;
   border-width: 10px;
-  top: 50px;
+  right: 52px;
+  top: -20px;
 }
 
 .furnitura_help:before {
-  border-color: transparent #78787b transparent transparent;
+  border-color: transparent transparent #78787b transparent;
   border-width: 12px;
-  top: 48px;
-}
-
-.furnitura_help img {
-  width: 100px;
-  height: auto;
-  margin: 0 10px;
+  right: 50px;
+  top: -24px;
 }
 
 .furnitura_help p {
-  font-family: "MuseoSansCyrl";
-  font-weight: 300;
-  font-size: 18px;
-  color: #111820;
-  letter-spacing: 0;
-  line-height: 26px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .furnitura_help i {
-  padding: 5px 5px 0 0;
+  padding: 0px 5px 0 0;
   align-self: flex-start;
+}
+
+@media (min-width: 872px) {
+  .furnitura_help {
+    top: -53px;
+    left: 260px;
+    width: 570px;
+    height: 130px;
+  }
+  .furnitura_help:after, .furnitura_help:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    border-style: solid;
+  }
+  .furnitura_help:after {
+    border-color: transparent #f7f7f7 transparent transparent;
+    border-width: 10px;
+    top: 50px;
+  }
+  .furnitura_help:before {
+    border-color: transparent #78787b transparent transparent;
+    border-width: 12px;
+    top: 48px;
+  }
+  .furnitura_help img {
+    width: 100px;
+    height: auto;
+    margin: 0 10px;
+  }
+  .furnitura_help p {
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 18px;
+    color: #111820;
+    letter-spacing: 0;
+    line-height: 26px;
+  }
+  .furnitura_help i {
+    padding: 5px 5px 0 0;
+    align-self: flex-start;
+  }
 }
 
 .furnitura-set_benefits {
