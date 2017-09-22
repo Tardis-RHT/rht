@@ -1625,12 +1625,27 @@ a :visited {
 }
 
 .main_feedback_gallery-img {
+  width: 80px;
+  height: 80px;
   margin: 15px;
   align-self: center;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
 }
 
 .main_feedback_gallery-img img {
   width: 100%;
+  height: auto;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */

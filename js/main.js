@@ -268,14 +268,10 @@ $(document).ready(function() {
 	$('#goToNextSlideFeedback').on('click', function () {
 		slider.goToNextSlide();
 	});
-});
-
-$(document).ready(function() {
-    $("#feedbacklg").lightGallery({
+	$('.feedbacklg').lightGallery({
 		escKeyescKey: true,
 		mousewheel: false,
 		download: false,
 	});
 });
-
 // END OF SLIDER FOR FEEDBACK SECTION
