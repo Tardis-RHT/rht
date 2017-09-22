@@ -196,7 +196,6 @@
 .furnitura-set_benefits_wrap{
     padding-top: 100px;
     position: relative;
-    margin-bottom: 75px;
 }
 .furnitura-set_chars_set{
     font-size: 10px;
@@ -261,14 +260,44 @@
 .fur-set_slider-controls{
     @include flex;
     justify-content: space-between;
+    align-items: center;
     width: 62px;
     height: 46px;
 }
 .fur_pointer{
     &:hover{
-        cursor: pointer;        
+        cursor: pointer;
     }
 }
+
+// POINTER CLASS
+.pointer_right,
+.pointer_left{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: 2px solid;
+    border-color: $button_inactive $button_inactive transparent transparent;
+    &:hover{
+        border-color: $button_hover $button_hover transparent transparent;        
+    }
+}
+.pointer_right{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.pointer_left{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(135deg);
+}
+// END OF POINTER CLASS
+
+
+
+
+
 .pager_container{
     @include flex;
     margin-bottom: 30px;

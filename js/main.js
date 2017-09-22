@@ -196,7 +196,7 @@ rangeSlider();
 //END OF RANGE SLIDER
 
 
-// SHOW HIDE THE adjusting-plate BLOCK BY CKICKIN CHECKBOX
+// SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
@@ -205,7 +205,7 @@ function toggle() {
 	  div.style.display = 'none'
 	  }
   document.getElementById('adjusting-plate_checkbox').onchange = toggle;
-// END OF SHOW HIDE THE adjusting-plate BLOCK BY CKICKIN CHECKBOX
+// END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
 // SLIDER ON FURNITURA-SET PAGE
