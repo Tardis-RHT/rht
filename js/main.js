@@ -43,11 +43,7 @@ $(function(){
 	// END OF STCIKY HEADER
  
 	// LightGallery call and settings
-	$("#lightgallery").lightGallery({
-		escKeyescKey: true,
-		mousewheel: false,
-		download: false,
-	}); 
+
 	
 	// FURNITURA VIDEO
 	$('#videoFurnitura').lightGallery({
@@ -197,44 +193,85 @@ rangeSlider();
 
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-function toggle() {
-	var div = document.getElementById('adjusting-plate');
-	if(this.checked)
-	  div.style.display = 'block';
-	else
-	  div.style.display = 'none'
-	  }
-  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+// function toggle() {
+// 	var div = document.getElementById('adjusting-plate');
+// 	if(this.checked)
+// 	  div.style.display = 'block';
+// 	else
+// 	  div.style.display = 'none'
+// 	  }
+//   document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
 // SLIDER ON FURNITURA-SET PAGE
 $(document).ready(function() {
-    var slider = $('#fur_ben').lightSlider({
+		var slider = $('#fur_ben').lightSlider({
 		loop:true,
 		item: 1,
 		slideMove: 1,
 		keyPress: true,
 		controls: false,
 		pager: false,
-        onSliderLoad: function() {
-            $('#fur_ben').removeClass('cS-hidden');
-        } 
-	}); 
-	$('#goToPrevSlide').on('click', function () {
+				onSliderLoad: function() {
+						$('#fur_ben').removeClass('cS-hidden');
+				}
+		}); 
+		$('#goToPrevSlide').on('click', function () {
+			slider.goToPrevSlide();
+		});
+		$('#goToNextSlide').on('click', function () {
+			slider.goToNextSlide();
+		});
+		$('#fur_pager1').on('click', function () {
+			slider.goToSlide(1);
+		});
+		$('#fur_pager2').on('click', function () {
+			slider.goToSlide(2);
+		});	
+		$('#fur_pager3').on('click', function () {
+			slider.goToSlide(3);
+		});
+});
+// END OF SLIDER ON FURNITURA-SET PAGE
+
+
+// SLIDER FOR FEEDBACK SECTION
+$(document).ready(function() {
+	var slider = $('#feedbacksl').lightSlider({
+	loop:true,
+	item: 1,
+	slideMove: 1,
+	keyPress: true,
+	controls: false,
+	pager: false,
+	responsive : [
+		{
+			breakpoint: 768,
+			settings:{
+				pager: true,					
+			}
+		},
+	],
+	onBeforeSlide: function (el) {
+		$('#current').text(el.getCurrentSlideCount());
+	},
+	onSliderLoad: function() {
+			$('#feedbacksl').removeClass('cS-hidden');
+	},
+	});
+	$('#total').text(slider.getTotalSlideCount());
+	;
+	$('#goToPrevSlideFeedback').on('click', function () {
 		slider.goToPrevSlide();
 	});
-	$('#goToNextSlide').on('click', function () {
+	$('#goToNextSlideFeedback').on('click', function () {
 		slider.goToNextSlide();
 	});
-	$('#fur_pager1').on('click', function () {
-		slider.goToSlide(1);
+	$('.feedbacklg').lightGallery({
+		escKeyescKey: true,
+		mousewheel: false,
+		download: false,
 	});
-	$('#fur_pager2').on('click', function () {
-		slider.goToSlide(2);
-	});	
-	$('#fur_pager3').on('click', function () {
-		slider.goToSlide(3);
-	});
-  });
-// END OF SLIDER ON FURNITURA-SET PAGE
+});
+// END OF SLIDER FOR FEEDBACK SECTION

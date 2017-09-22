@@ -1592,7 +1592,7 @@ a :visited {
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
   justify-content: center;
-  flex-flow: column;
+  flex-direction: row;
 }
 
 .main_feedback_text {
@@ -1605,6 +1605,7 @@ a :visited {
 }
 
 .main_feedback_gallery {
+  margin: 0 auto;
   width: 290px;
   align-self: center;
   margin-bottom: 20px;
@@ -1624,12 +1625,27 @@ a :visited {
 }
 
 .main_feedback_gallery-img {
+  width: 80px;
+  height: 80px;
   margin: 15px;
   align-self: center;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
 }
 
 .main_feedback_gallery-img img {
   width: 100%;
+  height: auto;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   /* Safari 6.0 - 9.0 */
@@ -1648,10 +1664,31 @@ a :visited {
 }
 
 .main_feedback_feedback {
+  margin: 0 auto;
   width: 240px;
   height: 46px;
   align-self: center;
   margin-bottom: 50px;
+}
+
+.feedback_pointer {
+  margin-top: 60px;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .feedback_pointer {
+    display: none;
+  }
+}
+
+.feedback_slider_counter {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #78787b;
+  letter-spacing: 0;
+  line-height: 26px;
 }
 
 @media screen and (min-width: 760px) {
@@ -1683,6 +1720,22 @@ a :visited {
     height: 30px;
     margin-left: -15px;
   }
+  .feedback_slider_container {
+    margin: 0 auto;
+    width: 740px;
+    display: -webkit-box;
+    /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+    display: -moz-box;
+    /* Firefox 2 - 27 (2009 Spec), UC Mini */
+    display: -ms-flexbox;
+    /* IE10 (2012 Syntax) */
+    display: -webkit-flex;
+    /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+    display: flex;
+    /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+    justify-content: center;
+    align-items: flex-start;
+  }
   .main_feedback_container {
     width: 670px;
     display: -webkit-box;
@@ -1698,15 +1751,7 @@ a :visited {
     justify-content: center;
     flex-flow: column;
   }
-  .main_feedback_number {
-    font-family: "MuseoSansCyrl";
-    font-weight: 300;
-    font-size: 18px;
-    color: #78787b;
-    letter-spacing: 0;
-    line-height: 26px;
-  }
-  .main_feedback_number span {
+  .main_feedback_number-big {
     font-size: 36px;
     font-weight: 500;
   }
