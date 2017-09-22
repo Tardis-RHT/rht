@@ -193,14 +193,16 @@ rangeSlider();
 
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-// function toggle() {
-// 	var div = document.getElementById('adjusting-plate');
-// 	if(this.checked)
-// 	  div.style.display = 'block';
-// 	else
-// 	  div.style.display = 'none'
-// 	  }
-//   document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+
+function toggle() {
+	var div = document.getElementById('adjusting-plate');
+	if(this.checked)
+	  div.style.display = 'block';
+	else
+	  div.style.display = 'none'
+	  }
+  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
