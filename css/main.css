@@ -3299,12 +3299,39 @@ input[type=range]::-ms-thumb:hover {
   display: flex;
   /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
   justify-content: space-between;
+  align-items: center;
   width: 62px;
   height: 46px;
 }
 
 .fur_pointer:hover {
   cursor: pointer;
+}
+
+.pointer_right,
+.pointer_left {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+  border-color: #dddddd #dddddd transparent transparent;
+}
+
+.pointer_right:hover,
+.pointer_left:hover {
+  border-color: #0063a6 #0063a6 transparent transparent;
+}
+
+.pointer_right {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+.pointer_left {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(135deg);
 }
 
 .pager_container {
