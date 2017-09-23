@@ -194,21 +194,20 @@ rangeSlider();
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
-// function toggle() {
-// 	var div = document.getElementById('adjusting-plate');
-// 	if(this.checked)
-// 	  div.style.display = 'block';
-// 	else
-// 	  div.style.display = 'none'
-// 	  }
-//   document.getElementById('adjusting-plate_checkbox').onchange = toggle;
-
+function toggle() {
+	var div = document.getElementById('adjusting-plate');
+	if(this.checked)
+	  div.style.display = 'block';
+	else
+	  div.style.display = 'none'
+  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+}
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
 // SLIDER ON FURNITURA-SET PAGE
 $(document).ready(function() {
-		var slider = $('#fur_ben').lightSlider({
+		var sliderFur = $('#fur_ben').lightSlider({
 		loop:true,
 		item: 1,
 		slideMove: 1,
@@ -220,19 +219,19 @@ $(document).ready(function() {
 				}
 		}); 
 		$('#goToPrevSlide').on('click', function () {
-			slider.goToPrevSlide();
+			sliderFur.goToPrevSlide();
 		});
 		$('#goToNextSlide').on('click', function () {
-			slider.goToNextSlide();
+			sliderFur.goToNextSlide();
 		});
 		$('#fur_pager1').on('click', function () {
-			slider.goToSlide(1);
+			sliderFur.goToSlide(1);
 		});
 		$('#fur_pager2').on('click', function () {
-			slider.goToSlide(2);
+			sliderFur.goToSlide(2);
 		});	
 		$('#fur_pager3').on('click', function () {
-			slider.goToSlide(3);
+			sliderFur.goToSlide(3);
 		});
 });
 // END OF SLIDER ON FURNITURA-SET PAGE
@@ -240,7 +239,7 @@ $(document).ready(function() {
 
 // SLIDER FOR FEEDBACK SECTION
 $(document).ready(function() {
-	var slider = $('#feedbacksl').lightSlider({
+	var sliderFeedback = $('#feedbacksl').lightSlider({
 	loop:true,
 	item: 1,
 	slideMove: 1,
@@ -260,15 +259,16 @@ $(document).ready(function() {
 	},
 	onSliderLoad: function() {
 			$('#feedbacksl').removeClass('cS-hidden');
+			$('#total').text(sliderFeedback.getTotalSlideCount());
 	},
 	});
-	$('#total').text(slider.getTotalSlideCount());
-	;
+	
+	
 	$('#goToPrevSlideFeedback').on('click', function () {
-		slider.goToPrevSlide();
+		sliderFeedback.goToPrevSlide();
 	});
 	$('#goToNextSlideFeedback').on('click', function () {
-		slider.goToNextSlide();
+		sliderFeedback.goToNextSlide();
 	});
 	$('.feedbacklg').lightGallery({
 		escKeyescKey: true,
