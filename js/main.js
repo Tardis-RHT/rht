@@ -201,6 +201,7 @@ function toggle() {
 	  div.style.display = 'none'
 }
 document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
