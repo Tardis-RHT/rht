@@ -193,15 +193,14 @@ rangeSlider();
 
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
 	  div.style.display = 'block';
 	else
 	  div.style.display = 'none'
-  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 }
+document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
@@ -214,9 +213,13 @@ $(document).ready(function() {
 		keyPress: true,
 		controls: false,
 		pager: false,
-				onSliderLoad: function() {
-						$('#fur_ben').removeClass('cS-hidden');
-				}
+		onSliderLoad: function() {
+				$('#fur_ben').removeClass('cS-hidden');
+		},
+		onBeforeSlide: function (el) {
+			$('div.fur_pager').removeClass('fur_pager_active');
+			$('#fur_pager'+el.getCurrentSlideCount()).addClass('fur_pager_active');
+		},
 		}); 
 		$('#goToPrevSlide').on('click', function () {
 			sliderFur.goToPrevSlide();
