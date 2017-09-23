@@ -43,11 +43,7 @@ $(function(){
 	// END OF STCIKY HEADER
  
 	// LightGallery call and settings
-	$("#lightgallery").lightGallery({
-		escKeyescKey: true,
-		mousewheel: false,
-		download: false,
-	}); 
+
 	
 	// FURNITURA VIDEO
 	$('#videoFurnitura').lightGallery({
@@ -221,3 +217,89 @@ $(function($){
  }
 
 
+
+// SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
+
+function toggle() {
+	var div = document.getElementById('adjusting-plate');
+	if(this.checked)
+	  div.style.display = 'block';
+	else
+	  div.style.display = 'none'
+  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+}
+// END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
+
+
+// SLIDER ON FURNITURA-SET PAGE
+$(document).ready(function() {
+		var sliderFur = $('#fur_ben').lightSlider({
+		loop:true,
+		item: 1,
+		slideMove: 1,
+		keyPress: true,
+		controls: false,
+		pager: false,
+				onSliderLoad: function() {
+						$('#fur_ben').removeClass('cS-hidden');
+				}
+		}); 
+		$('#goToPrevSlide').on('click', function () {
+			sliderFur.goToPrevSlide();
+		});
+		$('#goToNextSlide').on('click', function () {
+			sliderFur.goToNextSlide();
+		});
+		$('#fur_pager1').on('click', function () {
+			sliderFur.goToSlide(1);
+		});
+		$('#fur_pager2').on('click', function () {
+			sliderFur.goToSlide(2);
+		});	
+		$('#fur_pager3').on('click', function () {
+			sliderFur.goToSlide(3);
+		});
+});
+// END OF SLIDER ON FURNITURA-SET PAGE
+
+
+// SLIDER FOR FEEDBACK SECTION
+$(document).ready(function() {
+	var sliderFeedback = $('#feedbacksl').lightSlider({
+	loop:true,
+	item: 1,
+	slideMove: 1,
+	keyPress: true,
+	controls: false,
+	pager: false,
+	responsive : [
+		{
+			breakpoint: 768,
+			settings:{
+				pager: true,					
+			}
+		},
+	],
+	onBeforeSlide: function (el) {
+		$('#current').text(el.getCurrentSlideCount());
+	},
+	onSliderLoad: function() {
+			$('#feedbacksl').removeClass('cS-hidden');
+			$('#total').text(sliderFeedback.getTotalSlideCount());
+	},
+	});
+	
+	
+	$('#goToPrevSlideFeedback').on('click', function () {
+		sliderFeedback.goToPrevSlide();
+	});
+	$('#goToNextSlideFeedback').on('click', function () {
+		sliderFeedback.goToNextSlide();
+	});
+	$('.feedbacklg').lightGallery({
+		escKeyescKey: true,
+		mousewheel: false,
+		download: false,
+	});
+});
+// END OF SLIDER FOR FEEDBACK SECTION

@@ -170,6 +170,9 @@ a {
 .breadcrumbs{
     @include text-style_main($weight_light, $font-gray, 22px);
     padding-top: 30px;
+    @media (max-width:871px){
+        display: none;
+    }
 }
 
 // .only_desktop{
