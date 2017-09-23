@@ -240,7 +240,7 @@ $(document).ready(function() {
 // END OF SLIDER ON FURNITURA-SET PAGE
 
 
-// SLIDER FOR FEEDBACK SECTION
+// SLIDER AND GALLERY FOR FEEDBACK SECTION
 $(document).ready(function() {
 	var sliderFeedback = $('#feedbacksl').lightSlider({
 	loop:true,
@@ -265,8 +265,6 @@ $(document).ready(function() {
 			$('#total').text(sliderFeedback.getTotalSlideCount());
 	},
 	});
-	
-	
 	$('#goToPrevSlideFeedback').on('click', function () {
 		sliderFeedback.goToPrevSlide();
 	});
@@ -279,4 +277,4 @@ $(document).ready(function() {
 		download: false,
 	});
 });
-// END OF SLIDER FOR FEEDBACK SECTION
+// END OF SLIDER AND GALLERY FOR FEEDBACK SECTION
