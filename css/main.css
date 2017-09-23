@@ -3405,6 +3405,10 @@ input[type=range]::-ms-thumb:hover {
   background-color: #0063a6;
 }
 
+.fur_pager_active {
+  background-color: #0063a6;
+}
+
 .furnitura-set_kit {
   margin-bottom: 40px;
 }
