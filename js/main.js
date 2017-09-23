@@ -259,10 +259,11 @@ $(document).ready(function() {
 	},
 	onSliderLoad: function() {
 			$('#feedbacksl').removeClass('cS-hidden');
+			$('#total').text(sliderFeedback.getTotalSlideCount());
 	},
 	});
-	$('#total').text(sliderFeedback.getTotalSlideCount());
-	;
+	
+	
 	$('#goToPrevSlideFeedback').on('click', function () {
 		sliderFeedback.goToPrevSlide();
 	});
