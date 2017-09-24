@@ -64,9 +64,6 @@ $(function(){
 	// }); 
 
 
-	
-
-
 	// ANCHOR SCROLL
 	$(document).ready(function() {
 		$(".main_page_video-scroll").click(function () {
@@ -77,8 +74,6 @@ $(function(){
 			});
 		});
 
-	//Sertificates Carousel
-	
 
 	// LightSlider call and settings
 	$("#lightSlider").lightSlider({
@@ -92,7 +87,7 @@ $(function(){
 		autoWidth: true
 	});
 
-
+	//Sertificates Carousel
 	$('#lightSlider_certificates').lightSlider({
 		item:6,
 		loop:false,
@@ -135,18 +130,6 @@ $(function(){
 		download: false,
 	}); 
 
-	$(function(){
-		var calcVideoSize = function() {
-			var video_height = $('#main_video-video').outerHeight()
-			$('#main_video').css("height", video_height + 'px');
-			console.log(video_height);
-		}
-		$(window).resize(function() {
-			calcVideoSize()
-		});	
-			calcVideoSize();
-
-	})
 });
 
 
@@ -191,6 +174,38 @@ var rangeSlider = function(){
 rangeSlider();
 //END OF RANGE SLIDER
 
+$(function($){
+	if(document.getElementById('tel')){
+		// console.log('exist');
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+	}
+ });
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	// telBtn.setAttribute('disabled', 'disabled');
+	
+	tel.checkValidity();
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		// console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		// console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+	
+ }
+ $(".form_callback").trigger('reset');
+
+
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 function toggle() {
@@ -200,7 +215,11 @@ function toggle() {
 	else
 	  div.style.display = 'none'
 }
-document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+
+if(document.getElementById('adjusting-plate_checkbox')){
+	document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+}
+
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
@@ -278,3 +297,15 @@ $(document).ready(function() {
 	});
 });
 // END OF SLIDER AND GALLERY FOR FEEDBACK SECTION
+
+//TOOGLE BUTTONS MINI-MAXI ON PAGE AUTOMATICA-CARD
+
+function maximize(){
+	
+		if($('#maxi').is(':checked')){
+			$('.maxi').css('visibility', 'visible');
+		}else{
+			$('.maxi').css('visibility', 'hidden');
+		}
+};
+

@@ -86,3 +86,11 @@
 .main-page_certificates > .slider{
     margin-bottom: 45px;
 }
+
+.main-page_certificates_slider{
+    .fur-set_slider-controls{
+        button{
+            background: none;
+        }
+    }
+}
