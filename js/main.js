@@ -219,15 +219,14 @@ $(function($){
 
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
 	  div.style.display = 'block';
 	else
 	  div.style.display = 'none'
-  document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 }
+document.getElementById('adjusting-plate_checkbox').onchange = toggle;
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
@@ -240,9 +239,13 @@ $(document).ready(function() {
 		keyPress: true,
 		controls: false,
 		pager: false,
-				onSliderLoad: function() {
-						$('#fur_ben').removeClass('cS-hidden');
-				}
+		onSliderLoad: function() {
+				$('#fur_ben').removeClass('cS-hidden');
+		},
+		onBeforeSlide: function (el) {
+			$('div.fur_pager').removeClass('fur_pager_active');
+			$('#fur_pager'+el.getCurrentSlideCount()).addClass('fur_pager_active');
+		},
 		}); 
 		$('#goToPrevSlide').on('click', function () {
 			sliderFur.goToPrevSlide();
@@ -263,7 +266,7 @@ $(document).ready(function() {
 // END OF SLIDER ON FURNITURA-SET PAGE
 
 
-// SLIDER FOR FEEDBACK SECTION
+// SLIDER AND GALLERY FOR FEEDBACK SECTION
 $(document).ready(function() {
 	var sliderFeedback = $('#feedbacksl').lightSlider({
 	loop:true,
@@ -288,8 +291,6 @@ $(document).ready(function() {
 			$('#total').text(sliderFeedback.getTotalSlideCount());
 	},
 	});
-	
-	
 	$('#goToPrevSlideFeedback').on('click', function () {
 		sliderFeedback.goToPrevSlide();
 	});
@@ -302,4 +303,8 @@ $(document).ready(function() {
 		download: false,
 	});
 });
+<<<<<<< HEAD
 // END OF SLIDER FOR FEEDBACK SECTION
+=======
+// END OF SLIDER AND GALLERY FOR FEEDBACK SECTION
+>>>>>>> d34dc48c435e0c7ec82b0819c46663abcd080208
