@@ -1,3 +1,16 @@
+$(function(){
+    var calcVideoSize = function() {
+        var video_height = $('#main_video-video').outerHeight()
+        $('#main_video').css("height", video_height + 'px');
+        console.log(video_height);
+    }
+    $(window).resize(function() {
+        calcVideoSize()
+    });	
+        calcVideoSize();
+
+});
+
 var toHide = document.getElementsByClassName("toHide");
 var toShow = document.getElementsByClassName("toShow");
 var control_btn = document.getElementById("video-play");

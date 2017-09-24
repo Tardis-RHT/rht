@@ -135,18 +135,6 @@ $(function(){
 		download: false,
 	}); 
 
-	$(function(){
-		var calcVideoSize = function() {
-			var video_height = $('#main_video-video').outerHeight()
-			$('#main_video').css("height", video_height + 'px');
-			console.log(video_height);
-		}
-		$(window).resize(function() {
-			calcVideoSize()
-		});	
-			calcVideoSize();
-
-	})
 });
 
 
@@ -192,29 +180,32 @@ rangeSlider();
 //END OF RANGE SLIDER
 
 $(function($){
-	$("#tel").mask("+380 (99) 999 - 99 - 99");
+	$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
  });
-
- 
-
  function checkTelValidity(){
 	var tel = document.getElementById('tel');
 	var telBtn = document.getElementById('tel-btn');
 	// telBtn.setAttribute('disabled', 'disabled');
+	
 	tel.checkValidity();
-	console.log(tel.checkValidity());
-	console.log(tel.value);
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
 	
 	if (tel.checkValidity() === false || tel.value == ""){
-		console.log('invalid');
+		// console.log('invalid');
 		telBtn.setAttribute('disabled', 'disabled');
 	   }
 	else if (tel.checkValidity() === true){
-		console.log('valid');
+		// console.log('valid');
 		telBtn.removeAttribute('disabled', 'disabled');
 	   }
 	//    telBtn.setAttribute('disabled', 'disabled');
+	
  }
+ $(".form_callback").trigger('reset');
 
 
 
@@ -303,3 +294,21 @@ $(document).ready(function() {
 	});
 });
 // END OF SLIDER FOR FEEDBACK SECTION
+
+//TOOGLE BUTTONS MINI-MAXI ON PAGE AUTOMATICA-CARD
+
+// function maximize(){
+// 	$('.maxi').css('visibility', 'visible');	
+// 	
+// };
+// function minimize(){
+// 	$('.maxi').css('visibility', 'hidden');	
+// };
+function maximize(){
+	
+		if($('#maxi').is(':checked')){
+			$('.maxi').css('visibility', 'visible');
+		}else{
+			$('.maxi').css('visibility', 'hidden');
+		}
+};

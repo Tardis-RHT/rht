@@ -294,13 +294,17 @@
             <div class="main_callback_left">
             </div>
             <div class="main_callback_center">
-                <div class="callback_form_wrapper">
+                <div class="callback_form_wrapper wrapper">
                     <div class="callback_form_wrapper-small">
                         <h2>Обратная связь</h2>
                         <p>Оставьте номер телефона и менеджер свяжется с вами в течение 15 минут</p>
                         <form class="form_callback" name="callback">
-                            <input class="callback_telephone" type="tel" name="telephone" placeholder="Номер телефона">
-                            <button class="callback_callus_btn btn" type="submit" disabled>Перезвоните мне</button>
+                            
+                            <input class="callback_telephone tel" type="tel" name="telephone" placeholder="Номер телефона" id="tel" 
+                            PATTERN="\D[0-9]{3}\s\D[0-9]{2}\D\s[0-9]{3}\s\D\s[0-9]{2}\s\D\s[0-9]{2}"
+                            onkeydown="checkTelValidity()">
+                            <label class="phone" for="tel">Номер телефона</label>
+                            <button class="callback_callus_btn btn" type="submit" disabled id="tel-btn">Перезвоните мне</button>
                         </form>
                         <span>Звоните бесплатно  0 800 21 02 57</span>
                         <span>Ответим с 9:00 до 19:00 ежедневно</span>
@@ -331,6 +335,8 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/lightslider.js"></script>
-        <script type="text/javascript" src="js/lightgallery.js"></script>	
+        <script type="text/javascript" src="js/lightgallery.js"></script>
+        <script type="text/javascript" src="js/maskedinput.js"></script>
+
     </body>
     </html>

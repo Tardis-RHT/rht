@@ -23,6 +23,18 @@
         font-size: 18px;
         font-weight: $weight_normal;
     }
+    // &::after{
+    //     content:"Номер должен состоять из 12 цифр";
+    //     display: block;
+    //     position: absolute;
+    //     width: 280px;
+    //     top: 0;
+    //     left: 0;
+    //     font-family: $main_font;
+    //     font-size: 16px;
+    //     font-weight: $weight_light;
+    //     visibility:hidden;
+    // }
 }
 #tel{
     font-family: $main_font;
@@ -44,10 +56,14 @@
     &:active + label, &:focus + label{
         visibility: visible;
     }
-    // &:invalid{
-	// 	border: 2px solid red;
+    // &:active + label::after, &:focus + label::after{
+    //     visibility: hidden;
     // }
-    // &:placeholder-shown {
-	// 	border: none;
+    // &:invalid + label::after{
+    //     visibility: visible;
+    //     color: red;
+    // }
+    // &:placeholder-shown + label{
+	// 	visibility: hidden;
 	// }
 }

@@ -150,8 +150,10 @@
                             
                         }
                     } else buffer[i] === test.charAt(pos) && pos++, partialPosition > i && (lastMatch = i);
-                    return allow ? writeBuffer() : partialPosition > lastMatch + 1 ? settings.autoclear || buffer.join("") === defaultBuffer ? (input.val() && input.val(""), 
-                    clearBuffer(0, len)) : writeBuffer() : (writeBuffer(), input.val(input.val().substring(0, lastMatch + 1))), 
+                    return allow ? writeBuffer() : partialPosition > lastMatch + 1 ? settings.autoclear || buffer.join("") === defaultBuffer ? (input.val() 
+                    // && input.val(""), 
+                    // clearBuffer(0, len)
+                ) : writeBuffer() : (writeBuffer(), input.val(input.val().substring(0, lastMatch + 1))), 
                     partialPosition ? i : firstNonMaskPos;
                 }
                 var input = $(this), buffer = $.map(mask.split(""), function(c, i) {
