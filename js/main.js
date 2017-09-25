@@ -174,6 +174,8 @@ var rangeSlider = function(){
 rangeSlider();
 //END OF RANGE SLIDER
 
+//CALLBACK VALIDATION
+
 $(function($){
 	if(document.getElementById('tel')){
 		// console.log('exist');
@@ -205,7 +207,7 @@ $(function($){
  }
  $(".form_callback").trigger('reset');
 
-
+// END OF CALLBACK VALIDATION
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 function toggle() {
@@ -309,3 +311,31 @@ function maximize(){
 		}
 };
 
+//CALLBACK POPUP
+
+$( document ).ready(function(){
+	if('#callback-popup'){
+		hidePopup()
+	}
+})
+function hidePopup(){
+	$('#callback-popup').hide(250,'swing');
+}
+function showPopup(){
+	$('#callback-popup').show(250,'swing');
+}
+
+
+//END OF CALLBACK POPUP
+
+//CALLBACK SUBMIT (AJAX)
+
+$('#callback').bind('submit',function(e) {
+	e.preventDefault(); 
+	//here would be code
+
+	//PLEASE DON'T FORGET TO ADD RESET ON 200!!!
+	//ASK ABOUT ADDING ERROR ON 500
+});
+
+//END OF CALLBACK SUBMIT (AJAX)

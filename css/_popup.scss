@@ -67,3 +67,46 @@
 	// 	visibility: hidden;
 	// }
 }
+
+//answer
+.main_callback{
+    position: relative;
+}
+.main_callback-answer{
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 262.5px);
+    width: 525px;
+    height: 585px;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: $bg_white;
+    .callback_form_wrapper-small{
+        padding: 27px 38px;
+        justify-content: flex-start;
+        position: relative;
+    }
+    p{
+        margin: 0;
+        text-align: left;
+        margin-bottom: 95px;
+        align-self: flex-start;
+    }
+    .callback-answer{
+        width: 280px;
+    }
+    .callback-answer-close{
+        position: absolute;
+        top: -41px;
+        right: -43px;
+        border-left: 1px solid $font-gray;
+        border-bottom: 1px solid $font-gray;
+        border-right: none;
+        border-top: none;
+        padding: 8px 14px 6px 12px;
+        box-shadow: none;
+        outline:none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
