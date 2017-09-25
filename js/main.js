@@ -303,8 +303,4 @@ $(document).ready(function() {
 		download: false,
 	});
 });
-<<<<<<< HEAD
-// END OF SLIDER FOR FEEDBACK SECTION
-=======
 // END OF SLIDER AND GALLERY FOR FEEDBACK SECTION
->>>>>>> d34dc48c435e0c7ec82b0819c46663abcd080208
