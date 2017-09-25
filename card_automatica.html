@@ -88,10 +88,13 @@
 		<!-- END OF MAIN MENU -->
 	</header>
     
+
+    <section class="furnitura-set_wrapper">
+        <div class="breadcrumbs wrapper">
+            Главная  /  Автоматика / Rotelli Premium&nbsp;1100
+        </div>
+    </section>
     <section class="card_automatica_title">
-        <section class="breadcrumbs wrapper">
-                Главная  /  Автоматика / Rotelli Premium&nbsp;1100
-        </section>
         <div class="automatica_title-container wrapper">
             <div class="main_products-caption">
                 <div class="automatica_set-capture">
@@ -117,10 +120,10 @@
         <h2 class="inset-title">В комплект входит</h2>
         <p class="inset-format">Формат комплекта:</p>
         <span class="toggle">
-                <input id="off" type="radio" name="toggle" value="off" checked>
-                <label for="off">Mini</label>
-                <input id="on" type="radio" name="toggle" value="on">
-                <label for="on">Maxi</label>
+                <input id="mini" type="radio" name="toggle" value="mini" checked onclick="maximize()">
+                <label for="mini">Mini</label>
+                <input id="maxi" type="radio" name="toggle" value="maxi" onclick="maximize()">
+                <label for="maxi">Maxi</label>
         </span>
         <div class="inset-container">
             <div class="inset-items">
@@ -141,15 +144,21 @@
                             <img src="../img/products/bitmap1.png" alt="Стальная оцинкованная зубчатая рейка">
                         </div>
                     <p class="inset-item-name">Стальная оцинкованная зубчатая рейка &mdash; 4&nbsp;м</p>
-                    <input type="text" class="item-width" placeholder="Ширина проема ворот"><i class="zmdi zmdi-help showme"></i>
+                    <input type="text" class="item-width" placeholder="Ширина проема ворот">
+                    <i class="zmdi zmdi-help showme"></i>
+                    <!-- <div class="furnitura_help">
+                        <img src="img/adjusting_plate.png" alt="Item of the kit">
+                        <p>Позволяет правильно выставить уровень ворот при установке, выровнять его при проседании почвы, а также сменить каркас или передвинуть ворота без замены фурнитуры.</p>
+                        <i class="zmdi zmdi-close"></i>
+                    </div> -->
                 </div>
-                <div class="inset-item">
+                <div class="inset-item maxi">
                         <div class="inset-img-container">
                             <img src="../img/products/bitmap2.png" alt="Сигнальная лампа">
                         </div>
                     <p class="inset-item-name">Сигнальная лампа &mdash; 1&nbsp;шт</p>
                 </div>
-                <div class="inset-item">
+                <div class="inset-item maxi">
                         <div class="inset-img-container">
                             <img src="../img/products/bitmap3.png" alt="Комплект фотоэлементов безопасности">
                         </div>

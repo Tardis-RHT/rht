@@ -249,34 +249,93 @@
 			<h2>Отзывы</h2>
 			<div class="main_feedback_number-container">
 				<img src="img/icons/feedback_stripes.svg" alt="DecorativeArrows">
-				<p class="main_feedback_number"><span class="main_feedback_number-big">1 </span>/ 11</p>
-			</div>
-			<div class="main_feedback_container">				
-				<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
-						и продукцию. Всё отправили вовремя, без косяков и за 
-						вполне доступные деньги. Всем рекомендую!
-				</p>
-				<div class="main_feedback_nameanddate">
-					<p class="main_feedback_name">
-						Константин Сергеев
-					</p>
-					<p class="main_feedback_date">
-						07.09.2017
-					</p>
+				<div class="feedback_slider_counter">
+					<span id="current" class="main_feedback_number-big">1</span><span> / </span><span id="total" class="main_feedback_number">/ 11</span>
 				</div>
-				<div class="main_feedback_gallery">
-					<div id="lightgallery" class="main_feedback_gallery-cont">
-						<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
-					</div>
-				</div>
-				<button class="main_feedback_feedback btn">
-					Оставить Отзыв
-				</button>
 			</div>
+			<div class="feedback_slider_container">
+				<div id="goToPrevSlideFeedback" class="pointer_left feedback_pointer"></div>	
+				<div class="main_feedback_container">		
+					<ul id="feedbacksl" class="cs-hidden">
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Константин Сергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2017
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										КСергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2217
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Конст Сер
+									</p>
+									<p class="main_feedback_date">
+										07.09.2317
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="goToNextSlideFeedback" class="pointer_right feedback_pointer"></div>				
+			</div>
+			<button class="main_feedback_feedback btn">
+				Оставить Отзыв
+			</button>
 		</div>
 	</section>
+
     
         <section class="automatica_offers wrapper">
             <h2 class="automatica_offers-title">Также предлагаем</h2>
@@ -294,13 +353,17 @@
             <div class="main_callback_left">
             </div>
             <div class="main_callback_center">
-                <div class="callback_form_wrapper">
+                <div class="callback_form_wrapper wrapper">
                     <div class="callback_form_wrapper-small">
                         <h2>Обратная связь</h2>
                         <p>Оставьте номер телефона и менеджер свяжется с вами в течение 15 минут</p>
                         <form class="form_callback" name="callback">
-                            <input class="callback_telephone" type="tel" name="telephone" placeholder="Номер телефона">
-                            <button class="callback_callus_btn btn" type="submit" disabled>Перезвоните мне</button>
+                            
+                            <input class="callback_telephone tel" type="tel" name="telephone" placeholder="Номер телефона" id="tel" 
+                            PATTERN="\D[0-9]{3}\s\D[0-9]{2}\D\s[0-9]{3}\s\D\s[0-9]{2}\s\D\s[0-9]{2}"
+                            onkeydown="checkTelValidity()">
+                            <label class="phone" for="tel">Номер телефона</label>
+                            <button class="callback_callus_btn btn" type="submit" disabled id="tel-btn">Перезвоните мне</button>
                         </form>
                         <span>Звоните бесплатно  0 800 21 02 57</span>
                         <span>Ответим с 9:00 до 19:00 ежедневно</span>
@@ -331,6 +394,8 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/lightslider.js"></script>
-        <script type="text/javascript" src="js/lightgallery.js"></script>	
+        <script type="text/javascript" src="js/lightgallery.js"></script>
+        <script type="text/javascript" src="js/maskedinput.js"></script>
+
     </body>
     </html>
