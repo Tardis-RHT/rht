@@ -4911,6 +4911,169 @@ input[type=range]::-ms-thumb:hover {
   background-color: transparent;
   cursor: pointer;
 }
+
+.comment {
+  background-color: #f7f7f7;
+  padding: 45px 0 150px;
+}
+
+.comment-title {
+  margin-bottom: 75px;
+}
+
+.comment-form {
+  width: 670px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-wrap: wrap;
+}
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #78787b;
+  box-sizing: border-box;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.comment-form input::-moz-placeholder, .comment-form textarea::-moz-placeholder {
+  opacity: 1;
+}
+
+.comment-form input::-webkit-input-placeholder, .comment-form textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown {
+  border: 1px solid #78787b;
+}
+
+.comment-form textarea {
+  resize: none;
+  margin-bottom: 50px;
+}
+
+.comment-inputs {
+  min-width: 55%;
+  width: 55%;
+}
+
+.comment-inputs input, .comment-inputs select {
+  display: block;
+  margin-bottom: 35px;
+}
+
+.comment-dropfiles {
+  width: calc(45% - 35px);
+  margin-left: 35px;
+  height: 210px;
+  border: 1px dashed #78787b;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.comment-dropfiles b, .comment-dropfiles span {
+  display: block;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.comment-dropfiles span {
+  font-weight: 300;
+}
+
+.comment-dropfiles span:nth-of-type(2) {
+  margin: 20px 0;
+}
+
+.comment-btn {
+  width: 280px;
+  margin-right: 40px;
+}
+
+.comment-requiremence {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #78787b;
+  letter-spacing: 0;
+  line-height: 46px;
+}
+
+.comment-select {
+  width: 100%;
+}
+
+.comment-select button {
+  display: block;
+  width: 100%;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  background-color: white;
+  position: relative;
+}
+
+.comment-select button:hover {
+  background-color: white;
+}
+
+.comment-select button::after {
+  font-family: "material-design-iconic-font";
+  content: '\f2f9';
+  position: absolute;
+  display: block;
+  top: calc(50% - 10px);
+  right: 20px;
+}
+
+.comment-select .dropdown-content {
+  top: 46px;
+  background-color: white;
+  width: 100%;
+}
+
+.comment-select .dropdown-content a {
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-top-color: #dddddd;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.comment-select .dropdown-content a:last-of-type {
+  border-bottom-color: #dddddd;
+}
+
+.comment-select .dropdown-content a:hover {
+  border: 1px solid #0063a6;
+  background-color: white;
+}
  
 
  /*# sourceMappingURL= main.css.map */
