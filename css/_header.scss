@@ -146,8 +146,6 @@
 		color: $font_white;    
 	}
 	.header_wrapper_hidesmall {
-		margin: 0 auto;
-		max-width: 1200px;
 		@include flex;
 		font-size: 18px;
 		font-weight: 500;
@@ -232,9 +230,7 @@
 		background-color: $bg_white;
 	}
 	.header_wrapper_small {
-		margin: 0 auto;
 		height: 70px;
-		max-width: 1200px;
 		background-color: $bg_white;
 		@include flex;
 		align-items: center;
@@ -327,7 +323,7 @@
 	}
 }
 
-@media screen and (min-width: 1010px){
+@media screen and (min-width: 1040px){
 	.header_cart_call {
 	font-size: inherit;
 	}
