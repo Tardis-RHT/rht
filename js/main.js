@@ -32,7 +32,7 @@ $(function(){
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
 		  $('.header_cart_call').removeClass('invisible');
-		  $('.header_cart_buy').css('padding','0 0 0 20px');
+		  $('.header_cart_buy').css('margin','0 0 0 20px');
 	  }
 	  else{
 		  $('.header_wrapper_big').removeClass('stickytop');

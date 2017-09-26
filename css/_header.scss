@@ -40,6 +40,17 @@
 .header_mobile_cart {
 	@include flex;
 }
+.header_cart_buy {
+	@include flex;
+	align-self: center;
+	padding: 0;
+	border-style: none;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: $weight_normal;
+	outline: none;
+	background-color: $bg_white;
+}
 .shopping-cart_number {
 	width: 16px;
 	height: 16px;
@@ -146,8 +157,6 @@
 		color: $font_white;    
 	}
 	.header_wrapper_hidesmall {
-		margin: 0 auto;
-		max-width: 1200px;
 		@include flex;
 		font-size: 18px;
 		font-weight: 500;
@@ -232,9 +241,7 @@
 		background-color: $bg_white;
 	}
 	.header_wrapper_small {
-		margin: 0 auto;
 		height: 70px;
-		max-width: 1200px;
 		background-color: $bg_white;
 		@include flex;
 		align-items: center;
@@ -291,7 +298,6 @@
 		color: $button_normal;
 		font-size: 10px;
 		text-decoration: none;
-		font-weight: bold;
 		font-weight: $weight_bold;
 		outline: none;
 		@include transition(background-color);
@@ -316,18 +322,14 @@
 		font-size: 9px;
 		padding: 5px 0;
 	}
-	.header_cart_buy {
-		@include flex;
-		align-self: center;
-		padding: g;
-	}
+
 	.shopping-cart_number {
 		top: -10px;
 		left: -5px;
 	}
 }
 
-@media screen and (min-width: 1010px){
+@media screen and (min-width: 1040px){
 	.header_cart_call {
 	font-size: inherit;
 	}
