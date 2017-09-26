@@ -1,5 +1,5 @@
 .shopping-cart{
-    margin: 50px auto 120px;
+    margin: 50px auto 40px;
     h2{
         margin-bottom: 50px;
     }
@@ -7,15 +7,12 @@
         margin: 0 auto 120px;
     }        
 }
-
 .shopping-cart_item-single{
     position: relative;
     width: 100%;
     @include flex;
-    // flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
-    // align-items: flex-start;
     border-top: solid 1px $button_inactive;
     padding-bottom: 15px;
     &:last-of-type{
@@ -40,7 +37,6 @@
         }
     }
     @media(min-width:872px){
-        // flex-direction: row;
         justify-content: space-between;
         align-items: center;        
         height: 180px;        
@@ -78,8 +74,6 @@
     @media (min-width:872px){
         margin-top: 0;        
     }
-
-
 }
 .shopping-cart_item-single_number{
     width: 46px;
@@ -116,6 +110,7 @@
 }
 .shopping-cart_order{
     width: 200px;
+    vertical-align: middle;
     @media (min-width:872px){
         margin-left: auto;        
     }

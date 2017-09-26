@@ -5085,7 +5085,7 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .shopping-cart {
-  margin: 50px auto 120px;
+  margin: 50px auto 40px;
 }
 
 .shopping-cart h2 {
@@ -5280,6 +5280,7 @@ input[type=range]::-ms-thumb:hover {
 
 .shopping-cart_order {
   width: 200px;
+  vertical-align: middle;
 }
 
 @media (min-width: 872px) {
