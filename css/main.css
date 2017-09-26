@@ -3433,6 +3433,7 @@ input[type=range]::-ms-thumb:hover {
   overflow-x: visible;
   overflow-y: hidden;
   vertical-align: top;
+  margin: 0 -15px 0 -15px;
 }
 
 @media (min-width: 872px) {
@@ -3462,14 +3463,6 @@ input[type=range]::-ms-thumb:hover {
   min-width: 266px;
   height: auto;
   margin: 15px;
-}
-
-.furnitura-set_kit_single:first-of-type {
-  margin-left: 0;
-}
-
-.furnitura-set_kit_single:last-of-type {
-  margin-right: 0;
 }
 
 .furnitura-set_kit_single p {

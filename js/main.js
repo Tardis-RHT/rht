@@ -178,7 +178,7 @@ rangeSlider();
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
-	  div.style.display = 'block';
+	  div.style.display = 'inline-block';
 	else
 	  div.style.display = 'none'
 }
