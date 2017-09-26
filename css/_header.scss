@@ -39,6 +39,7 @@
 }
 .header_mobile_cart {
 	@include flex;
+	color: $font-white;
 }
 .header_cart_buy {
 	@include flex;
