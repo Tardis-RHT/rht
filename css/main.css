@@ -5289,6 +5289,105 @@ input[type=range]::-ms-thumb:hover {
     margin-left: auto;
   }
 }
+
+.backToCart {
+  display: block;
+  color: #78787b;
+  margin-bottom: 70px;
+}
+
+.order h2 {
+  margin-bottom: 60px;
+}
+
+.order_container {
+  width: 100%;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+}
+
+.order_make {
+  flex: 1;
+  margin-right: 30px;
+  background-color: #f7f7f7;
+}
+
+.order_list {
+  flex: 1;
+  background-color: #f7f7f7;
+  border: solid 1px #78787b;
+}
+
+.order_list ul {
+  margin: 25px;
+}
+
+.order_item {
+  border-bottom: solid 1px white;
+  padding-bottom: 15px;
+}
+
+.order_item:last-child {
+  border-bottom: none;
+  margin-bottom: 35px;
+}
+
+.order_item h3 {
+  color: #111820;
+}
+
+.order_item_price {
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: space-between;
+}
+
+.order_item_price p {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.order_price_total {
+  margin-top: 30px;
+  padding: 15px 0;
+  border-top: solid 1px white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: #111820;
+}
+
+.order_price_total p span {
+  font-size: 24px;
+}
+
+.order_price_note {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #111820;
+}
  
 
  /*# sourceMappingURL= main.css.map */

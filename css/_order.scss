@@ -1,0 +1,69 @@
+.backToCart{
+    display: block;
+    color: $font-gray;
+    margin-bottom: 70px;
+}
+.order{
+    h2{
+        margin-bottom: 60px;
+    }
+}
+.order_container{
+    width: 100%;
+    @include flex;
+    justify-content: space-between;    
+}
+.order_make{
+    flex: 1;
+    margin-right:30px;
+    background-color: $bg_section;
+    
+}
+.order_list{
+    flex: 1;
+    background-color: $bg_section;
+    border: solid 1px $font-gray;
+    ul{
+        margin: 25px;
+    }
+}
+.order_item{
+    border-bottom: solid 1px $bg_white;
+    padding-bottom: 15px;
+    &:last-child{
+        border-bottom: none;
+        margin-bottom: 35px;      
+    }
+    h3{
+        color: $font_black;
+    }
+}
+.order_item_price{
+    @include flex;
+    justify-content: space-between;
+    p{
+        @include text-style_main($weight_light, $font_black, 22px);
+    }
+}
+.order_price_total{
+    margin-top: 30px;
+    padding: 15px 0 0 0;
+    border-top: solid 1px $bg_white;
+    font-size: 24px;
+    font-weight: $weight_normal;
+    line-height: 29px;
+    color: $font_black;
+    p{
+        span{
+            font-size: 24px;
+        }
+    }
+
+    
+}
+.order_price_note{
+    font-size: 16px;
+    font-weight: $weight_light;
+    line-height: 19px;
+    color: $font_black;
+}
