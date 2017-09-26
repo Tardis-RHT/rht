@@ -43,12 +43,16 @@ $(function(){
 	// END OF STCIKY HEADER
  
 	// LightGallery call and settings
-	$("#lightgallery").lightGallery({
-		escKeyescKey: true,
-		mousewheel: false
+
+	
+	// FURNITURA VIDEO
+	$('#videoFurnitura').lightGallery({
+		videoMaxWidth: '100%',
+		autoPlay: true,
+		controls: false,
+		counter: false,
+		download: false,
 	}); 
-	
-	
 	// $(window).resize(function () {
 	// 	var width = $('body').outerWidth()
 	// 	if ($(window).width() < 620){
@@ -60,21 +64,16 @@ $(function(){
 	// }); 
 
 
-	
-
-
 	// ANCHOR SCROLL
 	$(document).ready(function() {
 		$(".main_page_video-scroll").click(function () {
 			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height();
+			var destination = $(elementClick).offset().top - $('.header_wrapper_big').height() + 1;
 			$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
 			return false;
 			});
 		});
 
-	//Sertificates Carousel
-	
 
 	// LightSlider call and settings
 	$("#lightSlider").lightSlider({
@@ -88,166 +87,51 @@ $(function(){
 		autoWidth: true
 	});
 
-
-
-		$('#lightSlider_certificates').lightSlider({
-			item:6,
-			loop:true,
-			easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-			speed:600,
-			controls: false,
-			pager: false,
-			slideMargin: 0,
-			responsive: [
-				{
-					breakpoint:620,
-					settings: {
-						item:4
-					  }
-				},
-				{
-					breakpoint:470,
-					settings: {
-						item:3
-					  }
-				}
-			]
-		});
-
-
-
-
-
-// VIDEO POPUP
-var toHide = document.getElementsByClassName("toHide");
-var toShow = document.getElementsByClassName("toShow");
-var control_btn = document.getElementById("video-play");
-
-document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen;
-function onFullScreenEnter() {
-// console.log("Enter fullscreen initiated from iframe");
-
-	for (var i = 0; i < toHide.length; i++){
-		toHide[i].style.display="none";
-	};
-
-	for (var i = 0; i < toShow.length; i++){
-		toShow[i].style.display="block";
-	};
-};
-
-function onFullScreenExit() {
-	// console.log("Exit fullscreen initiated from iframe");
-
-	for (var i = 0; i < toHide.length; i++){
-		toHide[i].style.display="block";
-	};
-
-	for (var i = 0; i < toShow.length; i++){
-		toShow[i].style.display="none";
-		toShow[i].style.visibility="hidden";
-	};	
-};
-
-// Note: FF nightly needs about:config full-screen-api.enabled set to true.
-function enterFullscreen(id) {
-	onFullScreenEnter(id);
-	var el =  document.getElementById(id);
-	var onfullscreenchange =  function(e){
-	var fullscreenElement = document.fullscreenElement || document.mozFullscreenElement || document.webkitFullscreenElement;
-	var fullscreenEnabled = document.fullscreenEnabled || document.mozFullscreenEnabled || document.webkitFullscreenEnabled;
-	console.log( 'fullscreenEnabled = ' + fullscreenEnabled, ',  fullscreenElement = ', fullscreenElement, ',  e = ', e);
-	}
-	el.addEventListener("webkitfullscreenchange", onfullscreenchange);
-	el.addEventListener("mozfullscreenchange",     onfullscreenchange);
-	el.addEventListener("fullscreenchange",             onfullscreenchange);
-	if (el.webkitRequestFullScreen) {
-	el.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-	} else {
-	el.mozRequestFullScreen();
-	}
-	document.querySelector('#'+id + ' button').onclick = function(){
-	exitFullscreen(id);
-	}
-}
-
-function exitFullscreen(id) {
-	onFullScreenExit(id);
-	document.cancelFullScreen();
-	document.querySelector('#'+id + ' button').onclick = function(){
-	enterFullscreen(id);
-	}
-}
-
-function _fullscreenEnabled() {
-	// FF provides nice flag, maybe others will add support for this later on?
-	if(window['fullScreen'] !== undefined) {
-		console.log('1');
-		return window.fullScreen;
-	}
-	// 5px height margin, just in case (needed by e.g. IE)
-	var heightMargin = 5;
-	if($.browser.webkit && /Apple Computer/.test(navigator.vendor)) {
-		// Safari in full screen mode shows the navigation bar, 
-		// which is 40px  
-		heightMargin = 42;
-		console.log('2');
-	}
-	return screen.width == window.innerWidth &&
-		Math.abs(screen.height - window.innerHeight) < heightMargin;
-}
-
-//VIDEO CONTROLS	
-	
-	function vidplay() {
-		var video = document.getElementById("main_video-video");
-		var button = document.getElementById("video-play");
-		if (video.paused) {
-		   video.play();
-		   button.textContent = "| |";
-		} else {
-		   video.pause();
-		   button.textContent = ">";
-		}
-	 }
-
-	 $('#main_video-video').mousemove(function(){
-		$('#video-play').css('visibility', 'visible');
-		$('#video-play').delay(2000).fadeOut();
-		$('#main_video-video').mousemove(function(){
-			$('#video-play').fadeIn();	
-			$('#video-play').delay(1500).fadeOut();
-		});		
+	//Sertificates Carousel
+	$('#lightSlider_certificates').lightSlider({
+		item:6,
+		loop:false,
+		easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+		speed:600,
+		controls: false,
+		pager: false,
+		slideMargin: 0,
+		responsive: [
+			{
+				breakpoint:620,
+				settings: {
+					item:4
+					}
+			},
+			{
+				breakpoint:470,
+				settings: {
+					item:3
+					}
+			}
+		]
 	});
 
-	
-
-
-
-	$(function(){
-		var calcVideoSize = function() {
-			var video_height = $('#main_video-video').outerHeight()
-			$('#main_video').css("height", video_height + 'px');
-			console.log(video_height);
-		}
-		$(window).resize(function() {
-			calcVideoSize()
-		});	
-			calcVideoSize();
-
-	})
-});
-
-
-// VIDEO POPUP IN FURNITURA
-$(function () {
-	$('#vidBox').VideoPopUp({
-		backgroundColor: "#17212a",
-		opener: "video1",
-		maxweight: "1200",
-		idvideo: "v1"
+	$("#lightSlider_filenka").lightSlider({
+		gallery: false,
+		item: 1,
+		loop: false,
+		slideMargin: 0,
+		controls: true,
+		// adaptiveHeight: true,
+		pager: true,
+		// autoWidth: true
 	});
+	$('#video_panels').lightGallery({
+		videoMaxWidth: '100%',
+		autoPlay: true,
+		controls: false,
+		counter: false,
+		download: false,
+	}); 
+
 });
+
 
 // DROPDOWN MENU IN FURNITURA
 /* When the user clicks on the button, 
@@ -289,3 +173,174 @@ var rangeSlider = function(){
   };
 rangeSlider();
 //END OF RANGE SLIDER
+
+// SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
+function toggle() {
+	var div = document.getElementById('adjusting-plate');
+	if(this.checked)
+	  div.style.display = 'block';
+	else
+	  div.style.display = 'none'
+}
+
+if(document.getElementById('adjusting-plate_checkbox')){
+	document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+}
+
+// END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
+
+
+// SLIDER ON FURNITURA-SET PAGE
+$(document).ready(function() {
+		var sliderFur = $('#fur_ben').lightSlider({
+		loop:true,
+		item: 1,
+		slideMove: 1,
+		keyPress: true,
+		controls: false,
+		pager: false,
+		onSliderLoad: function() {
+				$('#fur_ben').removeClass('cS-hidden');
+		},
+		onBeforeSlide: function (el) {
+			$('div.fur_pager').removeClass('fur_pager_active');
+			$('#fur_pager'+el.getCurrentSlideCount()).addClass('fur_pager_active');
+		},
+		}); 
+		$('#goToPrevSlide').on('click', function () {
+			sliderFur.goToPrevSlide();
+		});
+		$('#goToNextSlide').on('click', function () {
+			sliderFur.goToNextSlide();
+		});
+		$('#fur_pager1').on('click', function () {
+			sliderFur.goToSlide(1);
+		});
+		$('#fur_pager2').on('click', function () {
+			sliderFur.goToSlide(2);
+		});	
+		$('#fur_pager3').on('click', function () {
+			sliderFur.goToSlide(3);
+		});
+});
+// END OF SLIDER ON FURNITURA-SET PAGE
+
+
+// SLIDER AND GALLERY FOR FEEDBACK SECTION
+$(document).ready(function() {
+	var sliderFeedback = $('#feedbacksl').lightSlider({
+	loop:true,
+	item: 1,
+	slideMove: 1,
+	keyPress: true,
+	controls: false,
+	pager: false,
+	responsive : [
+		{
+			breakpoint: 768,
+			settings:{
+				pager: true,					
+			}
+		},
+	],
+	onBeforeSlide: function (el) {
+		$('#current').text(el.getCurrentSlideCount());
+	},
+	onSliderLoad: function() {
+			$('#feedbacksl').removeClass('cS-hidden');
+			$('#total').text(sliderFeedback.getTotalSlideCount());
+	},
+	});
+	$('#goToPrevSlideFeedback').on('click', function () {
+		sliderFeedback.goToPrevSlide();
+	});
+	$('#goToNextSlideFeedback').on('click', function () {
+		sliderFeedback.goToNextSlide();
+	});
+	$('.feedbacklg').lightGallery({
+		escKeyescKey: true,
+		mousewheel: false,
+		download: false,
+	});
+});
+// END OF SLIDER AND GALLERY FOR FEEDBACK SECTION
+
+//TOOGLE BUTTONS MINI-MAXI ON PAGE AUTOMATICA-CARD
+
+function maximize(){
+	
+		if($('#maxi').is(':checked')){
+			$('.maxi').css('visibility', 'visible');
+		}else{
+			$('.maxi').css('visibility', 'hidden');
+		}
+};
+
+//CALLBACK POPUP
+
+$( document ).ready(function(){
+	checkTelValidity();
+	if('#callback-popup'){
+		hidePopup()
+	}
+})
+function hidePopup(){
+	$('#callback-popup').hide(250,'swing');
+}
+function showPopup(){
+	$('#callback-popup').show(250,'swing');
+}
+
+
+//END OF CALLBACK POPUP
+
+//CALLBACK SUBMIT (AJAX)
+
+$('#callback').bind('submit',function(e) {
+	e.preventDefault(); 
+	//here would be code
+
+	//PLEASE DON'T FORGET TO ADD RESET ON 200!!!
+	//ASK ABOUT ADDING ERROR ON 500
+});
+
+//END OF CALLBACK SUBMIT (AJAX)
+
+//CALLBACK VALIDATION
+
+$(function($){
+	if(document.getElementById('tel')){
+		// console.log('exist');
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+	}
+ });
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	telBtn.setAttribute('disabled', 'disabled');
+	
+	tel.checkValidity();
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		// console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		// console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+	
+ }
+
+ //-->>> this doesn't work while we don't have submit action (I prevented default)
+ function resetForm(){
+ 	$("#callback").trigger('reset');	 
+}
+
+// END OF CALLBACK VALIDATION

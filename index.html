@@ -29,7 +29,7 @@
 			<ul class="mobile_menu_main">
 				<li><a href="furnitura.html">Фурнитура</a></li>
 				<li><a href="automatica.html">Автоматика</a></li>
-				<li><a href="#">Филёнка</a></li>
+				<li><a href="panels.html">Филёнка</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<button class="mobile_callus-btn">Перезвоните мне</button>
@@ -68,7 +68,7 @@
 					<ul class="header_menu_main">
 						<li><a href="furnitura.html">Фурнитура</a></li>
 						<li><a href="automatica.html">Автоматика</a></li>
-						<li><a href="#">Филёнка</a></li>
+						<li><a href="panels.html">Филёнка</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</nav>
@@ -92,10 +92,10 @@
 		<a href="index.html" class="video-fullscreen_logo toShow" id="video-fullscreen_logo">
 			<img src="img/logo-transparent.png" alt="RHT logo">
 		</a>
-		<video controls id="main_video-video" class="main-page_video-video" onclick="vidplay()" poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop">
+		<video controls="controls" id="main_video-video" class="main-page_video-video"  poster="../img/Video_bg.png"  preload="auto" muted="" autoplay="autoplay" loop="loop">
 			<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		  <a class="video-play toShow" id="video-play" onclick="vidplay()">| |</a>
+		  <!-- <a class="video-play toShow" id="video-play" onclick="vidplay()">| |</a> -->
 		  <button class="video_exit toShow" onclick="exitFullscreen('main_video')"><i class="zmdi zmdi-close zmdi-hc-5x"></i></button>
 		<div class="main-page_video_caption wrapper toHide">
 			<h1 class="main-page_video-title" id="title">Rolling Hi-tech</h1>
@@ -164,7 +164,7 @@
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Усиленная фурнитура <br>для откатных ворот</h3>
-				<button class="main_products-btn btn">Перейти в каталог фурнитуры</button>
+				<button class="main_products-btn btn" onClick='location.href="furnitura.html"'>Перейти в каталог фурнитуры</button>
 			</div>
 			<!-- <img src="img/Product_1.png" class="main_products-img"> -->
 		</div>
@@ -173,14 +173,14 @@
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Автоматика <br>для откатных ворот</h3>
-				<button class="main_products-btn btn">Перейти в каталог автоматики</button>
+				<button class="main_products-btn btn" onClick='location.href="automatica.html"'>Перейти в каталог автоматики</button>
 			</div>
 		</div>
 		<div class="main_products-single">
 			<div class="main_products-caption wrapper">
 				<h3 class="main_products-category dots">Продукция</h3>
 				<h3 class="main_products-title">Металлические филёнки <br>для зашивки ворот и калиток</h3>
-				<button class="main_products-btn btn">Перейти в каталог филенок</button>
+				<button class="main_products-btn btn" onClick='location.href="panels.html"'>Перейти в каталог филенок</button>
 			</div>
 			<!-- <img src="img/Product_3.png" class="main_products-img"> -->
 		</div>
@@ -245,70 +245,103 @@
 
   
 		<div class="main-page_certificates_slider wrapper">
-			<button class="slider_btn" id="prevSlide">
-			<svg>	
-				<g id="Left-line" transform="translate(-396.000000, -5480.000000)" stroke="#DDDDDD" stroke-width="2">
-						<g id="sertificate" transform="translate(-228.000000, 4774.000000)">
-							<g id="Наигация" transform="translate(625.000000, 699.000000)">
-								<g id="Left" transform="translate(8.000000, 23.500000) scale(-1, 1) rotate(-180.000000) translate(-8.000000, -23.500000) translate(0.000000, 8.000000)">
-									<path d="M0.5,15.5 L15.4164339,30.4164339" id="Line"></path>
-									<path d="M0.5,0.5 L15.4164339,15.4164339" id="Line" transform="translate(8.000000, 8.000000) scale(1, -1) translate(-8.000000, -8.000000) "></path>
-								</g>
-							</g>
-						</g>
-					</g>
-				</g>
-			</svg>
-			</button>
-			<i class="slider_controls-line"></i>
-			<button class="slider_btn" id="nextSlide">
-			<svg>	
-				<g id="Right-line" transform="translate(-455.000000, -5480.000000)" stroke="#DDDDDD" stroke-width="2">
-					<g id="sertificate" transform="translate(-228.000000, 4774.000000)">
-						<g id="Наигация" transform="translate(625.000000, 699.000000)">
-							<g id="Right" transform="translate(67.000000, 23.500000) rotate(-180.000000) translate(-67.000000, -23.500000) translate(59.000000, 8.000000)">
-								<path d="M0.5,15.5 L15.4164339,30.4164339" id="Line"></path>
-								<path d="M0.5,0.5 L15.4164339,15.4164339" id="Line" transform="translate(8.000000, 8.000000) scale(1, -1) translate(-8.000000, -8.000000) "></path>
-							</g>
-						</g>
-					</g>
-				</g>
-				</svg>
-			</button>
+			<div class="fur-set_slider-controls">
+				<button id="prevSlide" class="pointer_left"></button>
+				<img src="../img/icons/separator.svg" alt="#">
+				<button id="nextSlide" class="pointer_right"></button>								
+			</div>
 		</div>
 	</section>
 
 	<section class="main_feedback">
-		<div class="main_feedback_wrapper">
+		<div class="main_feedback_wrapper wrapper">
 			<h2>Отзывы</h2>
 			<div class="main_feedback_number-container">
 				<img src="img/icons/feedback_stripes.svg" alt="DecorativeArrows">
-				<p class="main_feedback_number"><span class="main_feedback_number-big">1 </span>/ 11</p>
-			</div>
-			<div class="main_feedback_container">				
-				<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
-						и продукцию. Всё отправили вовремя, без косяков и за 
-						вполне доступные деньги. Всем рекомендую!
-				</p>
-				<div class="main_feedback_nameanddate">
-					<p class="main_feedback_name">
-						Константин Сергеев
-					</p>
-					<p class="main_feedback_date">
-						07.09.2017
-					</p>
+				<div class="feedback_slider_counter">
+					<span id="current" class="main_feedback_number-big">1</span><span> / </span><span id="total" class="main_feedback_number">/ 11</span>
 				</div>
-				<div class="main_feedback_gallery">
-					<div id="lightgallery" class="main_feedback_gallery-cont">
-						<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
-					</div>
-				</div>
-				<button class="main_feedback_feedback btn">
-					Оставить Отзыв
-				</button>
 			</div>
+			<div class="feedback_slider_container">
+				<div id="goToPrevSlideFeedback" class="pointer_left feedback_pointer"></div>	
+				<div class="main_feedback_container">		
+					<ul id="feedbacksl" class="cs-hidden">
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Константин Сергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2017
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										КСергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2217
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Конст Сер
+									</p>
+									<p class="main_feedback_date">
+										07.09.2317
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="goToNextSlideFeedback" class="pointer_right feedback_pointer"></div>				
+			</div>
+			<button class="main_feedback_feedback btn" onClick='location.href="comment.html"'>
+				Оставить Отзыв
+			</button>
 		</div>
 	</section>
 
@@ -316,13 +349,17 @@
 		<div class="main_callback_left">
 		</div>
 		<div class="main_callback_center">
-			<div class="callback_form_wrapper">
+			<div class="callback_form_wrapper wrapper">
 				<div class="callback_form_wrapper-small">
 					<h2>Обратная связь</h2>
 					<p>Оставьте номер телефона и менеджер свяжется с вами в течение 15 минут</p>
-					<form class="form_callback" name="callback">
-						<input class="callback_telephone" type="tel" name="telephone" placeholder="Номер телефона">
-						<button class="callback_callus_btn btn" type="submit" disabled>Перезвоните мне</button>
+					<form class="form_callback" name="callback" id="callback">
+						
+						<input class="callback_telephone" type="tel" name="telephone" placeholder="Номер телефона" id="tel" 
+						PATTERN="\D[0-9]{3}\s\D[0-9]{2}\D\s[0-9]{3}\s\D\s[0-9]{2}\s\D\s[0-9]{2}"
+						onkeydown="checkTelValidity()">
+						<label class="phone" for="tel">Номер телефона</label>
+						<button class="callback_callus_btn btn" type="submit" disabled id="tel-btn" onclick="resetForm(), showPopup()">Перезвоните мне</button>
 					</form>
 					<span>Звоните бесплатно  0 800 21 02 57</span>
 					<span>Ответим с 9:00 до 19:00 ежедневно</span>
@@ -331,7 +368,17 @@
 		</div>
 		<div class="main_callback_right">
 		</div>
+		<section class="main_callback-answer wrapper" id="callback-popup">			
+			<div class="callback_form_wrapper-small">
+				<h2>Ваша заявка обрабатывается</h2>
+				<p>Оператор свяжется в течение 30 минут</p>
+				<button class="btn callback-answer" onClick='location.href="index.html"'>На главную</button>
+				<button class="callback-answer-close" onClick='hidePopup()'><i class="zmdi zmdi-close zmdi-hc-2x"></i></button>			
+			</div>	
+		</section>
 	</section>
+
+
 
 	<footer>
 		<div class="footer_wrapper">
@@ -339,7 +386,7 @@
 				<ul class="header_menu_main">
 					<li><a href="furnitura.html">Фурнитура</a></li>
 					<li><a href="automatica.html">Автоматика</a></li>
-					<li><a href="#">Филёнка</a></li>
+					<li><a href="panels.html">Филёнка</a></li>
 					<li><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
@@ -352,7 +399,11 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main-video.js"></script>
+	<script type="text/javascript" src="js/lightgallery.min.js"></script>
 	<script type="text/javascript" src="js/lightslider.js"></script>
-	<script type="text/javascript" src="js/lightgallery.js"></script>	
+	<script type="text/javascript" src="js/lg-video.min.js"></script>
+	<script type="text/javascript" src="js/maskedinput.js"></script>
+	
 </body>
 </html>

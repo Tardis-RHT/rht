@@ -100,18 +100,18 @@
         }
         @media (min-width:1600px) {
             height: 650px;
-            &:first-of-type{
-                background-size: 70%;
-            }
+            // &:first-of-type{
+            //     background-size: 70%;
+            // }
             &:nth-of-type(2){ 
                 background-position: left 17% center;        
                 .main_products-caption{
                     padding-left: 34%;
                 }
             }
-            &:last-of-type{    
-                background-size: 100%;
-            }
+            // &:last-of-type{    
+            //     background-size: 100%;
+            // }
         }
 }
 .main_products-caption{
