@@ -9,7 +9,7 @@
     width: 670px;
     @include flex;
     flex-wrap: wrap;
-    input, textarea{
+    input, textarea, select{
         width: 100%;
         padding: 10px 20px;
         border: 1px solid $font-gray;
@@ -40,16 +40,28 @@
         display: block;
         margin-bottom: 35px;
     }
-    // select{
-    //     // border: none;
-    //     box-shadow: none;
-    //     -webkit-appearance: none;
-    //     option{
-    //         width: 100%;
-    //         padding: 0;
-    //         outline: none;
-    //     }
-    // }
+    select{
+        // border: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        option{
+            display: block;
+            width: 100%;
+            padding: 0;
+            outline: none;
+            border: 1px solid $bg_white;
+            border-top-color: $button_inactive;
+            @include transition(border-color);
+            // padding: 10px 20px;
+            &:last-of-type{
+                border-bottom-color: $button_inactive;
+            }
+            &:hover{
+                border: 1px solid $button_hover;
+                background-color: $bg_white;
+            }
+        }
+    }
 }
 .comment-dropfiles{
     width: calc(45% - 35px);

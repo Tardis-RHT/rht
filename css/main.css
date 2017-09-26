@@ -4936,7 +4936,7 @@ input[type=range]::-ms-thumb:hover {
   flex-wrap: wrap;
 }
 
-.comment-form input, .comment-form textarea {
+.comment-form input, .comment-form textarea, .comment-form select {
   width: 100%;
   padding: 10px 20px;
   border: 1px solid #78787b;
@@ -4949,15 +4949,15 @@ input[type=range]::-ms-thumb:hover {
   line-height: 22px;
 }
 
-.comment-form input::-moz-placeholder, .comment-form textarea::-moz-placeholder {
+.comment-form input::-moz-placeholder, .comment-form textarea::-moz-placeholder, .comment-form select::-moz-placeholder {
   opacity: 1;
 }
 
-.comment-form input::-webkit-input-placeholder, .comment-form textarea::-webkit-input-placeholder {
+.comment-form input::-webkit-input-placeholder, .comment-form textarea::-webkit-input-placeholder, .comment-form select::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown {
+.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown, .comment-form select:placeholder-shown {
   border: 1px solid #78787b;
 }
 
@@ -4974,6 +4974,33 @@ input[type=range]::-ms-thumb:hover {
 .comment-inputs input, .comment-inputs select {
   display: block;
   margin-bottom: 35px;
+}
+
+.comment-inputs select {
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.comment-inputs select option {
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: 1px solid white;
+  border-top-color: #dddddd;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.comment-inputs select option:last-of-type {
+  border-bottom-color: #dddddd;
+}
+
+.comment-inputs select option:hover {
+  border: 1px solid #0063a6;
+  background-color: white;
 }
 
 .comment-dropfiles {
