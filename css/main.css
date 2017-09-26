@@ -887,7 +887,7 @@ a :visited {
     display: flex;
     /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
     align-self: center;
-    padding: g;
+    padding: 0;
   }
   .shopping-cart_number {
     top: -10px;
