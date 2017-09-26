@@ -32,7 +32,7 @@ $(function(){
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
 		  $('.header_cart_call').removeClass('invisible');
-		  $('.header_cart_buy').css('padding','0 0 0 20px');
+		  $('.header_cart_buy').css('margin','0 0 0 20px');
 	  }
 	  else{
 		  $('.header_wrapper_big').removeClass('stickytop');
@@ -174,46 +174,11 @@ var rangeSlider = function(){
 rangeSlider();
 //END OF RANGE SLIDER
 
-//CALLBACK VALIDATION
-
-$(function($){
-	if(document.getElementById('tel')){
-		// console.log('exist');
-		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
-	}
- });
- function checkTelValidity(){
-	var tel = document.getElementById('tel');
-	var telBtn = document.getElementById('tel-btn');
-	// telBtn.setAttribute('disabled', 'disabled');
-	
-	tel.checkValidity();
-	// console.log(tel.checkValidity());
-	// console.log(tel.value);
-	// if(tel.value == '+380 (__) ___ - __ - __'){
-	// 	console.log('empty');
-	// }
-	
-	if (tel.checkValidity() === false || tel.value == ""){
-		// console.log('invalid');
-		telBtn.setAttribute('disabled', 'disabled');
-	   }
-	else if (tel.checkValidity() === true){
-		// console.log('valid');
-		telBtn.removeAttribute('disabled', 'disabled');
-	   }
-	//    telBtn.setAttribute('disabled', 'disabled');
-	
- }
- $(".form_callback").trigger('reset');
-
-// END OF CALLBACK VALIDATION
-
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
-	  div.style.display = 'block';
+	  div.style.display = 'inline-block';
 	else
 	  div.style.display = 'none'
 }
@@ -314,6 +279,7 @@ function maximize(){
 //CALLBACK POPUP
 
 $( document ).ready(function(){
+	checkTelValidity();
 	if('#callback-popup'){
 		hidePopup()
 	}
@@ -339,3 +305,42 @@ $('#callback').bind('submit',function(e) {
 });
 
 //END OF CALLBACK SUBMIT (AJAX)
+
+//CALLBACK VALIDATION
+
+$(function($){
+	if(document.getElementById('tel')){
+		// console.log('exist');
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+	}
+ });
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	telBtn.setAttribute('disabled', 'disabled');
+	
+	tel.checkValidity();
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		// console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		// console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+	
+ }
+
+ //-->>> this doesn't work while we don't have submit action (I prevented default)
+ function resetForm(){
+ 	$("#callback").trigger('reset');	 
+}
+
+// END OF CALLBACK VALIDATION
