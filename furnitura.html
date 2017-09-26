@@ -7,7 +7,8 @@
 	<title>RHT</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="css/lightgallery.css">
+	<link rel="stylesheet" href="css/lightslider.css">
+	<link rel="stylesheet" href="css/lightgallery.css">
 	<link rel="stylesheet" type="text/css" href="css/videopopup.css" media="screen" />
 </head>
 
@@ -228,7 +229,7 @@
 					</ul>
 					<p class="furnitura_chars_price">2990 <span class="furnitura_hrn">грн</span></p>
 					<div class="furnitura_chars_buttons">
-						<a class="ghost_link" href="#">Подробнее ></a>
+						<a class="ghost_link" href="furnitura_set.html">Подробнее ></a>
 						<button class="btn">Добавить в корзину</button>
 						<a href="furnitura_set.html"><button class="ghost_btn">Подробнее</button></a>
 					</div>
@@ -262,9 +263,9 @@
 					</ul>
 					<p class="furnitura_chars_price">2690 <span class="furnitura_hrn">грн</span></p>
 					<div class="furnitura_chars_buttons">
-						<a class="ghost_link" href="#">Подробнее ></a>
+						<a class="ghost_link" href="furnitura_set.html">Подробнее ></a>
 						<button class="btn">Добавить в корзину</button>
-						<button class="ghost_btn">Подробнее</button>
+						<a href="furnitura_set.html"><button class="ghost_btn">Подробнее</button></a>
 					</div>
 				</div>
 				<div class="furnitura_products_img">
@@ -350,32 +351,90 @@
 			<h2>Отзывы</h2>
 			<div class="main_feedback_number-container">
 				<img src="img/icons/feedback_stripes.svg" alt="DecorativeArrows">
-				<p class="main_feedback_number"><span class="main_feedback_number-big">1 </span>/ 11</p>
-			</div>
-			<div class="main_feedback_container">				
-				<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
-						и продукцию. Всё отправили вовремя, без косяков и за 
-						вполне доступные деньги. Всем рекомендую!
-				</p>
-				<div class="main_feedback_nameanddate">
-					<p class="main_feedback_name">
-						Константин Сергеев
-					</p>
-					<p class="main_feedback_date">
-						07.09.2017
-					</p>
+				<div class="feedback_slider_counter">
+					<span id="current" class="main_feedback_number-big">1</span><span> / </span><span id="total" class="main_feedback_number">/ 11</span>
 				</div>
-				<div class="main_feedback_gallery">
-					<div id="lightgallery" class="main_feedback_gallery-cont">
-						<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
-						<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
-					</div>
-				</div>
-				<button class="main_feedback_feedback btn">
-					Оставить Отзыв
-				</button>
 			</div>
+			<div class="feedback_slider_container">
+				<div id="goToPrevSlideFeedback" class="pointer_left feedback_pointer"></div>	
+				<div class="main_feedback_container">		
+					<ul id="feedbacksl" class="cs-hidden">
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Константин Сергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2017
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										КСергеев
+									</p>
+									<p class="main_feedback_date">
+										07.09.2217
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="feedback_slide_container">
+								<p class="main_feedback_text">Спасибо компании «Rolling Hi-Tech» за отличную работу 
+										и продукцию. Всё отправили вовремя, без косяков и за 
+										вполне доступные деньги. Всем рекомендую!
+								</p>
+								<div class="main_feedback_nameanddate">
+									<p class="main_feedback_name">
+										Конст Сер
+									</p>
+									<p class="main_feedback_date">
+										07.09.2317
+									</p>
+								</div>
+								<div class="main_feedback_gallery">
+									<div class="main_feedback_gallery-cont feedbacklg">
+										<a class="main_feedback_gallery-img" href='img/vorota1.jpeg'><img src="img/vorota1.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota2.jpeg'><img src="img/vorota2.jpeg" alt="Feedback Gallery"></a>
+										<a class="main_feedback_gallery-img" href='img/vorota3.jpeg'><img src="img/vorota3.jpeg" alt="Feedback Gallery"></a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="goToNextSlideFeedback" class="pointer_right feedback_pointer"></div>				
+			</div>
+			<button class="main_feedback_feedback btn" onClick='location.href="comment.html"'>
+				Оставить Отзыв
+			</button>
 		</div>
 	</section>
 
@@ -435,6 +494,7 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main-video.js"></script>
 	<script type="text/javascript" src="js/lightgallery.min.js"></script>
 	<script type="text/javascript" src="js/lightslider.js"></script>
 	<script type="text/javascript" src="js/lg-video.min.js"></script>
