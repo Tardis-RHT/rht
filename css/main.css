@@ -3364,6 +3364,7 @@ input[type=range]::-ms-thumb:hover {
   width: 25px;
   height: 25px;
   border: 2px solid;
+  outline: none;
   border-color: #dddddd #dddddd transparent transparent;
 }
 
