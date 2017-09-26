@@ -40,6 +40,17 @@
 .header_mobile_cart {
 	@include flex;
 }
+.header_cart_buy {
+	@include flex;
+	align-self: center;
+	padding: 0;
+	border-style: none;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: $weight_normal;
+	outline: none;
+	background-color: $bg_white;
+}
 .shopping-cart_number {
 	width: 16px;
 	height: 16px;
@@ -287,7 +298,6 @@
 		color: $button_normal;
 		font-size: 10px;
 		text-decoration: none;
-		font-weight: bold;
 		font-weight: $weight_bold;
 		outline: none;
 		@include transition(background-color);
@@ -312,11 +322,7 @@
 		font-size: 9px;
 		padding: 5px 0;
 	}
-	.header_cart_buy {
-		@include flex;
-		align-self: center;
-		padding: 0;
-	}
+
 	.shopping-cart_number {
 		top: -10px;
 		left: -5px;
