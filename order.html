@@ -98,9 +98,38 @@
     <section class="order wrapper">
         <h2>Заказ товаров</h2>
         <div class="order_container">
-            <div class="order_make">
-                    Выберите способ доставки
-            </div>
+            <ul class="order_make">
+				<li>
+					<p class="order_make_title order_delivery">Выберите способ доставки</p>
+					<p class="order_make_comment">Стоимость доставки не включена в стоимость и соответствует тарифам компаний.</p>
+					<form class="order_delivery_form">
+						<label for="post_office">Выберите почтовую компанию</label>
+						<input type="text" id="post_office" name="post office">
+					</form>
+					<button id="orderGo" class="btn">Продолжить</button>
+				</li>
+				<li>
+					<p class="order_make_title order_pay">Выберите способ оплаты</p>
+					<ul class="order_payment-list">
+						<li class="order_payment_method">Наложенным платежем</li>
+						<li class="order_payment_method">Оплата на счет</li>
+						<li class="order_payment_method">Онлайн оплата</li>
+						<li class="order_payment_method">Наличными</li>
+						<li class="order_payment_method">Банковской картой</li>
+					</ul>
+				</li>
+				<li>
+					<p class="order_make_title order_done">Ваш заказ принят</p>
+					<div class="order_done_message">
+						<h3>Спасибо, ваш заказ принят!</h3>
+						<h3>Его номер : 89944</h3>
+						<p>Ожидайте звонка с 09:00 до 19:00, чтобы подтвердить заявку.  Менеджер уточнит стоимость доставки в связи с тарифами почтовой компании.</p>
+						<a href="index.html">
+							<button class="btn">На главную</button>
+						</a>
+					</div>
+				</li>	
+            </ul>
             <div class="order_list">
                     <ul>
                         <li class="order_item">
@@ -143,7 +172,8 @@
     </footer>
     
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/order.js"></script>	
     <script type="text/javascript" src="js/main-video.js"></script>
     <script type="text/javascript" src="js/lightgallery.min.js"></script>
     <script type="text/javascript" src="js/lightslider.js"></script>
