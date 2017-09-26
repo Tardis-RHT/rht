@@ -9,9 +9,6 @@ footer {
     box-sizing: border-box;
 }
 .footer_wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
     @include flex;
     justify-content: space-between;
     align-items: center;
@@ -32,13 +29,12 @@ footer {
         background-color: $bg_black;
     }
     .footer_wrapper{
-        width: 100%;   
-        justify-content: center;     
+        justify-content: flex-start;     
         .header_menu{
             display: none;
         }
     }
     .footer_copyright{
-        text-align: center;
+        text-align: left;
     }
 }
