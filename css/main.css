@@ -1471,12 +1471,15 @@ a :visited {
 
 .main_partners_wrapper {
   max-width: 1200px;
+  width: calc(100% - 30px);
   margin: 0 auto 40px;
   padding-top: 40px;
+  box-sizing: border-box;
 }
 
 .main_partenrs_container {
   height: 150px;
+  margin: 0 15px;
   white-space: nowrap;
   overflow-x: visible;
   overflow-y: hidden;
