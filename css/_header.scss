@@ -50,6 +50,10 @@
 	font-weight: $weight_normal;
 	outline: none;
 	background-color: $bg_white;
+	cursor: pointer;
+	a{
+		@include flex;
+	}
 }
 .shopping-cart_number {
 	width: 16px;
