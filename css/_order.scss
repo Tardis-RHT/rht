@@ -136,6 +136,24 @@
         color: rgb(0,113,186);
     }
 }
+.order_payment-list{
+    display: none;
+    background-color: $bg_white;
+}
+.order_payment_method{
+    cursor: pointer;
+    border-bottom: solid 1px $button_inactive;
+    background-color: $bg_white;
+    &:last-of-type{
+        border-bottom: none;
+    }
+    h4{
+        @include text-style_main($weight_normal, $font_black, 26px);
+    }
+    p{
+        @include text-style_main($weight_light, $font_gray, 26px);        
+    }
+}
 .order_done{
     min-height: 86px;
     line-height: 46px;
@@ -155,9 +173,7 @@
         color: rgb(0,113,186);
     }
 }
-.order_payment-list{
-    display: none;
-}
+
 
 
 
@@ -179,5 +195,6 @@
     }
     button{
         margin-top: 35px;
+        width: 206px;
     }
 }

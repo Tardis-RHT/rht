@@ -5477,6 +5477,39 @@ input[type=range]::-ms-thumb:hover {
   color: #0071ba;
 }
 
+.order_payment-list {
+  display: none;
+  background-color: white;
+}
+
+.order_payment_method {
+  cursor: pointer;
+  border-bottom: solid 1px #dddddd;
+  background-color: white;
+}
+
+.order_payment_method:last-of-type {
+  border-bottom: none;
+}
+
+.order_payment_method h4 {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.order_payment_method p {
+  font-family: "MuseoSansCyrl";
+  font-weight: 300;
+  font-size: 18px;
+  color: #78787b;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
 .order_done {
   min-height: 86px;
   line-height: 46px;
@@ -5495,10 +5528,6 @@ input[type=range]::-ms-thumb:hover {
   font-size: 36px;
   font-weight: 300;
   color: #0071ba;
-}
-
-.order_payment-list {
-  display: none;
 }
 
 .order_done_message {
@@ -5526,6 +5555,7 @@ input[type=range]::-ms-thumb:hover {
 
 .order_done_message button {
   margin-top: 35px;
+  width: 206px;
 }
  
 
