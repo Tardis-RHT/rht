@@ -18,10 +18,12 @@
     flex: 1;
     margin-right:30px;
     background-color: $bg_white;
+
 }
 .order_make_item{
     margin-bottom: 20px;
     min-height: 86px;
+
 }
 .order_list{
     flex: 1;
@@ -243,9 +245,6 @@
 
 
 
-
-
-
 .order_pay {
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
@@ -364,4 +363,3 @@
         width: 206px;
     }
 }
-
