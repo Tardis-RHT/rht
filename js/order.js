@@ -7,7 +7,6 @@ $(document).ready(function(){
         $('#orderGo').hide('400');
         $('.order_delivery').css('color', 'rgb(221,221,221)');
         $('.order_pay').css('color', 'rgb(17,24,32)');
-        
     });
     $('.order_payment_method').click(function(){
         $('.order_done_message').show('400');
@@ -26,4 +25,3 @@ function deliveryChoose(){
         $('.oder_deliver-courier').show('400');
     }
 };
-
