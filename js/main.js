@@ -97,6 +97,18 @@ $(function(){
 		pager: false,
 		slideMargin: 0,
 		responsive: [
+			// {
+			// 	breakpoint:1400,
+			// 	settings: {
+			// 		item:4
+			// 		}
+			// },
+			// {
+			// 	breakpoint:768,
+			// 	settings: {
+			// 		item:3
+			// 		}
+			// },
 			{
 				breakpoint:620,
 				settings: {
@@ -173,6 +185,41 @@ var rangeSlider = function(){
   };
 rangeSlider();
 //END OF RANGE SLIDER
+
+//CALLBACK VALIDATION
+
+$(function($){
+	if(document.getElementById('tel')){
+		// console.log('exist');
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+	}
+ });
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	// telBtn.setAttribute('disabled', 'disabled');
+	
+	tel.checkValidity();
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		// console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		// console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+	
+ }
+ $(".form_callback").trigger('reset');
+
+// END OF CALLBACK VALIDATION
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 function toggle() {
@@ -286,6 +333,7 @@ $( document ).ready(function(){
 })
 function hidePopup(){
 	$('#callback-popup').hide(250,'swing');
+	hideModal();
 }
 function showPopup(){
 	$('#callback-popup').show(250,'swing');
@@ -344,3 +392,31 @@ $(function($){
 }
 
 // END OF CALLBACK VALIDATION
+
+//POPUP MODAL Window
+
+function superPopup(){
+	$('#overlay')
+		.addClass('modal-overlay');
+	$('#popup-callback-start')
+		.addClass('modal');
+	$('#callback-popup')
+		.addClass('modal-answer');
+	$('#modal-close').click(function(){
+		hideModal()
+	});
+	$('body, html')
+		.css('overflow', 'hidden');
+}
+function hideModal(){
+	$('#popup-callback-start')
+	.removeClass('modal');
+$('#callback-popup')
+	.removeClass('modal-answer');
+$('#overlay')
+	.removeClass('modal-overlay');
+$('body, html')
+	.css('overflow', 'scroll');
+};
+
+//END OF POPUP
