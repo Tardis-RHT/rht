@@ -5344,7 +5344,6 @@ input[type=range]::-ms-thumb:hover {
     margin-right: 30px;
   }
 }
-
 .order_make_item {
   margin-bottom: 20px;
   min-height: 86px;
@@ -5424,7 +5423,6 @@ input[type=range]::-ms-thumb:hover {
   line-height: 19px;
   color: #111820;
 }
-
 .order_make_name {
   box-sizing: border-box;
   background-color: #f7f7f7;
@@ -5722,13 +5720,11 @@ input[type=range]::-ms-thumb:hover {
   background-color: white;
   margin-left: 55px;
 }
-
 .order_payment-list {
   display: none;
   background-color: white;
   padding: 30px 0;
 }
-
 .order_payment_method {
   cursor: pointer;
   border-bottom: solid 1px #dddddd;
@@ -5736,11 +5732,9 @@ input[type=range]::-ms-thumb:hover {
   padding: 20px 0 20px 55px;
   margin-bottom: 0;
 }
-
 .order_payment_method:last-of-type {
   border-bottom: none;
 }
-
 .order_payment_method h4 {
   font-family: "MuseoSansCyrl";
   font-weight: 500;
@@ -5771,7 +5765,6 @@ input[type=range]::-ms-thumb:hover {
   letter-spacing: 0;
   line-height: 26px;
 }
-
 .pay_cod::before {
   background-image: url("../img/icons/pay_cod.svg");
 }
