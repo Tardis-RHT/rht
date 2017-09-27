@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>RHT</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/lightslider.css">
+	<link rel="stylesheet" href="css/lightgallery.css">
+	
+	
+</head>
+
+<body>
+	<header>
+		<!-- MOBILE MENU -->
+		<div class="header_mobile stickytop">
+			<div class="header_mobile_burger"><i id='burger' class="zmdi zmdi-menu zmdi-hc-2x"></i>
+			</div>
+			<a class="header_mobile_logo" href="index.html">RHT</a>
+			<a href="shopping-cart.html" class="header_mobile_cart">
+				<i class="zmdi zmdi-shopping-cart icon_cart"></i>
+				<div class="shopping-cart_number">2</div>
+			</a>
+		</div>
+		<div class="mobile_menu">
+			<ul class="mobile_menu_main">
+				<li><a href="furnitura.html">Фурнитура</a></li>
+				<li><a href="automatica.html">Автоматика</a></li>
+				<li><a href="panels.html">Филёнка</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<button class="mobile_callus-btn">Перезвоните мне</button>
+			<div class="mobile_callus">
+				<img class="mobile_icon_phone" src="img/phone.svg" alt="call us">
+				<a class="mobile_callus-tel" href="tel:0800210257">0 800 210 257</a>
+				<span class="mobile_callus-text">Бесплатно по Украине</span>
+			</div>
+		</div>
+		<!-- END OF MOBILE MENU -->
+
+		<!-- HIDING PART OF MENU -->
+		<div class="header_wrapper_hidebig">
+			<div class="header_wrapper_hidesmall wrapper">
+				<div class="header_lang">
+					<a class="header_lang_main" href="#">Рус <i id="header_shevron" class="zmdi zmdi-chevron-down"></i>
+					</a>
+					<div class="header_lang_content invisible">
+						<a class="header_lang_drop" href="#">Укр</a>
+						<a class="header_lang_drop" href="#">Англ</a>
+					</div>
+				</div>
+				<div class="header_callus">
+					<a class="header_callus_tel" href="tel:0800210257"><i class="zmdi zmdi-phone"></i> 0 800 210 257</a>
+					<span class="header_callus_text">Бесплатно по Украине</span>
+					
+				</div>
+			</div>
+		</div>
+		<!-- END OF HIDING PART OF MENU -->
+
+		<!-- MAIN MENU -->
+		<div class="header_wrapper_big">
+			<div class="header_wrapper_small wrapper">
+				<a href="index.html"><img class="header_logo" src="img/logo.png" alt="RHT logo"></a>
+				<nav class="header_menu">
+					<ul class="header_menu_main">
+						<li><a href="furnitura.html">Фурнитура</a></li>
+						<li><a href="automatica.html">Автоматика</a></li>
+						<li><a href="panels.html">Филёнка</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header_cart">
+					<div class="header_cart_call invisible">
+						<button class="header_cart_call-button">Перезвоните мне</button>
+						<span class="header_cart_call-tel">Или звоните <a href="tel:0800210257">0 800 21 02 57</a></span>
+					</div>
+					<a href="shopping-cart.html">
+						<button class="header_cart_buy">
+							<i class="zmdi zmdi-shopping-cart icon_cart"></i>
+							<div class="shopping-cart_number">1</div>
+							<span class="header_cart_bye-text">Корзина</span>
+						</butoon>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- END OF MAIN MENU -->
+    </header>
+   
+    <section class="breadcrumbs wrapper">
+            <a class="backToCart" href="shopping-cart.html"><i class="zmdi zmdi-long-arrow-left"></i> Назад к корзине</a>
+    </section>
+
+    <section class="order wrapper">
+        <h2>Заказ товаров</h2>
+        <div class="order_container">
+            <ul class="order_make">
+				<li>
+					<p class="order_make_title order_delivery">Выберите способ доставки</p>
+					<p class="order_make_comment">Стоимость доставки не включена в стоимость и соответствует тарифам компаний.</p>
+					<form class="order_delivery_form">
+						<label for="post_office">Выберите почтовую компанию</label>
+						<input type="text" id="post_office" name="post office">
+					</form>
+					<button id="orderGo" class="btn">Продолжить</button>
+				</li>
+				<li>
+					<p class="order_make_title order_pay">Выберите способ оплаты</p>
+					<ul class="order_payment-list">
+						<li class="order_payment_method">
+							<h4>Наложенным платежем</h4>
+							<p>Оплатите после получения товара.</p>
+						</li>
+						<li class="order_payment_method">
+							<h4>Оплата на счет</h4>
+							<p>Менеджер магазина вышлет вам счет-фактуру для оплаты в отделении или с помощью онлайн-банкинга любого банка.</p>
+						</li>
+						<li class="order_payment_method">
+							<h4>Онлайн оплата</h4>
+							<p>Оплата с помощью сервиса Ligpay.</p>
+						</li>
+						<li class="order_payment_method">
+							<h4>Наличными</h4>
+							<p>Оплатите наличными, когда будете забирать товар у курьера «Новой Почты».</p>
+						</li>
+						<li class="order_payment_method">
+							<h4>Банковской картой</h4>
+							<p>Оплачивайте курьеру мгновенно с помощью банковской карты.</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p class="order_make_title order_done">Ваш заказ принят</p>
+					<div class="order_done_message">
+						<h3>Спасибо, ваш заказ принят!</h3>
+						<h3>Его номер : 89944</h3>
+						<p>Ожидайте звонка с 09:00 до 19:00, чтобы подтвердить заявку.  Менеджер уточнит стоимость доставки в связи с тарифами почтовой компании.</p>
+						<a href="index.html">
+							<button class="btn">На главную</button>
+						</a>
+					</div>
+				</li>	
+            </ul>
+            <div class="order_list">
+                    <ul>
+                        <li class="order_item">
+							<h3>Комплект «Стандарт»</h3>
+							<div class="order_item_price">
+								<p>2990 грн x 1 шт.</p><p>2990 грн</p>
+							</div>
+                        </li>
+                        <li class="order_item">
+							<h3>Автоматика «Rotelli»</h3>
+							<div class="order_item_price">
+								<p>1000 грн x 2 шт.</p><p>2000 грн</p>
+							</div>
+						</li>
+					</ul>
+					<ul>
+                        <li class="order_price_total">
+							<p>Сумма: <b>4990</b><span> грн</span></p>
+							<span class="order_price_note">*Доставка не входит в стоимость</span>	
+						</li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_wrapper wrapper">
+            <nav class="header_menu">
+                <ul class="header_menu_main">
+                    <li><a href="furnitura.html">Фурнитура</a></li>
+                    <li><a href="automatica.html">Автоматика</a></li>
+                    <li><a href="panels.html">Филёнка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer_copyright">
+                <p>&#169; Rolling Hi-Tech, 2017</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/order.js"></script>	
+    <script type="text/javascript" src="js/main-video.js"></script>
+    <script type="text/javascript" src="js/lightgallery.min.js"></script>
+    <script type="text/javascript" src="js/lightslider.js"></script>
+    <script type="text/javascript" src="js/lg-video.min.js"></script>
+    <script type="text/javascript" src="js/maskedinput.js"></script>
+</body>
+    </html>

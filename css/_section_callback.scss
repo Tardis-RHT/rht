@@ -1,6 +1,5 @@
 .callback_form_wrapper-small{
-    margin: 0 auto;    
-    // width: 320px;
+    margin: 0 auto 20px;    
     @include flex;
     justify-content: center;
     align-items: center;
@@ -92,18 +91,19 @@
         background-color: $bg_white;
     }
     .callback_form_wrapper-small{
+        margin: 0 auto;    
         width: 440px;
-        height: 500px;    
+        height: 500px;
         border: solid 1px $font-gray;
         h2{
             margin-bottom: 45px;
-            align-self: center;        
+            align-self: center;
         }
         p{
             font-weight: $weight_normal;
             font-size: 18px;
             line-height: 26px;
-            margin: 0 40px;
+            margin: 0 40px 25px; //from Anna (was: 0 40px)
         }
         span{
             font-size: 18px;
