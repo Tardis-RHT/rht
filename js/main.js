@@ -32,7 +32,7 @@ $(function(){
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
 		  $('.header_cart_call').removeClass('invisible');
-		  $('.header_cart_buy').css('padding','0 0 0 20px');
+		  $('.header_cart_buy').css('margin','0 0 0 20px');
 	  }
 	  else{
 		  $('.header_wrapper_big').removeClass('stickytop');
@@ -97,6 +97,18 @@ $(function(){
 		pager: false,
 		slideMargin: 0,
 		responsive: [
+			// {
+			// 	breakpoint:1400,
+			// 	settings: {
+			// 		item:4
+			// 		}
+			// },
+			// {
+			// 	breakpoint:768,
+			// 	settings: {
+			// 		item:3
+			// 		}
+			// },
 			{
 				breakpoint:620,
 				settings: {
@@ -213,7 +225,7 @@ $(function($){
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
-	  div.style.display = 'block';
+	  div.style.display = 'inline-block';
 	else
 	  div.style.display = 'none'
 }
@@ -314,12 +326,14 @@ function maximize(){
 //CALLBACK POPUP
 
 $( document ).ready(function(){
+	checkTelValidity();
 	if('#callback-popup'){
 		hidePopup()
 	}
 })
 function hidePopup(){
 	$('#callback-popup').hide(250,'swing');
+	hideModal();
 }
 function showPopup(){
 	$('#callback-popup').show(250,'swing');
@@ -339,3 +353,70 @@ $('#callback').bind('submit',function(e) {
 });
 
 //END OF CALLBACK SUBMIT (AJAX)
+
+//CALLBACK VALIDATION
+
+$(function($){
+	if(document.getElementById('tel')){
+		// console.log('exist');
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+	}
+ });
+ function checkTelValidity(){
+	var tel = document.getElementById('tel');
+	var telBtn = document.getElementById('tel-btn');
+	telBtn.setAttribute('disabled', 'disabled');
+	
+	tel.checkValidity();
+	// console.log(tel.checkValidity());
+	// console.log(tel.value);
+	// if(tel.value == '+380 (__) ___ - __ - __'){
+	// 	console.log('empty');
+	// }
+	
+	if (tel.checkValidity() === false || tel.value == ""){
+		// console.log('invalid');
+		telBtn.setAttribute('disabled', 'disabled');
+	   }
+	else if (tel.checkValidity() === true){
+		// console.log('valid');
+		telBtn.removeAttribute('disabled', 'disabled');
+	   }
+	//    telBtn.setAttribute('disabled', 'disabled');
+	
+ }
+
+ //-->>> this doesn't work while we don't have submit action (I prevented default)
+ function resetForm(){
+ 	$("#callback").trigger('reset');	 
+}
+
+// END OF CALLBACK VALIDATION
+
+//POPUP MODAL Window
+
+function superPopup(){
+	$('#overlay')
+		.addClass('modal-overlay');
+	$('#popup-callback-start')
+		.addClass('modal');
+	$('#callback-popup')
+		.addClass('modal-answer');
+	$('#modal-close').click(function(){
+		hideModal()
+	});
+	$('body, html')
+		.css('overflow', 'hidden');
+}
+function hideModal(){
+	$('#popup-callback-start')
+	.removeClass('modal');
+$('#callback-popup')
+	.removeClass('modal-answer');
+$('#overlay')
+	.removeClass('modal-overlay');
+$('body, html')
+	.css('overflow', 'scroll');
+};
+
+//END OF POPUP
