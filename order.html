@@ -99,42 +99,90 @@
         <h2>Заказ товаров</h2>
         <div class="order_container">
             <ul class="order_make">
-				<li>
-					<p class="order_make_title order_delivery">Выберите способ доставки</p>
-					<p class="order_make_comment">Стоимость доставки не включена в стоимость и соответствует тарифам компаний.</p>
-					<form class="order_delivery_form">
-						<label for="post_office">Выберите почтовую компанию</label>
-						<input type="text" id="post_office" name="post office">
-					</form>
-					<button id="orderGo" class="btn">Продолжить</button>
+				<li class="order_make_item">
+					<div class="order_make_name">
+						<p class="order_make_title order_delivery">Выберите способ доставки</p>
+						<p class="order_make_comment">Стоимость доставки не включена в стоимость и соответствует тарифам компаний.</p>
+					</div>
+					<div class="order_delivery_form">
+						<span>Выберите почтовую компанию</span>
+						<select class="post-office_select" name="post office">
+							<option class="option" value="sat">САТ</option>
+							<option class="option" value="intime">Интайм</option>
+							<option class="option" value="other">Другой способ доставки</option>
+						</select>
+						<span >Способ доставки:</span>
+						<span class="order_delivery-choose">
+							<input id="order_office" type="radio" name="order_delivery-choose" value="order_office" checked onclick="deliveryChoose()">
+							<label for="order_office">В отделение</label>
+							<input id="order_courier" type="radio" name="order_delivery-choose" value="order_courier" onclick="deliveryChoose()">
+							<label for="order_courier">Курьером</label>
+						</span>
+						<label for="oder_name">Имя и фамилия</label>
+						<input type="text" id="oder_name" name="order_name" placeholder="Имя и фамилия">
+
+						<label for="oder_region">Ваша область</label>
+						<input type="text" id="oder_region" name="oder_region" placeholder="Ваша область">
+
+						<label for="oder_city">Ваш город</label>
+						<input type="text" id="oder_city" name="oder_city" placeholder="Ваш город">
+
+						<input type="number" id="oder_post-office_number" name="oder_post-office_number" placeholder="№ отделения" min="0">
+
+						<div class="oder_deliver-courier">
+							<label for="oder_street">Улица</label>
+							<input type="text" id="oder_street" name="oder_street" placeholder="Улица">
+
+							<label for="oder_house">Дом</label>
+							<input type="text" id="oder_house" name="oder_house" placeholder="Дом">
+
+							<span>Удобное время</span>
+							<div class="oder_choose-time">
+								<span>с </span>
+								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
+								<span> до </span>
+								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
+							</div>
+
+							<label for="oder_comment">Комментарий</label>
+							<textarea type="text" id="oder_comment" name="oder_comment">
+							</textarea>			
+						</div>
+
+						<button id="orderGo" class="btn" >Продолжить</button>
+					</div>
 				</li>
-				<li>
-					<p class="order_make_title order_pay">Выберите способ оплаты</p>
+				<li class="order_make_item">
+					<div class="order_make_name">
+						<p class="order_make_title order_pay">Выберите способ оплаты</p>
+					</div>
 					<ul class="order_payment-list">
 						<li class="order_payment_method">
-							<h4>Наложенным платежем</h4>
+							<h4 class="pay_cod">Наложенным платежем</h4>
 							<p>Оплатите после получения товара.</p>
 						</li>
 						<li class="order_payment_method">
-							<h4>Оплата на счет</h4>
-							<p>Менеджер магазина вышлет вам счет-фактуру для оплаты в отделении или с помощью онлайн-банкинга любого банка.</p>
+							<h4 class="pay_account">Оплата на счет</h4>
+							<p>Менеджер магазина вышлет вам счет-фактуру для оплаты в отделении или с помощью онлайн-банкинга любого банка.</p>
 						</li>
 						<li class="order_payment_method">
-							<h4>Онлайн оплата</h4>
+							<h4 class="pay_online">Онлайн оплата</h4>
 							<p>Оплата с помощью сервиса Ligpay.</p>
 						</li>
 						<li class="order_payment_method">
-							<h4>Наличными</h4>
+							<h4 class="pay_cash">Наличными</h4>
 							<p>Оплатите наличными, когда будете забирать товар у курьера «Новой Почты».</p>
 						</li>
 						<li class="order_payment_method">
-							<h4>Банковской картой</h4>
+							<h4 class="pay_card">Банковской картой</h4>
 							<p>Оплачивайте курьеру мгновенно с помощью банковской карты.</p>
 						</li>
 					</ul>
 				</li>
-				<li>
-					<p class="order_make_title order_done">Ваш заказ принят</p>
+				<li class="order_make_item">
+					<div class="order_make_name">
+						<p class="order_make_title order_done">Ваш заказ принят</p>
+					</div>
 					<div class="order_done_message">
 						<h3>Спасибо, ваш заказ принят!</h3>
 						<h3>Его номер : 89944</h3>
