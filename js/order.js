@@ -9,39 +9,21 @@ $(document).ready(function(){
         $('.order_pay').css('color', 'rgb(17,24,32)');
         
     });
-
     $('.order_payment_method').click(function(){
         $('.order_done_message').show('400');
-        $('.order_payment-list').hide('300');
+        $('.order_payment-list').hide('400');
         $('.order_pay').css('color', 'rgb(221,221,221)');
         $('.order_done').css('color', 'rgb(17,24,32)');        
     });
-
-
-
-
-
-
-
-
-
-
-
-//TOOGLE BUTTONS MINI-MAXI ON PAGE AUTOMATICA-CARD
-
-// function maximize(){
-	
-// 		if($('#maxi').is(':checked')){
-// 			$('.maxi').css('visibility', 'visible');
-// 		}else{
-// 			$('.maxi').css('visibility', 'hidden');
-// 		}
-// };
-
-
-
-
 });
-
-
+// CHOOSING DELIVERY METHOD - POST-OFFICE - COURIER
+function deliveryChoose(){
+    if($('#order_office').is(':checked')){
+        $('#oder_post-office_number').show('400');
+        $('.oder_deliver-courier').hide('100');       
+    }else{
+        $('#oder_post-office_number').hide('100');
+        $('.oder_deliver-courier').show('400');
+    }
+};
 

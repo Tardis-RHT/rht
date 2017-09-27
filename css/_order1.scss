@@ -24,7 +24,6 @@
         min-height: 86px;
         
     }
-    
 }
 .order_list{
     flex: 1;
@@ -85,6 +84,10 @@
     margin-left: 55px;
     margin-bottom: 25px;   
 }
+// .order_make_container{
+//     background-color: $bg_white;
+    
+// }
 .order_delivery{
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
@@ -104,23 +107,129 @@
     height: 100%;
     padding: 20px 0;
     background-color: $bg_white;
-    label{
+    label,
+    span {
+        display: block;
         font-size: 16px;
         font-weight: $weight_light;
         color: $font_gray;
         line-height: 19px;
+    }
+    input{
+        display: block;
+        width: 366px;
+        height: 46px;
+        background-color: $bg_section;
+        @include text-style_main($weight_normal, $font_black, 22px);
+        outline: none;
+        border: solid 1px $button_inactive;
+        margin: 7px 0 15px;
+        padding: 0 0 0 25px;
+        box-sizing: border-box;
 
     }
+    // CHANGE THE COLOR OF THE PLACEHOLDER
+    ::-webkit-input-placeholder { /* Chrome */
+        color: $font_black;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $font_black;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $font_black;
+        opacity: 1;
+    }
+    :-moz-placeholder { /* Firefox 4 - 18 */
+        color: $font_black;
+        opacity: 1;
+    }
+}
+.post-office_select{
+    display: block;
+    width: 366px;
+    height: 46px;
+    background-color: $bg_section;
+    @include text-style_main($weight_normal, $font_black, 22px);
+    outline: none;
+    border: none;
+    border-radius: 0;
+    margin: 7px 0 10px;
+    padding: 0 0 0 25px;    
+}
+
+.order_delivery-choose{
+    display: block;
+    margin: 7px 0 10px;
+    width: 366px;
+    height: 46px;
+    label{
+        width: 50%;
+        height: 46px;
+        @include text-style_main($weight_bold, $button_normal, 22px);
+        text-align: center;
+        border: 2px solid $button_normal;
+        padding: 10px 0;
+        display: inline-block;
+        cursor: pointer;
+        &:last-of-type{
+            margin-left: -6px;
+        }
+    }
+    input{
+        display: none;
+    }
+    input:checked + label{
+        background-color: $button_normal;
+        color: $font_white;
+    }
+}
+.oder_deliver-courier{
+    display: none;
+    margin: 0 0 50px;
     input{
         width: 366px;
         height: 46px;
         background-color: $bg_section;
         @include text-style_main($weight_normal, $font_black, 22px);
         outline: none;
-        border: none;
+        border: solid 1px $button_inactive;
+        margin: 7px 0 15px;
+        padding: 0 0 0 25px;
+        box-sizing: border-box;
     }
 }
-
+#oder_post-office_number{
+    width: 183px;
+    margin: 35px 0 50px;
+}
+#oder_time_from{
+    width: 130px;
+    display: inline-block;
+}
+.oder_choose-time{
+    max-width: 366px;
+    box-sizing: border-box;
+    @include flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 7px 0 15px;
+    span{
+        display: block;
+        margin: 0 15px;
+        // &:last-of-type{
+        //     margin: 0 15px;
+        // }
+    }
+    input{
+        width: 130px;
+        border: solid 1px $button_inactive;
+        margin: 0;     
+    }
+}
+#orderGo{
+    width: 280px;
+    
+}
 .order_pay {
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
@@ -198,3 +307,4 @@
         width: 206px;
     }
 }
+
