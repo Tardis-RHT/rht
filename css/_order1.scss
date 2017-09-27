@@ -18,12 +18,10 @@
     flex: 1;
     margin-right:30px;
     background-color: $bg_white;
-    li{
-        background-color: $bg_section;
-        margin-bottom: 20px;
-        min-height: 86px;
-        
-    }
+}
+.order_make_item{
+    margin-bottom: 20px;
+    min-height: 86px;
 }
 .order_list{
     flex: 1;
@@ -71,22 +69,25 @@
     line-height: 19px;
     color: $font_black;
 }
+.order_make_name{
+    box-sizing: border-box;
+    background-color: $bg_section;
+    width: 100%;
+    min-height: 86px;
+    padding: 30px 0;
+}
 .order_make_title{
     position: relative;
     margin-left: 55px;
-    padding-top: 30px;
     font-size: 24px;
     font-weight: $weight_normal;
     line-height: 29px;
+    box-sizing: border-box;
 }
 .order_make_comment{
     @include text-style_main($weight_light, $font_black, 22px);
-    margin: 10px 0 25px 55px;
+    margin: 10px 0 0 55px;
 }
-// .order_make_container{
-//     background-color: $bg_white;
-    
-// }
 .order_delivery{
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
@@ -155,7 +156,6 @@
     margin: 7px 0 10px;
     padding: 0 0 0 25px;    
 }
-
 .order_delivery-choose{
     display: block;
     margin: 7px 0 10px;
@@ -228,9 +228,6 @@
     span{
         display: block;
         margin: 0 15px;
-        // &:last-of-type{
-        //     margin: 0 15px;
-        // }
     }
     input{
         width: 130px;
@@ -242,14 +239,19 @@
 }
 #orderGo{
     width: 280px;
-    
 }
+
+
+
+
+
+
 .order_pay {
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
     transition: color 0.4s ease;
-    color: $button_inactive;    
+    color: $button_inactive;
     &::before{
         position: absolute;
         left: -35px;
@@ -259,28 +261,70 @@
         color: rgb(0,113,186);
     }
 }
+.oder_pay_container{
+    background-color: $bg_white;
+    margin-left: 55px;
+}
 .order_payment-list{
     display: none;
     background-color: $bg_white;
+    padding: 30px 0;
 }
 .order_payment_method{
     cursor: pointer;
     border-bottom: solid 1px $button_inactive;
     background-color: $bg_white;
+    padding: 20px 0 20px 55px;
+    margin-bottom: 0;
     &:last-of-type{
         border-bottom: none;
     }
     h4{
         @include text-style_main($weight_normal, $font_black, 26px);
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            // background-image: url('../img/icons/pay_account.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            left: -40px;
+        }
     }
     p{
         @include text-style_main($weight_light, $font_gray, 26px);        
     }
 }
+.pay_cod{
+    &::before{
+        background-image: url('../img/icons/pay_cod.svg');        
+    }
+}
+.pay_account{
+    &::before{
+        background-image: url('../img/icons/pay_account.svg');        
+    }
+}
+.pay_online{
+    &::before{
+        background-image: url('../img/icons/pay_online.svg');        
+    }
+}
+.pay_cash{
+    &::before{
+        background-image: url('../img/icons/pay_cash.svg');        
+    }
+}
+.pay_card{
+    &::before{
+        background-image: url('../img/icons/pay_card.svg');        
+    }
+}
 .order_done{
-    min-height: 86px;
-    line-height: 46px;
-    padding: 20px 0;
     color: $button_inactive;
     -webkit-transition: color 0.4s ease;
     -moz-transition: color 0.4s ease;
@@ -292,7 +336,6 @@
         content: '3';
         font-size: 36px;
         font-weight: $weight_light;
-        
         color: rgb(0,113,186);
     }
 }
