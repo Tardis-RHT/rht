@@ -5412,8 +5412,7 @@ input[type=range]::-ms-thumb:hover {
   color: #111820;
   letter-spacing: 0;
   line-height: 22px;
-  margin-left: 55px;
-  margin-bottom: 25px;
+  margin: 10px 0 25px 55px;
 }
 
 .order_delivery {
@@ -5545,6 +5544,7 @@ input[type=range]::-ms-thumb:hover {
 .oder_deliver-courier {
   display: none;
   margin: 0 0 50px;
+  box-sizing: border-box;
 }
 
 .oder_deliver-courier input {
@@ -5562,6 +5562,24 @@ input[type=range]::-ms-thumb:hover {
   margin: 7px 0 15px;
   padding: 0 0 0 25px;
   box-sizing: border-box;
+}
+
+.oder_deliver-courier textarea {
+  box-sizing: border-box;
+  width: 366px;
+  height: 207px;
+  background-color: #f7f7f7;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+  outline: none;
+  border: solid 1px #dddddd;
+  resize: none;
+  padding: 0 0 0 25px;
+  margin: 7px 0 15px;
 }
 
 #oder_post-office_number {
@@ -5601,6 +5619,8 @@ input[type=range]::-ms-thumb:hover {
   width: 130px;
   border: solid 1px #dddddd;
   margin: 0;
+  text-align: center;
+  padding: 0 0 0 30px;
 }
 
 #orderGo {

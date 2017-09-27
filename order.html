@@ -103,7 +103,7 @@
 					<p class="order_make_title order_delivery">Выберите способ доставки</p>
 					<p class="order_make_comment">Стоимость доставки не включена в стоимость и соответствует тарифам компаний.</p>
 					<div class="order_delivery_form">
-						<label for="post_office">Выберите почтовую компанию</label>
+						<span>Выберите почтовую компанию</span>
 						<select class="post-office_select" name="post office">
 							<option class="option" value="sat">САТ</option>
 							<option class="option" value="intime">Интайм</option>
@@ -125,7 +125,7 @@
 						<label for="oder_city">Ваш город</label>
 						<input type="text" id="oder_city" name="oder_city" placeholder="Ваш город">
 
-						<input type="number" id="oder_post-office_number" name="oder_post-office_number" placeholder="№ отделения">
+						<input type="number" id="oder_post-office_number" name="oder_post-office_number" placeholder="№ отделения" min="0">
 
 						<div class="oder_deliver-courier">
 							<label for="oder_street">Улица</label>
@@ -137,16 +137,15 @@
 							<span>Удобное время</span>
 							<div class="oder_choose-time">
 								<span>С </span>
-								<input type="text" id="oder_time" name="oder_time">
+								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
 								<span> до </span>
-								<input type="text" id="oder_time" name="oder_time">
+								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
 							</div>
 
 							<label for="oder_comment">Комментарий</label>
-							<input type="text" id="oder_comment" name="oder_comment" placeholder="Комментарий">				
+							<textarea type="text" id="oder_comment" name="oder_comment">
+							</textarea>			
 						</div>
-						
-
 
 						<button id="orderGo" class="btn" disabled>Продолжить</button>
 					</div>

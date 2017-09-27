@@ -81,8 +81,7 @@
 }
 .order_make_comment{
     @include text-style_main($weight_light, $font_black, 22px);
-    margin-left: 55px;
-    margin-bottom: 25px;   
+    margin: 10px 0 25px 55px;
 }
 // .order_make_container{
 //     background-color: $bg_white;
@@ -186,6 +185,7 @@
 .oder_deliver-courier{
     display: none;
     margin: 0 0 50px;
+    box-sizing: border-box;
     input{
         width: 366px;
         height: 46px;
@@ -196,6 +196,18 @@
         margin: 7px 0 15px;
         padding: 0 0 0 25px;
         box-sizing: border-box;
+    }
+    textarea{
+        box-sizing: border-box;
+        width: 366px;
+        height: 207px;
+        background-color: $bg_section;
+        @include text-style_main($weight_normal, $font_black, 22px);
+        outline: none;
+        border: solid 1px $button_inactive;
+        resize: none;
+        padding: 0 0 0 25px;
+        margin: 7px 0 15px;
     }
 }
 #oder_post-office_number{
@@ -223,7 +235,9 @@
     input{
         width: 130px;
         border: solid 1px $button_inactive;
-        margin: 0;     
+        margin: 0;
+        text-align: center;
+        padding: 0 0 0 30px;
     }
 }
 #orderGo{
