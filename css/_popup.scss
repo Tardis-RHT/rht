@@ -17,11 +17,14 @@
         display: block;
         position: absolute;
         top: 40px;
-        left: 20px;
+        left: 10px;
         font-family: material-design-iconic-font;
         color: $font-gray;
         font-size: 18px;
         font-weight: $weight_normal;
+        @media (min-width:550px){
+            left: 20px;
+        }
     }
     // &::after{
     //     content:"Номер должен состоять из 12 цифр";
@@ -74,22 +77,23 @@
 }
 .main_callback-answer{
     position: absolute;
-    top: 50px;
-    left: calc(50% - 262.5px);
-    width: 525px;
-    height: 585px;
+    top: 0;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    padding: 40px;
+    padding: 15px;
     background-color: $bg_white;
     .callback_form_wrapper-small{
-        padding: 27px 38px;
         justify-content: flex-start;
         position: relative;
+    }
+    h2{        
+        padding-right: 25px;
     }
     p{
         margin: 0;
         text-align: left;
-        margin-bottom: 95px;
+        margin-bottom: 40px;
         align-self: flex-start;
     }
     .callback-answer{
@@ -97,8 +101,56 @@
     }
     .callback-answer-close{
         position: absolute;
-        top: -41px;
-        right: -43px;
+        top: -1px;
+        right: 1px;
+        border: none;
+        padding: 8px 14px 6px 12px;
+        box-shadow: none;
+        outline:none;
+        background-color: transparent;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width:550px){
+    .main_callback-answer{
+        top: 50px;
+        left: calc(50% - 262.5px);
+        height: 585px;
+        padding: 40px;
+        width: 525px;
+        .callback_form_wrapper-small{
+            padding: 27px 38px;
+        }
+        p{
+            margin-bottom: 95px;
+        }
+        .callback-answer-close{
+            right: 1;
+            border-left: 1px solid $font-gray;
+            border-bottom: 1px solid $font-gray;
+            border-right: none;
+            border-top: none;
+            
+        }
+    }
+}
+
+
+.modal{
+    position: fixed;
+    z-index: 120;
+    top: 45px;
+    background-color: $bg_white;
+    // padding-top: 25px;
+    .callback-modal-close{
+        display: block;
+        position: absolute;
+        top:1.5px;
+        right: 1px;
+        // top: -41.5px;
+        // right: -43px;
         border-left: 1px solid $font-gray;
         border-bottom: 1px solid $font-gray;
         border-right: none;
@@ -108,5 +160,44 @@
         outline:none;
         background-color: transparent;
         cursor: pointer;
+        box-sizing: border-box;
     }
+}
+.callback-modal-close{
+    display: none;
+}
+
+.modal-answer{
+    position: fixed;
+    z-index: 150;
+    top: 45px;
+    // padding-top: 25px;
+    max-height: 353px;
+    // height: auto;
+    @media(min-width:329px){
+        max-height: 330px;
+    }
+    @media(min-width:450px){
+        max-height: none;
+        // height: 100%;
+    }
+    .callback-answer-close{
+        border-left: 1px solid $font-gray;
+        border-bottom: 1px solid $font-gray;
+        border-right: none;
+        border-top: none;
+    }
+}
+
+.modal-overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.6;
+    z-index: 110;
 }
