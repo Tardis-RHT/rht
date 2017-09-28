@@ -5146,7 +5146,8 @@ input[type=range]::-ms-thumb:hover {
 }
 
 .comment-form {
-  width: 670px;
+  width: 100%;
+  max-width: 670px;
   display: -webkit-box;
   /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
   display: -moz-box;
@@ -5160,7 +5161,7 @@ input[type=range]::-ms-thumb:hover {
   flex-wrap: wrap;
 }
 
-.comment-form input, .comment-form textarea {
+.comment-form input, .comment-form textarea, .comment-form select {
   width: 100%;
   padding: 10px 20px;
   border: 1px solid #78787b;
@@ -5173,15 +5174,15 @@ input[type=range]::-ms-thumb:hover {
   line-height: 22px;
 }
 
-.comment-form input::-moz-placeholder, .comment-form textarea::-moz-placeholder {
+.comment-form input::-moz-placeholder, .comment-form textarea::-moz-placeholder, .comment-form select::-moz-placeholder {
   opacity: 1;
 }
 
-.comment-form input::-webkit-input-placeholder, .comment-form textarea::-webkit-input-placeholder {
+.comment-form input::-webkit-input-placeholder, .comment-form textarea::-webkit-input-placeholder, .comment-form select::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown {
+.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown, .comment-form select:placeholder-shown {
   border: 1px solid #78787b;
 }
 
@@ -5192,7 +5193,7 @@ input[type=range]::-ms-thumb:hover {
 
 .comment-inputs {
   min-width: 55%;
-  width: 55%;
+  width: 100%;
 }
 
 .comment-inputs input, .comment-inputs select {
@@ -5200,13 +5201,42 @@ input[type=range]::-ms-thumb:hover {
   margin-bottom: 35px;
 }
 
+.comment-inputs select {
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.comment-inputs select option {
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: 1px solid white;
+  border-top-color: #dddddd;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+.comment-inputs select option:last-of-type {
+  border-bottom-color: #dddddd;
+}
+
+.comment-inputs select option:hover {
+  border: 1px solid #0063a6;
+  background-color: white;
+}
+
 .comment-dropfiles {
-  width: calc(45% - 35px);
-  margin-left: 35px;
+  width: 100%;
   height: 210px;
+  margin-bottom: 35px;
   border: 1px dashed #78787b;
   padding: 15px 20px;
   cursor: pointer;
+  position: relative;
+  background-color: white;
 }
 
 .comment-dropfiles b, .comment-dropfiles span {
@@ -5238,7 +5268,8 @@ input[type=range]::-ms-thumb:hover {
   font-size: 18px;
   color: #78787b;
   letter-spacing: 0;
-  line-height: 46px;
+  line-height: 22px;
+  padding-top: 25px;
 }
 
 .comment-select {
@@ -5274,29 +5305,41 @@ input[type=range]::-ms-thumb:hover {
   right: 20px;
 }
 
-.comment-select .dropdown-content {
-  top: 46px;
-  background-color: white;
+@media (min-width: 700px) {
+  .comment-form {
+    width: 670px;
+  }
+  .comment-inputs {
+    width: 55%;
+  }
+  .comment-dropfiles {
+    width: calc(45% - 35px);
+    margin-left: 35px;
+  }
+  .comment-requiremence {
+    line-height: 46px;
+    padding-top: 0;
+  }
+}
+
+.dz-message {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: dashed;
 }
 
-.comment-select .dropdown-content a {
-  box-sizing: border-box;
-  border: 1px solid white;
-  border-top-color: #dddddd;
-  -webkit-transition: border-color 0.3s;
-  -moz-transition: border-color 0.3s;
-  -o-transition: border-color 0.3s;
-  transition: border-color 0.3s;
+.dz-preview {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  margin: 0;
 }
 
-.comment-select .dropdown-content a:last-of-type {
-  border-bottom-color: #dddddd;
-}
-
-.comment-select .dropdown-content a:hover {
-  border: 1px solid #0063a6;
-  background-color: white;
+.dz-preview::nth-of-type(2) {
+  right: -320px;
 }
 
 .shopping-cart {
@@ -5558,6 +5601,7 @@ input[type=range]::-ms-thumb:hover {
     margin-right: 30px;
   }
 }
+
 .order_make_item {
   margin-bottom: 20px;
   min-height: 86px;
@@ -5637,6 +5681,7 @@ input[type=range]::-ms-thumb:hover {
   line-height: 19px;
   color: #111820;
 }
+
 .order_make_name {
   box-sizing: border-box;
   background-color: #f7f7f7;
@@ -5934,11 +5979,13 @@ input[type=range]::-ms-thumb:hover {
   background-color: white;
   margin-left: 55px;
 }
+
 .order_payment-list {
   display: none;
   background-color: white;
   padding: 30px 0;
 }
+
 .order_payment_method {
   cursor: pointer;
   border-bottom: solid 1px #dddddd;
@@ -5946,9 +5993,11 @@ input[type=range]::-ms-thumb:hover {
   padding: 20px 0 20px 55px;
   margin-bottom: 0;
 }
+
 .order_payment_method:last-of-type {
   border-bottom: none;
 }
+
 .order_payment_method h4 {
   font-family: "MuseoSansCyrl";
   font-weight: 500;
@@ -5979,6 +6028,7 @@ input[type=range]::-ms-thumb:hover {
   letter-spacing: 0;
   line-height: 26px;
 }
+
 .pay_cod::before {
   background-image: url("../img/icons/pay_cod.svg");
 }
