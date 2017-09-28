@@ -277,6 +277,7 @@
     width: 25px;
     height: 25px;
     border: 2px solid;
+    outline: none;
     border-color: $button_inactive $button_inactive transparent transparent;
     &:hover{
         border-color: $button_hover $button_hover transparent transparent;        
@@ -329,6 +330,7 @@
     overflow-x: visible;
     overflow-y: hidden;
     vertical-align: top;
+    margin: 0 -15px 0 -15px;
     @media(min-width:872px){
         width: 100%;
         @include flex;
@@ -346,20 +348,17 @@
     min-width: 266px;
     height: auto;
     margin: 15px;
-    &:first-of-type{
-        margin-left: 0;
-    }
-    &:last-of-type{
-        margin-right: 0;
-    }
+    // &:first-of-type{
+    //     margin-left: 0;
+    // }
+    // &:last-of-type{
+    //     margin-right: 0;
+    // }
     p{
         display: inline-block;
         height: 65px;
         @include text-style_main($weight_normal, $font_h2, 30px);
     }
-    // @media(min-width:1200px){
-    //     margin: 0;
-    // }
 }
 #adjusting-plate{
     display: none;

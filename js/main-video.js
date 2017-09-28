@@ -57,7 +57,6 @@ document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFu
 function onFullScreenEnter() {
     console.log("Enter fullscreen initiated from iframe");
     showControls();
-
 };
 
 function onFullScreenExit() {

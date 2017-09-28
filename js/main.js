@@ -32,7 +32,7 @@ $(function(){
 		  $('.header_wrapper_big').addClass('stickytop');
 		  $('.header_cart_bye-text').addClass('invisible');
 		  $('.header_cart_call').removeClass('invisible');
-		  $('.header_cart_buy').css('padding','0 0 0 20px');
+		  $('.header_cart_buy').css('margin','0 0 0 20px');
 	  }
 	  else{
 		  $('.header_wrapper_big').removeClass('stickytop');
@@ -97,6 +97,18 @@ $(function(){
 		pager: false,
 		slideMargin: 0,
 		responsive: [
+			// {
+			// 	breakpoint:1400,
+			// 	settings: {
+			// 		item:4
+			// 		}
+			// },
+			// {
+			// 	breakpoint:768,
+			// 	settings: {
+			// 		item:3
+			// 		}
+			// },
 			{
 				breakpoint:620,
 				settings: {
@@ -178,7 +190,7 @@ rangeSlider();
 function toggle() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
-	  div.style.display = 'block';
+	  div.style.display = 'inline-block';
 	else
 	  div.style.display = 'none'
 }
@@ -286,6 +298,7 @@ $( document ).ready(function(){
 })
 function hidePopup(){
 	$('#callback-popup').hide(250,'swing');
+	hideModal();
 }
 function showPopup(){
 	$('#callback-popup').show(250,'swing');
@@ -344,3 +357,31 @@ $(function($){
 }
 
 // END OF CALLBACK VALIDATION
+
+//POPUP MODAL Window
+
+function superPopup(){
+	$('#overlay')
+		.addClass('modal-overlay');
+	$('#popup-callback-start')
+		.addClass('modal');
+	$('#callback-popup')
+		.addClass('modal-answer');
+	$('#modal-close').click(function(){
+		hideModal()
+	});
+	$('body, html')
+		.css('overflow', 'hidden');
+}
+function hideModal(){
+	$('#popup-callback-start')
+	.removeClass('modal');
+$('#callback-popup')
+	.removeClass('modal-answer');
+$('#overlay')
+	.removeClass('modal-overlay');
+$('body, html')
+	.css('overflow', 'scroll');
+};
+
+//END OF POPUP

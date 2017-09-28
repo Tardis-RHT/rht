@@ -187,5 +187,24 @@
     opacity:1;
     display:block;
     z-index:2;
-    -moz-transition:    all 2s 2s ease-in-out;
+    -moz-transition: all 2s 2s ease-in-out;
     }
+
+//for mobile
+
+.video-alt-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.main-page_video-video{
+    visibility: hidden;
+}
+@media(min-width: 768px){
+    .main-page_video-video{
+        visibility: visible;
+    } 
+    .video-alt-img{
+        visibility: hidden;
+    }
+}
