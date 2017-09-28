@@ -5749,30 +5749,6 @@ input[type=range]::-ms-thumb:hover {
   }
 }
 
-.order_delivery_form input {
-  display: block;
-  width: 295px;
-  height: 46px;
-  background-color: #f7f7f7;
-  font-family: "MuseoSansCyrl";
-  font-weight: 500;
-  font-size: 18px;
-  color: #111820;
-  letter-spacing: 0;
-  line-height: 22px;
-  outline: none;
-  border: solid 1px #dddddd;
-  margin: 7px 0 15px;
-  padding: 0 0 0 25px;
-  box-sizing: border-box;
-}
-
-@media (min-width: 395px) {
-  .order_delivery_form input {
-    width: 366px;
-  }
-}
-
 .order_delivery_form ::-webkit-input-placeholder {
   /* Chrome */
   color: #111820;
@@ -5855,13 +5831,13 @@ input[type=range]::-ms-thumb:hover {
   color: white;
 }
 
-.oder_deliver-courier {
+.order_deliver-courier {
   display: none;
   margin: 0 0 50px;
   box-sizing: border-box;
 }
 
-.oder_deliver-courier input {
+.order_deliver-courier input {
   width: 295px;
   height: 46px;
   background-color: #f7f7f7;
@@ -5879,12 +5855,12 @@ input[type=range]::-ms-thumb:hover {
 }
 
 @media (min-width: 395px) {
-  .oder_deliver-courier input {
+  .order_deliver-courier input {
     width: 366px;
   }
 }
 
-.oder_deliver-courier textarea {
+.order_deliver-courier textarea {
   box-sizing: border-box;
   width: 295px;
   height: 207px;
@@ -5903,21 +5879,49 @@ input[type=range]::-ms-thumb:hover {
 }
 
 @media (min-width: 395px) {
-  .oder_deliver-courier textarea {
+  .order_deliver-courier textarea {
     width: 366px;
   }
 }
 
-#oder_post-office_number {
-  width: 183px;
-  margin: 35px 0 50px;
+.order_input {
+  display: block;
+  width: 295px;
+  height: 46px;
+  background-color: #f7f7f7;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 22px;
+  outline: none;
+  border: solid 1px #dddddd;
+  margin: 7px 0 15px;
+  padding: 0 0 0 25px;
+  box-sizing: border-box;
 }
 
-#oder_time {
+@media (min-width: 395px) {
+  .order_input {
+    width: 366px;
+  }
+}
+
+.order_label {
+  opacity: 0;
+}
+
+#order_post-office_number {
+  width: 183px;
+  margin: 7px 0 50px;
+}
+
+#order_time {
   width: 130px;
 }
 
-.oder_choose-time {
+.order_choose-time {
   width: 295px;
   box-sizing: border-box;
   display: -webkit-box;
@@ -5935,12 +5939,12 @@ input[type=range]::-ms-thumb:hover {
   margin: 7px 0 15px;
 }
 
-.oder_choose-time span {
+.order_choose-time span {
   display: block;
   margin: 0 15px;
 }
 
-.oder_choose-time input {
+.order_choose-time input {
   width: 130px;
   border: solid 1px #dddddd;
   margin: 0;
@@ -5949,7 +5953,7 @@ input[type=range]::-ms-thumb:hover {
 }
 
 @media (min-width: 395px) {
-  .oder_choose-time {
+  .order_choose-time {
     width: 366px;
   }
 }
@@ -5975,7 +5979,7 @@ input[type=range]::-ms-thumb:hover {
   color: #0071ba;
 }
 
-.oder_pay_container {
+.order_pay_container {
   background-color: white;
   margin-left: 55px;
 }
