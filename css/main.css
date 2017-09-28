@@ -870,6 +870,7 @@ a :visited {
     /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
     width: 20%;
     justify-content: flex-end;
+    align-items: center;
   }
   .header_cart_call-button {
     width: 100%;
