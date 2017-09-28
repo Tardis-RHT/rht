@@ -134,21 +134,22 @@
             max-width: 366px;
         }
     }
-    input{
-        display: block;
-        width: 295px;
-        height: 46px;
-        background-color: $bg_section;
-        @include text-style_main($weight_normal, $font_black, 22px);
-        outline: none;
-        border: solid 1px $button_inactive;
-        margin: 7px 0 15px;
-        padding: 0 0 0 25px;
-        box-sizing: border-box;
-        @media (min-width:395px){
-            width: 366px;
-        }
-    }
+    // input{
+    //     display: block;
+    //     width: 295px;
+    //     height: 46px;
+    //     background-color: $bg_section;
+    //     @include text-style_main($weight_normal, $font_black, 22px);
+    //     outline: none;
+    //     border: solid 1px $button_inactive;
+    //     margin: 7px 0 15px;
+    //     padding: 0 0 0 25px;
+    //     box-sizing: border-box;
+    //     @media (min-width:395px){
+    //         width: 366px;
+    //     }
+    // }
+    
     // CHANGE THE COLOR OF THE PLACEHOLDER
     ::-webkit-input-placeholder { /* Chrome */
         color: $font_black;
@@ -165,6 +166,7 @@
         opacity: 1;
     }
 }
+
 .post-office_select{
     display: block;
     width: 295px;
@@ -206,7 +208,7 @@
         color: $font_white;
     }
 }
-.oder_deliver-courier{
+.order_deliver-courier{
     display: none;
     margin: 0 0 50px;
     box-sizing: border-box;
@@ -240,14 +242,33 @@
         }
     }
 }
-#oder_post-office_number{
-    width: 183px;
-    margin: 35px 0 50px;
+.order_input{
+    display: block;
+    width: 295px;
+    height: 46px;
+    background-color: $bg_section;
+    @include text-style_main($weight_normal, $font_black, 22px);
+    outline: none;
+    border: solid 1px $button_inactive;
+    margin: 7px 0 15px;
+    padding: 0 0 0 25px;
+    box-sizing: border-box;
+    @media (min-width:395px){
+    width: 366px;
+    }
 }
-#oder_time{
+.order_label{
+    opacity: 0;
+    
+}
+#order_post-office_number{
+    width: 183px;
+    margin: 7px 0 50px;
+}
+#order_time{
     width: 130px;
 }
-.oder_choose-time{
+.order_choose-time{
     width: 295px;
     box-sizing: border-box;
     @include flex;
@@ -293,7 +314,7 @@
         color: rgb(0,113,186);
     }
 }
-.oder_pay_container{
+.order_pay_container{
     background-color: $bg_white;
     margin-left: 55px;
 }
@@ -318,7 +339,6 @@
             content: '';
             position: absolute;
             display: block;
-            // background-image: url('../img/icons/pay_account.svg');
             background-repeat: no-repeat;
             background-size: contain;
             width: 30px;
