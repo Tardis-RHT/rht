@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="css/lightslider.css">
 	<link rel="stylesheet" href="css/lightgallery.css">
 	<link rel="stylesheet" href="css/dropzone.css">
-	<link rel="stylesheet" href="css/basic.css">
 	
 	
 </head>
@@ -34,7 +33,7 @@
 				<li><a href="panels.html">Филёнка</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
-			<button class="mobile_callus-btn">Перезвоните мне</button>
+			<button class="mobile_callus-btn" onclick="superPopup()">Перезвоните мне</button>
 			<div class="mobile_callus">
 				<img class="mobile_icon_phone" src="img/phone.svg" alt="call us">
 				<a class="mobile_callus-tel" href="tel:0800210257">0 800 210 257</a>
@@ -77,7 +76,7 @@
 				</nav>
 				<div class="header_cart">
 					<div class="header_cart_call invisible">
-						<button class="header_cart_call-button">Перезвоните мне</button>
+						<button class="header_cart_call-button" onclick="superPopup()">Перезвоните мне</button>
 						<span class="header_cart_call-tel">Или звоните <a href="tel:0800210257">0 800 21 02 57</a></span>
 					</div>
 					<a href="shopping-cart.html">
@@ -92,6 +91,8 @@
 		</div>
 		<!-- END OF MAIN MENU -->
 	</header>
+		
+	<div id="overlay"></div>		
 
     <div class="furnitura-set_wrapper">
         <section class="breadcrumbs wrapper">
@@ -133,7 +134,7 @@
                     <!-- <input type="file" multiple accept="image/jpeg,image/png"> -->
                 </div>
                 <textarea name="comment" id="" cols="30" rows="10" required placeholder="Сообщение"></textarea>
-                <button type="submit" disabled class="btn comment-btn">Отправить</button>
+                <button type="submit" disabled class="btn comment-btn" id="comment_btn">Отправить</button>
                 <span class="comment-requiremence">
                     *Все поля обязательные для заполнения
                 </span>
@@ -141,8 +142,8 @@
         </div>
     </section>
 
-    <footer>
-		<div class="footer_wrapper">
+	<footer>
+		<div class="footer_wrapper wrapper">
 			<nav class="header_menu">
 				<ul class="header_menu_main">
 					<li><a href="furnitura.html">Фурнитура</a></li>
@@ -165,6 +166,7 @@
 	<script type="text/javascript" src="js/lg-video.min.js"></script>
 	<script type="text/javascript" src="js/maskedinput.js"></script>
 	<script type="text/javascript" src="js/dropzone.js"></script>
+	<script type="text/javascript" src="js/smartvalidity.js"></script>
 	
 </body>
 </html>
