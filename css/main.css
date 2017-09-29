@@ -4943,6 +4943,20 @@ input[type=range]::-ms-thumb:hover {
   position: relative;
 }
 
+.form_callback .callback_tel_error {
+  color: red;
+  font-family: "MuseoSansCyrl";
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  width: 100%;
+  visibility: hidden;
+}
+
 .phone {
   position: absolute;
   visibility: hidden;
@@ -4999,6 +5013,14 @@ input[type=range]::-ms-thumb:hover {
   visibility: visible;
 }
 
+#tel:active + span, #tel:focus + span {
+  visibility: hidden;
+}
+
+#tel:invalid {
+  box-shadow: none;
+}
+
 .main_callback {
   position: relative;
 }
@@ -5035,8 +5057,8 @@ input[type=range]::-ms-thumb:hover {
 
 .main_callback-answer .callback-answer-close {
   position: absolute;
-  top: -1px;
-  right: 1px;
+  top: -42px;
+  right: -42px;
   border: none;
   padding: 8px 14px 6px 12px;
   box-shadow: none;
@@ -5044,6 +5066,12 @@ input[type=range]::-ms-thumb:hover {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
+  width: 42px;
+  height: 42px;
+}
+
+.main_callback-answer .callback-answer-close:hover {
+  color: #0063a6;
 }
 
 @media (min-width: 550px) {
@@ -5073,14 +5101,25 @@ input[type=range]::-ms-thumb:hover {
   position: fixed;
   z-index: 120;
   top: 45px;
+  left: 0;
   background-color: white;
+}
+
+@media (min-width: 550px) {
+  .modal {
+    left: calc(50% - 262.5px);
+  }
+}
+
+.modal .callback_form_wrapper-small {
+  position: relative;
 }
 
 .modal .callback-modal-close {
   display: block;
   position: absolute;
-  top: 1.5px;
-  right: 1px;
+  top: -42px;
+  right: -42px;
   border-left: 1px solid #78787b;
   border-bottom: 1px solid #78787b;
   border-right: none;
@@ -5091,6 +5130,12 @@ input[type=range]::-ms-thumb:hover {
   background-color: transparent;
   cursor: pointer;
   box-sizing: border-box;
+  width: 42px;
+  height: 42px;
+}
+
+.modal .callback-modal-close:hover {
+  color: #0063a6;
 }
 
 .callback-modal-close {
@@ -5101,6 +5146,7 @@ input[type=range]::-ms-thumb:hover {
   position: fixed;
   z-index: 150;
   top: 45px;
+  left: 0;
   max-height: 353px;
 }
 
@@ -5116,11 +5162,29 @@ input[type=range]::-ms-thumb:hover {
   }
 }
 
+@media (min-width: 550px) {
+  .modal-answer {
+    left: calc(50% - 262.5px);
+  }
+}
+
 .modal-answer .callback-answer-close {
   border-left: 1px solid #78787b;
   border-bottom: 1px solid #78787b;
   border-right: none;
   border-top: none;
+  width: 42px;
+  height: 42px;
+  top: -42px;
+  right: -42px;
+}
+
+.modal-answer .callback-answer-close:hover {
+  color: #0063a6;
+}
+
+.modal-answer .callback_form_wrapper-small {
+  position: relative;
 }
 
 .modal-overlay {
@@ -5328,18 +5392,61 @@ input[type=range]::-ms-thumb:hover {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+  background-color: white;
+  z-index: 10;
   border-style: dashed;
 }
 
 .dz-preview {
-  position: absolute;
   top: 0;
   right: -200px;
   margin: 0;
 }
 
-.dz-preview::nth-of-type(2) {
-  right: -320px;
+.dz-preview span[data-dz-name] {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 26px;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+}
+
+.comment-form .comment-inputs {
+  position: relative;
+}
+
+.comment-form label {
+  position: absolute;
+  margin-top: -105px;
+  left: 0;
+  color: #78787b;
+  visibility: hidden;
+}
+
+.comment-form input:focus + label {
+  visibility: visible;
+}
+
+.comment-form select:focus + label {
+  visibility: visible;
+}
+
+.comment-form input:invalid {
+  box-shadow: none;
+  border-color: red;
+}
+
+.comment-form input:placeholder-shown {
+  border-color: #78787b;
 }
 
 .shopping-cart {

@@ -104,14 +104,17 @@
             <h2 class="comment-title">Оставьте ваш отзыв</h2>
             <form action="" enctype="multipart/form-data" method="post" class="comment-form">
                 <div class="comment-inputs">
-                    <input type="text" class="comment-name" placeholder="Имя и фамилия" required>
-                    <input type="email" class="comment-email" placeholder="Email" required>
-                    <select name="products" id="" required>
+					<input type="text" class="comment-name" placeholder="Имя и фамилия" required id="commentName">
+					<label for="commentName">Имя и фамилия</label>
+					<input type="email" class="comment-email" placeholder="Email" required id="commentEmail">
+					<label for="commentEmail">Email</label>
+                    <select name="products" id="commentProducts" required>
                         <option disabled value="" selected="selected" style="display: none;">Товар</option>
                         <option value="Фурнитура">Фурнитура</option>
                         <option value="Автоматика">Автоматика</option>
                         <option value="Филёнка">Металлическая филёнка</option>
-                    </select>
+					</select>
+					<label for="commentProducts">Товар</label>
                     <!-- <div class="comment-select dropdown">
                         <button onclick="myFunction()" class="dropbtn">Товар</button>
                         <div id="myDropdown" class="dropdown-content">
@@ -121,9 +124,9 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="comment-dropfiles dropzone" id="dropfiles" action="/file-upload">
-                    <b>Перетяните сюда</b>
-                    <span>до 3 фотографий</span>
+                <div class="comment-dropfiles dropzone" id="my-dropzone" action="/file-upload">
+                    <b id="msgText">Перетяните сюда</b>
+                    <span id="msgQuontity">до 3 фотографий</span>
                     <span>или</span>
                     <b>Загрузите с компьютера</b>
                     <span>(jpg/png до 10 Мб)</span>
@@ -157,7 +160,6 @@
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/main-video.js"></script>
 	<script type="text/javascript" src="js/lightgallery.min.js"></script>
 	<script type="text/javascript" src="js/lightslider.js"></script>
 	<script type="text/javascript" src="js/lg-video.min.js"></script>
