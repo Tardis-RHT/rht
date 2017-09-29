@@ -116,25 +116,25 @@
 						<span >Способ доставки:</span>
 						<span class="order_delivery-choose">
 							<input id="order_office" type="radio" name="order_delivery-choose" value="order_office" checked onclick="deliveryChoose()">
-							<label for="order_office">В отделение</label>
+							<label for="order_office" class="order_office_label">В отделение</label>
 							<input id="order_courier" type="radio" name="order_delivery-choose" value="order_courier" onclick="deliveryChoose()">
-							<label for="order_courier">Курьером</label>
+							<label for="order_courier" class="order_courier_label">Курьером</label>
 						</span>
 						<label class="order_label" for="order_name">Имя и фамилия</label>
-						<input class="order_input" type="text" id="order_name" class="show_label" name="order_name" placeholder="Имя и фамилия">
+						<input class="order_input" type="text" id="order_name" class="show_label" name="order_name" placeholder="Имя и фамилия" required>
 
 						<label class="order_label" for="order_region">Ваша область</label>
-						<input class="order_input" type="text" id="order_region" name="order_region" placeholder="Ваша область">
+						<input class="order_input" type="text" id="order_region" name="order_region" placeholder="Ваша область" required>
 
 						<label class="order_label" for="order_city">Ваш город</label>
-						<input class="order_input" type="text" id="order_city" name="order_city" placeholder="Ваш город">
+						<input class="order_input" type="text" id="order_city" name="order_city" placeholder="Ваш город" required>
 
 						<label class="order_label" id="order_post-office_label" for="order_post-office_number">№ отделения</label>
-						<input class="order_input" type="number" id="order_post-office_number" name="order_post-office_number" placeholder="№ отделения" min="0">
+						<input class="order_input" type="number" id="order_post-office_number" name="order_post-office_number" placeholder="№ отделения" min="0" required>
 
 						<div class="order_deliver-courier">
 							<label class="order_label" for="order_street">Улица</label>
-							<input class="order_input" type="text" id="order_street" name="order_street" placeholder="Улица">
+							<input class="order_input" type="text" id="order_street" name="order_street" placeholder="Улица" required>
 
 							<label class="order_label" for="order_house">Дом</label>
 							<input class="order_input" type="text" id="order_house" name="order_house" placeholder="Дом">
@@ -142,9 +142,9 @@
 							<span>Удобное время</span>
 							<div class="order_choose-time">
 								<span>с </span>
-								<input type="time" id="order_time" name="order_time" min="09:00" max="19:00">
+								<input type="time" id="order_time_from" name="order_time" min="09:00" max="19:00">
 								<span> до </span>
-								<input type="time" id="order_time" name="order_time" min="09:00" max="19:00">
+								<input type="time" id="order_time_to" name="order_time" min="09:00" max="19:00">
 							</div>
 
 							<label for="order_comment">Комментарий</label>
@@ -238,10 +238,10 @@
     <script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/order.js"></script>	
-    <script type="text/javascript" src="js/main-video.js"></script>
     <script type="text/javascript" src="js/lightgallery.min.js"></script>
     <script type="text/javascript" src="js/lightslider.js"></script>
     <script type="text/javascript" src="js/lg-video.min.js"></script>
     <script type="text/javascript" src="js/maskedinput.js"></script>
+	<script type="text/javascript" src="js/smartvalidity.js"></script>
 </body>
     </html>

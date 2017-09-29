@@ -364,8 +364,7 @@ $(function($){
 	// });
 	if(document.getElementById('tel')){
 		// console.log('exist');
-		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});	
-		// $("#tel").smartValidity();	
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});		
 	}
  });
  function checkTelValidity(){

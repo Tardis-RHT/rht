@@ -4950,6 +4950,20 @@ input[type=range]::-ms-thumb:hover {
   position: relative;
 }
 
+.form_callback .callback_tel_error {
+  color: red;
+  font-family: "MuseoSansCyrl";
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  width: 100%;
+  visibility: hidden;
+}
+
 .phone {
   position: absolute;
   color: red;
@@ -4999,6 +5013,14 @@ input[type=range]::-ms-thumb:hover {
 #tel:active, #tel:focus {
   text-align: right;
   padding-right: 20px;
+}
+
+#tel:invalid {
+  box-shadow: none;
+}
+
+#tel:active + span, #tel:focus + span {
+  visibility: hidden;
 }
 
 #tel:invalid {
@@ -5241,6 +5263,8 @@ input[type=range]::-ms-thumb:hover {
 .comment-form textarea {
   resize: none;
   margin-bottom: 50px;
+  box-shadow: none;
+  outline: none;
 }
 
 .comment-inputs {
@@ -5251,6 +5275,7 @@ input[type=range]::-ms-thumb:hover {
 .comment-inputs input, .comment-inputs select {
   display: block;
   margin-bottom: 35px;
+  outline: none;
 }
 
 .comment-inputs select {

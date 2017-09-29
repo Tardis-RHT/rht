@@ -1,5 +1,20 @@
 .form_callback{
     position: relative;
+    
+    .callback_tel_error{
+        color:red;
+        font-family: $main_font;
+        font-size: 16px;
+        // line-height: 32px;
+        font-weight: $weight-light;
+        text-align: left;
+        margin: 0;
+        position: absolute;
+        top: -15px;
+        left: 40px;
+        width: 100%;
+        visibility: hidden;
+    }
 }
 .phone{
     position: absolute;
@@ -49,6 +64,12 @@
     // &:active + span, &:focus + span{
     //     visibility: hidden;
     // }
+    &:invalid{
+        box-shadow: none;
+    }
+    &:active + span, &:focus + span{
+        visibility: hidden;
+    }
     &:invalid{
         box-shadow: none;
     }

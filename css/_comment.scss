@@ -31,7 +31,9 @@
     }
     textarea{        
         resize: none;
-        margin-bottom: 50px;   
+        margin-bottom: 50px;
+        box-shadow: none;
+        outline: none;   
     }
 }
 .comment-inputs{
@@ -40,6 +42,7 @@
     input, select{
         display: block;
         margin-bottom: 35px;
+        outline: none; 
     }
     select{
         // border: none;
