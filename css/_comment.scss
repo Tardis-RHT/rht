@@ -166,15 +166,57 @@
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
+    background-color: $bg_white;
+    z-index: 10;
     border-style: dashed;
 }
 
 .dz-preview{
-    position: absolute;
     top: 0;
     right: -200px;
     margin: 0;
-    &::nth-of-type(2){
-        right: -320px;
+    // @include flex;
+    // .dz-filename span{
+    //     @include text-style_main($weight_normal, $font_black, 26px);
+    // }
+    span[data-dz-name]{
+        @include text-style_main($weight_normal, $font_black, 26px);
+        max-width: 150px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        top: 10px;
+        left: 100px;
     }
 }
+
+//labels
+
+.comment-form{
+    .comment-inputs{
+        position: relative;
+    }
+    label{
+        position: absolute;
+        // top:-105px; 
+        margin-top: -105px;
+        left: 0;
+        color: $font_gray;
+        visibility: hidden;
+    }
+    input:focus + label{
+       visibility: visible;
+    }
+    select:focus + label{
+        visibility: visible;
+    }
+    input:invalid{
+        box-shadow: none;
+        border-color: red;
+    }
+    input:placeholder-shown{
+        border-color: $font-gray;
+    }
+} 

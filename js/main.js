@@ -334,6 +334,7 @@ $( document ).ready(function(){
 function hidePopup(){
 	$('#callback-popup').hide(250,'swing');
 	hideModal();
+	$('#tel-btn').attr('disabled', 'disabled');
 }
 function showPopup(){
 	$('#callback-popup').show(250,'swing');
@@ -359,31 +360,37 @@ $('#callback').bind('submit',function(e) {
 $(function($){
 	if(document.getElementById('tel')){
 		// console.log('exist');
-		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});		
 	}
  });
  function checkTelValidity(){
 	var tel = document.getElementById('tel');
 	var telBtn = document.getElementById('tel-btn');
-	telBtn.setAttribute('disabled', 'disabled');
-	
-	tel.checkValidity();
-	// console.log(tel.checkValidity());
-	// console.log(tel.value);
-	// if(tel.value == '+380 (__) ___ - __ - __'){
-	// 	console.log('empty');
-	// }
-	
-	if (tel.checkValidity() === false || tel.value == ""){
-		// console.log('invalid');
+	var telError = document.getElementById('callback_tel_error');
+	if(telBtn){
 		telBtn.setAttribute('disabled', 'disabled');
-	   }
-	else if (tel.checkValidity() === true){
-		// console.log('valid');
-		telBtn.removeAttribute('disabled', 'disabled');
-	   }
-	//    telBtn.setAttribute('disabled', 'disabled');
-	
+		telError.style.visibility = 'hidden';
+		tel.checkValidity();
+		
+		// console.log(tel.checkValidity());
+		// console.log(tel.value);
+		// if(tel.value == '+380 (__) ___ - __ - __'){
+		// 	console.log('empty');
+		// }
+		
+		if (tel.checkValidity() === false || tel.value == ""){
+			// console.log('invalid');
+			telBtn.setAttribute('disabled', 'disabled');
+			telError.style.visibility = 'visible';
+		}
+		else if (tel.checkValidity() === true){
+			// console.log('valid');
+			telBtn.removeAttribute('disabled', 'disabled');
+			telError.style.visibility = 'hidden';
+			// telLabel.style.visibility = 'visible';
+		}
+		//    telBtn.setAttribute('disabled', 'disabled');
+	}
  }
 
  //-->>> this doesn't work while we don't have submit action (I prevented default)
@@ -405,7 +412,7 @@ function superPopup(){
 	$('#modal-close').click(function(){
 		hideModal()
 	});
-	$('body, html')
+	$('body')
 		.css('overflow', 'hidden');
 }
 function hideModal(){
@@ -415,8 +422,43 @@ $('#callback-popup')
 	.removeClass('modal-answer');
 $('#overlay')
 	.removeClass('modal-overlay');
-$('body, html')
-	.css('overflow', 'scroll');
+$('body')
+	.css('overflow', 'auto');
 };
 
 //END OF POPUP
+
+
+//DROPZONE
+
+function changeMsg(){
+	document.getElementById("msgText").innerHTML="Вы можете перетянуть";
+	document.getElementById("msgQuontity").innerHTML="ещё 2 фотографии";
+}
+function changeMsg2(){
+	document.getElementById("msgQuontity").innerHTML="ещё 1 фотографию";
+}
+function changeMsg3(){
+	document.getElementById("msgText").innerHTML="Перетяните сюда";
+	document.getElementById("msgQuontity").innerHTML="до 3 фотографий";
+	document.getElementsByClassName("dz-message")[0].style.opacity = '0.7';	
+}
+  //END OF DROPZONE
+
+  //VALIDATION ON COMMENT PAGE
+
+
+  function checkCommentValidity(){
+	var inputs = $('.comment-form input, select, textarea');
+	var commentBtn = $('.comment-btn');
+	if(commentBtn){
+		commentBtn.attr('disabled', 'disabled');
+		for (i=0; i <inputs.length; i++){
+			inputs[i].checkValidity();
+			console.log(inputs[i].checkValidity());
+		}
+		
+	}
+  }
+  checkCommentValidity();
+  //END OF VALIDATION ON COMMENT PAGE
