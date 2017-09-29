@@ -358,44 +358,68 @@ $('#callback').bind('submit',function(e) {
 //CALLBACK VALIDATION
 
 $(function($){
+	// $('#commentName').smartValidity({
+	// 	btn: 'comment_btn',
+    //     label:'commentName_lab'
+	// });
 	if(document.getElementById('tel')){
 		// console.log('exist');
-		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});		
+		$("#tel").mask("+380 (99) 999 - 99 - 99", {completed:function(){checkTelValidity()}});	
+		// $("#tel").smartValidity();	
 	}
  });
  function checkTelValidity(){
 	var tel = document.getElementById('tel');
 	var telBtn = document.getElementById('tel-btn');
-	var telError = document.getElementById('callback_tel_error');
-	if(telBtn){
-		telBtn.setAttribute('disabled', 'disabled');
-		telError.style.visibility = 'hidden';
-		tel.checkValidity();
+	var telLabel = document.getElementById('tel_label');
+
+	$("#tel").smartValidity({
+		btn: 'tel-btn',
+        label:'tel_label',
+		errorstyle: { "text-align": "right", "padding-right": "20px" }
+	});
+	
+	// if(telBtn){
+	// 	telBtn.setAttribute('disabled', 'disabled');
+
+	// 	function telStart(){
+	// 		telLabel.style.color = 'rgb(120,120,123)';
+	// 		telLabel.innerHTML="Номер телефона";
+	// 		tel.style.borderColor = '#dddddd';
+	// 	}
+	// 	function telError(){
+	// 		telLabel.style.color = 'red';
+	// 		tel.style.borderColor = 'red';
+	// 		telLabel.innerHTML="Номер должен состоять из 12 цифр";
+	// 		tel.style.textAlign = 'right';
+	// 		tel.style.paddingRight = '20px';
+	// 	}
+	// 	tel.onfocus = function(){
+	// 		telStart();
+	// 	} 
+	// 	tel.checkValidity();
 		
-		// console.log(tel.checkValidity());
-		// console.log(tel.value);
-		// if(tel.value == '+380 (__) ___ - __ - __'){
-		// 	console.log('empty');
-		// }
-		
-		if (tel.checkValidity() === false || tel.value == ""){
-			// console.log('invalid');
-			telBtn.setAttribute('disabled', 'disabled');
-			telError.style.visibility = 'visible';
-		}
-		else if (tel.checkValidity() === true){
-			// console.log('valid');
-			telBtn.removeAttribute('disabled', 'disabled');
-			telError.style.visibility = 'hidden';
-			// telLabel.style.visibility = 'visible';
-		}
-		//    telBtn.setAttribute('disabled', 'disabled');
-	}
+	// 	if (tel.checkValidity() === false || tel.value == ""){
+	// 		// console.log('invalid');
+	// 		telBtn.setAttribute('disabled', 'disabled');
+	// 		tel.onblur = function(){
+	// 			telError();
+	// 		} 
+	// 	}
+	// 	else if (tel.checkValidity() === true){
+	// 		// console.log('valid');
+	// 		telBtn.removeAttribute('disabled', 'disabled');
+	// 		tel.onblur = function(){
+	// 			telStart();
+	// 		}
+	// 	}
+	// }
  }
 
  //-->>> this doesn't work while we don't have submit action (I prevented default)
  function resetForm(){
- 	$("#callback").trigger('reset');	 
+	 $("#callback").trigger('reset');
+	 $("#tel").css('text-align', 'center').css('padding-right','0');	 
 }
 
 // END OF CALLBACK VALIDATION
@@ -434,9 +458,17 @@ $('body')
 function changeMsg(){
 	document.getElementById("msgText").innerHTML="Вы можете перетянуть";
 	document.getElementById("msgQuontity").innerHTML="ещё 2 фотографии";
+	document.getElementsByClassName("dz-message")[0].style.opacity = '0';
+}
+function changeMsg1(){
+	document.getElementById("msgText").innerHTML="Перетяните сюда";
+	document.getElementById("msgQuontity").innerHTML="до 3 фотографий";
+	document.getElementsByClassName("dz-message")[0].style.opacity = '0';
 }
 function changeMsg2(){
+	document.getElementById("msgText").innerHTML="Вы можете перетянуть";
 	document.getElementById("msgQuontity").innerHTML="ещё 1 фотографию";
+	document.getElementsByClassName("dz-message")[0].style.opacity = '0';
 }
 function changeMsg3(){
 	document.getElementById("msgText").innerHTML="Перетяните сюда";
@@ -447,9 +479,9 @@ function changeMsg3(){
 
   //VALIDATION ON COMMENT PAGE
 
-
+  if($('.comment-form input, select, textarea')){
+	   var inputs = $('.comment-form input, select, textarea');
   function checkCommentValidity(){
-	var inputs = $('.comment-form input, select, textarea');
 	var commentBtn = $('.comment-btn');
 	if(commentBtn){
 		commentBtn.attr('disabled', 'disabled');
@@ -460,5 +492,13 @@ function changeMsg3(){
 		
 	}
   }
-  checkCommentValidity();
+
+  for (i=0; i <inputs.length; i++){
+  	inputs[i].onchange = function(){
+		checkCommentValidity();
+	}
+}
+  }
+ 
+  
   //END OF VALIDATION ON COMMENT PAGE

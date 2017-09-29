@@ -1,25 +1,9 @@
 .form_callback{
     position: relative;
-    
-    .callback_tel_error{
-        color:red;
-        font-family: $main_font;
-        font-size: 16px;
-        // line-height: 32px;
-        font-weight: $weight-light;
-        text-align: left;
-        margin: 0;
-        position: absolute;
-        top: -15px;
-        left: 40px;
-        width: 100%;
-        visibility: hidden;
-    }
 }
 .phone{
     position: absolute;
-    visibility: hidden;
-    color:  $font-gray;
+    color: red;
     font-size: 16px;
     font-weight: $weight_light;
     line-height: 19px;
@@ -41,18 +25,6 @@
             left: 20px;
         }
     }
-    // &::after{
-    //     content:"Номер должен состоять из 12 цифр";
-    //     display: block;
-    //     position: absolute;
-    //     width: 280px;
-    //     top: 0;
-    //     left: 0;
-    //     font-family: $main_font;
-    //     font-size: 16px;
-    //     font-weight: $weight_light;
-    //     visibility:hidden;
-    // }
 }
 #tel{
     font-family: $main_font;
@@ -71,12 +43,12 @@
         text-align: right;
         padding-right: 20px;
     }
-    &:active + label, &:focus + label{
-        visibility: visible;
-    }
-    &:active + span, &:focus + span{
-        visibility: hidden;
-    }
+    // &:active + label, &:focus + label{
+    //     visibility: visible;
+    // }
+    // &:active + span, &:focus + span{
+    //     visibility: hidden;
+    // }
     &:invalid{
         box-shadow: none;
     }
@@ -87,9 +59,9 @@
     //     visibility: visible;
     //     color: red;
     // }
-    // &:placeholder-shown + label{
-	// 	visibility: hidden;
-    // }
+    &:placeholder-shown + label{
+		visibility: hidden;
+    }
 }
 
 

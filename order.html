@@ -32,7 +32,7 @@
 				<li><a href="panels.html">Филёнка</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
-			<button class="mobile_callus-btn">Перезвоните мне</button>
+			<button class="mobile_callus-btn" onclick="superPopup()">Перезвоните мне</button>
 			<div class="mobile_callus">
 				<img class="mobile_icon_phone" src="img/phone.svg" alt="call us">
 				<a class="mobile_callus-tel" href="tel:0800210257">0 800 210 257</a>
@@ -75,7 +75,7 @@
 				</nav>
 				<div class="header_cart">
 					<div class="header_cart_call invisible">
-						<button class="header_cart_call-button">Перезвоните мне</button>
+						<button class="header_cart_call-button" onclick="superPopup()">Перезвоните мне</button>
 						<span class="header_cart_call-tel">Или звоните <a href="tel:0800210257">0 800 21 02 57</a></span>
 					</div>
 					<a href="shopping-cart.html">
@@ -90,6 +90,8 @@
 		</div>
 		<!-- END OF MAIN MENU -->
 	</header>
+		
+	<div id="overlay"></div>
    
     <section class="breadcrumbs wrapper">
             <a class="backToCart" href="shopping-cart.html"><i class="zmdi zmdi-long-arrow-left"></i> Назад к корзине</a>
