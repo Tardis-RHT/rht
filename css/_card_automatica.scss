@@ -138,6 +138,7 @@
     border: 1px solid $button_inactive;
     box-shadow: none;
     margin-right: 7px;
+    margin-bottom: 15px;
     font-family: $main_font;
     font-weight: $weight_normal;
     font-size: 18px;
@@ -378,3 +379,87 @@
 .maxi{
     visibility: hidden;
 }
+
+.with-input{
+    position: relative;
+}
+// help button
+.automatica_help{
+    // display: none;
+    position: absolute;
+    align-items: center;
+    border: 1px solid $font-gray;
+    color: $font_black;
+    background-color: $bg_section;
+    top: 40px;
+    left: 0px;
+    width: 290px;
+    z-index: 2;
+    &:after,
+    &:before {
+        content:'';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid; 
+    }
+    &:after {
+        border-color: transparent transparent $bg_section transparent;
+        border-width: 10px;
+        right: 52px;
+        top: -20px;
+    }
+    &:before {
+        border-color: transparent transparent $font-gray transparent;
+        border-width: 12px;
+        right: 50px;        
+        top: -24px;
+    }
+    p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    i{
+        padding: 0px 5px 0 0;
+        align-self: flex-start;
+    }
+    @media (min-width:872px){
+        top: -53px;
+        left: 260px;
+        width: 570px;
+        height: 130px;
+        &:after,
+        &:before {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: 100%;
+            border-style: solid;
+        }
+        &:after {
+            border-color: transparent $bg_section transparent transparent;
+            border-width: 10px;
+            top: 50px;
+        }
+        &:before {
+            border-color: transparent $font-gray transparent transparent ;
+            border-width: 12px;
+            top: 48px;
+        }
+        img{
+            width:100px;
+            height: auto;
+            margin: 0 10px;
+        }
+        p{
+            @include text-style_main($weight_light, $font_black, 26px);
+    
+        }
+        i{
+            padding: 5px 5px 0 0;
+            align-self: flex-start;
+        }
+    }
+}
+

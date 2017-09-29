@@ -118,38 +118,37 @@
 							<input id="order_courier" type="radio" name="order_delivery-choose" value="order_courier" onclick="deliveryChoose()">
 							<label for="order_courier">Курьером</label>
 						</span>
-						<label for="oder_name">Имя и фамилия</label>
-						<input type="text" id="oder_name" name="order_name" placeholder="Имя и фамилия">
+						<label class="order_label" for="order_name">Имя и фамилия</label>
+						<input class="order_input" type="text" id="order_name" class="show_label" name="order_name" placeholder="Имя и фамилия">
 
-						<label for="oder_region">Ваша область</label>
-						<input type="text" id="oder_region" name="oder_region" placeholder="Ваша область">
+						<label class="order_label" for="order_region">Ваша область</label>
+						<input class="order_input" type="text" id="order_region" name="order_region" placeholder="Ваша область">
 
-						<label for="oder_city">Ваш город</label>
-						<input type="text" id="oder_city" name="oder_city" placeholder="Ваш город">
+						<label class="order_label" for="order_city">Ваш город</label>
+						<input class="order_input" type="text" id="order_city" name="order_city" placeholder="Ваш город">
 
-						<input type="number" id="oder_post-office_number" name="oder_post-office_number" placeholder="№ отделения" min="0">
+						<label class="order_label" id="order_post-office_label" for="order_post-office_number">№ отделения</label>
+						<input class="order_input" type="number" id="order_post-office_number" name="order_post-office_number" placeholder="№ отделения" min="0">
 
-						<div class="oder_deliver-courier">
-							<label for="oder_street">Улица</label>
-							<input type="text" id="oder_street" name="oder_street" placeholder="Улица">
+						<div class="order_deliver-courier">
+							<label class="order_label" for="order_street">Улица</label>
+							<input class="order_input" type="text" id="order_street" name="order_street" placeholder="Улица">
 
-							<label for="oder_house">Дом</label>
-							<input type="text" id="oder_house" name="oder_house" placeholder="Дом">
+							<label class="order_label" for="order_house">Дом</label>
+							<input class="order_input" type="text" id="order_house" name="order_house" placeholder="Дом">
 
 							<span>Удобное время</span>
-							<div class="oder_choose-time">
+							<div class="order_choose-time">
 								<span>с </span>
-								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
+								<input type="time" id="order_time" name="order_time" min="09:00" max="19:00">
 								<span> до </span>
-								<input type="time" id="oder_time" name="oder_time" min="09:00" max="19:00">
+								<input type="time" id="order_time" name="order_time" min="09:00" max="19:00">
 							</div>
 
-							<label for="oder_comment">Комментарий</label>
-							<textarea type="text" id="oder_comment" name="oder_comment">
-							</textarea>			
+							<label for="order_comment">Комментарий</label>
+							<textarea type="text" id="order_comment" name="order_comment"></textarea>			
 						</div>
-
-						<button id="orderGo" class="btn" >Продолжить</button>
+						<button id="orderGo" class="btn" disabled>Продолжить</button>
 					</div>
 				</li>
 				<li class="order_make_item">
