@@ -471,6 +471,10 @@ a :visited {
   }
 }
 
+.breadcrumbs a {
+  color: inherit;
+}
+
 .stickytop {
   position: fixed;
   top: 0;
@@ -5019,10 +5023,6 @@ input[type=range]::-ms-thumb:hover {
   box-shadow: none;
 }
 
-#tel:active + span, #tel:focus + span {
-  visibility: hidden;
-}
-
 #tel:invalid {
   box-shadow: none;
 }
@@ -5256,8 +5256,8 @@ input[type=range]::-ms-thumb:hover {
   opacity: 1;
 }
 
-.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown, .comment-form select:placeholder-shown {
-  border: 1px solid #78787b;
+.comment-form input:invalid, .comment-form textarea:invalid, .comment-form select:invalid {
+  box-shadow: none;
 }
 
 .comment-form textarea {
@@ -5442,7 +5442,7 @@ input[type=range]::-ms-thumb:hover {
   margin-top: -105px;
   left: 0;
   color: #78787b;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .comment-form input:focus + label {
@@ -5453,13 +5453,91 @@ input[type=range]::-ms-thumb:hover {
   visibility: visible;
 }
 
-.comment-form input:invalid {
-  box-shadow: none;
-  border-color: red;
+.comment-form input:placeholder-shown + label {
+  visibility: hidden;
 }
 
-.comment-form input:placeholder-shown {
-  border-color: #78787b;
+.comment-form .comment-textarea {
+  position: relative;
+  width: 100%;
+}
+
+.comment-form .comment-textarea label {
+  visibility: visible;
+  position: absolute;
+  color: #78787b;
+  left: 0;
+  top: -20px;
+  margin-top: 0;
+}
+
+.comment-form textarea:focus + label {
+  visibility: visible;
+}
+
+.comment-form textarea:placeholder-shown + label {
+  visibility: hidden;
+}
+
+.comment-thankyou {
+  background-color: #f7f7f7;
+  width: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .comment-thankyou {
+    padding-bottom: 115px;
+    margin-bottom: 105px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comment-thankyou {
+    background-image: url("../img/bg_full.png");
+  }
+}
+
+.comment-thankyou h2 {
+  margin-bottom: 60px;
+}
+
+.comment-thankyou p {
+  margin-bottom: 30px;
+  max-width: 415px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #0d223f;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.comment-thankyou button {
+  min-width: 205px;
+}
+
+.all_offers {
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .all_offers {
+    padding-bottom: 105px;
+  }
+}
+
+.all_offers h2 {
+  margin-bottom: 35px;
+}
+
+.all_offers a {
+  margin-bottom: 35px;
 }
 
 .shopping-cart {

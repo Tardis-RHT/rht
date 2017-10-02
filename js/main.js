@@ -378,42 +378,17 @@ $(function($){
 		errorstyle: { "text-align": "right", "padding-right": "20px" }
 	});
 	
-	// if(telBtn){
-	// 	telBtn.setAttribute('disabled', 'disabled');
-
-	// 	function telStart(){
-	// 		telLabel.style.color = 'rgb(120,120,123)';
-	// 		telLabel.innerHTML="Номер телефона";
-	// 		tel.style.borderColor = '#dddddd';
-	// 	}
-	// 	function telError(){
-	// 		telLabel.style.color = 'red';
-	// 		tel.style.borderColor = 'red';
-	// 		telLabel.innerHTML="Номер должен состоять из 12 цифр";
-	// 		tel.style.textAlign = 'right';
-	// 		tel.style.paddingRight = '20px';
-	// 	}
-	// 	tel.onfocus = function(){
-	// 		telStart();
-	// 	} 
-	// 	tel.checkValidity();
+	if (telBtn  !== undefined && telBtn !== null){
+		telBtn.setAttribute( "disabled", "disabled" );
 		
-	// 	if (tel.checkValidity() === false || tel.value == ""){
-	// 		// console.log('invalid');
-	// 		telBtn.setAttribute('disabled', 'disabled');
-	// 		tel.onblur = function(){
-	// 			telError();
-	// 		} 
-	// 	}
-	// 	else if (tel.checkValidity() === true){
-	// 		// console.log('valid');
-	// 		telBtn.removeAttribute('disabled', 'disabled');
-	// 		tel.onblur = function(){
-	// 			telStart();
-	// 		}
-	// 	}
-	// }
- }
+		if (tel.checkValidity() === false || tel.value == ""){
+			telBtn.setAttribute( "disabled", "disabled" );
+		}
+		else if (tel.checkValidity() === true){
+			telBtn.removeAttribute( "disabled", "disabled" );
+		}
+	}
+}
 
  //-->>> this doesn't work while we don't have submit action (I prevented default)
  function resetForm(){
@@ -440,13 +415,13 @@ function superPopup(){
 }
 function hideModal(){
 	$('#popup-callback-start')
-	.removeClass('modal');
-$('#callback-popup')
-	.removeClass('modal-answer');
-$('#overlay')
-	.removeClass('modal-overlay');
-$('body')
-	.css('overflow', 'auto');
+		.removeClass('modal');
+	$('#callback-popup')
+		.removeClass('modal-answer');
+	$('#overlay')
+		.removeClass('modal-overlay');
+	$('body')
+		.css('overflow', 'auto');
 };
 
 //END OF POPUP
@@ -478,26 +453,67 @@ function changeMsg3(){
 
   //VALIDATION ON COMMENT PAGE
 
-  if($('.comment-form input, select, textarea')){
-	   var inputs = $('.comment-form input, select, textarea');
-  function checkCommentValidity(){
-	var commentBtn = $('.comment-btn');
-	if(commentBtn){
-		commentBtn.attr('disabled', 'disabled');
-		for (i=0; i <inputs.length; i++){
-			inputs[i].checkValidity();
-			console.log(inputs[i].checkValidity());
-		}
-		
+  if($('.comment-form').length > 0){
+		var inputs = $('#commentName, #commentEmail, #commentProducts, #commentText');
+		var commentBtn = $('#comment_btn');
+  		function checkCommentValidity(){
+		if(commentBtn != undefined){
+		// commentBtn.prop( "disabled", true );
+
+			$("#commentEmail").smartValidity({
+				btn: 'comment-btn',
+				label:'commentEmail-lab',
+				startBorder: 'rgb(120,120,123)',
+				startText: 'Email',
+				errorText:'Введите в формате mail@mail.com'
+			});
+			$("#commentText").smartValidity({
+				btn: 'comment-btn',
+				label:'commentText-lab',
+				startBorder: 'rgb(120,120,123)',
+				startText: 'Сообщение',
+				errorText:'Сообщение должно содержать больше 10 символов'
+			});
+
+			for (i=0; i <inputs.length; i++){
+				inputs[i].checkValidity();
+				
+			}
+			if(inputs[0].checkValidity() === true && inputs[1].checkValidity() === true &&inputs[2].checkValidity() === true &&inputs[3].checkValidity() === true){
+				commentBtn.prop( "disabled", false );
+				return true;
+			} else{
+				commentBtn.prop( "disabled", true );
+				return false;
+			}
 	}
   }
 
   for (i=0; i <inputs.length; i++){
-  	inputs[i].onchange = function(){
-		checkCommentValidity();
+  	inputs[i].onkeydown = function(){
+			checkCommentValidity();
+		}
+	inputs[i].onchange = function(){
+			checkCommentValidity();
+		}	
 	}
 }
-  }
+
+	  //>>>labels on comment page
+	  //>>>popup on comment page
+
+
+function showCommentThanx(){
+	$('#thankyou-hide').css('display', 'none');
+	$('#thankyou-popup').show(250,'swing');
+}
  
-  
+$('#comment-form').bind('submit',function(e) {
+	e.preventDefault();
+	$("#comment-form").trigger('reset'); 
+	//here would be code
+
+	//PLEASE DON'T FORGET TO ADD RESET ON 200!!!
+	//ASK ABOUT ADDING ERROR ON 500
+});
   //END OF VALIDATION ON COMMENT PAGE
