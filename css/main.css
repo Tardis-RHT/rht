@@ -174,6 +174,7 @@ textarea:focus:-ms-input-placeholder {
 .btn:disabled {
   background-color: #dddddd;
   border-color: #dddddd;
+  cursor: default;
 }
 
 .btn:disabled:hover {
@@ -215,6 +216,7 @@ textarea:focus:-ms-input-placeholder {
   border-color: #dddddd;
   color: #dddddd;
   background-color: white;
+  cursor: default;
 }
 
 .ghost_btn:disabled:hover {
@@ -250,6 +252,10 @@ textarea:focus:-ms-input-placeholder {
 
 .video_icon:active, .video-play:active {
   top: 1px;
+}
+
+.video_icon:disabled, .video-play:disabled {
+  cursor: default;
 }
 
 .video_icon:disabled #Oval, .video-play:disabled #Oval {
@@ -4960,8 +4966,7 @@ input[type=range]::-ms-thumb:hover {
 
 .phone {
   position: absolute;
-  visibility: hidden;
-  color: #78787b;
+  color: red;
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
@@ -5010,8 +5015,8 @@ input[type=range]::-ms-thumb:hover {
   padding-right: 20px;
 }
 
-#tel:active + label, #tel:focus + label {
-  visibility: visible;
+#tel:invalid {
+  box-shadow: none;
 }
 
 #tel:active + span, #tel:focus + span {
@@ -5020,6 +5025,10 @@ input[type=range]::-ms-thumb:hover {
 
 #tel:invalid {
   box-shadow: none;
+}
+
+#tel:placeholder-shown + label {
+  visibility: hidden;
 }
 
 .main_callback {
@@ -5254,6 +5263,8 @@ input[type=range]::-ms-thumb:hover {
 .comment-form textarea {
   resize: none;
   margin-bottom: 50px;
+  box-shadow: none;
+  outline: none;
 }
 
 .comment-inputs {
@@ -5264,6 +5275,7 @@ input[type=range]::-ms-thumb:hover {
 .comment-inputs input, .comment-inputs select {
   display: block;
   margin-bottom: 35px;
+  outline: none;
 }
 
 .comment-inputs select {

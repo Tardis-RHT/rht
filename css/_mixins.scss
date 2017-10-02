@@ -68,6 +68,7 @@
     &:disabled{
         background-color: $button_inactive;
         border-color: $button_inactive;
+        cursor: default;
         &:hover{
             top:0;
         }
@@ -97,6 +98,7 @@
         border-color: $button_inactive;
         color: $button_inactive;
         background-color: $bg_white;
+        cursor: default;
         &:hover{
             top:0;
         }
@@ -128,6 +130,7 @@
         top: 1px;
     }
     &:disabled{
+        cursor: default;
         #Oval{
             fill: $button_inactive;
         }

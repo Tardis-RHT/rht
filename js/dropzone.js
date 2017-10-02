@@ -1123,8 +1123,18 @@
       this.files = without(this.files, file);
       this.emit("removedfile", file);
       if (this.files.length === 0) {
+        changeMsg1();
         return this.emit("reset");
       }
+      if (this.files.length === 1){
+        // console.log('remains 2');
+        changeMsg();
+      }
+      if (this.files.length === 2){
+        // console.log('remains 1');
+        changeMsg2();
+      }
+      
     };
 
     Dropzone.prototype.removeAllFiles = function(cancelIfNecessary) {
