@@ -173,6 +173,9 @@ a {
     @media (max-width:871px){
         display: none;
     }
+    a{
+        color: inherit;
+    }
 }
 
 // .only_desktop{

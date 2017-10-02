@@ -35,7 +35,7 @@ jQuery.fn.smartValidity = function(options){
         }
 
         if (btn !== undefined){
-            btn.prop( "disabled", true );
+            // btn.prop( "disabled", true );
             this.onfocus = function(){
                 startopt();
             }
@@ -43,14 +43,14 @@ jQuery.fn.smartValidity = function(options){
 
             if (this.checkValidity() === false || this.value == ""){
                 // console.log('invalid');
-                btn.prop( "disabled", true );
+                // btn.prop( "disabled", true );
                 this.onblur = function(){
                     erroropt();
                 } 
             }
             else if (this.checkValidity() === true){
                 // console.log('valid');
-                btn.prop( "disabled", false );
+                // btn.prop( "disabled", false );
                 this.onblur = function(){
                     startopt();
                 }
