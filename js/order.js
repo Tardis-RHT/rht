@@ -105,29 +105,3 @@ function checkCourier2() {
             $('#orderGo').removeAttr('disabled');
         }
 };
-
-
-// function inputsChecker(){
-//     if($('#order_office').is(':checked')){
-//         checkOffice();
-//     }else{
-//         checkCourier();
-//     }
-// };
-
-
-// (function() {
-//     $('.order_delivery_form > input').keyup(function() {
-//         var empty = false;
-//         $('.order_delivery_form > input').each(function() {
-//             if ($(this).val() == '') {
-//                 empty = true;
-//             }
-//         });
-//         if (empty) {
-//             $('#orderGo').attr('disabled', 'disabled');
-//         } else {
-//             $('#orderGo').removeAttr('disabled');
-//         }
-//     });
-// })()
