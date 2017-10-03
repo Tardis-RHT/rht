@@ -317,7 +317,7 @@ input[type="range"]{
     -moz-apperance: none;
     height: 2px;
     outline: none;
-    background-color: rgb(221,221,221);
+    background-color: $button_inactive;
 }
 input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none !important;
@@ -331,6 +331,14 @@ input[type='range']::-webkit-slider-thumb {
     &:hover{
         background-color: $button_hover;
     }
+    &:disabled{
+        background-color: $button_inactive;
+        cursor: default;
+    }
+}
+input[type='range']:disabled::-webkit-slider-thumb {
+    background-color: $button_inactive;
+    cursor: default;
 }
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
@@ -345,6 +353,10 @@ input[type=range]::-moz-range-thumb {
         background-color: $button_hover;
     }
 }
+input[type='range']:disabled::-moz-range-thumb {
+    background-color: $button_inactive;
+    cursor: default;
+}
   /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
     background-color: $button_normal;
@@ -357,6 +369,10 @@ input[type=range]::-ms-thumb {
     &:hover{
         background-color: $button_hover;
     }
+}
+input[type='range']:disabled::-ms-thumb {
+    background-color: $button_inactive;
+    cursor: default;
 }
 // END OF RANGE SLIDER
 
