@@ -727,35 +727,60 @@ a :visited {
     display: inline-block;
     width: 89px;
     box-sizing: border-box;
+    border-left: solid 1px #353b42;
+    border-right: solid 1px #353b42;
     font-size: 18px;
     font-weight: 500;
     line-height: 40px;
+    box-sizing: border-box;
   }
-  .header_lang_main {
-    display: block;
-    border-left: solid 1px #353b42;
-    border-right: solid 1px #353b42;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 20px;
-    color: white;
-  }
-  .header_lang_content {
+  .languagepicker {
     position: absolute;
-    background-color: #111820;
-    min-width: 89px;
-    z-index: 1;
-  }
-  .header_lang_drop {
-    color: white;
-    padding-left: 20px;
+    display: block;
+    width: 100%;
     height: 40px;
     line-height: 40px;
-    display: block;
+    color: white;
+    box-sizing: border-box;
+  }
+  .languagepicker li {
+    display: none;
+    width: 100%;
+    background-color: #111820;
+    padding-left: 20px;
+    height: 40px;
     border-top: solid 1px #353b42;
   }
-  .header_lang_drop:last-of-type {
+  .languagepicker li:first-of-type {
+    border-top: none;
+    display: block;
+  }
+  .languagepicker li:last-of-type {
     border-bottom: solid 1px #353b42;
+  }
+  .languagepicker li a {
+    color: white;
+  }
+  .languagepicker li:hover {
+    cursor: pointer;
+  }
+  .chevron_up::after {
+    content: '';
+    position: absolute;
+    font-family: 'Material-Design-Iconic-Font';
+    font-size: 20px;
+    right: 10px;
+    content: "\f2fc";
+    color: white;
+  }
+  .chevron_down::after {
+    content: '';
+    position: absolute;
+    font-family: 'Material-Design-Iconic-Font';
+    font-size: 20px;
+    right: 10px;
+    content: "\f2f9";
+    color: white;
   }
   .stickytop {
     position: fixed;
