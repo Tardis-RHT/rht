@@ -13,7 +13,7 @@ $(function(){
 	$(document).ready(function() {
 		$('.languagepicker li:first').addClass('chevron_down');
 	});
-	$('.languagepicker').click(function() {
+	$('.languagepicker').hover(function() {
 		$('.languagepicker li').css('display','block');
 		$('.languagepicker li:first').addClass('chevron_up');
 		$('.languagepicker li:first').removeClass('chevron_down');
