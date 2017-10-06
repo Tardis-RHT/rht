@@ -212,7 +212,9 @@
 				color: $font_white;
 			}
 			&:hover{
-				cursor: pointer;
+				&:not(:first-child){
+					cursor: pointer;
+				}
 			}
 
 		}
