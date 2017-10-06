@@ -2516,7 +2516,7 @@ footer {
     padding-bottom: 0;
   }
   .furnitura_wrapper p {
-    margin: 40px 35px;
+    margin: 40px 35px 40px 0;
     padding: 0;
   }
 }
