@@ -50,7 +50,7 @@
 
 @media screen and (min-width: 550px){
     .main_callback {
-        margin: 0 auto;    
+        margin: 0 auto;
         width: 100%;
         height: 685px;
         box-sizing: border-box;
@@ -70,11 +70,10 @@
     .main_callback_left{
         background-image: url('../img/bg_left.png');
         background-position: left bottom;
-        
     }
     .main_callback_right{
         background-image: url('../img/bg_right.png');
-        background-position: right bottom;        
+        background-position: right bottom;
     }
     .main_callback_center{
         width: 525px;
@@ -100,16 +99,14 @@
             align-self: center;
         }
         p{
-            font-weight: $weight_normal;
-            font-size: 18px;
-            line-height: 26px;
+		    @include text-style_main($weight_normal, $font_black, 26px);
             margin: 0 40px 25px; //from Anna (was: 0 40px)
         }
         span{
             font-size: 18px;
             line-height: 26px;
             color: $font-gray;
-            margin: 0 40px;    
+            margin: 0 40px;
         }
     }
     .form_callback {
@@ -121,8 +118,7 @@
             height:46px;
         }
         input{
-            border: 1px solid rgb(221,221,221);
-            background-color: rgb(247,247,247);
+            border: 1px solid $button_inactive;
             outline: none;
             margin: 0 0 20px 0;
             font-weight: $weight_normal;
