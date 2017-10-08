@@ -27,15 +27,25 @@
         }
     }
     .garantee{
-        // bottom: 40%;
+        position: absolute;
         top: calc(10% + 40px + 15px);
-        max-width: 20%;
         left: auto;
         right: 15px;
-        @media (min-width:480px){
-            position: static;
-            max-width: none;
+        width: 80px;
+        height: 80px;
+        @include flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        overflow: hidden;
+        img{
             opacity: 1;
+            max-width: none;
+            width:380px;
+            height: 300px;
+            margin-top: -3px;
+            margin-right: 3px;
+            left:0;
+            position: static;
         }
         @media(min-width:769px){
             display: none;

@@ -3931,9 +3931,34 @@ input[type='range']:disabled::-ms-thumb {
   top: 20px;
   left: 75%;
   z-index: 3;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: rgba(252, 248, 248, 0.6);
+  border-radius: 50%;
+}
+
+.automatica_set-single-wrapper .garantee img {
   opacity: 1;
+  max-width: none;
+  width: 380px;
+  height: 300px;
+  margin-top: -3px;
+  margin-right: 3px;
+  left: 0;
+  position: static;
 }
 
 @media (min-width: 769px) {
@@ -4418,18 +4443,36 @@ input[type='range']:disabled::-ms-thumb {
 }
 
 .card_automatica_title .garantee {
+  position: absolute;
   top: calc(10% + 40px + 15px);
-  max-width: 20%;
   left: auto;
   right: 15px;
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-@media (min-width: 480px) {
-  .card_automatica_title .garantee {
-    position: static;
-    max-width: none;
-    opacity: 1;
-  }
+.card_automatica_title .garantee img {
+  opacity: 1;
+  max-width: none;
+  width: 380px;
+  height: 300px;
+  margin-top: -3px;
+  margin-right: 3px;
+  left: 0;
+  position: static;
 }
 
 @media (min-width: 769px) {
