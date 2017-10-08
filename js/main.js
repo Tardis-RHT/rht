@@ -421,13 +421,14 @@ function changeMsg3(){
 	}
 }
 
-	  //>>>labels on comment page
+	  //>>>end of labels on comment page
 	  //>>>popup on comment page
 
 
 function showCommentThanx(){
 	$('#thankyou-hide').css('display', 'none');
-	$('#thankyou-popup').show(250,'swing');
+	// $('#thankyou-hide').hide(200, 'swing');
+	$('#thankyou-popup').show(450,'swing');
 }
  
 $('#comment-form').bind('submit',function(e) {
