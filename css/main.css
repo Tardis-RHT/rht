@@ -5560,6 +5560,10 @@ input[type='range']:disabled::-ms-thumb {
   margin-bottom: 35px;
 }
 
+#thankyou-popup {
+  display: none;
+}
+
 .shopping-cart {
   margin: 50px auto 40px;
 }

@@ -421,7 +421,7 @@ function changeMsg3(){
 	}
 }
 
-	  //>>>labels on comment page
+	  //>>>end of labels on comment page
 	  //>>>popup on comment page
 
 
