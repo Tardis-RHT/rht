@@ -427,7 +427,8 @@ function changeMsg3(){
 
 function showCommentThanx(){
 	$('#thankyou-hide').css('display', 'none');
-	$('#thankyou-popup').show(250,'swing');
+	// $('#thankyou-hide').hide(200, 'swing');
+	$('#thankyou-popup').show(450,'swing');
 }
  
 $('#comment-form').bind('submit',function(e) {
