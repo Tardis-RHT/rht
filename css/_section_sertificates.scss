@@ -3,30 +3,27 @@
     padding-bottom: 15px;
     background-color: $bg_section;
     margin-bottom: 30px;
-    @media (min-width:768px){
+    @media (min-width:1024px){
         padding-top: 120px;
         padding-bottom: 140px;
         margin-bottom: 115px;
     }
-
     .slider{
         width: auto;
         overflow: hidden;
         }
     .slides{
         margin: 0 auto;
-        // height: 100%;
-        margin-bottom: 15px;
-        @media (min-width:768px){
+        // margin-bottom: 15px;
+        @media (min-width:1024px){
             margin-bottom: 45px;
         }
     }
     .slide{
-        // float: left;
         display: inline-block;
         height: 150px;
         width: 117px;
-        margin: 0 5px;
+        margin: 0 5px 20px;
         img{
             display: block;
             height: 100%;
@@ -37,44 +34,12 @@
                 filter: none;
             }
         }
-        @media (min-width:768px){
+        @media (min-width:1024px){
             height: 347px;
             width: 270px;
-            margin: 0 17px;
+            margin: 0 17px 20px;
         }
     }
-    .controls{
-        text-align: center;
-    }
-    .slider_btn{
-        display: inline-block;
-        width: 18px;
-        height: 46px;
-        color: $button_inactive;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        padding: 0;
-        svg{
-            width: 18px;
-            height: 33px;
-        }
-        &:hover{
-            svg > g{
-                stroke: $button_normal;
-            }
-        }
-        &:active {
-             padding: 0;
-        }  
-    }
-}
-.slider_controls-line{
-    display: inline-block;
-    height: 33px;
-    width: 2px;
-    background-color: $button_inactive;
-    margin: 0 15px;
 }
 
 .main-page_certificates_title{
@@ -83,8 +48,10 @@
         margin-bottom: 100px;
     }
 }
-.main-page_certificates > .slider{
-    margin-bottom: 45px;
+@media(min-width:1024px){
+    .main-page_certificates > .slider{
+        margin-bottom: 45px;
+    }
 }
 
 .main-page_certificates_slider{
@@ -93,4 +60,12 @@
             background: none;
         }
     }
+}
+
+#main-page_certificates_scroll-wrapper{ 
+    white-space: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+    width: calc(100% - 30px);
+    margin: 0 auto 40px;
 }
