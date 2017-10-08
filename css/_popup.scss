@@ -67,9 +67,9 @@
     &:invalid{
         box-shadow: none;
     }
-    &:active + span, &:focus + span{
-        visibility: hidden;
-    }
+    // &:active + span, &:focus + span{
+    //     visibility: hidden;
+    // }
     &:invalid{
         box-shadow: none;
     }

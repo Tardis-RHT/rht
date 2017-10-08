@@ -471,6 +471,10 @@ a :visited {
   }
 }
 
+.breadcrumbs a {
+  color: inherit;
+}
+
 .stickytop {
   position: fixed;
   top: 0;
@@ -723,35 +727,60 @@ a :visited {
     display: inline-block;
     width: 89px;
     box-sizing: border-box;
+    border-left: solid 1px #353b42;
+    border-right: solid 1px #353b42;
     font-size: 18px;
     font-weight: 500;
     line-height: 40px;
+    box-sizing: border-box;
   }
-  .header_lang_main {
-    display: block;
-    border-left: solid 1px #353b42;
-    border-right: solid 1px #353b42;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 20px;
-    color: white;
-  }
-  .header_lang_content {
+  .languagepicker {
     position: absolute;
-    background-color: #111820;
-    min-width: 89px;
-    z-index: 1;
-  }
-  .header_lang_drop {
-    color: white;
-    padding-left: 20px;
+    display: block;
+    width: 100%;
     height: 40px;
     line-height: 40px;
-    display: block;
+    color: white;
+    box-sizing: border-box;
+  }
+  .languagepicker li {
+    display: none;
+    width: 100%;
+    background-color: #111820;
+    padding-left: 20px;
+    height: 40px;
     border-top: solid 1px #353b42;
   }
-  .header_lang_drop:last-of-type {
+  .languagepicker li:first-of-type {
+    border-top: none;
+    display: block;
+  }
+  .languagepicker li:last-of-type {
     border-bottom: solid 1px #353b42;
+  }
+  .languagepicker li a {
+    color: white;
+  }
+  .languagepicker li:hover:not(:first-child) {
+    cursor: pointer;
+  }
+  .chevron_up::after {
+    content: '';
+    position: absolute;
+    font-family: 'Material-Design-Iconic-Font';
+    font-size: 20px;
+    right: 10px;
+    content: "\f2fc";
+    color: white;
+  }
+  .chevron_down::after {
+    content: '';
+    position: absolute;
+    font-family: 'Material-Design-Iconic-Font';
+    font-size: 20px;
+    right: 10px;
+    content: "\f2f9";
+    color: white;
   }
   .stickytop {
     position: fixed;
@@ -2109,8 +2138,11 @@ a :visited {
     align-self: center;
   }
   .callback_form_wrapper-small p {
+    font-family: "MuseoSansCyrl";
     font-weight: 500;
     font-size: 18px;
+    color: #111820;
+    letter-spacing: 0;
     line-height: 26px;
     margin: 0 40px 25px;
   }
@@ -2131,7 +2163,6 @@ a :visited {
   }
   .form_callback input {
     border: 1px solid #dddddd;
-    background-color: #f7f7f7;
     outline: none;
     margin: 0 0 20px 0;
     font-weight: 500;
@@ -2487,7 +2518,7 @@ footer {
     padding-bottom: 0;
   }
   .furnitura_wrapper p {
-    margin: 40px 35px;
+    margin: 40px 35px 40px 0;
     padding: 0;
   }
 }
@@ -2698,6 +2729,16 @@ input[type='range']::-webkit-slider-thumb:hover {
   background-color: #0063a6;
 }
 
+input[type='range']::-webkit-slider-thumb:disabled {
+  background-color: #dddddd;
+  cursor: default;
+}
+
+input[type='range']:disabled::-webkit-slider-thumb {
+  background-color: #dddddd;
+  cursor: default;
+}
+
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
   background-color: #0071ba;
@@ -2713,6 +2754,11 @@ input[type=range]::-moz-range-thumb:hover {
   background-color: #0063a6;
 }
 
+input[type='range']:disabled::-moz-range-thumb {
+  background-color: #dddddd;
+  cursor: default;
+}
+
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
   background-color: #0071ba;
@@ -2726,6 +2772,11 @@ input[type=range]::-ms-thumb {
 
 input[type=range]::-ms-thumb:hover {
   background-color: #0063a6;
+}
+
+input[type='range']:disabled::-ms-thumb {
+  background-color: #dddddd;
+  cursor: default;
 }
 
 .furnitura_products {
@@ -5019,10 +5070,6 @@ input[type=range]::-ms-thumb:hover {
   box-shadow: none;
 }
 
-#tel:active + span, #tel:focus + span {
-  visibility: hidden;
-}
-
 #tel:invalid {
   box-shadow: none;
 }
@@ -5256,8 +5303,8 @@ input[type=range]::-ms-thumb:hover {
   opacity: 1;
 }
 
-.comment-form input:placeholder-shown, .comment-form textarea:placeholder-shown, .comment-form select:placeholder-shown {
-  border: 1px solid #78787b;
+.comment-form input:invalid, .comment-form textarea:invalid, .comment-form select:invalid {
+  box-shadow: none;
 }
 
 .comment-form textarea {
@@ -5442,7 +5489,7 @@ input[type=range]::-ms-thumb:hover {
   margin-top: -105px;
   left: 0;
   color: #78787b;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .comment-form input:focus + label {
@@ -5453,13 +5500,91 @@ input[type=range]::-ms-thumb:hover {
   visibility: visible;
 }
 
-.comment-form input:invalid {
-  box-shadow: none;
-  border-color: red;
+.comment-form input:placeholder-shown + label {
+  visibility: hidden;
 }
 
-.comment-form input:placeholder-shown {
-  border-color: #78787b;
+.comment-form .comment-textarea {
+  position: relative;
+  width: 100%;
+}
+
+.comment-form .comment-textarea label {
+  visibility: visible;
+  position: absolute;
+  color: #78787b;
+  left: 0;
+  top: -20px;
+  margin-top: 0;
+}
+
+.comment-form textarea:focus + label {
+  visibility: visible;
+}
+
+.comment-form textarea:placeholder-shown + label {
+  visibility: hidden;
+}
+
+.comment-thankyou {
+  background-color: #f7f7f7;
+  width: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .comment-thankyou {
+    padding-bottom: 115px;
+    margin-bottom: 105px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comment-thankyou {
+    background-image: url("../img/bg_full.png");
+  }
+}
+
+.comment-thankyou h2 {
+  margin-bottom: 60px;
+}
+
+.comment-thankyou p {
+  margin-bottom: 30px;
+  max-width: 415px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #0d223f;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.comment-thankyou button {
+  min-width: 205px;
+}
+
+.all_offers {
+  padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .all_offers {
+    padding-bottom: 105px;
+  }
+}
+
+.all_offers h2 {
+  margin-bottom: 35px;
+}
+
+.all_offers a {
+  margin-bottom: 35px;
 }
 
 .shopping-cart {
@@ -6216,6 +6341,105 @@ input[type=range]::-ms-thumb:hover {
 .order_done_message button {
   margin-top: 35px;
   width: 206px;
+}
+
+body.login_main {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.login_wrapper {
+  margin: 8% auto;
+  max-width: 525px;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.rht_login_form {
+  margin: 40px;
+  padding: 40px;
+  width: 440px;
+  min-height: 500px;
+  border: solid 1px #78787b;
+  box-sizing: border-box;
+  display: -webkit-box;
+  /* Safari 3.1 - 6, Chrome < 21 (2009 Spec), UC Browser Android */
+  display: -moz-box;
+  /* Firefox 2 - 27 (2009 Spec), UC Mini */
+  display: -ms-flexbox;
+  /* IE10 (2012 Syntax) */
+  display: -webkit-flex;
+  /* Safari 6.1 - 8, Android < 4.4, BB < 10, Chrome 21 - 28 */
+  display: flex;
+  /* Edge 12+, Firefox 28+, Blink, Safari 9+, Opera Mini 8+ */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rht_login_form h2 {
+  margin-bottom: 45px;
+  margin-left: -3px;
+}
+
+.rht_login_form p {
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin: 0 0 20px;
+}
+
+.rht_login_form p:last-of-type {
+  margin: 0;
+}
+
+.rht_login_form p input[type="text"],
+.rht_login_form p input[type="password"] {
+  box-sizing: border-box;
+  width: 280px;
+  height: 46px;
+  border: 1px solid #dddddd;
+  outline: none;
+  padding-left: 5px;
+  font-family: "MuseoSansCyrl";
+  font-weight: 500;
+  font-size: 18px;
+  color: #111820;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+.rht_login_form p input[type="submit"] {
+  width: 280px;
+}
+
+.rht_login_form p.rht_forgetme {
+  font-size: 14px;
+}
+
+.rht_login_form span {
+  font-size: 18px;
+  line-height: 26px;
+  color: #78787b;
+  margin: 0 40px;
+}
+
+.rht_forgetme {
+  font-size: 10px;
 }
  
 

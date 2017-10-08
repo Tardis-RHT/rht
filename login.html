@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>RHT</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+</head>
+<body class="login_main">
+    <section class="login_wrapper">
+        <form name="rht_loginform" id="rht_loginform" class="rht_login_form">
+				<h2>Rolling Hi-Tech</h2>
+				<p>
+					<label for="rht_user_login">Имя пользователя или e-mail<br>
+					<input type="text" name="log" id="rht_user_login" class="input" value=""></label>
+				</p>
+				<p>
+					<label for="rht_user_pass">Пароль<br>
+					<input type="password" name="pwd" id="rht_user_pass" class="input" value=""></label>
+				</p>
+				<p>
+					<label for="rht_rememberme">
+						<input name="rememberme" type="checkbox" id="rht_rememberme" value="" class="adjusting-plate_checkbox"> Запомнить меня
+					</label>
+				</p>
+				<p>
+					<input type="submit" name="wp-submit" id="wp-submit" class="btn" value="Войти">
+					<input type="hidden" name="redirect_to">
+					<input type="hidden" name="testcookie" >
+				</p>
+				<p id="nav" class="rht_forgetme">
+					<a href="#">Забыли пароль?</a>
+				</p>
+				<p id="backtoblog">
+					<a href="#"><i class="zmdi zmdi-long-arrow-left"></i> Назад к сайту «Rolling Hi-Tech»</a>
+				</p>
+        </form>
+    </section>
+</body>
+</html>

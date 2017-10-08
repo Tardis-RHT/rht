@@ -22,12 +22,9 @@
         &::-webkit-input-placeholder {
             opacity: 1;
         }
-        &:placeholder-shown{
-            border: 1px solid $font-gray;
+        &:invalid{
+            box-shadow: none;
         }
-        // &:invalid{
-        //     border: none;
-        // }
     }
     textarea{        
         resize: none;
@@ -207,7 +204,7 @@
         margin-top: -105px;
         left: 0;
         color: $font_gray;
-        visibility: hidden;
+        visibility: visible;
     }
     input:focus + label{
        visibility: visible;
@@ -215,11 +212,75 @@
     select:focus + label{
         visibility: visible;
     }
-    input:invalid{
-        box-shadow: none;
-        border-color: red;
+    // input:invalid{
+    //     box-shadow: none;
+    //     border-color: red;
+    // }
+    input:placeholder-shown + label{
+        visibility: hidden;
     }
-    input:placeholder-shown{
-        border-color: $font-gray;
+    .comment-textarea{
+        position: relative;
+        width: 100%;
+        label{
+            visibility: visible;
+            position: absolute;
+            color: $font_gray;
+            left: 0;
+            top: -20px;
+            margin-top: 0;
+        }
+    }
+    textarea:focus + label{
+        visibility: visible;
+    }
+    textarea:placeholder-shown + label{
+        visibility: hidden;
     }
 } 
+
+//thankyou message
+
+.comment-thankyou{
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    background-color: $bg_section;
+    width: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    @media(min-width:768px){
+        padding-bottom: 115px;
+        margin-bottom: 105px;
+    }
+    @media(min-width:1024px){
+        background-image: url('../img/bg_full.png');
+    }
+    h2{
+        margin-bottom: 60px;
+    }
+    p{
+        margin-bottom: 30px;
+        max-width: 415px;
+        @include text-style_main($weight_normal, $font_h2, 28px);
+    }
+    button{
+        min-width: 205px;
+    }
+}
+.all_offers{
+    padding-bottom: 50px;
+    @media(min-width:768px){
+        padding-bottom: 105px;
+    }
+    h2{
+        margin-bottom: 35px;
+    }
+    a{
+        margin-bottom: 35px;
+    }
+}
