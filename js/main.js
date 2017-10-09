@@ -144,17 +144,44 @@ $(function($){
 // END OF CALLBACK VALIDATION
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-function toggle() {
+function toggleCheckbox() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
+	{
 	  div.style.display = 'inline-block';
-	else
-	  div.style.display = 'none'
+	  document.getElementById('furnitura_chars_price_add').style.display = 'inline-block';
+	  document.getElementById('furnitura_chars_price').style.display = 'none';
+	  
+	}
+	else{
+	  div.style.display = 'none';
+	  document.getElementById('furnitura_chars_price_add').style.display = 'none';
+	  document.getElementById('furnitura_chars_price').style.display = 'inline-block';
+	  
+	}
 }
 
 if(document.getElementById('adjusting-plate_checkbox')){
-	document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+	document.getElementById('adjusting-plate_checkbox').onchange = toggleCheckbox;
 }
+
+
+function showPrice()
+{
+  if (document.getElementById("adjusting-plate_checkbox").checked = true)
+  { 
+    alert("Флажок установлен"); }
+  else 
+  {
+    alert("Флажок не установлен")
+  }
+}
+
+
+
+// if(document.getElementById('adjusting-plate_checkbox').checked){
+// 	document.getElementsByClassName('furnitura_chars_price_add').style.display = 'block';
+// }
 
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 

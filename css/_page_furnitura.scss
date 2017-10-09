@@ -538,7 +538,8 @@ input[type='range']:disabled::-ms-thumb {
         display: block;
     }
 }
-.furnitura_chars_price{
+.furnitura_chars_price,
+.furnitura_chars_price_add{
     font-weight: $weight_normal;
     font-size: 36px;
     line-height: 46px;
@@ -548,6 +549,9 @@ input[type='range']:disabled::-ms-thumb {
         font-size: 18px;
     }
 }
+.furnitura_chars_price_add{
+    display: none;
+}    
 .furnitura_products_end{
     margin: 0 auto 50px;
     padding-bottom: 15px;
