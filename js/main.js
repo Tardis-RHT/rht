@@ -1,6 +1,5 @@
 
 $(function(){
-
 	// MOBILE MENU
 	$('#burger').click(function() {
 			$('.mobile_menu').toggle();
@@ -87,42 +86,7 @@ $(function(){
 		autoWidth: true
 	});
 
-	//Sertificates Carousel
-	$('#lightSlider_certificates').lightSlider({
-		item:6,
-		loop:false,
-		easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-		speed:600,
-		controls: false,
-		pager: false,
-		slideMargin: 0,
-		responsive: [
-			// {
-			// 	breakpoint:1400,
-			// 	settings: {
-			// 		item:4
-			// 		}
-			// },
-			// {
-			// 	breakpoint:768,
-			// 	settings: {
-			// 		item:3
-			// 		}
-			// },
-			{
-				breakpoint:620,
-				settings: {
-					item:4
-					}
-			},
-			{
-				breakpoint:470,
-				settings: {
-					item:3
-					}
-			}
-		]
-	});
+
 
 	$("#lightSlider_filenka").lightSlider({
 		gallery: false,
@@ -180,18 +144,26 @@ $(function($){
 // END OF CALLBACK VALIDATION
 
 // SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
-function toggle() {
+function toggleCheckbox() {
 	var div = document.getElementById('adjusting-plate');
 	if(this.checked)
+	{
 	  div.style.display = 'inline-block';
-	else
-	  div.style.display = 'none'
+	  document.getElementById('furnitura_chars_price_add').style.display = 'inline-block';
+	  document.getElementById('furnitura_chars_price').style.display = 'none';
+	  
+	}
+	else{
+	  div.style.display = 'none';
+	  document.getElementById('furnitura_chars_price_add').style.display = 'none';
+	  document.getElementById('furnitura_chars_price').style.display = 'inline-block';
+	  
+	}
 }
 
 if(document.getElementById('adjusting-plate_checkbox')){
-	document.getElementById('adjusting-plate_checkbox').onchange = toggle;
+	document.getElementById('adjusting-plate_checkbox').onchange = toggleCheckbox;
 }
-
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
@@ -457,13 +429,14 @@ function changeMsg3(){
 	}
 }
 
-	  //>>>labels on comment page
+	  //>>>end of labels on comment page
 	  //>>>popup on comment page
 
 
 function showCommentThanx(){
 	$('#thankyou-hide').css('display', 'none');
-	$('#thankyou-popup').show(250,'swing');
+	// $('#thankyou-hide').hide(200, 'swing');
+	$('#thankyou-popup').show(450,'swing');
 }
  
 $('#comment-form').bind('submit',function(e) {
@@ -475,3 +448,46 @@ $('#comment-form').bind('submit',function(e) {
 	//ASK ABOUT ADDING ERROR ON 500
 });
   //END OF VALIDATION ON COMMENT PAGE
+
+ //CERTIFICATES SCROLL OR CAROUSEL
+
+function calcWidth(){
+    if ($(window).width() < '1024'){
+		if($('#lightSlider_certificates').length>0){
+			$('#lightSlider_certificates').lightSlider().destroy();
+		}
+		$('.slides').removeAttr('id').attr('id', 'main-page_certificates_scroll-wrapper');
+		$('.main-page_certificates_slider').css('display', 'none');
+    } else {
+		$('.main-page_certificates_slider').css('display', 'block');
+		$('.slides').attr('id', 'lightSlider_certificates');
+			//Sertificates Carousel
+		$('#lightSlider_certificates').lightSlider({
+			item:6,
+			loop:false,
+			easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+			speed:600,
+			controls: false,
+			pager: false,
+			slideMargin: 0,
+			responsive: [
+				{
+					breakpoint:1400,
+					settings: {
+						item:5
+						}
+				},
+				{
+					breakpoint:1200,
+					settings: {
+						item:4
+					}
+				}	
+			]
+		});
+	}
+}
+$(window).resize(calcWidth);
+$(document).ready(calcWidth);
+
+//END OF CERTIFICATES SCROLL OR CAROUSEL
