@@ -4619,7 +4619,7 @@ input[type='range']:disabled::-ms-thumb {
   }
 }
 
-.automatica-install button {
+.automatica-install a {
   display: inline-block;
 }
 

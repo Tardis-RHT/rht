@@ -125,6 +125,7 @@
 
     <section class="automatica-inset wrapper">
         <h2 class="inset-title">В комплект входит</h2>
+        <form action="" id="automatica-form">
         <p class="inset-format">Формат комплекта:</p>
         <span class="toggle">
                 <input id="mini" type="radio" name="toggle" value="mini" checked onclick="maximize()">
@@ -151,7 +152,7 @@
                             <img src="../img/products/bitmap1.png" alt="Стальная оцинкованная зубчатая рейка">
                         </div>
                     <p class="inset-item-name">Стальная оцинкованная зубчатая рейка &mdash; 4&nbsp;м</p>
-                    <input type="text" class="item-width" placeholder="Ширина проема ворот">
+                    <input type="text" class="item-width" placeholder="Ширина проема ворот" id="automatica-width" oninput="checkInput()">
                     <i class="zmdi zmdi-help showme"></i>
                     <!-- <div class="automatica_help">
                         <img src="img/adjusting_plate.png" alt="Item of the kit">
@@ -174,13 +175,14 @@
             </div>
             <div class="inset-order">
                 <p class="automatica_set-price">
-                    <b>2990</b> грн
+                    <b id="for-mini"> 2990</b> <b id="for-maxi"> 3490</b> грн
                 </p>
-                <button class="btn">
+                <button class="btn" id="automatica-btn" disabled>
                         Добавить в корзину
                 </button>
-            </div>            
+            </div>           
         </div>
+    </form> 
     </section>
 
     <section class="automatica-more wrapper">
@@ -207,9 +209,9 @@
     <section class="automatica-install">
         <p class="automatica-instruction wrapper">
             <span>Как установить автоматику Rotelli своими руками:</span>
-            <button class="ghost_btn material-icons">Скачать инструкцию  
+            <a class="ghost_btn material-icons">Скачать инструкцию  
                 <i class="zmdi zmdi-download"></i>
-            </button>
+            </a>
         </p>
     </section>
 
