@@ -164,25 +164,6 @@ function toggleCheckbox() {
 if(document.getElementById('adjusting-plate_checkbox')){
 	document.getElementById('adjusting-plate_checkbox').onchange = toggleCheckbox;
 }
-
-
-function showPrice()
-{
-  if (document.getElementById("adjusting-plate_checkbox").checked = true)
-  { 
-    alert("Флажок установлен"); }
-  else 
-  {
-    alert("Флажок не установлен")
-  }
-}
-
-
-
-// if(document.getElementById('adjusting-plate_checkbox').checked){
-// 	document.getElementsByClassName('furnitura_chars_price_add').style.display = 'block';
-// }
-
 // END OF SHOW HIDE THE adjusting-plate BLOCK BY CLICKIN CHECKBOX
 
 
