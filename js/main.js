@@ -392,38 +392,38 @@ function changeMsg3(){
   //VALIDATION ON COMMENT PAGE
 
   if($('.comment-form').length > 0){
-		var inputs = $('#commentName, #commentEmail, #commentProducts, #commentText');
-		var commentBtn = $('#comment_btn');
-  		function checkCommentValidity(){
-		if(commentBtn != undefined){
-		// commentBtn.prop( "disabled", true );
+	var inputs = $('#commentName, #commentEmail, #commentProducts, #commentText');
+	var commentBtn = $('#comment_btn');
+	function checkCommentValidity(){
+	if(commentBtn != undefined){
+	// commentBtn.prop( "disabled", true );
 
-			$("#commentEmail").smartValidity({
-				btn: 'comment-btn',
-				label:'commentEmail-lab',
-				startBorder: 'rgb(120,120,123)',
-				startText: 'Email',
-				errorText:'Введите в формате mail@mail.com'
-			});
-			$("#commentText").smartValidity({
-				btn: 'comment-btn',
-				label:'commentText-lab',
-				startBorder: 'rgb(120,120,123)',
-				startText: 'Сообщение',
-				errorText:'Сообщение должно содержать больше 10 символов'
-			});
+		$("#commentEmail").smartValidity({
+			btn: 'comment-btn',
+			label:'commentEmail-lab',
+			startBorder: 'rgb(120,120,123)',
+			startText: 'Email',
+			errorText:'Введите в формате mail@mail.com'
+		});
+		$("#commentText").smartValidity({
+			btn: 'comment-btn',
+			label:'commentText-lab',
+			startBorder: 'rgb(120,120,123)',
+			startText: 'Сообщение',
+			errorText:'Сообщение должно содержать больше 10 символов'
+		});
 
-			for (i=0; i <inputs.length; i++){
-				inputs[i].checkValidity();
-				
-			}
-			if(inputs[0].checkValidity() === true && inputs[1].checkValidity() === true &&inputs[2].checkValidity() === true &&inputs[3].checkValidity() === true){
-				commentBtn.prop( "disabled", false );
-				return true;
-			} else{
-				commentBtn.prop( "disabled", true );
-				return false;
-			}
+		for (i=0; i <inputs.length; i++){
+			inputs[i].checkValidity();
+			
+		}
+		if(inputs[0].checkValidity() === true && inputs[1].checkValidity() === true &&inputs[2].checkValidity() === true &&inputs[3].checkValidity() === true){
+			commentBtn.prop( "disabled", false );
+			return true;
+		} else{
+			commentBtn.prop( "disabled", true );
+			return false;
+		}
 	}
   }
 
@@ -499,3 +499,34 @@ $(window).resize(calcWidth);
 $(document).ready(calcWidth);
 
 //END OF CERTIFICATES SCROLL OR CAROUSEL
+
+//FORM ON PAGE AUTOMATICA
+if($('#automatica-form').length > 0){
+	var radio = $('#mini, #maxi');
+	var input = $('#automatica-width');
+	var commentBtn = $('#automatica-btn');
+	function checkInput(){
+		if (input.val() !== ''){
+			commentBtn.prop("disabled", false);
+		} else {
+			commentBtn.prop('disabled', true);
+		}
+	}
+	function changePrice(){
+		if(radio[0].checked){
+			$('#for-mini').css('display','inline');
+			$('#for-maxi').css('display','none');
+		} else if(radio[1].checked){
+			$('#for-mini').css('display','none');
+			$('#for-maxi').css('display','inline');
+		}
+	}
+	$(document).ready(function(){
+		checkInput();
+		changePrice();
+	});
+	radio.change(function(){
+		changePrice();
+	});
+}
+//END OF FORM ON PAGE AUTOMATICA
