@@ -98,15 +98,23 @@ $(function(){
 		pager: true,
 		// autoWidth: true
 	});
-	$('#video_panels').lightGallery({
-		videoMaxWidth: '100%',
-		autoPlay: true,
-		controls: false,
-		counter: false,
-		download: false,
-	}); 
-
+	// $('#video_panels').lightGallery({
+	// 	videoMaxWidth: '100%',
+	// 	autoPlay: true,
+	// 	controls: false,
+	// 	counter: false,
+	// 	download: false,
+	// }); 
+	
+	// $('#main_video-video').lightGallery({
+	// 	videoMaxWidth: '100%',
+	// 	autoPlay: true,
+	// 	controls: false,
+	// 	counter: false,
+	// 	download: false,
+	// }); 
 });
+
 
 //CALLBACK VALIDATION
 
@@ -483,3 +491,4 @@ $(window).resize(calcWidth);
 $(document).ready(calcWidth);
 
 //END OF CERTIFICATES SCROLL OR CAROUSEL
+

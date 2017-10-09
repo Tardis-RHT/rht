@@ -62,6 +62,7 @@ function onFullScreenEnter() {
 function onFullScreenExit() {
     console.log("Exit fullscreen initiated from iframe");
     hideControls();
+    video.style.display="none";
 };
 
 // Note: FF nightly needs about:config full-screen-api.enabled set to true.
@@ -92,6 +93,7 @@ function exitFullscreen(id) {
     document.cancelFullScreen();
     
     video.play();
+    video.style.display="none";
     
     document.querySelector('#'+id + ' button').onclick = function(){
     enterFullscreen(id);
