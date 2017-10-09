@@ -1021,6 +1021,7 @@ a :visited {
   cursor: pointer;
   font-size: 12px;
   line-height: 20px;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {

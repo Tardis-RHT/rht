@@ -47,6 +47,7 @@
     cursor: pointer;
     font-size: 12px;
     line-height: 20px;
+    font-weight: $weight_normal;
     @media (min-width:768px){
         font-size: 18px;
         line-height: 22px;
